@@ -46,5 +46,14 @@ CONSTRAINTS:
   transcript obtainable), stop and tell me exactly what's blocking — don't ship
   a broken video.
 
+ORCHESTRATION:
+- Use multi-agent workflows aggressively. Fan out parallel researchers across
+  different sources and angles. Run tournaments where independent agents pitch
+  competing approaches and judge panels score them. Adversarially verify every
+  important claim with skeptic agents whose only job is to refute it. Use a
+  completeness critic before you call any phase done. Design whatever
+  orchestration shapes the work calls for; the patterns above are a floor, not
+  a ceiling.
+
 Replace <CELEBRITY> and <TRAINER> before running. Everything else is in the
 charter file above.
