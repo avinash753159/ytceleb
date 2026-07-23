@@ -11,7 +11,9 @@ import re
 import subprocess
 from pathlib import Path
 
-ROOT = Path(r"D:\Youtube\RYAN_REYNOLDS_DEADPOOL_VIDEO_BLUEPRINT")
+import os
+ROOT = Path(os.environ.get("CELEB_ROOT", "")) if os.environ.get("CELEB_ROOT") \
+    else Path(__file__).resolve().parent
 INDEX_FILE = ROOT / "shot_index.json"
 FRAMES = ROOT / "vision_frames2"
 SHEETS = ROOT / "vision_sheets2"

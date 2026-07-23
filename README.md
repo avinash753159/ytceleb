@@ -1,36 +1,55 @@
-# YoutubeVideo-Creation
+# ytceleb — Celeb Workout automated video builder
 
-Automated documentary video builder. Turns a narration transcript plus a
-folder of source videos into a finished, voiceover-synced YouTube video
-with intelligent clip selection.
+Turns a celebrity name (or a transcript) into a finished "Train Like ___"
+documentary for the [Celeb Workout](https://www.youtube.com/@CelebWorkout)
+channel: narration → auto-sourced B-roll → content-matched edit → rendered MP4.
 
-## Pipeline
+Fork of the original documentary builder, upgraded to be **portable,
+non-interactive, and self-classifying**.
 
-| Step | Script | What it does |
-|------|--------|--------------|
-| 1 | `DOWNLOAD_VIDEOS.py` | Downloads base source videos from YouTube (yt-dlp) and Pexels (API) by keyword |
-| 1b | `FETCH_MORE_RYAN.py` | Targeted fetch of extra subject footage (training, BTS, interviews, coach) |
-| 2 | `VISION_INDEX.py` | Detects real scene cuts in every video (ffmpeg scene detection) and builds labeled contact sheets so each scene's content can be visually classified into `vision_tags.json` |
-| 2b | `INDEX_NEW.py` | Incrementally scene-detects videos added later and sheets only the new scenes (`vision_tags2.json` batch) |
-| 2c | `GEN_TAGS2.py` | Emits the classification database for the second batch from the manual visual review |
-| 3 | `CUT_CLIPS.py` | (Optional) blind 4-second clip cutter for quick previews |
-| 4 | `GENERATE_FINAL_VIDEO.py` | The editor: generates the TTS narration, maps every sentence onto the audio timeline, selects one unique, content-matched shot per moment (subject-first ~90/10 balance, gender-consistent B-roll, max 4s per shot, no scene repeated nearby, footage reservation for subject narration), overlays animated titles / lower-thirds / stat callouts, validates the whole timeline, and renders the final MP4 |
+## What's new in this fork
 
-The scene classification databases (`vision_tags*.json`, `sheets_map*.json`)
-are committed so the selector works without redoing the visual review.
+| Upgrade | Detail |
+|---|---|
+| **Portable** | `ROOT` is the project folder (was a hardcoded `D:\...` path). Override with `CELEB_ROOT`. |
+| **Auto B-roll classification** | `AUTO_TAGS.py` sends the contact sheets to **Gemini vision** and writes `vision_tags.json` automatically — replacing the old manual `GEN_TAGS2.py` review. Shots are chosen on what's *in* the footage. Degrades to the filename heuristic if no key. |
+| **ElevenLabs "Titan" voice** | `make_voiceover()` uses ElevenLabs (deep/bold/powerful Titan) when `config.json` `"tts":"elevenlabs"` and a key is present; chunks long scripts under the API limit; falls back to free edge-tts. |
+| **One-command runner** | `RUN.py` drives the whole pipeline non-interactively (for automation / the `/celebvid` skill). |
+| **Reuse existing audio** | `--audio <file|YouTube id>` drops in a narration and skips TTS (used for the Ryan Reynolds trial). |
 
 ## Requirements
 
-- Python 3.10+
-- `ffmpeg` / `ffprobe` on PATH
-- `pip install yt-dlp edge-tts pillow requests`
+- Python 3.10+, `ffmpeg`/`ffprobe` on PATH
+- `pip install yt-dlp edge-tts pillow requests google-genai youtube-transcript-api`
+- Keys (optional, unlock upgrades):
+  - `gemini_key.txt` or `GEMINI_API_KEY` — auto B-roll tagging ([get one](https://aistudio.google.com/apikey))
+  - `elevenlabs_key.txt` or `ELEVENLABS_API_KEY` — Titan voice
+  - `anthropic_key.txt` or `ANTHROPIC_API_KEY` — Claude-written scripts
+  - Pexels key is built in (generic B-roll)
 
-## Run
+## Quick start
+
+```bash
+# New video, Claude-written script, Titan voice, generic Pexels B-roll
+python RUN.py --name "Jason Statham" --gen-transcript --minutes 8 \
+    --tts elevenlabs --pexels
+
+# Reuse an existing narration (file or YouTube id) and just re-edit the B-roll
+python RUN.py --name "Ryan Reynolds" --coach "Don Saladino" \
+    --transcript iJyAcSuuuq8 --audio iJyAcSuuuq8 --pexels
+```
+
+Output: `final_video/<SLUG>_FINAL.mp4`.
+
+See **[CELEBVID_CHARTER.md](CELEBVID_CHARTER.md)** for the full operating guide
+(the `/celebvid` skill and the `/goal` charter both reference it).
+
+## Pipeline
 
 ```
-python DOWNLOAD_VIDEOS.py
-python VISION_INDEX.py        # then classify scenes into vision_tags.json
-python GENERATE_FINAL_VIDEO.py
+config.json → footage (yt-dlp + Pexels) → INDEX_NEW (scene-detect + contact
+sheets) → AUTO_TAGS (Gemini) → GENERATE_FINAL_VIDEO (timeline + text + render)
 ```
 
-Output: `final_video/RYAN_REYNOLDS_FINAL.mp4`
+Individual stages (`DOWNLOAD_VIDEOS.py`, `VISION_INDEX.py`, `INDEX_NEW.py`,
+`GENERATE_FINAL_VIDEO.py`) still run standalone; `RUN.py` just orchestrates them.

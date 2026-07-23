@@ -1,5 +1,13 @@
-# Only Python sources (and README) are tracked
+# Only Python sources, docs, and data DBs are tracked
 *
 !*.py
+!*.md
 !.gitignore
-!README.md
+# committed classification data (small); footage/renders never are
+!sheets_map*.json
+!vision_tags*.json
+# never commit heavy artifacts
+config.json
+transcript_*.md
+voiceover_*.mp3
+complete_voiceover.mp3

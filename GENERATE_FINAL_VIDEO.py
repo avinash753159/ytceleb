@@ -26,7 +26,8 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(r"D:\Youtube\RYAN_REYNOLDS_DEADPOOL_VIDEO_BLUEPRINT")
+ROOT = Path(os.environ.get("CELEB_ROOT", "")) if os.environ.get("CELEB_ROOT") \
+    else Path(__file__).resolve().parent
 
 # ---- project config: subject is configurable, nothing is hardcoded ----
 _cfg = {}
@@ -263,20 +264,118 @@ def ffprobe_duration(p):
     return float(r.stdout.strip())
 
 
+def _narration_text():
+    """The speakable narration: drop headers/timestamps, join to one string."""
+    content = TRANSCRIPT.read_text(encoding="utf-8")
+    lines = [l.strip() for l in content.split("\n")
+             if l.strip() and not l.startswith("#") and not l.startswith("[")]
+    return " ".join(lines)
+
+
+def _elevenlabs_key():
+    """Titan voice needs an ElevenLabs key. Look in config, env, then file."""
+    key = _cfg.get("el_api_key") or os.environ.get("ELEVENLABS_API_KEY", "")
+    if not key:
+        kf = ROOT / "elevenlabs_key.txt"
+        if kf.exists():
+            key = kf.read_text().strip()
+    return key.strip()
+
+
+def _make_voiceover_elevenlabs(text, key):
+    """Synthesize with ElevenLabs. Chunks the script under the per-request
+    character limit, then concatenates the parts losslessly with ffmpeg.
+    Voice defaults to 'Titan' (deep/bold/powerful) resolved by name if only
+    a name is given in config."""
+    import requests
+    voice_id = _cfg.get("el_voice_id", "").strip()
+    voice_name = _cfg.get("el_voice_name", "Titan")
+    model = _cfg.get("el_model", "eleven_multilingual_v2")
+    hdr = {"xi-api-key": key}
+    if not voice_id:                     # resolve voice_id from its name
+        r = requests.get("https://api.elevenlabs.io/v1/voices",
+                         headers=hdr, timeout=30)
+        r.raise_for_status()
+        for v in r.json().get("voices", []):
+            if v["name"].strip().lower() == voice_name.strip().lower():
+                voice_id = v["voice_id"]
+                break
+        if not voice_id:
+            raise RuntimeError(f"ElevenLabs voice '{voice_name}' not found on "
+                               "this account; set el_voice_id in config.json")
+
+    # chunk by sentence into <=4500-char blocks (safe under the API limit)
+    sents = re.split(r"(?<=[.!?])\s+", text)
+    chunks, cur = [], ""
+    for s in sents:
+        if len(cur) + len(s) + 1 > 4500 and cur:
+            chunks.append(cur.strip())
+            cur = ""
+        cur += " " + s
+    if cur.strip():
+        chunks.append(cur.strip())
+
+    parts_dir = ROOT / "_vo_parts"
+    parts_dir.mkdir(exist_ok=True)
+    part_files = []
+    for i, ch in enumerate(chunks):
+        pf = parts_dir / f"vo_{i:03d}.mp3"
+        resp = requests.post(
+            f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+            headers={**hdr, "Content-Type": "application/json"},
+            json={"text": ch, "model_id": model,
+                  "voice_settings": {"stability": 0.5,
+                                     "similarity_boost": 0.75,
+                                     "style": 0.0, "use_speaker_boost": True}},
+            timeout=180)
+        resp.raise_for_status()
+        pf.write_bytes(resp.content)
+        part_files.append(pf)
+        print(f"    ElevenLabs part {i + 1}/{len(chunks)} ok")
+
+    if len(part_files) == 1:
+        shutil.copy(part_files[0], VOICEOVER)
+    else:
+        concat = parts_dir / "concat.txt"
+        concat.write_text("\n".join(f"file '{p.as_posix()}'"
+                                    for p in part_files))
+        subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0",
+                        "-i", str(concat), "-c", "copy", str(VOICEOVER)],
+                       capture_output=True, check=True)
+
+
 def make_voiceover():
+    """Generate the narration mp3. Engine chosen by config.json 'tts':
+      - 'elevenlabs'  -> Titan (deep/bold/powerful), if a key is present
+      - otherwise     -> free edge-tts neural voice
+    ElevenLabs falls back to edge-tts if the key is missing or the call
+    fails, so a render is never blocked on the paid voice."""
+    text = _narration_text()
+    engine = _cfg.get("tts", "edge").lower()
+
+    if engine in ("elevenlabs", "11labs", "eleven"):
+        key = _elevenlabs_key()
+        if key:
+            try:
+                _make_voiceover_elevenlabs(text, key)
+                return
+            except Exception as e:
+                print(f"    [!] ElevenLabs failed ({e}); "
+                      "falling back to edge-tts")
+        else:
+            print("    [!] tts=elevenlabs but no key found "
+                  "(config el_api_key / ELEVENLABS_API_KEY / "
+                  "elevenlabs_key.txt); using edge-tts")
+
     try:
         import edge_tts
     except ImportError:
         subprocess.run(["pip", "install", "edge-tts", "-q"], check=True)
         import edge_tts
-    content = TRANSCRIPT.read_text(encoding="utf-8")
-    lines = [l.strip() for l in content.split("\n")
-             if l.strip() and not l.startswith("#") and not l.startswith("[")]
-
     voice = _cfg.get("voice", "en-US-ChristopherNeural")
 
     async def _s():
-        c = edge_tts.Communicate(" ".join(lines), voice)
+        c = edge_tts.Communicate(text, voice)
         await c.save(str(VOICEOVER))
     asyncio.run(_s())
 
