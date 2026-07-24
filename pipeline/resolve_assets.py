@@ -64,9 +64,26 @@ def item_anchor_ms(items, beat, words):
     return out
 
 
+def load_pool_scan():
+    """Judge-verified whitelist (library/pool_scan.json): scene ->
+    {clean, ryan, tag}. Built once by the vision judge fleet; scenes judged
+    not-clean are excluded outright, ryan=True boosts subject queries, and
+    the tag adds a keyword-match signal on top of the embedding score."""
+    f = ROOT / "library" / "pool_scan.json"
+    if not f.exists():
+        return {}
+    return {r["scene"]: r for r in json.loads(f.read_text(encoding="utf-8"))}
+
+
 def main():
     import embed_index
     from fetch_stills import fetch_still
+
+    pool_scan = load_pool_scan()
+    if pool_scan:
+        n_clean = sum(1 for r in pool_scan.values() if r["clean"])
+        print(f"[*] pool scan active: {n_clean}/{len(pool_scan)} "
+              f"judge-verified clean")
 
     plan = json.loads((MANIFEST / "plan.json").read_text())["plan"]
     beats = {b["beat_id"]: b for b in
@@ -77,11 +94,16 @@ def main():
     assets, misses = {}, []
 
     def pick_clip(query, beat, prefer_subject):
-        cands = embed_index.query(query, 24)
+        cands = embed_index.query(query, 32)
+        qwords = {w for w in re.findall(r"[a-z]+", query.lower())
+                  if len(w) > 3}
         best = None
         for c in cands:
             if c["score"] < SCORE_FLOOR:
                 break
+            scan = pool_scan.get(c["id"])
+            if scan is not None and not scan["clean"]:
+                continue                       # judge-verified dirty: never
             last = used_scenes.get(c["id"])
             if last is not None and beat["start"] - last < 90:
                 continue                       # no reuse within 90s
@@ -89,6 +111,13 @@ def main():
                 continue
             bonus = SUBJ_BONUS if (prefer_subject and any(
                 s in c["source"].lower() for s in SUBJ_BONUS_SOURCES)) else 0
+            if scan is not None:
+                if prefer_subject and scan.get("ryan"):
+                    bonus += 0.05              # judges SAW Ryan in frame
+                tw = {w for w in re.findall(r"[a-z]+",
+                                            scan.get("tag", "").lower())
+                      if len(w) > 3}
+                bonus += 0.02 * len(qwords & tw)   # tag keyword agreement
             sc = c["score"] + bonus
             if best is None or sc > best[0]:
                 best = (sc, c)

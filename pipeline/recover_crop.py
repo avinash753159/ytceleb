@@ -49,8 +49,10 @@ def classify(ocr, src, a, b, tmp):
     croppable = True
     subtle = True
     any_text = False
+    import threading
+    tid = threading.get_ident()
     for k, frac in enumerate((0.2, 0.5, 0.8)):
-        f = tmp / f"c{k}.jpg"
+        f = tmp / f"c_{tid}_{k}.jpg"
         if not extract(src, a + ln * frac, f):
             continue
         img = cv2.imread(str(f))
