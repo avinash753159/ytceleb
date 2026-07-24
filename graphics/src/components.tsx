@@ -159,13 +159,38 @@ export const PersonCard: React.FC<{
         }}
       >
         <div style={{height: 560, overflow: 'hidden'}}>
-          <Img
-            src={imageSrc}
-            style={{
-              width: '100%', height: '100%', objectFit: 'cover',
-              transform: `scale(${zoom})`,
-            }}
-          />
+          {imageSrc ? (
+            <Img
+              src={imageSrc}
+              style={{
+                width: '100%', height: '100%', objectFit: 'cover',
+                transform: `scale(${zoom})`,
+              }}
+            />
+          ) : (
+            // monogram fallback: no licensed headshot available - never
+            // show a wrong person under a real name
+            <div
+              style={{
+                width: '100%', height: '100%', display: 'flex',
+                alignItems: 'center', justifyContent: 'center',
+                background:
+                  `radial-gradient(circle at 30% 25%, #2a2a34, #101014)`,
+              }}
+            >
+              <div
+                style={{
+                  width: 260, height: 260, borderRadius: 130,
+                  background: accent, display: 'flex',
+                  alignItems: 'center', justifyContent: 'center',
+                  fontFamily: TOKENS.fontDisplay, fontSize: 110,
+                  color: TOKENS.ink, transform: `scale(${zoom})`,
+                }}
+              >
+                {name.split(/\s+/).map((w) => w[0]).slice(0, 2).join('')}
+              </div>
+            </div>
+          )}
         </div>
         <div
           style={{

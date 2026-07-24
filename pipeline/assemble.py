@@ -53,6 +53,17 @@ def run(cmd, timeout=600):
     return r
 
 
+def data_url(path):
+    """Chrome blocks file:// URIs inside Remotion's served bundle
+    ('Not allowed to load local resource') - embed images as data URLs."""
+    import base64
+    ext = Path(path).suffix.lower().lstrip(".") or "jpeg"
+    if ext == "jpg":
+        ext = "jpeg"
+    b = Path(path).read_bytes()
+    return f"data:image/{ext};base64," + base64.b64encode(b).decode()
+
+
 _BUNDLE = None
 
 
@@ -83,7 +94,9 @@ def render_remotion(comp, props, dest, dur_s, alpha):
         cmd += ["--codec=vp8", "--image-format=png",
                 "--pixel-format=yuva420p"]
     else:
-        cmd += ["--codec=h264", "--image-format=jpeg"]
+        # config.ts defaults to yuva420p (for overlays) - h264 must override
+        cmd += ["--codec=h264", "--image-format=jpeg",
+                "--pixel-format=yuv420p"]
     old = os.getcwd()
     os.chdir(GRAPHICS)
     try:
@@ -168,7 +181,7 @@ def build_piece(p, a, beat, idx, assets_all):
             if idx % 2:
                 zoom = (zoom[1], zoom[0])
             render_remotion("KenBurns",
-                            {"src": Path(asset["path"]).as_uri(),
+                            {"src": data_url(asset["path"]),
                              "zoomFrom": zoom[0], "zoomTo": zoom[1],
                              "panFrom": list(pan[0]), "panTo": list(pan[1])},
                             piece, dur, alpha=False)
@@ -181,22 +194,22 @@ def build_piece(p, a, beat, idx, assets_all):
         if asset.get("kind") == "split":
             ov = p.get("overlay", {})
             render_remotion("SplitCompare",
-                            {"leftSrc": Path(asset["left"]["path"]).as_uri(),
-                             "rightSrc": Path(asset["right"]["path"]).as_uri(),
+                            {"leftSrc": data_url(asset["left"]["path"]),
+                             "rightSrc": data_url(asset["right"]["path"]),
                              "leftLabel": ov.get("left", ""),
                              "rightLabel": ov.get("right", "")},
                             piece, dur, alpha=False)
             return piece
         if asset.get("kind") == "still":
             render_remotion("KenBurns",
-                            {"src": Path(asset["path"]).as_uri()},
+                            {"src": data_url(asset["path"])},
                             piece, dur, alpha=False)
             return piece
         raise RuntimeError(f"{bid}: split_compare without asset")
 
     if tr == "person_card":
         base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4")
-        img = (Path(asset["path"]).as_uri()
+        img = (data_url(asset["path"])
                if asset.get("kind") == "still" else "")
         ov = p.get("overlay", {})
         webm = render_remotion("PersonCard",

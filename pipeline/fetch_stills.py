@@ -181,8 +181,10 @@ def ocr_reject(path):
         return False        # OCR unavailable: don't block, ingest QC catches it
 
 
-def upscale_if_needed(path, min_w=1920):
-    """Real-ESRGAN if available, else high-quality lanczos via ffmpeg."""
+def upscale_if_needed(path, min_w=1920, max_w=2560):
+    """Normalize width into [min_w, max_w]: upscale small stills
+    (Real-ESRGAN, else lanczos), downscale megapixel monsters - headless
+    Chrome fails to load ~60MP images during Remotion renders."""
     import subprocess
     r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
                         "-show_entries", "stream=width", "-of", "csv=p=0",
@@ -190,6 +192,15 @@ def upscale_if_needed(path, min_w=1920):
     try:
         w = int(r.stdout.strip().split("\n")[0])
     except Exception:
+        return False
+    if w > max_w:
+        dn = path.with_name(path.stem + "_dn" + path.suffix)
+        subprocess.run(["ffmpeg", "-i", str(path),
+                        "-vf", f"scale={max_w}:-2:flags=lanczos",
+                        "-q:v", "2", "-y", str(dn)], capture_output=True)
+        if dn.exists():
+            dn.replace(path)
+            return True
         return False
     if w >= min_w:
         return True
