@@ -135,16 +135,20 @@ def main():
             if c:
                 used_scenes[c["id"]] = b["end"]
                 dur = b["end"] - b["start"]
-                if dur > 6.0:      # QC: no shot may exceed 6s -> two shots
-                    c2 = pick_clip(p["retrieval_query"], b, subj)
-                    if c2:
-                        used_scenes[c2["id"]] = b["end"]
-                        rec["asset"] = {"kind": "clip2", "a": c, "b": c2}
-                    else:
-                        rec["asset"] = {"kind": "clip2", "a": c,
-                                        "b": {**c, "start":
-                                              min(c["start"] + 3.0,
-                                                  c["end"] - 1.3)}}
+                if dur > 6.0:      # QC: no shot may exceed 6s
+                    import math
+                    n = max(2, math.ceil(dur / 5.0))
+                    picks = [c]
+                    while len(picks) < n:
+                        cx = pick_clip(p["retrieval_query"], b, subj)
+                        if not cx:
+                            cx = {**c, "start": min(
+                                c["start"] + 3.0 * len(picks),
+                                c["end"] - 1.3)}
+                        else:
+                            used_scenes[cx["id"]] = b["end"]
+                        picks.append(cx)
+                    rec["asset"] = {"kind": "clips", "list": picks}
                 else:
                     rec["asset"] = {"kind": "clip", **c}
             else:

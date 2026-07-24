@@ -45,6 +45,27 @@ def g1_ocr_sweep(video, plan, assets, beats):
     ocr = RapidOCR()
     fails = []
     tmp = Path(tempfile.mkdtemp(prefix="qc_ocr_"))
+
+    # judge authority: scenes the vision fleet verified clean are exempt -
+    # OCR gibberish on textures / physical in-scene signage must not
+    # overrule a human-grade verdict
+    scan_f = ROOT / "library" / "pool_scan.json"
+    judged_clean = set()
+    if scan_f.exists():
+        judged_clean = {r["scene"] for r in
+                        json.loads(scan_f.read_text(encoding="utf-8"))
+                        if r["clean"]}
+
+    def beat_scenes(a):
+        ass = a.get("asset") or {}
+        if ass.get("kind") == "clip":
+            return [ass["id"]]
+        if ass.get("kind") == "clip2":
+            return [ass["a"]["id"], ass["b"]["id"]]
+        if ass.get("kind") == "clips":
+            return [c["id"] for c in ass["list"]]
+        return []
+
     for p in plan:
         a = assets[p["beat_id"]]
         tr = a["treatment"]
@@ -53,6 +74,9 @@ def g1_ocr_sweep(video, plan, assets, beats):
             continue          # our own overlays/labels contain text by design
         if p.get("overlay_stat"):
             continue
+        scenes = beat_scenes(a)
+        if scenes and all(s in judged_clean for s in scenes):
+            continue          # every scene here was eyeballed clean
         b = beats[p["beat_id"]]
         t = b["start"] + 0.5
         while t < b["end"] - 0.3:

@@ -152,11 +152,11 @@
   "fallback_used": true,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_008_2f68a9478ad9a3bd_0.jpg",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_008_v3b_4fee9b99da9164c7_0.jpg",
    "license": "pexels",
    "source": "pexels",
-   "page": "https://www.pexels.com/photo/person-writing-on-a-notebook-8370433/",
-   "title": "A person writing cryptocurrency notes in a notebook, highlighting Bitcoin and future predictions."
+   "page": "https://www.pexels.com/photo/view-of-dumbbells-lying-on-the-floor-16513597/",
+   "title": "Hexagonal dumbbells on a gym floor bathed in natural sunlight, creating dynamic shadows."
   }
  },
  "b_009": {
@@ -1191,20 +1191,15 @@
   }
  },
  "b_064": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v3_ryan_saladino_a|52",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_saladino_a.mp4",
-   "source": "v3_ryan_saladino_a",
-   "scene": 52,
-   "start": 316.15,
-   "end": 319.99,
-   "dur": 3.84,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 0.1047
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_064_4c1c6e28473bef32_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/fresh-vegetables-in-containers-5794767/",
+   "title": "Organic vegetables displayed in plastic containers for a healthy diet."
   }
  },
  "b_065": {
@@ -1808,54 +1803,80 @@
   }
  },
  "b_099": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_b|65",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
-   "source": "ryan_reynolds_gym_b",
-   "scene": 65,
-   "start": 400.4,
-   "end": 413.08,
-   "dur": 12.68,
-   "score": 0.083
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_099_fca55b8540cf3adb_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/woman-wearing-red-sports-bra-leaning-on-concrete-bricks-863986/",
+   "title": "Blonde woman in red sportswear smiling with a dumbbell in a bright gym setting."
   }
  },
  "b_100": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip2",
-   "a": {
-    "id": "v3_ryan_saladino_b|0",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_saladino_b.mp4",
-    "source": "v3_ryan_saladino_b",
-    "scene": 0,
-    "start": 0.0,
-    "end": 3.09,
-    "dur": 3.09,
-    "crop_box": [
-     0.0,
-     0.106,
-     0.0,
-     0.0
-    ],
-    "subtle_mark": false,
-    "score": 0.1543
-   },
-   "b": {
-    "id": "v3_ryan_gym_b|19",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
-    "source": "v3_ryan_gym_b",
-    "scene": 19,
-    "start": 55.7,
-    "end": 57.07,
-    "dur": 1.37,
-    "crop_box": null,
-    "subtle_mark": false,
-    "score": 0.1375
-   }
+   "kind": "clips",
+   "list": [
+    {
+     "id": "v3_ryan_saladino_b|0",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_saladino_b.mp4",
+     "source": "v3_ryan_saladino_b",
+     "scene": 0,
+     "start": 0.0,
+     "end": 3.09,
+     "dur": 3.09,
+     "crop_box": [
+      0.0,
+      0.106,
+      0.0,
+      0.0
+     ],
+     "subtle_mark": false,
+     "score": 0.165
+    },
+    {
+     "id": "ryan_reynolds_coach_a|0",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_coach_a.mp4",
+     "source": "ryan_reynolds_coach_a",
+     "scene": 0,
+     "start": 0.0,
+     "end": 3.09,
+     "dur": 3.09,
+     "crop_box": [
+      0.0,
+      0.106,
+      0.0,
+      0.0
+     ],
+     "subtle_mark": false,
+     "score": 0.165
+    },
+    {
+     "id": "v3_ryan_gym_b|17",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
+     "source": "v3_ryan_gym_b",
+     "scene": 17,
+     "start": 52.67,
+     "end": 54.83,
+     "dur": 2.17,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 0.1489
+    },
+    {
+     "id": "ryan_reynolds_gym_d|17",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
+     "source": "ryan_reynolds_gym_d",
+     "scene": 17,
+     "start": 52.67,
+     "end": 54.83,
+     "dur": 2.17,
+     "score": 0.1489
+    }
+   ]
   }
  }
 }
