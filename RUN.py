@@ -32,6 +32,17 @@ import subprocess
 import sys
 from pathlib import Path
 
+# Windows consoles / redirected logs default to cp1252, which cannot encode
+# the checkmarks and arrows some scripts print -> UnicodeEncodeError mid-run.
+# Force UTF-8 for this process and every child so output never crashes a run.
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+os.environ["PYTHONUTF8"] = "1"
+os.environ["PYTHONIOENCODING"] = "utf-8"
+
 ROOT = Path(__file__).resolve().parent
 PY = sys.executable
 

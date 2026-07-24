@@ -46,7 +46,7 @@ def download_youtube_videos():
 
         if output_file.exists():
             size_mb = output_file.stat().st_size / (1024 * 1024)
-            print(f"[✓] {name} ({size_mb:.1f} MB)")
+            print(f"[OK] {name} ({size_mb:.1f} MB)")
             downloaded += 1
             continue
 
@@ -61,7 +61,7 @@ def download_youtube_videos():
             print("[FAILED after all retries]")
             failed += 1
 
-    print(f"\n[✓] Downloaded: {downloaded}/11")
+    print(f"\n[OK] Downloaded: {downloaded}/11")
     if failed > 0:
         print(f"[!] Failed: {failed}")
 
@@ -116,7 +116,7 @@ def download_pexels_videos():
                     video_path = pexels_dir / video_name
 
                     if video_path.exists():
-                        print(f"    [✓] {video_name} (exists)")
+                        print(f"    [OK] {video_name} (exists)")
                         downloaded += 1
                         continue
 
@@ -127,7 +127,7 @@ def download_pexels_videos():
                         f.write(video_response.content)
 
                     size_mb = video_path.stat().st_size / (1024 * 1024)
-                    print(f"✓ ({size_mb:.1f} MB)")
+                    print(f"OK ({size_mb:.1f} MB)")
                     downloaded += 1
 
                 except Exception as e:
@@ -136,7 +136,7 @@ def download_pexels_videos():
         except Exception as e:
             print(f"    [!] Search error")
 
-    print(f"\n[✓] Pexels videos: {downloaded}")
+    print(f"\n[OK] Pexels videos: {downloaded}")
     return downloaded
 
 
@@ -151,8 +151,8 @@ if __name__ == "__main__":
     print("\n" + "="*70)
     print("SUMMARY")
     print("="*70)
-    print(f"[✓] YouTube: {yt_count} videos")
-    print(f"[✓] Pexels: {px_count} videos")
-    print(f"[✓] Total: {yt_count + px_count} videos")
-    print(f"\n[→] NEXT: Run QUICK_COMPILE.py")
+    print(f"[OK] YouTube: {yt_count} videos")
+    print(f"[OK] Pexels: {px_count} videos")
+    print(f"[OK] Total: {yt_count + px_count} videos")
+    print(f"\n[->] NEXT: Run QUICK_COMPILE.py")
     print("="*70)
