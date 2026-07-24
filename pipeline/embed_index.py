@@ -60,10 +60,21 @@ def build():
     shots = [json.loads(l) for l in
              (LIB / "shots.jsonl").read_text(encoding="utf-8").splitlines()]
     clean = [s for s in shots if s["verdict"] == "clean"]
+
+    # resume: skip shots already embedded (kill-resilient)
+    embs, meta = [], []
+    if NPY.exists() and META.exists():
+        prior = np.load(NPY)
+        pmeta = json.loads(META.read_text(encoding="utf-8"))
+        done_ids = {m["id"] for m in pmeta}
+        embs = [prior[i] for i in range(len(pmeta))]
+        meta = list(pmeta)
+        clean = [s for s in clean
+                 if f"{s['source']}|{s['scene']}" not in done_ids]
+        print(f"[*] resume: {len(meta)} already embedded")
     print(f"[*] embedding {len(clean)} clean shots ({MODEL})")
 
     tmp = Path(tempfile.mkdtemp(prefix="emb_"))
-    embs, meta = [], []
     with torch.no_grad():
         for i, s in enumerate(clean):
             ln = s["end"] - s["start"]
@@ -88,6 +99,8 @@ def build():
                          "end": s["end"], "dur": s["dur"]})
             if (i + 1) % 50 == 0:
                 print(f"    [{i + 1}/{len(clean)}]", flush=True)
+                np.save(NPY, np.stack(embs))          # checkpoint
+                META.write_text(json.dumps(meta), encoding="utf-8")
 
     arr = np.stack(embs)
     np.save(NPY, arr)

@@ -271,8 +271,12 @@ def main():
     lst.write_text("\n".join(f"file '{p.absolute().as_posix()}'"
                              for p in pieces), encoding="utf-8")
     silent = WORK / "v2_silent.mp4"
+    # re-encode at concat: pieces come from two encoders (x264 + Remotion)
+    # whose stream params differ - stream-copy concat would glitch
     run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
-         "-c", "copy", "-y", str(silent)], timeout=1800)
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
+         "-pix_fmt", "yuv420p", "-r", str(FPS), "-y", str(silent)],
+        timeout=3600)
 
     final = OUT / cfg.get("output", "RYAN_REYNOLDS_FINAL.mp4").replace(
         ".mp4", "_V2.mp4")
