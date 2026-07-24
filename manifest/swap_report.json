@@ -1,0 +1,219 @@
+[
+ {
+  "beat_id": "b_005",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|25"
+  ],
+  "why": [
+   "Close-up dumbbell curl fits the query, but a 'BODY TRANSFORMATION' watermark is visible center-frame, which disqualifies the shot."
+  ]
+ },
+ {
+  "beat_id": "b_006",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|17"
+  ],
+  "why": [
+   "Ryan Reynolds talking-head at a photoshoot (no gym, no training) with a Men's Health 'MH' logo watermark bottom-right \u2014 wrong content and visible branding."
+  ]
+ },
+ {
+  "beat_id": "b_020",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|3"
+  ],
+  "why": [
+   "Reynolds posing next to a heavy bag is a static magazine photo, not fight training, and 'Men'sHealth', an 'MH' logo, and a faint 'BODY TRANSFORMATION' watermark are all visible."
+  ]
+ },
+ {
+  "beat_id": "b_025",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|30"
+  ],
+  "why": [
+   "Shirtless man doing an ab/decline movement on a bench with no dumbbells in frame \u2014 the narration names a chest-and-triceps workout and the query names dumbbell chest work, neither of which is visible."
+  ]
+ },
+ {
+  "beat_id": "b_035",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|58"
+  ],
+  "why": [
+   "Although it shows dumbbell curls, the frame is a low-quality motion-blurred shot with a visible 'BODY TRANSFORMATION' watermark burned into the image, which disqualifies it."
+  ]
+ },
+ {
+  "beat_id": "b_037",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|65",
+   "ryan_reynolds_gym_a|65"
+  ],
+  "why": [
+   "Frame is two trainers standing and talking with large burned-in graphics ('5 LOADED CARRY / 5 rounds of 25 yards') and a Men's Health logo watermark \u2014 text overlays plus no core exercise being performed."
+  ]
+ },
+ {
+  "beat_id": "b_038",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|114"
+  ],
+  "why": [
+   "Frame shows a man doing a lying/incline barbell press on rusty outdoor equipment \u2014 not a back squat, front squat, leg press, or split squat, and not in a gym, so it contradicts both query and narration."
+  ]
+ },
+ {
+  "beat_id": "b_039",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|14"
+  ],
+  "why": [
+   "Frame shows a man lifting a medicine ball or plate overhead while another watches \u2014 no walking lunges and no leg extension machine anywhere, so it contradicts the specific quad exercises named."
+  ]
+ },
+ {
+  "beat_id": "b_040",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|77",
+   "pexels_running_cardio_sprint_0|0"
+  ],
+  "why": [
+   "A man casually resting a hand on a bench in a home gym \u2014 no sprinting, no bike, no HIIT effort of any kind, plus visible gym signage text ('...ADINO') on the wall."
+  ]
+ },
+ {
+  "beat_id": "b_042",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_a|37"
+  ],
+  "why": [
+   "Content is right (seated dumbbell overhead press with spotter) but a faint '...TRANSFORM...' watermark is visible across the middle of the frame, which is an automatic fail."
+  ]
+ },
+ {
+  "beat_id": "b_044",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|21"
+  ],
+  "why": [
+   "Man reclining on an adjustable bench with no weight or curl in sight \u2014 no preacher bench, no concentration curl, just a generic muscular-guy-on-bench shot under a very specific biceps line."
+  ]
+ },
+ {
+  "beat_id": "b_048",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|95"
+  ],
+  "why": [
+   "A woman doing a dumbbell box squat onto a pad \u2014 not a Romanian deadlift, hip thrust, or pull-through \u2014 and visible 'BELLS OF STEEL' branding text plus a cork board with papers make it a mismatch for the specific exercise narration."
+  ]
+ },
+ {
+  "beat_id": "b_050",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_a|25"
+  ],
+  "why": [
+   "Frame shows bare legs standing on a beach in denim shorts with no jump, sprint, or explosive movement visible \u2014 a static beach shot does not depict explosive power training."
+  ]
+ },
+ {
+  "beat_id": "b_053",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|38"
+  ],
+  "why": [
+   "A three-panel split-screen of men standing around a gym (one on the phone) \u2014 no boxing, no pad work, no sweat/effort visible, and the baked-in split-screen edit makes it unusable as clean b-roll."
+  ]
+ },
+ {
+  "beat_id": "b_054",
+  "action": "swap",
+  "new": [
+   "pexels_shoulder_arm_exercise_training_0|0"
+  ],
+  "why": [
+   "The frame is entirely a burned-in text card listing a 'DAY 4' workout \u2014 on-screen text everywhere, no footage of anyone training, so it fails outright."
+  ]
+ },
+ {
+  "beat_id": "b_056",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_b|27"
+  ],
+  "why": [
+   "A talking-head of a man in a backwards cap standing indoors in a gym (with mirrored wall text visible) \u2014 nothing outdoor, no hiking or biking, completely wrong for an outdoor cardio query."
+  ]
+ },
+ {
+  "beat_id": "b_057",
+  "action": "swap",
+  "new": [
+   "pexels_recovery_stretching_yoga_0|0",
+   "ryan_reynolds_diet_a|9"
+  ],
+  "why": [
+   "A dark, blurry shot of someone doing feet-elevated decline pushups on a stability ball \u2014 that is strength training, not foam rolling/yoga/mobility, and it contradicts the rest-day recovery narration."
+  ]
+ },
+ {
+  "beat_id": "b_062",
+  "action": "swap",
+  "new": [
+   "pexels_shoulder_arm_exercise_training_1|0",
+   "ryan_reynolds_diet_a|53"
+  ],
+  "why": [
+   "Large baked-in on-screen graphic text ('4 STRICT PULLUP / 5 sets of 5 reps') from the source video is plainly visible, which is an automatic fail regardless of the pull-up content."
+  ]
+ },
+ {
+  "beat_id": "b_086",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|74"
+  ],
+  "why": [
+   "Frame is a shirtless man from behind in a bright living room touching his hair \u2014 no massage, bodywork, sauna, or ice bath anywhere, so it fails both the recovery query and the narration."
+  ]
+ },
+ {
+  "beat_id": "b_097",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|61"
+  ],
+  "why": [
+   "Content-wise it is Ryan Reynolds talking on camera, but the frame carries an NBC News watermark plus burned-in chyron text ('RYAN REYNOLDS LIVE IN 1A / STAR GOES UNDERGROUND IN NEW ROLE'), which disqualifies it outright."
+  ]
+ },
+ {
+  "beat_id": "b_100",
+  "action": "swap",
+  "new": [
+   "ryan_reynolds_gym_d|25",
+   "ryan_reynolds_gym_d|17",
+   "ryan_reynolds_gym_d|3",
+   "ryan_reynolds_gym_d|19"
+  ],
+  "why": [
+   "reshape>12s"
+  ]
+ }
+]

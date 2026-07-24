@@ -162,13 +162,22 @@ def build_piece(p, a, beat, idx, assets_all):
     if tr in ("motion_broll", "exercise_demo"):
         if asset.get("kind") == "clip":
             return clip_piece(asset, dur, piece)
+        multi = None
         if asset.get("kind") == "clip2":       # >6s beat = two shots
-            h1, h2 = dur / 2, dur - dur / 2
-            p1 = clip_piece(asset["a"], h1, WORK / f"h1_{bid}.mp4")
-            p2 = clip_piece(asset["b"], h2, WORK / f"h2_{bid}.mp4")
+            multi = [asset["a"], asset["b"]]
+        elif asset.get("kind") == "clips":     # N shots (long/music beats)
+            multi = asset["list"]
+        if multi:
+            n = len(multi)
+            seg = dur / n
+            parts = []
+            for i, c in enumerate(multi):
+                parts.append(clip_piece(
+                    c, seg if i < n - 1 else dur - seg * (n - 1),
+                    WORK / f"h{i}_{bid}.mp4"))
             l2 = WORK / f"cc_{bid}.txt"
-            l2.write_text(f"file '{p1.absolute().as_posix()}'\n"
-                          f"file '{p2.absolute().as_posix()}'")
+            l2.write_text("\n".join(f"file '{p.absolute().as_posix()}'"
+                                    for p in parts))
             run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(l2),
                  "-c", "copy", "-y", str(piece)])
             return piece

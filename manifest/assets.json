@@ -37,12 +37,13 @@
   "fallback_used": false,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_002_f3dd7709adec52eb_0.jpg",
-   "license": "pexels",
-   "source": "pexels",
-   "page": "https://www.pexels.com/photo/monochrome-photo-of-muscular-man-15046713/",
-   "title": "Muscular man lifting weights in a gym setting, showcasing strength and fitness."
-  }
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_002_v3_e234e7d391702fab_0.jpg",
+   "license": "by",
+   "source": "openverse",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=70554183",
+   "title": "File:Deadpool 2 Japan Premiere Red Carpet Ryan Reynolds (cropped).jpg"
+  },
+  "audit": "still_swapped"
  },
  "b_003": {
   "treatment": "still_pushin",
@@ -68,30 +69,32 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_int_a|17",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_a.mp4",
-   "source": "ryan_reynolds_int_a",
-   "scene": 17,
-   "start": 53.22,
-   "end": 54.89,
-   "dur": 1.67,
-   "score": 0.1134
-  }
+   "id": "ryan_reynolds_gym_d|25",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
+   "source": "ryan_reynolds_gym_d",
+   "scene": 25,
+   "start": 67.57,
+   "end": 68.87,
+   "dur": 1.3,
+   "score": 0.1038
+  },
+  "audit": "swapped"
  },
  "b_006": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_int_a|30",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_a.mp4",
-   "source": "ryan_reynolds_int_a",
-   "scene": 30,
-   "start": 90.76,
-   "end": 92.22,
-   "dur": 1.46,
-   "score": 0.1621
-  }
+   "id": "ryan_reynolds_gym_d|17",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
+   "source": "ryan_reynolds_gym_d",
+   "scene": 17,
+   "start": 52.67,
+   "end": 54.83,
+   "dur": 2.17,
+   "score": 0.1404
+  },
+  "audit": "swapped"
  },
  "b_007": {
   "treatment": "motion_broll",
@@ -113,12 +116,13 @@
   "fallback_used": false,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_008_2f68a9478ad9a3bd_0.jpg",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_008_v2_3dbbeda7438c4267_2.jpg",
    "license": "pexels",
    "source": "pexels",
-   "page": "https://www.pexels.com/photo/person-writing-on-a-notebook-8370433/",
-   "title": "A person writing cryptocurrency notes in a notebook, highlighting Bitcoin and future predictions."
-  }
+   "page": "https://www.pexels.com/photo/dumbbells-and-black-boxing-gloves-6296116/",
+   "title": "High angle view of boxing gloves, dumbbell, and kettlebell on gym floor."
+  },
+  "audit": "still_swapped"
  },
  "b_009": {
   "treatment": "motion_broll",
@@ -190,12 +194,13 @@
   "fallback_used": false,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_015_34f6c20cf1cad72b_0.jpg",
-   "license": "pexels",
-   "source": "pexels",
-   "page": "https://www.pexels.com/photo/man-with-a-gun-behind-a-net-18326060/",
-   "title": "A distressed man reaches through a fence, holding a gun, in a tense setting."
-  }
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_015_ff_333bc35bcc39f033_0.jpg",
+   "license": "by",
+   "source": "openverse",
+   "page": "https://www.flickr.com/photos/26547909@N07/5028434520",
+   "title": "Ryan Reynolds"
+  },
+  "audit": "forced_still"
  },
  "b_016": {
   "treatment": "still_pushin",
@@ -250,19 +255,17 @@
   }
  },
  "b_020": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_int_a|92",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_a.mp4",
-   "source": "ryan_reynolds_int_a",
-   "scene": 92,
-   "start": 214.01,
-   "end": 215.26,
-   "dur": 1.25,
-   "score": 0.1274
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_020_ff_7b3ca6fb84bd2afb_0.jpg",
+   "license": "CC BY-SA 2.0",
+   "source": "wikimedia",
+   "page": "https://commons.wikimedia.org/wiki/File:%27Pugpool%27_Deadpool_Dog_Sidekick.jpg",
+   "title": "File:'Pugpool' Deadpool Dog Sidekick.jpg"
+  },
+  "audit": "forced_still"
  },
  "b_021": {
   "treatment": "motion_broll",
@@ -330,15 +333,16 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_gym_a|30",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
-   "source": "ryan_reynolds_gym_a",
+   "id": "ryan_reynolds_gym_b|30",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
    "scene": 30,
    "start": 146.27,
    "end": 149.82,
    "dur": 3.55,
    "score": 0.1076
-  }
+  },
+  "audit": "swapped"
  },
  "b_026": {
   "treatment": "infographic_list",
@@ -462,15 +466,16 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_int_a|17",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_a.mp4",
-   "source": "ryan_reynolds_int_a",
-   "scene": 17,
-   "start": 53.22,
-   "end": 54.89,
-   "dur": 1.67,
-   "score": 0.107
-  }
+   "id": "ryan_reynolds_gym_b|58",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
+   "scene": 58,
+   "start": 365.37,
+   "end": 368.58,
+   "dur": 3.21,
+   "score": 0.0982
+  },
+  "audit": "swapped"
  },
  "b_036": {
   "treatment": "infographic_list",
@@ -488,85 +493,70 @@
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip2",
-   "a": {
-    "id": "ryan_reynolds_int_c|15",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_c.mp4",
-    "source": "ryan_reynolds_int_c",
-    "scene": 15,
-    "start": 51.43,
-    "end": 58.98,
-    "dur": 7.55,
-    "score": 0.1007
-   },
-   "b": {
-    "id": "ryan_reynolds_gym_c|122",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-    "source": "ryan_reynolds_gym_c",
-    "scene": 122,
-    "start": 691.69,
-    "end": 697.45,
-    "dur": 5.76,
-    "score": 0.094
-   }
-  }
+   "kind": "clips",
+   "list": [
+    {
+     "id": "ryan_reynolds_gym_b|65",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+     "source": "ryan_reynolds_gym_b",
+     "scene": 65,
+     "start": 400.4,
+     "end": 413.08,
+     "dur": 12.68,
+     "score": 0.0915
+    },
+    {
+     "id": "ryan_reynolds_gym_a|65",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
+     "source": "ryan_reynolds_gym_a",
+     "scene": 65,
+     "start": 400.4,
+     "end": 413.08,
+     "dur": 12.68,
+     "score": 0.0915
+    }
+   ]
+  },
+  "audit": "swapped"
  },
  "b_038": {
-  "treatment": "exercise_demo",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_c|114",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-   "source": "ryan_reynolds_gym_c",
-   "scene": 114,
-   "start": 646.65,
-   "end": 657.91,
-   "dur": 11.26,
-   "score": 0.1065
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_038_ff_31f4b7ddfcf6c5a1_2.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/man-in-black-tank-top-working-out-3926639/",
+   "title": "A focused man lifting weights indoors showcasing strength and concentration."
+  },
+  "audit": "forced_still"
  },
  "b_039": {
-  "treatment": "exercise_demo",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_a|14",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
-   "source": "ryan_reynolds_gym_a",
-   "scene": 14,
-   "start": 31.2,
-   "end": 33.12,
-   "dur": 1.92,
-   "score": 0.0928
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_039_ff_daa8741037eeac7d_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/a-woman-in-black-tank-top-working-out-in-the-room-4587359/",
+   "title": "A young woman performing lunges with dumbbells in a modern indoor gym setting."
+  },
+  "audit": "forced_still"
  },
  "b_040": {
-  "treatment": "exercise_demo",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip2",
-   "a": {
-    "id": "ryan_reynolds_int_c|21",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_c.mp4",
-    "source": "ryan_reynolds_int_c",
-    "scene": 21,
-    "start": 124.92,
-    "end": 126.54,
-    "dur": 1.63,
-    "score": 0.0757
-   },
-   "b": {
-    "id": "ryan_reynolds_int_c|23",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_c.mp4",
-    "source": "ryan_reynolds_int_c",
-    "scene": 23,
-    "start": 128.13,
-    "end": 137.43,
-    "dur": 9.3,
-    "score": 0.0711
-   }
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_040_ff_5b9c08bab4a190b1_1.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/man-in-res-tank-top-running-on-athletic-field-3760259/",
+   "title": "Young male athlete in start position on outdoor track, ready to sprint."
+  },
+  "audit": "forced_still"
  },
  "b_041": {
   "treatment": "motion_broll",
@@ -588,15 +578,16 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_int_a|15",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_a.mp4",
-   "source": "ryan_reynolds_int_a",
-   "scene": 15,
-   "start": 50.93,
-   "end": 52.22,
-   "dur": 1.29,
-   "score": 0.1002
-  }
+   "id": "ryan_reynolds_gym_a|37",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
+   "source": "ryan_reynolds_gym_a",
+   "scene": 37,
+   "start": 197.41,
+   "end": 215.55,
+   "dur": 18.14,
+   "score": 0.0959
+  },
+  "audit": "swapped"
  },
  "b_043": {
   "treatment": "infographic_list",
@@ -611,19 +602,17 @@
   ]
  },
  "b_044": {
-  "treatment": "exercise_demo",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_c|30",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-   "source": "ryan_reynolds_gym_c",
-   "scene": 30,
-   "start": 146.27,
-   "end": 149.82,
-   "dur": 3.55,
-   "score": 0.0981
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_044_ff_b69ea4813bc5fa87_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/man-in-black-tank-top-working-out-3926644/",
+   "title": "A determined man lifting a dumbbell indoors, showcasing strength and fitness."
+  },
+  "audit": "forced_still"
  },
  "b_045": {
   "treatment": "exercise_demo",
@@ -687,15 +676,16 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_gym_c|95",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-   "source": "ryan_reynolds_gym_c",
+   "id": "ryan_reynolds_gym_b|95",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
    "scene": 95,
    "start": 527.19,
    "end": 529.95,
    "dur": 2.75,
    "score": 0.085
-  }
+  },
+  "audit": "swapped"
  },
  "b_049": {
   "treatment": "infographic_list",
@@ -710,19 +700,17 @@
   ]
  },
  "b_050": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_c|25",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-   "source": "ryan_reynolds_gym_c",
-   "scene": 25,
-   "start": 98.68,
-   "end": 115.57,
-   "dur": 16.89,
-   "score": 0.085
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_050_ff_e3ec446092602248_3.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/person-in-black-activewear-practicing-plyometrics-7675403/",
+   "title": "Close-up of an athlete's legs performing a box jump indoors, showcasing athletic footwear and activewear."
+  },
+  "audit": "forced_still"
  },
  "b_051": {
   "treatment": "motion_broll",
@@ -756,30 +744,32 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_int_c|11",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_c.mp4",
-   "source": "ryan_reynolds_int_c",
-   "scene": 11,
-   "start": 30.11,
-   "end": 33.66,
-   "dur": 3.55,
-   "score": 0.0818
-  }
+   "id": "ryan_reynolds_gym_b|38",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
+   "scene": 38,
+   "start": 215.55,
+   "end": 225.39,
+   "dur": 9.84,
+   "score": 0.0773
+  },
+  "audit": "swapped"
  },
  "b_054": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_gym_c|126",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-   "source": "ryan_reynolds_gym_c",
-   "scene": 126,
-   "start": 699.45,
-   "end": 702.37,
-   "dur": 2.92,
-   "score": 0.0942
-  }
+   "id": "pexels_shoulder_arm_exercise_training_0|0",
+   "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_shoulder_arm_exercise_training_0.mp4",
+   "source": "pexels_shoulder_arm_exercise_training_0",
+   "scene": 0,
+   "start": 0.0,
+   "end": 17.45,
+   "dur": 17.45,
+   "score": 0.0735
+  },
+  "audit": "swapped"
  },
  "b_055": {
   "treatment": "stat_callout",
@@ -789,46 +779,30 @@
   }
  },
  "b_056": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_int_c|30",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_c.mp4",
-   "source": "ryan_reynolds_int_c",
-   "scene": 30,
-   "start": 296.46,
-   "end": 384.38,
-   "dur": 87.92,
-   "score": 0.0616
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_056_ff_70a3fac16f4e6a48_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/a-person-with-a-backpack-on-a-mountain-27517432/",
+   "title": "A hiker pauses at a trail sign in the scenic Uinta Mountains wilderness."
+  },
+  "audit": "forced_still"
  },
  "b_057": {
-  "treatment": "exercise_demo",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip2",
-   "a": {
-    "id": "pexels_recovery_stretching_yoga_0|0",
-    "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_recovery_stretching_yoga_0.mp4",
-    "source": "pexels_recovery_stretching_yoga_0",
-    "scene": 0,
-    "start": 0.0,
-    "end": 12.2,
-    "dur": 12.2,
-    "score": 0.0899
-   },
-   "b": {
-    "id": "ryan_reynolds_gym_d|55",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
-    "source": "ryan_reynolds_gym_d",
-    "scene": 55,
-    "start": 144.77,
-    "end": 147.83,
-    "dur": 3.07,
-    "score": 0.0727
-   }
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_057_ff_3df9ac27b824be7f_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/photo-of-shirtless-man-doing-yoga-2294360/",
+   "title": "Muscular man performing yoga stretch indoors on a mat with urban window view in the background."
+  },
+  "audit": "forced_still"
  },
  "b_058": {
   "treatment": "still_pushin",
@@ -895,28 +869,31 @@
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip2",
-   "a": {
-    "id": "pexels_shoulder_arm_exercise_training_1|0",
-    "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_shoulder_arm_exercise_training_1.mp4",
-    "source": "pexels_shoulder_arm_exercise_training_1",
-    "scene": 0,
-    "start": 0.0,
-    "end": 24.62,
-    "dur": 24.62,
-    "score": 0.0843
-   },
-   "b": {
-    "id": "ryan_reynolds_gym_c|120",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
-    "source": "ryan_reynolds_gym_c",
-    "scene": 120,
-    "start": 689.56,
-    "end": 690.82,
-    "dur": 1.25,
-    "score": 0.0824
-   }
-  }
+   "kind": "clips",
+   "list": [
+    {
+     "id": "pexels_shoulder_arm_exercise_training_1|0",
+     "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_shoulder_arm_exercise_training_1.mp4",
+     "source": "pexels_shoulder_arm_exercise_training_1",
+     "scene": 0,
+     "start": 0.0,
+     "end": 24.62,
+     "dur": 24.62,
+     "score": 0.0843
+    },
+    {
+     "id": "ryan_reynolds_diet_a|53",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_diet_a.mp4",
+     "source": "ryan_reynolds_diet_a",
+     "scene": 53,
+     "start": 484.75,
+     "end": 509.95,
+     "dur": 25.2,
+     "score": 0.0796
+    }
+   ]
+  },
+  "audit": "swapped"
  },
  "b_063": {
   "treatment": "motion_broll",
@@ -1137,19 +1114,17 @@
   }
  },
  "b_082": {
-  "treatment": "exercise_demo",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_int_c|33",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_c.mp4",
-   "source": "ryan_reynolds_int_c",
-   "scene": 33,
-   "start": 391.27,
-   "end": 405.4,
-   "dur": 14.14,
-   "score": 0.1012
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_082_ff_80031d0555848715_0.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/man-training-with-battle-ropes-4164519/",
+   "title": "Man engages in an intense battle rope workout in a gym, focusing on fitness and strength."
+  },
+  "audit": "forced_still_signage"
  },
  "b_083": {
   "treatment": "infographic_list",
@@ -1187,19 +1162,17 @@
   }
  },
  "b_086": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_bts_a|38",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_bts_a.mp4",
-   "source": "ryan_reynolds_bts_a",
-   "scene": 38,
-   "start": 67.15,
-   "end": 68.44,
-   "dur": 1.29,
-   "score": 0.0913
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_086_ff_60bf022016a7f201_3.jpg",
+   "license": "pexels",
+   "source": "pexels",
+   "page": "https://www.pexels.com/photo/physical-therapist-assisting-patient-in-rehab-session-31234755/",
+   "title": "A therapist assists a patient during a rehabilitation session indoors, promoting mobility and flexibility."
+  },
+  "audit": "forced_still"
  },
  "b_087": {
   "treatment": "motion_broll",
@@ -1304,19 +1277,17 @@
   ]
  },
  "b_097": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_int_b|108",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_b.mp4",
-   "source": "ryan_reynolds_int_b",
-   "scene": 108,
-   "start": 316.12,
-   "end": 320.42,
-   "dur": 4.3,
-   "score": 0.1559
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_097_ff2_ee768d855981aab8_4.jpg",
+   "license": "CC BY-SA 3.0",
+   "source": "wikimedia",
+   "page": "https://commons.wikimedia.org/wiki/File:Ryan_Reynolds_by_Gage_Skidmore_4.jpg",
+   "title": "File:Ryan Reynolds by Gage Skidmore 4.jpg"
+  },
+  "audit": "forced_still"
  },
  "b_098": {
   "treatment": "motion_broll",
@@ -1349,27 +1320,54 @@
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip2",
-   "a": {
-    "id": "ryan_reynolds_gym_d|25",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
-    "source": "ryan_reynolds_gym_d",
-    "scene": 25,
-    "start": 67.57,
-    "end": 68.87,
-    "dur": 1.3,
-    "score": 0.1484
-   },
-   "b": {
-    "id": "ryan_reynolds_gym_d|73",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
-    "source": "ryan_reynolds_gym_d",
-    "scene": 73,
-    "start": 191.17,
-    "end": 192.7,
-    "dur": 1.53,
-    "score": 0.1457
-   }
-  }
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "ryan_reynolds_gym_b|34",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+     "source": "ryan_reynolds_gym_b",
+     "scene": 34,
+     "start": 175.34,
+     "end": 180.05,
+     "dur": 4.71,
+     "score": 0.1149
+    },
+    {
+     "kind": "clip",
+     "id": "pexels_bodybuilding_workout_exercise_0|0",
+     "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_bodybuilding_workout_exercise_0.mp4",
+     "source": "pexels_bodybuilding_workout_exercise_0",
+     "scene": 0,
+     "start": 0.0,
+     "end": 27.28,
+     "dur": 27.28,
+     "score": 0.0894
+    },
+    {
+     "kind": "clip",
+     "id": "ryan_reynolds_int_a|93",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_a.mp4",
+     "source": "ryan_reynolds_int_a",
+     "scene": 93,
+     "start": 215.26,
+     "end": 219.34,
+     "dur": 4.09,
+     "score": 0.1057
+    },
+    {
+     "kind": "clip",
+     "id": "ryan_reynolds_diet_a|53",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_diet_a.mp4",
+     "source": "ryan_reynolds_diet_a",
+     "scene": 53,
+     "start": 484.75,
+     "end": 509.95,
+     "dur": 25.2,
+     "score": 0.1276
+    }
+   ]
+  },
+  "audit": "montage_from_approved"
  }
 }

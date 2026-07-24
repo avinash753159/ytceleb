@@ -48,8 +48,9 @@ def g1_ocr_sweep(video, plan, assets, beats):
     for p in plan:
         a = assets[p["beat_id"]]
         tr = a["treatment"]
-        if tr in ("infographic_list", "stat_callout", "person_card"):
-            continue                     # our own overlays contain text
+        if tr in ("infographic_list", "stat_callout", "person_card",
+                  "split_compare"):
+            continue          # our own overlays/labels contain text by design
         if p.get("overlay_stat"):
             continue
         b = beats[p["beat_id"]]
@@ -65,6 +66,10 @@ def g1_ocr_sweep(video, plan, assets, beats):
                 for band in (img[int(H * .70):, :], img[:int(H * .15), :]):
                     res, _ = ocr(band)
                     for box, text, conf in (res or []):
+                        # 1-3 char fragments are OCR noise on textures /
+                        # equipment; real subtitles/watermarks are longer
+                        if len(re.sub(r"[^A-Za-z0-9]", "", text)) < 4:
+                            continue
                         xs = [q[0] for q in box]
                         ys = [q[1] for q in box]
                         if float(conf) > 0.5 and \
@@ -89,6 +94,9 @@ def g2_g3_shots(plan, assets, beats):
             segs = [(asset["id"], dur)]
         elif asset.get("kind") == "clip2":
             segs = [(asset["a"]["id"], dur / 2), (asset["b"]["id"], dur / 2)]
+        elif asset.get("kind") == "clips":
+            n = len(asset["list"])
+            segs = [(c["id"], dur / n) for c in asset["list"]]
         for sid, sdur in segs:
             if sid in last_use and b["start"] - last_use[sid] < 90:
                 reuse.append(f"{p['beat_id']}: scene {sid} reused "
@@ -122,15 +130,28 @@ def g5_counts(plan, signals):
     return fails
 
 
-def g6_black_freeze(video):
+def g6_black_freeze(video, plan, assets, beats):
     r = subprocess.run(["ffmpeg", "-i", str(video), "-vf",
                         "blackdetect=d=0.4:pix_th=0.08,freezedetect=n=0.001:d=2",
                         "-an", "-f", "null", "-"],
                        capture_output=True, text=True, timeout=1800)
     log = r.stderr or ""
+
+    # stills/splits/graphics are static by design - freeze only matters
+    # inside motion-clip beats; black matters everywhere
+    def beat_at(t):
+        for p in plan:
+            b = beats[p["beat_id"]]
+            if b["start"] - 0.2 <= t <= b["end"] + 0.2:
+                return assets[p["beat_id"]]["treatment"]
+        return "?"
+
     blk = re.findall(r"black_start:([\d.]+)", log)
     frz = re.findall(r"freeze_start: ([\d.]+)", log)
-    return [f"black@{b}s" for b in blk] + [f"freeze@{f}s" for f in frz]
+    fails = [f"black@{b}s" for b in blk]
+    fails += [f"freeze@{f}s" for f in frz
+              if beat_at(float(f)) in ("motion_broll", "exercise_demo")]
+    return fails
 
 
 def g7_loudness(video, normalize):
@@ -181,7 +202,10 @@ def main():
     gates["G2_reuse"], gates["G3_shot_len"] = g2_g3_shots(plan, assets, beats)
     gates["G4_variety"] = g4_variety(plan, assets)
     gates["G5_counts"] = g5_counts(plan, signals)
-    gates["G6_black_freeze"] = g6_black_freeze(video)
+    gates["G6_black_freeze"] = g6_black_freeze(
+        video, plan, assets,
+        {b["beat_id"]: b for b in
+         json.loads((MANIFEST / "beats.json").read_text())["beats"]})
     gates["G7_loudness"], _ = g7_loudness(video, args.normalize)
     dur = ffprobe_dur(video)
     tgt = words["duration"]

@@ -158,7 +158,9 @@ def download(cand, dest):
 
 
 def ocr_reject(path):
-    """Same gate as ingest: burned text in top/bottom bands -> reject."""
+    """FULL-frame text gate for stills: Ken Burns pans/zooms move text that
+    sat mid-frame into the visible bands, so any sizeable text anywhere in
+    the photo disqualifies it."""
     try:
         from rapidocr_onnxruntime import RapidOCR
         import cv2
@@ -167,15 +169,14 @@ def ocr_reject(path):
             return True
         H, W = img.shape[:2]
         ocr = RapidOCR()
-        for band in (img[int(H * 0.70):, :], img[:int(H * 0.15), :]):
-            res, _ = ocr(band)
-            for box, text, conf in (res or []):
-                if float(conf) <= 0.5:
-                    continue
-                xs = [pt[0] for pt in box]
-                ys = [pt[1] for pt in box]
-                if (max(xs) - min(xs)) * (max(ys) - min(ys)) / (H * W) > 0.004:
-                    return True
+        res, _ = ocr(img)
+        for box, text, conf in (res or []):
+            if float(conf) <= 0.5:
+                continue
+            xs = [pt[0] for pt in box]
+            ys = [pt[1] for pt in box]
+            if (max(xs) - min(xs)) * (max(ys) - min(ys)) / (H * W) > 0.003:
+                return True
         return False
     except Exception:
         return False        # OCR unavailable: don't block, ingest QC catches it
