@@ -1,0 +1,12 @@
+{
+  "total_scenes": 40,
+  "clean": 0,
+  "reject_text": 0,
+  "reject_resolution": 40,
+  "survival_rate": 0.0,
+  "clean_duration_s": 0,
+  "by_source": {
+    "ryan_reynolds_bts_a": "0/24",
+    "ryan_reynolds_bts_b": "0/16"
+  }
+}

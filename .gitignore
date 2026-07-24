@@ -1,13 +1,33 @@
-# Only Python sources, docs, and data DBs are tracked
+# Only sources, docs, and small data files are tracked
 *
+!*/
 !*.py
 !*.md
 !.gitignore
 # committed classification data (small); footage/renders never are
 !sheets_map*.json
 !vision_tags*.json
+# v2: graphics sources + manifest contract + reports
+!graphics/package.json
+!graphics/tsconfig.json
+!graphics/remotion.config.ts
+!graphics/src/**
+!manifest/*.json
+!library/ingest_report.json
+!qc_report.json
+!profiles/*.yaml
 # never commit heavy artifacts
 config.json
 transcript_*.md
 voiceover_*.mp3
 complete_voiceover.mp3
+graphics/node_modules/
+graphics/package-lock.json
+final_video/
+library/stills/
+library/shots.db
+library/*.npy
+youtube_videos/
+pexels_videos/
+vision_frames*/
+vision_sheets*/

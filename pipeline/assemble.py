@@ -1,0 +1,287 @@
+#!/usr/bin/env python3
+"""
+assemble.py - Phase 4: render the video as a pure function of the manifest.
+
+Per beat (from plan.json + assets.json), produce piece_<beat>.mp4 at
+1920x1080/30fps, EXACTLY beat-duration long, silent:
+
+  clip   -> trim + scale/crop (motion_broll / exercise_demo)
+  still  -> Remotion <KenBurns> render (no ffmpeg zoompan jitter)
+  split  -> Remotion <SplitCompare> (opaque)
+  generated (list/stat) -> darkened under-clip + Remotion alpha overlay
+  person_card -> darkened under-clip + <PersonCard> alpha overlay
+  monogram    -> same, PersonCard renders a monogram when imageSrc=""
+
+Overlays are alpha WebM (vp8 + png + yuva420p) composited per piece with
+  ffmpeg -i base -c:v libvpx -i overlay.webm -filter_complex overlay
+(libvpx decoder REQUIRED - the native decoder silently drops alpha).
+
+Then: concat all pieces (fast concat demuxer path kept) + mux narration.
+Every stage writes artifacts to disk under final_video/v2_work/.
+
+Run:  py -3.12 pipeline/assemble.py [--only b_004]   (--only for debugging)
+"""
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(os.environ.get("CELEB_ROOT", "")) if os.environ.get("CELEB_ROOT") \
+    else Path(__file__).resolve().parent.parent
+MANIFEST = ROOT / "manifest"
+GRAPHICS = ROOT / "graphics"
+WORK = ROOT / "final_video" / "v2_work"
+OUT = ROOT / "final_video"
+FPS = 30
+W, H = 1920, 1080
+ACCENT = "#E63946"          # per-celebrity accent (profiles later)
+
+KB_PANS = [((0.5, 0.5), (0.5, 0.5)), ((0.35, 0.5), (0.65, 0.5)),
+           ((0.65, 0.5), (0.35, 0.5)), ((0.5, 0.35), (0.5, 0.65)),
+           ((0.5, 0.65), (0.5, 0.35)), ((0.35, 0.35), (0.65, 0.65)),
+           ((0.65, 0.35), (0.35, 0.65))]
+
+
+def run(cmd, timeout=600):
+    r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    if r.returncode != 0:
+        raise RuntimeError(f"cmd failed: {' '.join(map(str, cmd))[:200]}\n"
+                           f"{(r.stderr or '')[-400:]}")
+    return r
+
+
+_BUNDLE = None
+
+
+def remotion_bundle():
+    """Bundle once; every render reuses it (CLI re-bundling is ~15s/call)."""
+    global _BUNDLE
+    if _BUNDLE:
+        return _BUNDLE
+    b = WORK / "remotion_bundle"
+    if not (b / "index.html").exists():
+        run(["npx.cmd", "remotion", "bundle", "src/index.ts",
+             "--out-dir", str(b)], timeout=900)
+    _BUNDLE = b
+    return b
+
+
+def render_remotion(comp, props, dest, dur_s, alpha):
+    """Render a composition; alpha -> vp8 webm, else h264 mp4."""
+    props = dict(props)
+    props["durationInFrames"] = max(2, round(dur_s * FPS))
+    props["fps"] = FPS
+    props["accent"] = ACCENT
+    pf = WORK / f"props_{dest.stem}.json"
+    pf.write_text(json.dumps(props), encoding="utf-8")
+    cmd = ["npx.cmd", "remotion", "render", str(remotion_bundle()), comp,
+           str(dest), f"--props={pf}", "--log=error"]
+    if alpha:
+        cmd += ["--codec=vp8", "--image-format=png",
+                "--pixel-format=yuva420p"]
+    else:
+        cmd += ["--codec=h264", "--image-format=jpeg"]
+    old = os.getcwd()
+    os.chdir(GRAPHICS)
+    try:
+        run(cmd, timeout=900)
+    finally:
+        os.chdir(old)
+    return dest
+
+
+def clip_piece(asset, dur, dest, darken=False):
+    """Cut a library scene to exactly dur, 1920x1080/30, silent."""
+    src, s = asset["src"], asset["start"]
+    avail = asset["end"] - s
+    vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,"
+          f"crop={W}:{H},fps={FPS}")
+    if darken:
+        vf += ",eq=brightness=-0.25:saturation=0.55,gblur=sigma=6"
+    if avail >= dur:
+        run(["ffmpeg", "-ss", f"{s + 0.05:.2f}", "-i", src,
+             "-t", f"{dur:.3f}", "-vf", vf, "-an", "-c:v", "libx264",
+             "-preset", "veryfast", "-crf", "20", "-y", str(dest)])
+    else:  # loop the scene to cover the beat (rare: short scene, long beat)
+        run(["ffmpeg", "-stream_loop", "3", "-ss", f"{s + 0.05:.2f}",
+             "-i", src, "-t", f"{dur:.3f}", "-vf", vf, "-an",
+             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+             "-y", str(dest)])
+    return dest
+
+
+def composite(base, overlay_webm, dest):
+    run(["ffmpeg", "-i", str(base), "-c:v", "libvpx", "-i",
+         str(overlay_webm), "-filter_complex",
+         "[0:v][1:v]overlay=0:0:eof_action=pass",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+         "-pix_fmt", "yuv420p", "-an", "-y", str(dest)])
+    return dest
+
+
+def underlay(assets_all, beat, dur, dest):
+    """Darkened clean clip to sit under a full-screen graphic."""
+    # reuse any clean clip asset already resolved (stable choice: first clip)
+    for a in assets_all.values():
+        if (a.get("asset") or {}).get("kind") == "clip":
+            return clip_piece(a["asset"], dur, dest, darken=True)
+    # no clips at all -> plain dark slate
+    run(["ffmpeg", "-f", "lavfi", "-i",
+         f"color=c=0x101014:s={W}x{H}:r={FPS}", "-t", f"{dur:.3f}",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+         "-y", str(dest)])
+    return dest
+
+
+def build_piece(p, a, beat, idx, assets_all):
+    """One beat -> one exactly-timed silent mp4 piece."""
+    bid = p["beat_id"]
+    dur = round(beat["end"] - beat["start"], 3)
+    piece = WORK / f"piece_{idx:03d}_{bid}.mp4"
+    if piece.exists():
+        return piece
+    tr = a["treatment"]           # post-fallback treatment
+    asset = a.get("asset") or {}
+
+    if tr in ("motion_broll", "exercise_demo"):
+        if asset.get("kind") == "clip":
+            return clip_piece(asset, dur, piece)
+        if asset.get("kind") == "clip2":       # >6s beat = two shots
+            h1, h2 = dur / 2, dur - dur / 2
+            p1 = clip_piece(asset["a"], h1, WORK / f"h1_{bid}.mp4")
+            p2 = clip_piece(asset["b"], h2, WORK / f"h2_{bid}.mp4")
+            l2 = WORK / f"cc_{bid}.txt"
+            l2.write_text(f"file '{p1.absolute().as_posix()}'\n"
+                          f"file '{p2.absolute().as_posix()}'")
+            run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(l2),
+                 "-c", "copy", "-y", str(piece)])
+            return piece
+        raise RuntimeError(f"{bid}: {tr} without clip asset")
+
+    if tr == "still_pushin":
+        if asset.get("kind") == "still":
+            pan = KB_PANS[idx % len(KB_PANS)]
+            zoom = (1.0, 1.05 + (idx % 4) * 0.04)
+            if idx % 2:
+                zoom = (zoom[1], zoom[0])
+            render_remotion("KenBurns",
+                            {"src": Path(asset["path"]).as_uri(),
+                             "zoomFrom": zoom[0], "zoomTo": zoom[1],
+                             "panFrom": list(pan[0]), "panTo": list(pan[1])},
+                            piece, dur, alpha=False)
+            return piece
+        if asset.get("kind") == "clip":          # fallback path
+            return clip_piece(asset, dur, piece)
+        raise RuntimeError(f"{bid}: still_pushin without asset")
+
+    if tr == "split_compare":
+        if asset.get("kind") == "split":
+            ov = p.get("overlay", {})
+            render_remotion("SplitCompare",
+                            {"leftSrc": Path(asset["left"]["path"]).as_uri(),
+                             "rightSrc": Path(asset["right"]["path"]).as_uri(),
+                             "leftLabel": ov.get("left", ""),
+                             "rightLabel": ov.get("right", "")},
+                            piece, dur, alpha=False)
+            return piece
+        if asset.get("kind") == "still":
+            render_remotion("KenBurns",
+                            {"src": Path(asset["path"]).as_uri()},
+                            piece, dur, alpha=False)
+            return piece
+        raise RuntimeError(f"{bid}: split_compare without asset")
+
+    if tr == "person_card":
+        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4")
+        img = (Path(asset["path"]).as_uri()
+               if asset.get("kind") == "still" else "")
+        ov = p.get("overlay", {})
+        webm = render_remotion("PersonCard",
+                               {"imageSrc": img,
+                                "name": ov.get("name", p.get("subject", "")),
+                                "role": ov.get("role", "")},
+                               WORK / f"ov_{bid}.webm", dur, alpha=True)
+        return composite(base, webm, piece)
+
+    if tr == "infographic_list":
+        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4")
+        items = [{"text": it["text"], "atMs": ms}
+                 for it, ms in zip(p["items"], a.get("items_ms", []))]
+        webm = render_remotion("ListReveal",
+                               {"title": p.get("title", ""), "items": items},
+                               WORK / f"ov_{bid}.webm", dur, alpha=True)
+        return composite(base, webm, piece)
+
+    if tr == "stat_callout":
+        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4")
+        webm = render_remotion("StatCard",
+                               {"value": p["value"], "label": p["label"]},
+                               WORK / f"ov_{bid}.webm", dur, alpha=True)
+        return composite(base, webm, piece)
+
+    raise RuntimeError(f"{bid}: unhandled treatment {tr}")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", help="render a single beat id (debug)")
+    args = ap.parse_args()
+
+    plan = {p["beat_id"]: p for p in
+            json.loads((MANIFEST / "plan.json").read_text())["plan"]}
+    assets = json.loads((MANIFEST / "assets.json").read_text())
+    beats = {b["beat_id"]: b for b in
+             json.loads((MANIFEST / "beats.json").read_text())["beats"]}
+    cfg = json.loads((ROOT / "config.json").read_text()) \
+        if (ROOT / "config.json").exists() else {}
+    voiceover = ROOT / f"voiceover_{cfg.get('slug', 'ryan_reynolds')}.mp3"
+
+    WORK.mkdir(parents=True, exist_ok=True)
+    order = sorted(plan.keys())
+    if args.only:
+        order = [args.only]
+
+    # overlay stats piggyback on stills: add after main piece (overlay_stat)
+    pieces = []
+    for idx, bid in enumerate(order):
+        p, a, b = plan[bid], assets[bid], beats[bid]
+        piece = build_piece(p, a, b, idx, assets)
+        if p.get("overlay_stat") and a["treatment"] == "still_pushin":
+            dur = round(b["end"] - b["start"], 3)
+            webm = render_remotion(
+                "StatCard", {"value": p["overlay_stat"]["value"],
+                             "label": p["overlay_stat"]["label"]},
+                WORK / f"ovs_{bid}.webm", min(dur, 3.0), alpha=True)
+            piece2 = WORK / f"piece_{idx:03d}_{bid}_s.mp4"
+            if not piece2.exists():
+                composite(piece, webm, piece2)
+            piece = piece2
+        pieces.append(piece)
+        print(f"  [{idx + 1}/{len(order)}] {bid} "
+              f"{a['treatment']}{' (fb)' if a['fallback_used'] else ''}",
+              flush=True)
+    if args.only:
+        print(f"[OK] {pieces[0]}")
+        return 0
+
+    lst = WORK / "concat.txt"
+    lst.write_text("\n".join(f"file '{p.absolute().as_posix()}'"
+                             for p in pieces), encoding="utf-8")
+    silent = WORK / "v2_silent.mp4"
+    run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
+         "-c", "copy", "-y", str(silent)], timeout=1800)
+
+    final = OUT / cfg.get("output", "RYAN_REYNOLDS_FINAL.mp4").replace(
+        ".mp4", "_V2.mp4")
+    run(["ffmpeg", "-i", str(silent), "-i", str(voiceover),
+         "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy",
+         "-c:a", "aac", "-b:a", "192k", "-y", str(final)], timeout=1800)
+    print(f"[OK] {final}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

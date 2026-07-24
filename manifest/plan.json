@@ -1,0 +1,865 @@
+{
+ "plan": [
+  {
+   "beat_id": "b_000",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds Deadpool shirtless shredded physique 2016",
+   "overlay_stat": {
+    "value": "38",
+    "label": "years old"
+   },
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_001",
+   "treatment": "split_compare",
+   "left_query": "Ryan Reynolds Deadpool 2016 physique",
+   "right_query": "Ryan Reynolds Deadpool and Wolverine 2024 physique",
+   "overlay": {
+    "left": "38 \u2014 DEADPOOL",
+    "right": "47 \u2014 D&W"
+   },
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_002",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds training transformation gym",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_003",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds muscular physique magazine",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_004",
+   "treatment": "person_card",
+   "subject": "Don Saladino",
+   "retrieval_query": "Don Saladino fitness trainer portrait",
+   "overlay": {
+    "name": "Don Saladino",
+    "role": "Ryan's Trainer"
+   },
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_005",
+   "treatment": "motion_broll",
+   "retrieval_query": "gym training montage weights close up",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_006",
+   "treatment": "motion_broll",
+   "retrieval_query": "Ryan Reynolds gym behind the scenes training",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_007",
+   "treatment": "motion_broll",
+   "retrieval_query": "weekly meal prep containers and workout plan",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_008",
+   "treatment": "still_pushin",
+   "retrieval_query": "training plan notebook gym bag ready",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_009",
+   "treatment": "motion_broll",
+   "retrieval_query": "regular person training home gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_010",
+   "treatment": "stat_callout",
+   "value": "6'2\"",
+   "label": "height",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_011",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds Deadpool lean shirtless",
+   "overlay_stat": {
+    "value": "190-195 lbs",
+    "label": "8-10% body fat"
+   },
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_012",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds photoshoot lean muscular camera ready",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_013",
+   "treatment": "person_card",
+   "subject": "Don Saladino",
+   "retrieval_query": "Don Saladino strength coach gym",
+   "overlay": {
+    "name": "Don Saladino",
+    "role": "Trainer since 2008"
+   },
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_014",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds consistent training over years",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_015",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds early 2000s young actor",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_016",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds Blade Trinity 2004",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_017",
+   "treatment": "split_compare",
+   "left_query": "Ryan Reynolds Green Lantern lean 2011",
+   "right_query": "Ryan Reynolds Deadpool 2016 shredded",
+   "overlay": {
+    "left": "GREEN LANTERN",
+    "right": "DEADPOOL 2016"
+   },
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_018",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds Deadpool Wolverine 2024 premiere",
+   "overlay_stat": {
+    "value": "47",
+    "label": "years old"
+   },
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_019",
+   "treatment": "stat_callout",
+   "value": "90%",
+   "label": "\"diet is the battle\"",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_020",
+   "treatment": "motion_broll",
+   "retrieval_query": "Ryan Reynolds boxing fight training movie",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_021",
+   "treatment": "motion_broll",
+   "retrieval_query": "athletic functional training gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_022",
+   "treatment": "motion_broll",
+   "retrieval_query": "clean healthy eating meal prep discipline",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_023",
+   "treatment": "infographic_list",
+   "title": "THE 7-DAY SPLIT",
+   "items": [
+    {
+     "text": "Mon \u2014 Chest + Triceps"
+    },
+    {
+     "text": "Tue \u2014 Back + Biceps"
+    },
+    {
+     "text": "Wed \u2014 Legs + HIIT"
+    },
+    {
+     "text": "Thu \u2014 Shoulders + Arms"
+    },
+    {
+     "text": "Fri \u2014 Posterior Chain"
+    },
+    {
+     "text": "Sat \u2014 Conditioning"
+    },
+    {
+     "text": "Sun \u2014 Rest"
+    }
+   ],
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_024",
+   "treatment": "motion_broll",
+   "retrieval_query": "trainer coaching client gym session",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_025",
+   "treatment": "motion_broll",
+   "retrieval_query": "chest workout dumbbells man gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_026",
+   "treatment": "infographic_list",
+   "title": "MONDAY \u2014 MAIN LIFTS",
+   "items": [
+    {
+     "text": "Incline bench press"
+    },
+    {
+     "text": "Flat dumbbell press"
+    },
+    {
+     "text": "Cable flies"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "bench press"
+  },
+  {
+   "beat_id": "b_027",
+   "treatment": "stat_callout",
+   "value": "3-5 x 6-12",
+   "label": "sets x reps",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_028",
+   "treatment": "infographic_list",
+   "title": "SUPERSETS",
+   "items": [
+    {
+     "text": "Dips + Pushups"
+    },
+    {
+     "text": "Overhead extensions + Skull crushers"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "pushup"
+  },
+  {
+   "beat_id": "b_029",
+   "treatment": "motion_broll",
+   "retrieval_query": "intense gym training muscles working",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_030",
+   "treatment": "infographic_list",
+   "title": "METABOLIC FINISHER \u2014 10-12 MIN",
+   "items": [
+    {
+     "text": "Battle ropes"
+    },
+    {
+     "text": "Medicine ball slams"
+    },
+    {
+     "text": "Jump rope"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "jump rope"
+  },
+  {
+   "beat_id": "b_031",
+   "treatment": "motion_broll",
+   "retrieval_query": "conditioning workout sweat athlete",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_032",
+   "treatment": "exercise_demo",
+   "exercise": "pullup",
+   "retrieval_query": "man doing pull ups in gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_033",
+   "treatment": "exercise_demo",
+   "exercise": "row",
+   "retrieval_query": "bent over barbell row gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_034",
+   "treatment": "motion_broll",
+   "retrieval_query": "perfect form weight training controlled reps",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_035",
+   "treatment": "exercise_demo",
+   "exercise": "curl",
+   "retrieval_query": "barbell curl hammer curl biceps",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_036",
+   "treatment": "infographic_list",
+   "title": "CORE CIRCUIT",
+   "items": [
+    {
+     "text": "Hanging leg raises"
+    },
+    {
+     "text": "Ab wheel rollouts"
+    },
+    {
+     "text": "Pallof presses"
+    }
+   ],
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_037",
+   "treatment": "motion_broll",
+   "retrieval_query": "functional core training athlete",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_038",
+   "treatment": "exercise_demo",
+   "exercise": "squat",
+   "retrieval_query": "barbell back squat gym heavy",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_039",
+   "treatment": "exercise_demo",
+   "exercise": "lunge",
+   "retrieval_query": "walking lunges leg extension gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_040",
+   "treatment": "exercise_demo",
+   "exercise": "sprint",
+   "retrieval_query": "sprint intervals bike HIIT training",
+   "overlay_stat": {
+    "value": "20-25 min",
+    "label": "HIIT"
+   },
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_041",
+   "treatment": "motion_broll",
+   "retrieval_query": "lean athlete training fat burning",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_042",
+   "treatment": "motion_broll",
+   "retrieval_query": "shoulder workout dumbbells higher reps",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_043",
+   "treatment": "infographic_list",
+   "title": "SHOULDERS \u2014 ALL 3 HEADS",
+   "items": [
+    {
+     "text": "Overhead press"
+    },
+    {
+     "text": "Lateral raises"
+    },
+    {
+     "text": "Rear-delt flies"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "overhead press"
+  },
+  {
+   "beat_id": "b_044",
+   "treatment": "exercise_demo",
+   "exercise": "curl",
+   "retrieval_query": "preacher curl concentration curl gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_045",
+   "treatment": "exercise_demo",
+   "exercise": "stretch",
+   "retrieval_query": "tricep rope pushdown cable gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_046",
+   "treatment": "motion_broll",
+   "retrieval_query": "light recovery training gym midweek",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_047",
+   "treatment": "exercise_demo",
+   "exercise": "deadlift",
+   "retrieval_query": "barbell deadlift trap bar heavy",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_048",
+   "treatment": "exercise_demo",
+   "exercise": "deadlift",
+   "retrieval_query": "romanian deadlift hip thrust glutes",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_049",
+   "treatment": "infographic_list",
+   "title": "FUNCTIONAL CIRCUIT",
+   "items": [
+    {
+     "text": "Kettlebell swings"
+    },
+    {
+     "text": "Box jumps"
+    },
+    {
+     "text": "Medicine ball throws"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "kettlebell"
+  },
+  {
+   "beat_id": "b_050",
+   "treatment": "motion_broll",
+   "retrieval_query": "explosive power training athlete jumping",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_051",
+   "treatment": "motion_broll",
+   "retrieval_query": "fight conditioning training gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_052",
+   "treatment": "infographic_list",
+   "title": "SATURDAY \u2014 CONDITIONING",
+   "items": [
+    {
+     "text": "Jump rope"
+    },
+    {
+     "text": "Shadowboxing"
+    },
+    {
+     "text": "Pad work / drills"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "boxing"
+  },
+  {
+   "beat_id": "b_053",
+   "treatment": "motion_broll",
+   "retrieval_query": "boxing pad work training sweat",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_054",
+   "treatment": "motion_broll",
+   "retrieval_query": "bodyweight circuit training full body",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_055",
+   "treatment": "stat_callout",
+   "value": "45-60 min",
+   "label": "steady-state cardio",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_056",
+   "treatment": "motion_broll",
+   "retrieval_query": "hiking bike ride outdoor cardio",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_057",
+   "treatment": "exercise_demo",
+   "exercise": "stretch",
+   "retrieval_query": "foam rolling yoga mobility recovery",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_058",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds relaxed candid rest",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_059",
+   "treatment": "motion_broll",
+   "retrieval_query": "tired athlete overtraining rest needed",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_060",
+   "treatment": "stat_callout",
+   "value": "3-5 x 6-15",
+   "label": "sets x reps everything",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_061",
+   "treatment": "motion_broll",
+   "retrieval_query": "compound lifts explosive conditioning gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_062",
+   "treatment": "motion_broll",
+   "retrieval_query": "training program variety periodization",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_063",
+   "treatment": "motion_broll",
+   "retrieval_query": "healthy food meal prep kitchen",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_064",
+   "treatment": "still_pushin",
+   "retrieval_query": "macro counting meal prep containers",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_065",
+   "treatment": "stat_callout",
+   "value": "2,600-3,200",
+   "label": "calories / day",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_066",
+   "treatment": "stat_callout",
+   "value": "200-250 g",
+   "label": "protein / day",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_067",
+   "treatment": "stat_callout",
+   "value": "70-100 g",
+   "label": "fats / day",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_068",
+   "treatment": "motion_broll",
+   "retrieval_query": "healthy meals daily spread table",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_069",
+   "treatment": "infographic_list",
+   "title": "PRE-WORKOUT",
+   "items": [
+    {
+     "text": "Black coffee"
+    },
+    {
+     "text": "Oats + whey or eggs"
+    }
+   ],
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_070",
+   "treatment": "still_pushin",
+   "retrieval_query": "protein shake banana post workout",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_071",
+   "treatment": "infographic_list",
+   "title": "MEAL 1",
+   "items": [
+    {
+     "text": "Egg whites + whole eggs"
+    },
+    {
+     "text": "Vegetables"
+    },
+    {
+     "text": "Oats"
+    }
+   ],
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_072",
+   "treatment": "infographic_list",
+   "title": "MEAL 2",
+   "items": [
+    {
+     "text": "Grilled chicken breast"
+    },
+    {
+     "text": "Sweet potato"
+    },
+    {
+     "text": "Broccoli"
+    }
+   ],
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_073",
+   "treatment": "infographic_list",
+   "title": "MEAL 3",
+   "items": [
+    {
+     "text": "Salmon or turkey"
+    },
+    {
+     "text": "Rice or quinoa"
+    },
+    {
+     "text": "Avocado"
+    }
+   ],
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_074",
+   "treatment": "still_pushin",
+   "retrieval_query": "lean beef white fish greens olive oil plate",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_075",
+   "treatment": "still_pushin",
+   "retrieval_query": "greek yogurt cottage cheese almonds snack",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_076",
+   "treatment": "motion_broll",
+   "retrieval_query": "protein shake evening kitchen",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_077",
+   "treatment": "infographic_list",
+   "title": "NUTRITION RULES",
+   "items": [
+    {
+     "text": "90% whole foods"
+    },
+    {
+     "text": "Zero processed junk"
+    },
+    {
+     "text": "High-carb: Mon / Wed / Fri"
+    }
+   ],
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_078",
+   "treatment": "infographic_list",
+   "title": "CARB CYCLING",
+   "items": [
+    {
+     "text": "Low-carb: Tue / Thu / Sat"
+    },
+    {
+     "text": "Sugar + alcohol: near zero"
+    }
+   ],
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_079",
+   "treatment": "motion_broll",
+   "retrieval_query": "athlete drinking water hydration",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_080",
+   "treatment": "stat_callout",
+   "value": "1 per 7-14 days",
+   "label": "cheat MEALS, not days",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_081",
+   "treatment": "still_pushin",
+   "retrieval_query": "performance nutrition strategic fueling athlete",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_082",
+   "treatment": "exercise_demo",
+   "exercise": "sprint",
+   "retrieval_query": "HIIT metabolic circuit fight training",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_083",
+   "treatment": "infographic_list",
+   "title": "HIS CARDIO",
+   "items": [
+    {
+     "text": "Jump rope"
+    },
+    {
+     "text": "Battle ropes"
+    },
+    {
+     "text": "Sprints"
+    },
+    {
+     "text": "Martial arts drills"
+    }
+   ],
+   "fallback_treatment": "exercise_demo",
+   "exercise": "jump rope"
+  },
+  {
+   "beat_id": "b_084",
+   "treatment": "motion_broll",
+   "retrieval_query": "high intensity efficient training",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_085",
+   "treatment": "stat_callout",
+   "value": "7-9 h",
+   "label": "sleep every night",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_086",
+   "treatment": "motion_broll",
+   "retrieval_query": "sports massage sauna ice bath recovery",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_087",
+   "treatment": "motion_broll",
+   "retrieval_query": "personal trainer private session gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_088",
+   "treatment": "stat_callout",
+   "value": "4-5",
+   "label": "days / week (realistic)",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_089",
+   "treatment": "stat_callout",
+   "value": "10,000",
+   "label": "steps / day",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_090",
+   "treatment": "stat_callout",
+   "value": "0.8-1 g",
+   "label": "protein per lb bodyweight",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_091",
+   "treatment": "motion_broll",
+   "retrieval_query": "burnout tired overtrained gym",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_092",
+   "treatment": "stat_callout",
+   "value": "3,000+",
+   "label": "calories without the volume",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_093",
+   "treatment": "motion_broll",
+   "retrieval_query": "training log progress tracking notebook",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_094",
+   "treatment": "stat_callout",
+   "value": "8 weeks",
+   "label": "is NOT movie-star timing",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_095",
+   "treatment": "still_pushin",
+   "retrieval_query": "Ryan Reynolds Deadpool shredded hero pose",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_096",
+   "treatment": "infographic_list",
+   "title": "THE FULL SYSTEM",
+   "items": [
+    {
+     "text": "Training"
+    },
+    {
+     "text": "Diet"
+    },
+    {
+     "text": "Cardio"
+    },
+    {
+     "text": "Recovery"
+    }
+   ],
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_097",
+   "treatment": "motion_broll",
+   "retrieval_query": "Ryan Reynolds smiling talking camera",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_098",
+   "treatment": "motion_broll",
+   "retrieval_query": "gym motivation starting workout",
+   "fallback_treatment": "still_pushin"
+  },
+  {
+   "beat_id": "b_099",
+   "treatment": "still_pushin",
+   "retrieval_query": "fitness channel subscribe end card gym",
+   "fallback_treatment": "motion_broll"
+  },
+  {
+   "beat_id": "b_100",
+   "treatment": "motion_broll",
+   "retrieval_query": "Ryan Reynolds training montage best moments",
+   "fallback_treatment": "still_pushin"
+  }
+ ]
+}

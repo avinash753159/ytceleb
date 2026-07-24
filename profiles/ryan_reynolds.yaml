@@ -1,0 +1,15 @@
+# Per-celebrity profile (niche-profile pattern; consumed by planner + graphics)
+name: ryan_reynolds
+display_name: "Ryan Reynolds"
+coach: "Don Saladino"
+accent_color: "#E63946"          # Deadpool red - drives every graphic
+script:
+  tone: "confident, direct, evidence-first; light wit allowed, no bro-science"
+  pacing: "energetic, every sentence earns its place"
+visuals:
+  style: "clean dark panels, hard numbers, premiere/photoshoot stills"
+  prefer: ["gym training", "physique stills", "behind the scenes"]
+  avoid: ["red carpet gossip", "family/private life"]
+music:
+  mood: "driving, cinematic, no lyrics"
+  duck_volume_speech: 0.10
