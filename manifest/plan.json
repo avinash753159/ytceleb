@@ -2,13 +2,13 @@
  "plan": [
   {
    "beat_id": "b_000",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds Deadpool shirtless shredded physique 2016",
    "overlay_stat": {
     "value": "38",
     "label": "years old"
    },
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_001",
@@ -23,15 +23,15 @@
   },
   {
    "beat_id": "b_002",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds training transformation gym",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_003",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds muscular physique magazine",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_004",
@@ -64,9 +64,9 @@
   },
   {
    "beat_id": "b_008",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "training plan notebook gym bag ready",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_009",
@@ -83,19 +83,19 @@
   },
   {
    "beat_id": "b_011",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds Deadpool lean shirtless",
    "overlay_stat": {
     "value": "190-195 lbs",
     "label": "8-10% body fat"
    },
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_012",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds photoshoot lean muscular camera ready",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_013",
@@ -110,9 +110,9 @@
   },
   {
    "beat_id": "b_014",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds consistent training over years",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_015",
@@ -139,13 +139,13 @@
   },
   {
    "beat_id": "b_018",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds Deadpool Wolverine 2024 premiere",
    "overlay_stat": {
     "value": "47",
     "label": "years old"
    },
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_019",
@@ -504,9 +504,9 @@
   },
   {
    "beat_id": "b_058",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds relaxed candid rest",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_059",
@@ -541,9 +541,9 @@
   },
   {
    "beat_id": "b_064",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "macro counting meal prep containers",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_065",
@@ -588,9 +588,9 @@
   },
   {
    "beat_id": "b_070",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "protein shake banana post workout",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_071",
@@ -645,15 +645,15 @@
   },
   {
    "beat_id": "b_074",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "lean beef white fish greens olive oil plate",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_075",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "greek yogurt cottage cheese almonds snack",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_076",
@@ -707,9 +707,9 @@
   },
   {
    "beat_id": "b_081",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "performance nutrition strategic fueling athlete",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_082",
@@ -813,9 +813,9 @@
   },
   {
    "beat_id": "b_095",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "Ryan Reynolds Deadpool shredded hero pose",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_096",
@@ -851,9 +851,9 @@
   },
   {
    "beat_id": "b_099",
-   "treatment": "still_pushin",
+   "treatment": "motion_broll",
    "retrieval_query": "fitness channel subscribe end card gym",
-   "fallback_treatment": "motion_broll"
+   "fallback_treatment": "still_pushin"
   },
   {
    "beat_id": "b_100",

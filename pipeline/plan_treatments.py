@@ -221,9 +221,12 @@ def validate_plan(plan, beats, signals):
                         f"treatment={tr}")
         if tr == "person_card" and not p.get("subject"):
             errs.append(f"R2 {b['beat_id']}: person_card without subject")
+        # V3 policy: motion footage of the SUBJECT is preferred everywhere;
+        # stills only when no video exists. Body beats accept subject motion.
         if s.get("body") and not s.get("people") and not cnt \
                 and not s.get("exercise") \
-                and tr not in ("still_pushin", "split_compare"):
+                and tr not in ("still_pushin", "split_compare",
+                               "motion_broll"):
             errs.append(f"R3 {b['beat_id']}: body description but "
                         f"treatment={tr}")
         if s.get("exercise") and not s.get("people") and not cnt \

@@ -27,15 +27,19 @@ export const ListReveal: React.FC<{
   title?: string;
   items: {text: string; atMs: number}[];
   accent?: string;
-}> = ({title, items, accent = TOKENS.accent}) => {
+  side?: 'left' | 'right';
+}> = ({title, items, accent = TOKENS.accent, side = 'left'}) => {
   const {frame, fps, tMs} = useT();
   return (
-    <AbsoluteFill style={{justifyContent: 'center', alignItems: 'flex-start'}}>
-      <div style={{marginLeft: 96, maxWidth: 900}}>
+    <AbsoluteFill
+      style={{justifyContent: 'center',
+              alignItems: side === 'left' ? 'flex-start' : 'flex-end'}}>
+      <div style={{[side === 'left' ? 'marginLeft' : 'marginRight']: 80,
+                   maxWidth: 760} as React.CSSProperties}>
         {title ? (
           <div
             style={{
-              fontFamily: TOKENS.fontDisplay, fontSize: 44, color: TOKENS.ink,
+              fontFamily: TOKENS.fontDisplay, fontSize: 38, color: TOKENS.ink,
               background: TOKENS.panel, border: `1px solid ${TOKENS.panelEdge}`,
               borderLeft: `10px solid ${accent}`, borderRadius: TOKENS.radius,
               padding: `${TOKENS.pad / 2}px ${TOKENS.pad}px`, marginBottom: 18,
@@ -60,9 +64,9 @@ export const ListReveal: React.FC<{
             >
               <div
                 style={{
-                  width: 54, height: 54, borderRadius: 27, background: accent,
+                  width: 46, height: 46, borderRadius: 23, background: accent,
                   color: TOKENS.ink, fontFamily: TOKENS.fontDisplay,
-                  fontSize: 30, display: 'flex', alignItems: 'center',
+                  fontSize: 26, display: 'flex', alignItems: 'center',
                   justifyContent: 'center', flexShrink: 0,
                 }}
               >
@@ -70,7 +74,7 @@ export const ListReveal: React.FC<{
               </div>
               <div
                 style={{
-                  fontFamily: TOKENS.fontBody, fontSize: 36, fontWeight: 600,
+                  fontFamily: TOKENS.fontBody, fontSize: 30, fontWeight: 600,
                   color: TOKENS.ink, background: TOKENS.panel,
                   border: `1px solid ${TOKENS.panelEdge}`,
                   borderRadius: TOKENS.radius,
@@ -93,7 +97,8 @@ export const StatCard: React.FC<{
   value: string;           // "20", "3,200", "8%"
   label: string;
   accent?: string;
-}> = ({value, label, accent = TOKENS.accent}) => {
+  side?: 'left' | 'right' | 'center';
+}> = ({value, label, accent = TOKENS.accent, side = 'center'}) => {
   const {frame, fps} = useT();
   const p = enter(frame, 0, fps);
   const numMatch = value.match(/^([\d.,]+)(.*)$/);
@@ -105,20 +110,23 @@ export const StatCard: React.FC<{
     ).toLocaleString('en-US');
     display = cur + numMatch[2];
   }
+  const align = side === 'center' ? 'center'
+    : side === 'left' ? 'flex-start' : 'flex-end';
   return (
-    <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center'}}>
+    <AbsoluteFill style={{justifyContent: 'center', alignItems: align}}>
       <div
         style={{
           background: TOKENS.panel, border: `1px solid ${TOKENS.panelEdge}`,
-          borderTop: `10px solid ${accent}`, borderRadius: TOKENS.radius,
-          padding: `${TOKENS.pad}px ${TOKENS.pad * 2}px`,
+          borderTop: `8px solid ${accent}`, borderRadius: TOKENS.radius,
+          padding: `${TOKENS.pad * 0.75}px ${TOKENS.pad * 1.4}px`,
           textAlign: 'center', opacity: p,
           transform: `scale(${0.9 + p * 0.1})`,
+          margin: side === 'center' ? 0 : '0 80px',
         }}
       >
         <div
           style={{
-            fontFamily: TOKENS.fontDisplay, fontSize: 150, lineHeight: 1.05,
+            fontFamily: TOKENS.fontDisplay, fontSize: 110, lineHeight: 1.05,
             color: TOKENS.ink,
           }}
         >
@@ -126,7 +134,7 @@ export const StatCard: React.FC<{
         </div>
         <div
           style={{
-            fontFamily: TOKENS.fontBody, fontSize: 38, color: TOKENS.inkDim,
+            fontFamily: TOKENS.fontBody, fontSize: 30, color: TOKENS.inkDim,
             textTransform: 'uppercase', letterSpacing: 3, marginTop: 6,
           }}
         >
@@ -144,21 +152,25 @@ export const PersonCard: React.FC<{
   name: string;
   role: string;
   accent?: string;
-}> = ({imageSrc, name, role, accent = TOKENS.accent}) => {
+  side?: 'left' | 'right' | 'center';
+}> = ({imageSrc, name, role, accent = TOKENS.accent, side = 'center'}) => {
   const {frame, fps} = useT();
   const {durationInFrames} = useVideoConfig();
   const p = enter(frame, 0, fps);
   const zoom = interpolate(frame, [0, durationInFrames], [1.0, 1.12]);
+  const align = side === 'center' ? 'center'
+    : side === 'left' ? 'flex-start' : 'flex-end';
   return (
-    <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center'}}>
+    <AbsoluteFill style={{justifyContent: 'center', alignItems: align}}>
       <div
         style={{
-          width: 760, borderRadius: TOKENS.radius, overflow: 'hidden',
+          width: 560, margin: side === 'center' ? 0 : '0 80px',
+          borderRadius: TOKENS.radius, overflow: 'hidden',
           background: TOKENS.panel, border: `1px solid ${TOKENS.panelEdge}`,
           opacity: p, transform: `translateY(${(1 - p) * 30}px)`,
         }}
       >
-        <div style={{height: 560, overflow: 'hidden'}}>
+        <div style={{height: 400, overflow: 'hidden'}}>
           {imageSrc ? (
             <Img
               src={imageSrc}
@@ -263,7 +275,7 @@ export const SplitCompare: React.FC<{
           style={{
             position: 'absolute', bottom: 60,
             [right ? 'right' : 'left']: 60,
-            fontFamily: TOKENS.fontDisplay, fontSize: 44, color: TOKENS.ink,
+            fontFamily: TOKENS.fontDisplay, fontSize: 38, color: TOKENS.ink,
             background: TOKENS.panel, borderRadius: TOKENS.radius,
             border: `1px solid ${TOKENS.panelEdge}`,
             borderBottom: `8px solid ${accent}`,

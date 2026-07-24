@@ -30,7 +30,9 @@ MANIFEST = ROOT / "manifest"
 sys.path.insert(0, str(ROOT / "pipeline"))
 
 SCORE_FLOOR = float(os.environ.get("RETRIEVAL_FLOOR", "0.05"))
-SUBJ_BONUS_SOURCES = ("ryan", "reference")   # subject footage preferred
+# subject footage preferred - V3 targets ~60-70% subject on screen
+SUBJ_BONUS_SOURCES = ("ryan", "v3_ryan", "reference")
+SUBJ_BONUS = 0.035
 
 
 def item_anchor_ms(items, beat, words):
@@ -85,7 +87,7 @@ def main():
                 continue                       # no reuse within 90s
             if c["dur"] < 1.2:
                 continue
-            bonus = 0.02 if (prefer_subject and any(
+            bonus = SUBJ_BONUS if (prefer_subject and any(
                 s in c["source"].lower() for s in SUBJ_BONUS_SOURCES)) else 0
             sc = c["score"] + bonus
             if best is None or sc > best[0]:
@@ -144,8 +146,11 @@ def main():
         elif tr == "person_card":
             s = fetch_still(p["retrieval_query"], p.get("subject", bid),
                             prefer_person=True)
-            rec["asset"] = ({"kind": "still", **s} if s
-                            else {"kind": "monogram"})
+            bg = pick_clip("trainer coaching client gym", b, True)
+            if bg:
+                used_scenes[bg["id"]] = b["end"]
+            rec["asset"] = ({"kind": "still", **s, "bg": bg} if s
+                            else {"kind": "monogram", "bg": bg})
             if not s:
                 misses.append(f"{bid}: no headshot for "
                               f"'{p.get('subject')}' -> monogram card")
@@ -163,11 +168,18 @@ def main():
                 misses.append(f"{bid}: split_compare missing a side -> {fb}")
 
         elif tr == "infographic_list":
-            rec["asset"] = {"kind": "generated"}
+            # V3: graphics ride ON live footage - pick a relevant bg clip
+            bg = pick_clip(p.get("retrieval_query") or b["text"][:70], b, True)
+            if bg:
+                used_scenes[bg["id"]] = b["end"]
+            rec["asset"] = {"kind": "generated", "bg": bg}
             rec["items_ms"] = item_anchor_ms(p["items"], b, words)
 
         elif tr == "stat_callout":
-            rec["asset"] = {"kind": "generated"}
+            bg = pick_clip(p.get("retrieval_query") or b["text"][:70], b, True)
+            if bg:
+                used_scenes[bg["id"]] = b["end"]
+            rec["asset"] = {"kind": "generated", "bg": bg}
 
         assets[bid] = rec
 

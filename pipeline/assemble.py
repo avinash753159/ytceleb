@@ -107,13 +107,22 @@ def render_remotion(comp, props, dest, dur_s, alpha):
 
 
 def clip_piece(asset, dur, dest, darken=False):
-    """Cut a library scene to exactly dur, 1920x1080/30, silent."""
+    """Cut a library scene to exactly dur, 1920x1080/30, silent.
+    crop_box [l,t,r,b] (from watermark recovery) trims those edges first,
+    pushing corner bugs/lower-third logos out of frame."""
     src, s = asset["src"], asset["start"]
     avail = asset["end"] - s
-    vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,"
+    cb = asset.get("crop_box")
+    pre = ""
+    if cb and any(cb):
+        l, t, r, btm = cb
+        pre = (f"crop=iw*{1 - l - r:.3f}:ih*{1 - t - btm:.3f}:"
+               f"iw*{l:.3f}:ih*{t:.3f},")
+    vf = (f"{pre}scale={W}:{H}:force_original_aspect_ratio=increase,"
           f"crop={W}:{H},fps={FPS}")
     if darken:
-        vf += ",eq=brightness=-0.25:saturation=0.55,gblur=sigma=6"
+        # V3: graphics sit over LIVE footage - only a light dim, no blur
+        vf += ",eq=brightness=-0.10:saturation=0.85"
     if avail >= dur:
         run(["ffmpeg", "-ss", f"{s + 0.05:.2f}", "-i", src,
              "-t", f"{dur:.3f}", "-vf", vf, "-an", "-c:v", "libx264",
@@ -135,18 +144,47 @@ def composite(base, overlay_webm, dest):
     return dest
 
 
-def underlay(assets_all, beat, dur, dest):
-    """Darkened clean clip to sit under a full-screen graphic."""
-    # reuse any clean clip asset already resolved (stable choice: first clip)
+def underlay(assets_all, beat, dur, dest, bg=None):
+    """LIVE footage under a graphic (V3): the beat's own resolved bg clip,
+    lightly dimmed. Falls back to any resolved clip, then a dark slate."""
+    if bg:
+        return clip_piece(bg, dur, dest, darken=True)
     for a in assets_all.values():
         if (a.get("asset") or {}).get("kind") == "clip":
             return clip_piece(a["asset"], dur, dest, darken=True)
-    # no clips at all -> plain dark slate
     run(["ffmpeg", "-f", "lavfi", "-i",
          f"color=c=0x101014:s={W}x{H}:r={FPS}", "-t", f"{dur:.3f}",
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
          "-y", str(dest)])
     return dest
+
+
+def face_side(base_piece):
+    """Which half of the frame has faces? Graphics go on the OTHER side.
+    Returns 'left' or 'right' (side to PLACE the graphic)."""
+    try:
+        import cv2
+        cap = cv2.VideoCapture(str(base_piece))
+        n = int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0)
+        centers = []
+        casc = cv2.CascadeClassifier(
+            cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        for fi in (n // 4, n // 2, 3 * n // 4):
+            cap.set(cv2.CAP_PROP_POS_FRAMES, max(fi, 0))
+            ok, frame = cap.read()
+            if not ok:
+                continue
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            for (x, y, w, h) in casc.detectMultiScale(gray, 1.2, 5,
+                                                      minSize=(60, 60)):
+                centers.append((x + w / 2) / frame.shape[1])
+        cap.release()
+        if not centers:
+            return "left"
+        avg = sum(centers) / len(centers)
+        return "right" if avg < 0.5 else "left"   # graphic opposite faces
+    except Exception:
+        return "left"
 
 
 def build_piece(p, a, beat, idx, assets_all):
@@ -229,18 +267,22 @@ def build_piece(p, a, beat, idx, assets_all):
         return composite(base, webm, piece)
 
     if tr == "infographic_list":
-        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4")
+        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4",
+                        bg=asset.get("bg"))
         items = [{"text": it["text"], "atMs": ms}
                  for it, ms in zip(p["items"], a.get("items_ms", []))]
         webm = render_remotion("ListReveal",
-                               {"title": p.get("title", ""), "items": items},
+                               {"title": p.get("title", ""), "items": items,
+                                "side": face_side(base)},
                                WORK / f"ov_{bid}.webm", dur, alpha=True)
         return composite(base, webm, piece)
 
     if tr == "stat_callout":
-        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4")
+        base = underlay(assets_all, beat, dur, WORK / f"u_{bid}.mp4",
+                        bg=asset.get("bg"))
         webm = render_remotion("StatCard",
-                               {"value": p["value"], "label": p["label"]},
+                               {"value": p["value"], "label": p["label"],
+                                "side": face_side(base)},
                                WORK / f"ov_{bid}.webm", dur, alpha=True)
         return composite(base, webm, piece)
 
@@ -271,11 +313,13 @@ def main():
     for idx, bid in enumerate(order):
         p, a, b = plan[bid], assets[bid], beats[bid]
         piece = build_piece(p, a, b, idx, assets)
-        if p.get("overlay_stat") and a["treatment"] == "still_pushin":
+        if p.get("overlay_stat") and a["treatment"] in (
+                "still_pushin", "motion_broll", "exercise_demo"):
             dur = round(b["end"] - b["start"], 3)
             webm = render_remotion(
                 "StatCard", {"value": p["overlay_stat"]["value"],
-                             "label": p["overlay_stat"]["label"]},
+                             "label": p["overlay_stat"]["label"],
+                             "side": face_side(piece)},
                 WORK / f"ovs_{bid}.webm", min(dur, 3.0), alpha=True)
             piece2 = WORK / f"piece_{idx:03d}_{bid}_s.mp4"
             if not piece2.exists():

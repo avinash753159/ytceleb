@@ -96,7 +96,9 @@ def build():
             meta.append({"id": f"{s['source']}|{s['scene']}",
                          "src": s["src"], "source": s["source"],
                          "scene": s["scene"], "start": s["start"],
-                         "end": s["end"], "dur": s["dur"]})
+                         "end": s["end"], "dur": s["dur"],
+                         "crop_box": s.get("crop_box"),
+                         "subtle_mark": s.get("subtle_mark", False)})
             if (i + 1) % 50 == 0:
                 print(f"    [{i + 1}/{len(clean)}]", flush=True)
                 np.save(NPY, np.stack(embs))          # checkpoint
