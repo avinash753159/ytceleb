@@ -129,17 +129,40 @@ def build_queries(name: str, coach: str, slug: str) -> list:
     return q
 
 
-def download_one(query: str, out: Path, attempts: int = 4) -> bool:
+def _probe_height(path: Path) -> int:
+    r = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=height", "-of", "csv=p=0", str(path)],
+        capture_output=True, text=True, timeout=30)
+    try:
+        return int(r.stdout.strip().split("\n")[0])
+    except Exception:
+        return 0
+
+
+def download_one(query: str, out: Path, attempts: int = 4,
+                 min_height: int = 720) -> bool:
     """Download with retries. Each attempt takes a DIFFERENT search
     result, so one blocked/unavailable/filtered video cannot kill the
-    slot. Duration filter relaxes on later attempts."""
-    if out.exists() and out.stat().st_size > 500_000:
+    slot. Duration filter relaxes on later attempts.
+
+    Requests merged bestvideo+bestaudio up to 1080p (needs ffmpeg and a
+    JS runtime like deno on PATH - without one YouTube only exposes the
+    legacy 360p single-file format). Verifies the result is at least
+    min_height tall; a shorter file is deleted and the next search
+    result is tried, because low-res source footage is unusable."""
+    if out.exists() and out.stat().st_size > 500_000 \
+            and _probe_height(out) >= min_height:
         return True
     filters = ["duration<720", "duration<1500", "duration<2400", None]
     for i in range(1, attempts + 1):
         flt = filters[min(i - 1, len(filters) - 1)]
         args = ["yt-dlp", "-f",
-                "best[ext=mp4][height<=720]/best[ext=mp4]",
+                f"bv*[height<={min_height * 2 if min_height <= 720 else 1080}]"
+                f"[height>={min_height}]+ba/"
+                f"b[height>={min_height}]/b",
+                "--format-sort", "res:1080,ext:mp4:m4a",
+                "--merge-output-format", "mp4",
                 "--no-playlist", "-o", str(out),
                 "--playlist-items", str(i)]
         if flt:
@@ -147,11 +170,14 @@ def download_one(query: str, out: Path, attempts: int = 4) -> bool:
         args.append(f"ytsearch{attempts}:{query}")
         try:
             subprocess.run(args, capture_output=True, text=True,
-                           timeout=240 + i * 60)
+                           timeout=300 + i * 60)
         except Exception:
             pass
         if out.exists() and out.stat().st_size > 500_000:
-            return True
+            h = _probe_height(out)
+            if h >= min_height:
+                return True
+            print(f"      attempt {i}: got {h}p < {min_height}p - retrying")
         for part in out.parent.glob(out.stem + "*"):   # clean partials
             try:
                 part.unlink()
