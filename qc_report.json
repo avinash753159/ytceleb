@@ -1,6 +1,6 @@
 {
- "video": "final_video\\RYAN_REYNOLDS_FINAL_V2.mp4",
- "duration": 490.317,
+ "video": "final_video\\RYAN_REYNOLDS_V5.mp4",
+ "duration": 491.966016,
  "gates": {
   "G2_reuse": {
    "pass": true,
@@ -19,16 +19,22 @@
    "fails": []
   },
   "G6_black_freeze": {
-   "pass": true,
-   "fails": []
+   "pass": false,
+   "fails": [
+    "black@306.633333s",
+    "freeze@307.833333s",
+    "freeze@413.066667s"
+   ]
   },
   "G7_loudness": {
    "pass": true,
    "fails": []
   },
   "G8_duration": {
-   "pass": true,
-   "fails": []
+   "pass": false,
+   "fails": [
+    "final 491.97s vs narration 490.28s"
+   ]
   },
   "G1_ocr": {
    "pass": true,
