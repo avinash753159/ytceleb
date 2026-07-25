@@ -26,7 +26,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TOKEN = (ROOT / "do_token.txt").read_text().strip()
 API = "https://api.digitalocean.com/v2"
 TAG = "celebworkout-render"
-SIZE = "c-16"                 # 16 dedicated vCPU
+SIZES = ["c-16", "c-8", "s-8vcpu-16gb-amd"]   # try best first
+SIZE = SIZES[0]
 REGION = "nyc1"
 IMAGE = "ubuntu-24-04-x64"
 KEY_NAME = "celebworkout-render-key"
@@ -86,10 +87,23 @@ def up():
     if existing:
         d = existing[0]
     else:
-        d = api("POST", "/droplets", {
-            "name": "celebworkout-render", "region": REGION, "size": SIZE,
-            "image": IMAGE, "ssh_keys": [key_id], "tags": [TAG],
-            "user_data": CLOUD_INIT})["droplet"]
+        d = None
+        last = None
+        for size in SIZES:
+            try:
+                d = api("POST", "/droplets", {
+                    "name": "celebworkout-render", "region": REGION,
+                    "size": size, "image": IMAGE, "ssh_keys": [key_id],
+                    "tags": [TAG], "user_data": CLOUD_INIT})["droplet"]
+                print(f"[UP] using size {size}")
+                break
+            except SystemExit as e:
+                last = e
+                if "restricted" not in str(e):
+                    raise
+                print(f"[skip] {size} restricted by account tier")
+        if d is None:
+            raise last
     for _ in range(60):
         d = api("GET", f"/droplets/{d['id']}")["droplet"]
         ips = [n["ip_address"] for n in d["networks"]["v4"]

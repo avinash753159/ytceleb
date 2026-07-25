@@ -62,7 +62,8 @@ def interlude_seg(it, dest):
     vs = assemble._video_start(src)
     t0 = max(it["t0"], vs + 0.05)
     run(["ffmpeg", "-ss", f"{t0:.2f}", "-i", str(src),
-         "-t", f"{dur:.2f}", "-c:v", "libvpx", "-i", str(webm),
+         "-c:v", "libvpx", "-i", str(webm),
+         "-t", f"{dur:.2f}",
          "-filter_complex",
          "[0:v]scale=1920:1080:force_original_aspect_ratio=increase,"
          f"crop=1920:1080,fps={FPS}[b];[b][1:v]overlay=0:0:eof_action=pass",
