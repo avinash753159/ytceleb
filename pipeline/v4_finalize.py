@@ -102,8 +102,11 @@ def main():
             kind, asset = chosen
             a = assets[bid]
             prev_tr = a["treatment"]
-            if kind == "clip" and prev_tr == "still_pushin":
+            if kind == "clip" and prev_tr in ("still_pushin",
+                                              "split_compare"):
                 a["treatment"] = "motion_broll"
+            if kind == "still" and prev_tr == "split_compare":
+                a["treatment"] = "still_pushin"
             if kind == "still" and prev_tr in ("motion_broll",
                                                "exercise_demo"):
                 a["treatment"] = "still_pushin"
