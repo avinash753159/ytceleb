@@ -4,6 +4,34 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
+   "id": "ryan_reynolds_gym_a|61",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
+   "source": "ryan_reynolds_gym_a",
+   "scene": 61,
+   "start": 381.26,
+   "end": 391.85,
+   "dur": 10.59,
+   "score": 9
+  },
+  "v4": "tournament"
+ },
+ "b_001": {
+  "treatment": "split_compare",
+  "fallback_used": false,
+  "asset": {
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_001\\img_reynolds_sdcc2024_portrait.jpg",
+   "source": "Wikimedia Commons (Gage Skidmore, CC BY-SA 3.0) \u2014 SDCC July 25 2024",
+   "license": "Wikimedia Commons (Gage Skidmore, CC BY-SA 3.0) \u2014 SDCC July 25 2024",
+   "page": ""
+  },
+  "v4": "tournament"
+ },
+ "b_002": {
+  "treatment": "motion_broll",
+  "fallback_used": false,
+  "asset": {
+   "kind": "clip",
    "id": "ryan_reynolds_gym_c|61",
    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
    "source": "ryan_reynolds_gym_c",
@@ -11,68 +39,21 @@
    "start": 381.26,
    "end": 391.85,
    "dur": 10.59,
-   "score": 0.1385
-  }
- },
- "b_001": {
-  "treatment": "split_compare",
-  "fallback_used": false,
-  "asset": {
-   "kind": "split",
-   "left": {
-    "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_001_L_d59a1fd9c6bd714d_0.jpg",
-    "license": "pexels",
-    "source": "pexels",
-    "page": "https://www.pexels.com/photo/shirtless-man-leaning-on-glass-window-3839049/",
-    "title": "A fit shirtless man poses in a modern gym with equipment visible in the background."
-   },
-   "right": {
-    "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_001_R_7e91a7a6c9289fe2_0.jpg",
-    "license": "pexels",
-    "source": "pexels",
-    "page": "https://www.pexels.com/photo/shirtless-man-leaning-on-glass-window-3839049/",
-    "title": "A fit shirtless man poses in a modern gym with equipment visible in the background."
-   }
-  }
- },
- "b_002": {
-  "treatment": "motion_broll",
-  "fallback_used": false,
-  "asset": {
-   "kind": "clip",
-   "id": "v3_ryan_saladino_b|0",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_saladino_b.mp4",
-   "source": "v3_ryan_saladino_b",
-   "scene": 0,
-   "start": 0.0,
-   "end": 3.09,
-   "dur": 3.09,
-   "crop_box": [
-    0.0,
-    0.106,
-    0.0,
-    0.0
-   ],
-   "subtle_mark": false,
-   "score": 0.1564
-  }
+   "score": 8.5
+  },
+  "v4": "tournament"
  },
  "b_003": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v3_ryan_gym_b|73",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
-   "source": "v3_ryan_gym_b",
-   "scene": 73,
-   "start": 191.17,
-   "end": 192.7,
-   "dur": 1.53,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 0.1379
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_003\\img_mh_2016.jpg",
+   "source": "Men's Health March 2016 Deadpool cover-story photoshoot",
+   "license": "Men's Health March 2016 Deadpool cover-story photoshoot",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_004": {
   "treatment": "person_card",
@@ -80,101 +61,96 @@
   "asset": {
    "kind": "monogram",
    "bg": {
-    "id": "v3_ryan_gym_b|27",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
-    "source": "v3_ryan_gym_b",
-    "scene": 27,
-    "start": 83.43,
-    "end": 85.07,
-    "dur": 1.63,
+    "kind": "clip",
+    "id": "ryan_reynolds_gym_c|54",
+    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
+    "source": "ryan_reynolds_gym_c",
+    "scene": 54,
+    "start": 324.87,
+    "end": 329.12,
+    "dur": 4.25,
     "crop_box": null,
     "subtle_mark": false,
-    "score": 0.1024
+    "score": 8.5
    }
-  }
+  },
+  "v4": "tournament"
  },
  "b_005": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "v3_ryan_gym_b|19",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
-   "source": "v3_ryan_gym_b",
-   "scene": 19,
-   "start": 55.7,
-   "end": 57.07,
-   "dur": 1.37,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 0.0855
-  }
+   "id": "v4yt_yt_cWlK71dP_zA|0",
+   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_005\\yt_cWlK71dP_zA.mp4",
+   "source": "v4yt_yt_cWlK71dP_zA",
+   "scene": 0,
+   "start": 0.1,
+   "end": 19.932,
+   "dur": 19.832
+  },
+  "v4": "tournament"
  },
  "b_006": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_coach_a|0",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_coach_a.mp4",
-   "source": "ryan_reynolds_coach_a",
-   "scene": 0,
-   "start": 0.0,
-   "end": 3.09,
-   "dur": 3.09,
-   "crop_box": [
-    0.0,
-    0.106,
-    0.0,
-    0.0
-   ],
-   "subtle_mark": false,
-   "score": 0.1696
-  }
+   "id": "ryan_reynolds_gym_d|25",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
+   "source": "ryan_reynolds_gym_d",
+   "scene": 25,
+   "start": 67.57,
+   "end": 68.87,
+   "dur": 1.3,
+   "score": 6.5
+  },
+  "v4": "tournament"
  },
  "b_007": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_gym_a|34",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
-   "source": "ryan_reynolds_gym_a",
-   "scene": 34,
-   "start": 175.34,
-   "end": 180.05,
-   "dur": 4.71,
-   "score": 0.1019
-  }
+   "id": "pexels_healthy_eating_nutrition_meal_4|0",
+   "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_healthy_eating_nutrition_meal_4.mp4",
+   "source": "pexels_healthy_eating_nutrition_meal_4",
+   "scene": 0,
+   "start": 0.0,
+   "end": 8.22,
+   "dur": 8.22,
+   "crop_box": null,
+   "subtle_mark": false,
+   "score": 8.5
+  },
+  "v4": "tournament"
  },
  "b_008": {
   "treatment": "still_pushin",
   "fallback_used": true,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_008_v3b_4fee9b99da9164c7_0.jpg",
-   "license": "pexels",
-   "source": "pexels",
-   "page": "https://www.pexels.com/photo/view-of-dumbbells-lying-on-the-floor-16513597/",
-   "title": "Hexagonal dumbbells on a gym floor bathed in natural sunlight, creating dynamic shadows."
-  }
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_008\\img_plan_table.jpg",
+   "source": "Pexels photo 7900023",
+   "license": "Pexels photo 7900023",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_009": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "v3_ryan_dpw|46",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_dpw.mp4",
-   "source": "v3_ryan_dpw",
-   "scene": 46,
-   "start": 215.97,
-   "end": 217.97,
-   "dur": 2.0,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 0.1207
-  }
+   "id": "v4yt_yt_dfLf4sC9xDE|0",
+   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_009\\yt_dfLf4sC9xDE.webm",
+   "source": "v4yt_yt_dfLf4sC9xDE",
+   "scene": 0,
+   "start": 0.1,
+   "end": 23.9,
+   "dur": 23.8
+  },
+  "v4": "tournament"
  },
  "b_010": {
   "treatment": "stat_callout",
@@ -182,48 +158,48 @@
   "asset": {
    "kind": "generated",
    "bg": {
-    "id": "v3_ryan_freeguy|19",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_freeguy.mp4",
-    "source": "v3_ryan_freeguy",
-    "scene": 19,
-    "start": 167.1,
-    "end": 187.19,
-    "dur": 20.09,
+    "kind": "clip",
+    "id": "v3_ryan_carpet|15",
+    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_carpet.mp4",
+    "source": "v3_ryan_carpet",
+    "scene": 15,
+    "start": 29.53,
+    "end": 36.2,
+    "dur": 6.67,
     "crop_box": null,
     "subtle_mark": false,
-    "score": 0.1123
+    "score": 8
    }
-  }
+  },
+  "v4": "tournament"
  },
  "b_011": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_b|0",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
-   "source": "ryan_reynolds_gym_b",
-   "scene": 0,
-   "start": 0.0,
-   "end": 3.59,
-   "dur": 3.59,
-   "score": 0.1473
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s02_context\\b_011\\img_deadpool2016_freeway_still.jpg",
+   "source": "TMDB backdrop wsPO5Jny82b0pksjSvjUHEYHDkz.jpg",
+   "license": "TMDB backdrop wsPO5Jny82b0pksjSvjUHEYHDkz.jpg",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_012": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_gym_d|38",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
-   "source": "ryan_reynolds_gym_d",
-   "scene": 38,
-   "start": 112.83,
-   "end": 114.27,
-   "dur": 1.43,
-   "score": 0.1549
-  }
+   "id": "ryan_reynolds_gym_b|73",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
+   "scene": 73,
+   "start": 455.62,
+   "end": 459.04,
+   "dur": 3.42,
+   "score": 9
+  },
+  "v4": "tournament"
  },
  "b_013": {
   "treatment": "person_card",
@@ -231,100 +207,83 @@
   "asset": {
    "kind": "monogram",
    "bg": {
-    "id": "ryan_reynolds_gym_d|27",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
-    "source": "ryan_reynolds_gym_d",
-    "scene": 27,
-    "start": 83.43,
-    "end": 85.07,
-    "dur": 1.63,
-    "score": 0.1024
+    "kind": "clip",
+    "id": "v4yt_yt_fAaageACI_0_clean|0",
+    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s02_context\\b_013\\yt_fAaageACI_0_clean.mp4",
+    "source": "v4yt_yt_fAaageACI_0_clean",
+    "scene": 0,
+    "start": 0.1,
+    "end": 19.960957999999998,
+    "dur": 19.860958
    }
-  }
+  },
+  "v4": "tournament"
  },
  "b_014": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "ryan_reynolds_gym_a|74",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_a.mp4",
-   "source": "ryan_reynolds_gym_a",
-   "scene": 74,
-   "start": 459.04,
-   "end": 466.88,
-   "dur": 7.84,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 0.1476
-  }
+   "id": "v4yt_yt_iJyAcSuuuq8|0",
+   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s02_context\\b_014\\yt_iJyAcSuuuq8.mp4",
+   "source": "v4yt_yt_iJyAcSuuuq8",
+   "scene": 0,
+   "start": 0.1,
+   "end": 15.02,
+   "dur": 14.92
+  },
+  "v4": "tournament"
  },
  "b_015": {
   "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_015_34f6c20cf1cad72b_0.jpg",
-   "license": "pexels",
-   "source": "pexels",
-   "page": "https://www.pexels.com/photo/man-with-a-gun-behind-a-net-18326060/",
-   "title": "A distressed man reaches through a fence, holding a gun, in a tense setting."
-  }
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_015\\img_vanwilder_bd1.jpg",
+   "source": "TMDB backdrop (Van Wilder, 2002)",
+   "license": "TMDB backdrop (Van Wilder, 2002)",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_016": {
   "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_016_764126ece613ed00_0.jpg",
-   "license": "pexels",
-   "source": "pexels",
-   "page": "https://www.pexels.com/photo/stunning-backlit-cave-with-waterfalls-36219579/",
-   "title": "Dramatic cave view with backlit entrance and cascading waterfalls creating a mystical atmosphere."
-  }
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_016\\img_bt_promo_tanktop.jpg",
+   "source": "TMDB backdrop image.tmdb.org/t/p/original/5jIFimv2vKVi47iwbMSlmgLqBqE.jpg",
+   "license": "TMDB backdrop image.tmdb.org/t/p/original/5jIFimv2vKVi47iwbMSlmgLqBqE.jpg",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_017": {
   "treatment": "split_compare",
   "fallback_used": false,
   "asset": {
-   "kind": "split",
-   "left": {
-    "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_017_L_9be85c90d9f3a125_0.jpg",
-    "license": "pexels",
-    "source": "pexels",
-    "page": "https://www.pexels.com/photo/topless-man-in-black-and-white-23432347/",
-    "title": "Dramatic black and white portrait of a topless man leaning over marble bath, showcasing selective focus."
-   },
-   "right": {
-    "path": "C:\\Users\\avina\\ytceleb\\library\\stills\\b_017_R_d7e6bd057a134078_0.jpg",
-    "license": "pexels",
-    "source": "pexels",
-    "page": "https://www.pexels.com/photo/close-up-of-shredded-paper-18372328/",
-    "title": "Detailed close-up image showing the texture and patterns of shredded paper mixed with a warm orange hue."
-   }
-  }
+   "kind": "clip",
+   "id": "v4yt_yt_gtTfd6tISfw|0",
+   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_017\\yt_gtTfd6tISfw.mp4",
+   "source": "v4yt_yt_gtTfd6tISfw",
+   "scene": 0,
+   "start": 0.1,
+   "end": 15.333,
+   "dur": 15.233
+  },
+  "v4": "tournament"
  },
  "b_018": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v3_ryan_gym_b|58",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
-   "source": "v3_ryan_gym_b",
-   "scene": 58,
-   "start": 154.67,
-   "end": 156.97,
-   "dur": 2.3,
-   "crop_box": [
-    0.128,
-    0.0,
-    0.103,
-    0.139
-   ],
-   "subtle_mark": false,
-   "score": 0.1356
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_018\\img_dpw_storefront_still.jpg",
+   "source": "TMDB backdrop https://image.tmdb.org/t/p/original/5wzKSvvAREZjdMH0bRF8QBKKDbE.jpg",
+   "license": "TMDB backdrop https://image.tmdb.org/t/p/original/5wzKSvvAREZjdMH0bRF8QBKKDbE.jpg",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_019": {
   "treatment": "stat_callout",
@@ -332,50 +291,48 @@
   "asset": {
    "kind": "generated",
    "bg": {
-    "id": "ryan_reynolds_gym_d|19",
-    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_d.mp4",
-    "source": "ryan_reynolds_gym_d",
-    "scene": 19,
-    "start": 55.7,
-    "end": 57.07,
-    "dur": 1.37,
-    "score": 0.0976
+    "kind": "clip",
+    "id": "ryan_reynolds_int_b|15",
+    "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_int_b.mp4",
+    "source": "ryan_reynolds_int_b",
+    "scene": 15,
+    "start": 24.82,
+    "end": 28.06,
+    "dur": 3.24,
+    "score": 8.5
    }
-  }
+  },
+  "v4": "tournament"
  },
  "b_020": {
-  "treatment": "motion_broll",
+  "treatment": "still_pushin",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "ryan_reynolds_gym_b|74",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
-   "source": "ryan_reynolds_gym_b",
-   "scene": 74,
-   "start": 459.04,
-   "end": 466.88,
-   "dur": 7.84,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 0.108
-  }
+   "kind": "still",
+   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_020\\img_blade_trinity_hannibal.jpg",
+   "source": "collider.com still, Blade: Trinity (2004)",
+   "license": "collider.com still, Blade: Trinity (2004)",
+   "page": ""
+  },
+  "v4": "tournament"
  },
  "b_021": {
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "v3_ex_hike|1",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ex_hike.mp4",
-   "source": "v3_ex_hike",
-   "scene": 1,
-   "start": 1.67,
-   "end": 3.88,
-   "dur": 2.21,
+   "id": "v3_ex_lunge|2",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ex_lunge.mp4",
+   "source": "v3_ex_lunge",
+   "scene": 2,
+   "start": 16.77,
+   "end": 22.84,
+   "dur": 6.07,
    "crop_box": null,
    "subtle_mark": false,
-   "score": 0.102
-  }
+   "score": 8
+  },
+  "v4": "tournament"
  },
  "b_022": {
   "treatment": "motion_broll",
@@ -391,8 +348,9 @@
    "dur": 4.71,
    "crop_box": null,
    "subtle_mark": false,
-   "score": 0.1149
-  }
+   "score": 8
+  },
+  "v4": "tournament"
  },
  "b_023": {
   "treatment": "infographic_list",
