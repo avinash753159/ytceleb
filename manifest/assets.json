@@ -85,9 +85,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_005\\yt_cWlK71dP_zA.mp4",
    "source": "v4yt_yt_cWlK71dP_zA",
    "scene": 0,
-   "start": 0.1,
-   "end": 19.932,
-   "dur": 19.832
+   "start": 5.03,
+   "end": 19.98,
+   "dur": 14.95
   },
   "v4": "tournament"
  },
@@ -112,16 +112,16 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "pexels_healthy_eating_nutrition_meal_4|0",
-   "src": "C:\\Users\\avina\\ytceleb\\pexels_videos\\pexels_healthy_eating_nutrition_meal_4.mp4",
-   "source": "pexels_healthy_eating_nutrition_meal_4",
-   "scene": 0,
-   "start": 0.0,
-   "end": 8.22,
-   "dur": 8.22,
+   "id": "ryan_reynolds_gym_b|52",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
+   "scene": 52,
+   "start": 316.15,
+   "end": 319.99,
+   "dur": 3.84,
    "crop_box": null,
    "subtle_mark": false,
-   "score": 8.5
+   "score": 0.1036
   },
   "v4": "tournament"
  },
@@ -146,9 +146,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s01_hook\\b_009\\yt_dfLf4sC9xDE.webm",
    "source": "v4yt_yt_dfLf4sC9xDE",
    "scene": 0,
-   "start": 0.1,
-   "end": 23.9,
-   "dur": 23.8
+   "start": 9.66,
+   "end": 23.95,
+   "dur": 14.29
   },
   "v4": "tournament"
  },
@@ -212,9 +212,9 @@
     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s02_context\\b_013\\yt_fAaageACI_0_clean.mp4",
     "source": "v4yt_yt_fAaageACI_0_clean",
     "scene": 0,
-    "start": 0.1,
-    "end": 19.960957999999998,
-    "dur": 19.860958
+    "start": 9.81,
+    "end": 20.01,
+    "dur": 10.2
    }
   },
   "v4": "tournament"
@@ -251,9 +251,9 @@
   "fallback_used": false,
   "asset": {
    "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_016\\img_bt_promo_tanktop.jpg",
-   "source": "TMDB backdrop image.tmdb.org/t/p/original/5jIFimv2vKVi47iwbMSlmgLqBqE.jpg",
-   "license": "TMDB backdrop image.tmdb.org/t/p/original/5jIFimv2vKVi47iwbMSlmgLqBqE.jpg",
+   "path": "C:\\Users\\avina\\ytceleb\\library\\refs\\ryan_2004_1.jpg",
+   "source": "refpack",
+   "license": "tmdb-ref",
    "page": ""
   },
   "v4": "tournament"
@@ -262,14 +262,35 @@
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v4yt_yt_gtTfd6tISfw|0",
-   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s03_timeline\\b_017\\yt_gtTfd6tISfw.mp4",
-   "source": "v4yt_yt_gtTfd6tISfw",
-   "scene": 0,
-   "start": 0.1,
-   "end": 15.333,
-   "dur": 15.233
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "v3_ryan_saladino_a|61a",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_saladino_a.mp4",
+     "source": "v3_ryan_saladino_a",
+     "scene": 61,
+     "start": 381.26,
+     "end": 386.56,
+     "dur": 5.3,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 0.1253
+    },
+    {
+     "kind": "clip",
+     "id": "v3_ryan_saladino_a|61b",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_saladino_a.mp4",
+     "source": "v3_ryan_saladino_a",
+     "scene": 61,
+     "start": 386.56,
+     "end": 391.85,
+     "dur": 5.3,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 0.1253
+    }
+   ]
   },
   "v4": "tournament"
  },
@@ -523,13 +544,14 @@
   "fallback_used": false,
   "asset": {
    "kind": "clip",
-   "id": "v4yt_yt_Bjnp32vTv0Y|0",
-   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s04_monday\\b_031\\yt_Bjnp32vTv0Y.mp4",
-   "source": "v4yt_yt_Bjnp32vTv0Y",
-   "scene": 0,
-   "start": 0.1,
-   "end": 13.0,
-   "dur": 12.9
+   "id": "ryan_reynolds_gym_c|116",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_c.mp4",
+   "source": "ryan_reynolds_gym_c",
+   "scene": 116,
+   "start": 665.46,
+   "end": 678.72,
+   "dur": 13.26,
+   "score": 0.1015
   },
   "v4": "tournament"
  },
@@ -591,9 +613,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s05_tuesday\\b_035\\yt_S-VnuxjvViI.mp4",
    "source": "v4yt_yt_S-VnuxjvViI",
    "scene": 0,
-   "start": 0.1,
-   "end": 16.9165,
-   "dur": 16.8165
+   "start": 1.55,
+   "end": 16.97,
+   "dur": 15.42
   },
   "v4": "tournament"
  },
@@ -642,9 +664,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s06_wednesday\\b_038\\yt_oAY-FpqPgkw.mp4.mkv",
    "source": "v4yt_yt_oAY-FpqPgkw.mp4",
    "scene": 0,
-   "start": 0.1,
-   "end": 16.968999999999998,
-   "dur": 16.869
+   "start": 2.74,
+   "end": 17.02,
+   "dur": 14.28
   },
   "v4": "tournament"
  },
@@ -670,26 +692,45 @@
   "treatment": "exercise_demo",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v4yt_yt_QwscR2BhdEg.mp4|0",
-   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s06_wednesday\\b_040\\yt_QwscR2BhdEg.mp4.webm",
-   "source": "v4yt_yt_QwscR2BhdEg.mp4",
-   "scene": 0,
-   "start": 0.1,
-   "end": 13.921000000000001,
-   "dur": 13.821000000000002
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "v4yt_yt_QwscR2BhdEg.mp4|0s",
+     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s06_wednesday\\b_040\\yt_QwscR2BhdEg.mp4.webm",
+     "source": "v4yt_yt_QwscR2BhdEg.mp4",
+     "scene": 0,
+     "start": 0.1,
+     "end": 7.01,
+     "dur": 6.91
+    },
+    {
+     "kind": "clip",
+     "id": "v4yt_yt_QwscR2BhdEg.mp4|1s",
+     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s06_wednesday\\b_040\\yt_QwscR2BhdEg.mp4.webm",
+     "source": "v4yt_yt_QwscR2BhdEg.mp4",
+     "scene": 0,
+     "start": 7.01,
+     "end": 13.921000000000001,
+     "dur": 6.91
+    }
+   ]
   },
   "v4": "tournament"
  },
  "b_041": {
-  "treatment": "still_pushin",
+  "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "still",
-   "path": "C:\\Users\\avina\\ytceleb\\candidates\\s06_wednesday\\b_041\\img_ryan_dpw_workout.jpg",
-   "source": "setforset.com Ryan Reynolds workout article",
-   "license": "setforset.com Ryan Reynolds workout article",
-   "page": ""
+   "kind": "clip",
+   "id": "ryan_reynolds_gym_b|58",
+   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\ryan_reynolds_gym_b.mp4",
+   "source": "ryan_reynolds_gym_b",
+   "scene": 58,
+   "start": 365.37,
+   "end": 368.58,
+   "dur": 3.21,
+   "score": 0.1173
   },
   "v4": "tournament"
  },
@@ -771,9 +812,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s07_thursday\\b_046\\yt_cojtnACawz0.mp4",
    "source": "v4yt_yt_cojtnACawz0",
    "scene": 0,
-   "start": 0.1,
-   "end": 21.929,
-   "dur": 21.829
+   "start": 9.69,
+   "end": 21.98,
+   "dur": 12.29
   },
   "v4": "tournament"
  },
@@ -781,17 +822,35 @@
   "treatment": "exercise_demo",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v3_ex_rdl|17",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ex_rdl.mp4",
-   "source": "v3_ex_rdl",
-   "scene": 17,
-   "start": 93.59,
-   "end": 99.31,
-   "dur": 5.71,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 8.5
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "v3_ex_rdl|0s",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ex_rdl.mp4",
+     "source": "v3_ex_rdl",
+     "scene": 17,
+     "start": 93.59,
+     "end": 96.45,
+     "dur": 2.86,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 8.5
+    },
+    {
+     "kind": "clip",
+     "id": "v3_ex_rdl|1s",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ex_rdl.mp4",
+     "source": "v3_ex_rdl",
+     "scene": 17,
+     "start": 96.45,
+     "end": 99.31,
+     "dur": 2.86,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 8.5
+    }
+   ]
   },
   "v4": "tournament"
  },
@@ -860,9 +919,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s09_weekend\\b_051\\yt_3vDVxo0tGGg.mp4",
    "source": "v4yt_yt_3vDVxo0tGGg",
    "scene": 0,
-   "start": 0.1,
-   "end": 19.892999999999997,
-   "dur": 19.793
+   "start": 5.13,
+   "end": 19.91,
+   "dur": 14.78
   },
   "v4": "tournament"
  },
@@ -877,9 +936,9 @@
     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s09_weekend\\b_052\\yt_AxlE-g2cK30.mp4",
     "source": "v4yt_yt_AxlE-g2cK30",
     "scene": 0,
-    "start": 0.1,
-    "end": 17.892999999999997,
-    "dur": 17.793
+    "start": 5.37,
+    "end": 17.91,
+    "dur": 12.54
    }
   },
   "items_ms": [
@@ -910,9 +969,9 @@
    "src": "C:\\Users\\avina\\ytceleb\\candidates\\s09_weekend\\b_054\\yt_X3jBRfTYb70.mp4",
    "source": "v4yt_yt_X3jBRfTYb70",
    "scene": 0,
-   "start": 0.1,
-   "end": 16.924,
-   "dur": 16.824
+   "start": 4.77,
+   "end": 16.97,
+   "dur": 12.2
   },
   "v4": "tournament"
  },
@@ -944,14 +1003,29 @@
   "treatment": "exercise_demo",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v4yt_yt_Y3SirL0z8xI.mp4|0",
-   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s09_weekend\\b_057\\yt_Y3SirL0z8xI.mp4.webm",
-   "source": "v4yt_yt_Y3SirL0z8xI.mp4",
-   "scene": 0,
-   "start": 0.1,
-   "end": 21.9,
-   "dur": 21.8
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "v4yt_yt_Y3SirL0z8xI.mp4|0s",
+     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s09_weekend\\b_057\\yt_Y3SirL0z8xI.mp4.webm",
+     "source": "v4yt_yt_Y3SirL0z8xI.mp4",
+     "scene": 0,
+     "start": 7.36,
+     "end": 14.66,
+     "dur": 7.29
+    },
+    {
+     "kind": "clip",
+     "id": "v4yt_yt_Y3SirL0z8xI.mp4|1s",
+     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s09_weekend\\b_057\\yt_Y3SirL0z8xI.mp4.webm",
+     "source": "v4yt_yt_Y3SirL0z8xI.mp4",
+     "scene": 0,
+     "start": 14.66,
+     "end": 21.95,
+     "dur": 7.29
+    }
+   ]
   },
   "v4": "tournament"
  },
@@ -1003,14 +1077,29 @@
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v4yt_yt_MJxKwb80Qg4|0",
-   "src": "C:\\Users\\avina\\ytceleb\\candidates\\s10_notes\\b_061\\yt_MJxKwb80Qg4.mp4",
-   "source": "v4yt_yt_MJxKwb80Qg4",
-   "scene": 0,
-   "start": 0.1,
-   "end": 21.892999999999997,
-   "dur": 21.793
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "v4yt_yt_MJxKwb80Qg4|0s",
+     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s10_notes\\b_061\\yt_MJxKwb80Qg4.mp4",
+     "source": "v4yt_yt_MJxKwb80Qg4",
+     "scene": 0,
+     "start": 8.75,
+     "end": 15.34,
+     "dur": 6.59
+    },
+    {
+     "kind": "clip",
+     "id": "v4yt_yt_MJxKwb80Qg4|1s",
+     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s10_notes\\b_061\\yt_MJxKwb80Qg4.mp4",
+     "source": "v4yt_yt_MJxKwb80Qg4",
+     "scene": 0,
+     "start": 15.34,
+     "end": 21.93,
+     "dur": 6.59
+    }
+   ]
   },
   "v4": "tournament"
  },
@@ -1018,17 +1107,35 @@
   "treatment": "motion_broll",
   "fallback_used": false,
   "asset": {
-   "kind": "clip",
-   "id": "v3_ryan_gym_b|55",
-   "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
-   "source": "v3_ryan_gym_b",
-   "scene": 55,
-   "start": 144.77,
-   "end": 147.83,
-   "dur": 3.07,
-   "crop_box": null,
-   "subtle_mark": false,
-   "score": 7
+   "kind": "clips",
+   "list": [
+    {
+     "kind": "clip",
+     "id": "v3_ryan_gym_b|0s",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
+     "source": "v3_ryan_gym_b",
+     "scene": 55,
+     "start": 144.77,
+     "end": 146.3,
+     "dur": 1.53,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 7
+    },
+    {
+     "kind": "clip",
+     "id": "v3_ryan_gym_b|1s",
+     "src": "C:\\Users\\avina\\ytceleb\\youtube_videos\\v3_ryan_gym_b.mp4",
+     "source": "v3_ryan_gym_b",
+     "scene": 55,
+     "start": 146.3,
+     "end": 147.83,
+     "dur": 1.53,
+     "crop_box": null,
+     "subtle_mark": false,
+     "score": 7
+    }
+   ]
   },
   "v4": "tournament"
  },
@@ -1092,9 +1199,9 @@
     "src": "C:\\Users\\avina\\ytceleb\\candidates\\s11_macros\\b_066\\yt_l6KlN_H_I.webm",
     "source": "v4yt_yt_l6KlN_H_I",
     "scene": 0,
-    "start": 0.1,
-    "end": 21.9,
-    "dur": 21.8
+    "start": 8.59,
+    "end": 21.95,
+    "dur": 13.36
    }
   },
   "v4": "tournament"

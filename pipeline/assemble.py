@@ -106,12 +106,32 @@ def render_remotion(comp, props, dest, dur_s, alpha):
     return dest
 
 
+def _video_start(src):
+    """TRUE video start = first packet PTS. yt-dlp --download-sections keeps
+    original timestamps, so video packets can begin many seconds after t=0
+    while stream/container metadata claims start_time=0; seeking before the
+    first packet encodes zero frames."""
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                        "-show_entries", "packet=pts_time",
+                        "-read_intervals", "%+#1", "-of", "csv=p=0",
+                        str(src)], capture_output=True, text=True)
+    try:
+        return float(r.stdout.strip().split("\n")[0].strip(","))
+    except Exception:
+        return 0.0
+
+
 def clip_piece(asset, dur, dest, darken=False):
     """Cut a library scene to exactly dur, 1920x1080/30, silent.
     crop_box [l,t,r,b] (from watermark recovery) trims those edges first,
     pushing corner bugs/lower-third logos out of frame."""
     src, s = asset["src"], asset["start"]
+    vs = _video_start(src)
+    if s < vs:                       # clamp into the actual video range
+        s = vs + 0.05
     avail = asset["end"] - s
+    if avail < 1.0:                  # asset window collapsed - take from vs
+        avail = max(asset["end"], vs + dur + 0.2) - s
     cb = asset.get("crop_box")
     pre = ""
     if cb and any(cb):
