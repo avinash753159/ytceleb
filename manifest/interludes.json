@@ -1,0 +1,50 @@
+[
+ {
+  "id": "int_diet",
+  "after": "b_019",
+  "vid": "ntfkrFfjFCU",
+  "t0": 7.0,
+  "t1": 28.0,
+  "label": "Ryan Reynolds \u2014 Green Lantern press, 2011"
+ },
+ {
+  "id": "int_strom",
+  "after": "b_017",
+  "vid": "F-e2xPMjXK8",
+  "t0": 26.0,
+  "t1": 44.0,
+  "label": "Bobby Strom \u2014 Ryan's Green Lantern trainer"
+ },
+ {
+  "id": "int_access",
+  "after": "b_018",
+  "vid": "oxGYT3BCBZg",
+  "t0": 22.0,
+  "t1": 35.0,
+  "label": "Access Hollywood \u2014 Deadpool 3 training"
+ },
+ {
+  "id": "int_donmh",
+  "after": "b_024",
+  "vid": "OAc4a3Pvojw",
+  "t0": 33.0,
+  "t1": 50.0,
+  "label": "Don Saladino \u2014 Men's Health"
+ },
+ {
+  "id": "int_ethic",
+  "after": "b_059",
+  "vid": "gCav3Jkel5I",
+  "t0": 103.0,
+  "t1": 130.0,
+  "label": "Don Saladino \u2014 on Ryan's work ethic"
+ },
+ {
+  "id": "int_freeguy",
+  "after": "b_098",
+  "vid": "a_Swp1EJtmk",
+  "t0": 45.0,
+  "t1": 68.0,
+  "label": "Ryan Reynolds \u2014 Free Guy BTS"
+ }
+]

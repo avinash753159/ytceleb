@@ -6,6 +6,10 @@ import {
 import {
   BarsRise, EraCard, IconBurst, MacroApp, PeopleRow, SiteZoom, TypeOn,
 } from './v5cards';
+import {
+  BigCounter, CalendarGrid, ClockRing, DonutGauge, GramsBar, PlateCounter,
+  RangeSplit, StepsRing, TicketStub, YearsTimeline,
+} from './v6cards';
 
 // One composition per treatment graphic. Duration/fps come from input props
 // (--props=./props.json; inline JSON is broken on Windows shells).
@@ -59,5 +63,36 @@ export const Root: React.FC = () => (
     <Composition id="MacroApp" component={MacroApp as React.FC}
       durationInFrames={DUR} fps={FPS} width={W} height={H}
       defaultProps={{}} />
+    <Composition id="DonutGauge" component={DonutGauge as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{pct: 90, title: 'x'}} />
+    <Composition id="ClockRing" component={ClockRing as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{fromH: 7, toH: 9, title: 'x'}} />
+    <Composition id="CalendarGrid" component={CalendarGrid as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{activeDays: 6, title: 'x'}} />
+    <Composition id="PlateCounter" component={PlateCounter as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{display: 'x', title: 'x'}} />
+    <Composition id="GramsBar" component={GramsBar as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{icon: 'x', display: 'x', title: 'x'}} />
+    <Composition id="TicketStub" component={TicketStub as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{big: 'x', small: 'x', title: 'x'}} />
+    <Composition id="BigCounter" component={BigCounter as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{from: 0, to: 100, title: 'x'}} />
+    <Composition id="YearsTimeline" component={YearsTimeline as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{years: [{y: 'x', label: 'x'}], title: 'x'}} />
+    <Composition id="RangeSplit" component={RangeSplit as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{left: 'x', right: 'x', leftSub: 'x', rightSub: 'x',
+                     title: 'x'}} />
+    <Composition id="StepsRing" component={StepsRing as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{display: 'x', title: 'x'}} />
   </>
 );
