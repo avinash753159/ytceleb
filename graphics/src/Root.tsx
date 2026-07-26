@@ -10,6 +10,13 @@ import {
   BigCounter, CalendarGrid, ClockRing, DonutGauge, GramsBar, PlateCounter,
   RangeSplit, StepsRing, TicketStub, YearsTimeline,
 } from './v6cards';
+import {
+  ArrowCallout, Checklist, IndexCards, InstaCard, PhotoTiles, StepCards,
+} from './v7cards';
+import {CommentPrompt, LikeSubBug, SubscribeCard} from './v8cards';
+import {ChapterChip, Checklist2, PhotoBurst, PhotoTiles2,
+        StepCards2} from './v9cards';
+import {ExerciseCard} from './v10cards';
 
 // One composition per treatment graphic. Duration/fps come from input props
 // (--props=./props.json; inline JSON is broken on Windows shells).
@@ -94,5 +101,51 @@ export const Root: React.FC = () => (
     <Composition id="StepsRing" component={StepsRing as React.FC}
       durationInFrames={DUR} fps={FPS} width={W} height={H}
       defaultProps={{display: 'x', title: 'x'}} />
+    <Composition id="IndexCards" component={IndexCards as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{cards: [{text: 'x', atMs: 0}]}} />
+    <Composition id="Checklist" component={Checklist as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{items: [{text: 'x', atMs: 0}]}} />
+    <Composition id="PhotoTiles" component={PhotoTiles as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{tiles: [{src: '', label: 'x', atMs: 0}]}} />
+    <Composition id="StepCards" component={StepCards as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{steps: [{text: 'x', atMs: 0}]}} />
+    <Composition id="ArrowCallout" component={ArrowCallout as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{name: 'x'}} />
+    <Composition id="InstaCard" component={InstaCard as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{handle: 'x', name: 'x', bio: 'x', avatarSrc: ''}} />
+    <Composition id="SubscribeCard" component={SubscribeCard as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{}} />
+    <Composition id="CommentPrompt" component={CommentPrompt as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{a: 'x', b: 'y'}} />
+    <Composition id="LikeSubBug" component={LikeSubBug as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{}} />
+    <Composition id="PhotoTiles2" component={PhotoTiles2 as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{title: 'x', tiles: [{src: '', label: 'x', atMs: 0}]}} />
+    <Composition id="PhotoBurst" component={PhotoBurst as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{label: 'x',
+                     satellites: [{src: '', label: 'x', atMs: 0}]}} />
+    <Composition id="StepCards2" component={StepCards2 as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{title: 'x', steps: [{text: 'x', atMs: 0}]}} />
+    <Composition id="Checklist2" component={Checklist2 as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{title: 'x', items: [{text: 'x', atMs: 0}]}} />
+    <Composition id="ChapterChip" component={ChapterChip as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{part: 'PART 1', title: 'x'}} />
+    <Composition id="ExerciseCard" component={ExerciseCard as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{name: 'x', img0: '', img1: ''}} />
   </>
 );

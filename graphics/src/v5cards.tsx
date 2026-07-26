@@ -18,11 +18,16 @@ const pop = (frame: number, f0: number, fps: number) =>
   spring({frame: frame - f0, fps, config: {damping: 14, stiffness: 160,
                                            mass: 0.6}});
 
-// Dark stage with radiating accent circles (the reference's signature bg)
+// Dark stage with radiating accent circles (the reference's signature bg).
+// V9: 6-frame decaying impact shake on entrance + slow breathing glow.
 export const Stage: React.FC<{children?: React.ReactNode;
                               accent?: string}> = ({children, accent}) => {
   const {frame} = useT();
   const a = accent ?? V5.accent;
+  const decay = Math.max(0, 1 - frame / 9);
+  const shakeX = Math.sin(frame * 2.7) * 7 * decay;
+  const shakeY = Math.cos(frame * 3.3) * 5 * decay;
+  const breathe = 1 + 0.18 * Math.sin(frame / 34);
   return (
     <AbsoluteFill style={{
       background: `radial-gradient(ellipse at 50% 60%, ${V5.bg1}, ${V5.bg0})`,
@@ -38,8 +43,11 @@ export const Stage: React.FC<{children?: React.ReactNode;
       <div style={{position: 'absolute', left: '50%', top: '58%',
         width: 900, height: 500, marginLeft: -450, marginTop: -250,
         background: `radial-gradient(ellipse, ${V5.accentSoft}, transparent 65%)`,
-        filter: 'blur(30px)'}} />
-      {children}
+        filter: 'blur(30px)', opacity: breathe}} />
+      <AbsoluteFill style={{
+        transform: `translate(${shakeX}px, ${shakeY}px)`}}>
+        {children}
+      </AbsoluteFill>
     </AbsoluteFill>
   );
 };
@@ -51,7 +59,8 @@ export const SiteZoom: React.FC<{
   src: string;
   zoomFrom?: number; zoomTo?: number;
   focusX?: number; focusY?: number;           // 0-1 zoom target
-  highlightRect?: {x: number; y: number; w: number; h: number} | null;
+  highlightRect?: {x: number; y: number; w: number; h: number;
+                 yImg?: number; hImg?: number} | null;
   highlightAtMs?: number;
   label?: string;
   accent?: string;
@@ -90,22 +99,24 @@ export const SiteZoom: React.FC<{
           </div>
           <div style={{position: 'relative', width: '100%',
                        height: 880 - 54, overflow: 'hidden'}}>
-            <Img src={src} style={{
-              width: '100%',
+            <div style={{
+              position: 'relative', width: '100%',
               transformOrigin: `${focusX * 100}% ${focusY * 100}%`,
               transform: `scale(${z})`,
-            }} />
-            {highlightRect ? (
-              <div style={{
-                position: 'absolute',
-                left: `${highlightRect.x}%`, top: `${highlightRect.y}%`,
-                width: `${highlightRect.w * hl}%`,
-                height: `${highlightRect.h}%`,
-                background: V5.marker, mixBlendMode: 'multiply',
-                borderRadius: 6,
-                transform: 'rotate(-0.6deg)',
-              }} />
-            ) : null}
+            }}>
+              <Img src={src} style={{width: '100%', display: 'block'}} />
+              {highlightRect ? (
+                <div style={{
+                  position: 'absolute',
+                  left: `${highlightRect.x}%`,
+                  top: `${highlightRect.yImg ?? highlightRect.y}%`,
+                  width: `${highlightRect.w * hl}%`,
+                  height: `${highlightRect.hImg ?? highlightRect.h}%`,
+                  background: V5.marker, mixBlendMode: 'multiply',
+                  borderRadius: 4,
+                }} />
+              ) : null}
+            </div>
           </div>
         </div>
       </AbsoluteFill>

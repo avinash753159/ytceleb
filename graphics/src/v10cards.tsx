@@ -1,0 +1,182 @@
+import React from 'react';
+import {
+  AbsoluteFill,
+  Img,
+  OffthreadVideo,
+  interpolate,
+  spring,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
+import {V5} from './tokens_v5';
+import {Stage} from './v5cards';
+import {anteriorData, posteriorData} from './bodyPaths';
+
+const useT = () => {
+  const frame = useCurrentFrame();
+  const {fps, durationInFrames} = useVideoConfig();
+  return {frame, fps, dur: durationInFrames};
+};
+const pop = (frame: number, f0: number, fps: number) =>
+  spring({frame: frame - f0, fps,
+          config: {damping: 11, stiffness: 170, mass: 0.7}});
+
+// free-exercise-db muscle names -> vendored body-model region keys
+const MUSCLE_MAP: Record<string, string[]> = {
+  'chest': ['chest'],
+  'shoulders': ['front_deltoids', 'back_deltoids'],
+  'biceps': ['biceps'],
+  'triceps': ['triceps'],
+  'forearms': ['forearm'],
+  'abdominals': ['abs', 'obliques'],
+  'quadriceps': ['quadriceps'],
+  'hamstrings': ['hamstring'],
+  'glutes': ['gluteal'],
+  'calves': ['calves', 'left_soleus', 'right_soleus'],
+  'lats': ['upper_back'],
+  'middle back': ['upper_back'],
+  'lower back': ['lower_back'],
+  'traps': ['trapezius'],
+  'neck': ['neck'],
+  'abductors': ['abductors'],
+  'adductors': ['adductor'],
+};
+
+const toRegions = (names: string[]) =>
+  new Set(names.flatMap((n) => MUSCLE_MAP[n.toLowerCase()] ?? []));
+
+// One body figure (front or back) with pulsing highlighted regions.
+const Body: React.FC<{
+  data: {muscle: string; svgPoints: string[]}[];
+  primary: Set<string>; secondary: Set<string>;
+  accent: string; pulse: number;
+}> = ({data, primary, secondary, accent, pulse}) => (
+  <svg viewBox="0 0 100 200" style={{height: '100%'}}>
+    {data.map((m, i) =>
+      m.svgPoints.map((pts, j) => {
+        const isP = primary.has(m.muscle);
+        const isS = secondary.has(m.muscle);
+        return (
+          <polygon key={`${i}-${j}`} points={pts}
+            fill={isP ? accent : isS ? accent : '#3A3A42'}
+            opacity={isP ? 0.55 + 0.45 * pulse
+                     : isS ? 0.28 + 0.12 * pulse : 0.9}
+            stroke="#0C0C0F" strokeWidth="0.3"/>
+        );
+      })
+    )}
+  </svg>
+);
+
+// ------------------------------------------------ ExerciseCard
+// Real two-pose demo photos crossfading start<->finish + muscle map +
+// animated set/rep/rest counters. The flagship V10 card.
+export const ExerciseCard: React.FC<{
+  name: string;
+  img0?: string; img1?: string;        // start / finish pose photos
+  videoSrc?: string;                   // looping demo video (data URI)
+  videoStatic?: string;                // looping demo video (bundle public/)
+  primaryMuscles?: string[]; secondaryMuscles?: string[];
+  sets?: string; reps?: string; rest?: string;
+  accent?: string;
+}> = ({name, img0 = '', img1 = '', videoSrc, videoStatic,
+       primaryMuscles = [], secondaryMuscles = [],
+       sets, reps, rest, accent = V5.accent}) => {
+  const vsrc = videoStatic ? staticFile(videoStatic) : videoSrc;
+  const {frame, fps} = useT();
+  const enter = pop(frame, 3, fps);
+  // pose crossfade: eased alternation ~1.1s per pose
+  const cyc = (frame / (1.1 * fps)) % 2;
+  const xf = interpolate(
+    cyc < 1 ? cyc : 2 - cyc, [0.25, 0.75], [0, 1],
+    {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const pulse = 0.5 + 0.5 * Math.sin(frame / 7);
+  const prim = toRegions(primaryMuscles);
+  const sec = toRegions(secondaryMuscles);
+  const stats = [
+    sets ? {v: sets, l: 'SETS'} : null,
+    reps ? {v: reps, l: 'REPS'} : null,
+    rest ? {v: rest, l: 'REST'} : null,
+  ].filter(Boolean) as {v: string; l: string}[];
+  return (
+    <Stage accent={accent}>
+      <AbsoluteFill style={{justifyContent: 'center',
+                            alignItems: 'center'}}>
+        <div style={{
+          opacity: enter, transform: `scale(${0.92 + enter * 0.08})`,
+          display: 'grid', gridTemplateColumns: '1060px 520px',
+          gap: 0, width: 1580, height: 800,
+          background: '#101014', borderRadius: 30, overflow: 'hidden',
+          border: '2px solid rgba(255,255,255,0.13)',
+          boxShadow: `0 30px 90px rgba(0,0,0,0.6),
+                      0 0 ${40 + pulse * 22}px ${accent}44`,
+        }}>
+          {/* demo media: video loop preferred, two-pose crossfade else */}
+          <div style={{position: 'relative', overflow: 'hidden',
+                       background: '#fff'}}>
+            {vsrc ? (
+              <OffthreadVideo src={vsrc} muted loop style={{
+                position: 'absolute', inset: 0, width: '100%',
+                height: '100%', objectFit: 'cover'}}/>
+            ) : (
+              <>
+                <Img src={img0} style={{position: 'absolute', inset: 0,
+                  width: '100%', height: '100%', objectFit: 'cover'}}/>
+                <Img src={img1} style={{position: 'absolute', inset: 0,
+                  width: '100%', height: '100%', objectFit: 'cover',
+                  opacity: xf}}/>
+              </>
+            )}
+            <div style={{position: 'absolute', left: 0, right: 0,
+              bottom: 0, height: 10, background: accent,
+              boxShadow: `0 0 26px ${accent}`}}/>
+          </div>
+          {/* right rail */}
+          <div style={{padding: '34px 36px', display: 'flex',
+                       flexDirection: 'column', gap: 16,
+                       overflow: 'hidden'}}>
+            <div style={{color: '#fff', fontFamily: V5.font,
+                         fontWeight: 900, fontSize: 52, lineHeight: 1.05}}>
+              {name}
+            </div>
+            <div style={{display: 'flex', gap: 18, flex: 1,
+                         alignItems: 'center',
+                         justifyContent: 'center'}}>
+              <Body data={anteriorData} primary={prim} secondary={sec}
+                    accent={accent} pulse={pulse}/>
+              <Body data={posteriorData} primary={prim} secondary={sec}
+                    accent={accent} pulse={pulse}/>
+            </div>
+            <div style={{color: '#9aa6b0', fontFamily: V5.font,
+                         fontWeight: 700, fontSize: 30,
+                         textTransform: 'capitalize'}}>
+              {primaryMuscles.join(' · ')}
+            </div>
+            {stats.length ? (
+              <div style={{display: 'flex', gap: 18}}>
+                {stats.map((s, i) => {
+                  const p = pop(frame, 14 + i * 7, fps);
+                  return (
+                    <div key={i} style={{
+                      opacity: p, transform: `scale(${p})`,
+                      background: '#1b1b21', borderRadius: 16,
+                      padding: '10px 18px', textAlign: 'center',
+                      border: `2px solid ${accent}55`}}>
+                      <div style={{color: '#fff', fontFamily: V5.font,
+                                   fontWeight: 900,
+                                   fontSize: 36}}>{s.v}</div>
+                      <div style={{color: '#8b95a0', fontFamily: V5.font,
+                                   fontWeight: 700, fontSize: 20,
+                                   letterSpacing: 2}}>{s.l}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </AbsoluteFill>
+    </Stage>
+  );
+};

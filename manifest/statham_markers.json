@@ -1,0 +1,158 @@
+[
+ {
+  "kind": "CARD",
+  "payload": "era-montage 1998-2024",
+  "after_beat": "b_006",
+  "anchor": "starts with a kid on a ten-meter platform."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_dive1 xrxH5n93CzM 1990 BBC archive dive footage",
+  "after_beat": "b_010",
+  "anchor": "Outside the top ten on three-meter and platform."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_dive2 AiAnWmlT4Bc rare pro diving footage - ET",
+  "after_beat": "b_015",
+  "anchor": "hundred sit-up variations a day."
+ },
+ {
+  "kind": "CARD",
+  "payload": "sitezoom mens-health-2007",
+  "after_beat": "b_020",
+  "anchor": "Just a former athlete who already looked the part."
+ },
+ {
+  "kind": "CARD",
+  "payload": "big-counter 17lb / 6wks / 35min",
+  "after_beat": "b_025",
+  "anchor": "His words: I've never, ever gotten results like this before."
+ },
+ {
+  "kind": "CARD",
+  "payload": "checklist two-rules",
+  "after_beat": "b_035",
+  "anchor": "p, written down, so the numbers always tell you what's next."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_gym fSS10kxDFVk Statham on gym style and heavy weight",
+  "after_beat": "b_039",
+  "anchor": "heart into oblivion."
+ },
+ {
+  "kind": "CARD",
+  "payload": "chapter THE SPLIT",
+  "after_beat": "b_045",
+  "anchor": "plete diary. Seven days. Real numbers. Here's the breakdown."
+ },
+ {
+  "kind": "CARD",
+  "payload": "exercise deadlift 135-365",
+  "after_beat": "b_051",
+  "anchor": "trampoline, because of course he did."
+ },
+ {
+  "kind": "CARD",
+  "payload": "exercise big-five ladder",
+  "after_beat": "b_055",
+  "anchor": "coach Dan John."
+ },
+ {
+  "kind": "CARD",
+  "payload": "exercise rowing 6x500",
+  "after_beat": "b_058",
+  "anchor": "two sixty-six pound kettlebells as a cool-down."
+ },
+ {
+  "kind": "CARD",
+  "payload": "exercise front-squat 5x5",
+  "after_beat": "b_061",
+  "anchor": "ladder-style with a partner."
+ },
+ {
+  "kind": "CARD",
+  "payload": "exercise circuit 23:53",
+  "after_beat": "b_064",
+  "anchor": "logged time: twenty-three minutes, fifty-three seconds."
+ },
+ {
+  "kind": "CARD",
+  "payload": "photoburst the-week",
+  "after_beat": "b_066",
+  "anchor": "seventy-three minutes. Day seven: complete rest."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_ap mGAXoTU82T8 advanced training junket",
+  "after_beat": "b_069",
+  "anchor": "nothing left \u2014 that's copyable by anyone."
+ },
+ {
+  "kind": "CARD",
+  "payload": "phototiles six-meals",
+  "after_beat": "b_073",
+  "anchor": " whites, vegetables, lean meats, fish, nuts, protein shakes."
+ },
+ {
+  "kind": "CARD",
+  "payload": "checklist banned-list",
+  "after_beat": "b_077",
+  "anchor": "single night of beers."
+ },
+ {
+  "kind": "CARD",
+  "payload": "big-counter 2000kcal / 6 meals / 1.5gal",
+  "after_beat": "b_083",
+  "anchor": "you feeling full."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_fallon VN0sYjtuWGU Expendables near-drowning story",
+  "after_beat": "b_084",
+  "anchor": "forty-one. The reason this story matters is what came after."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_jre GXE8FxLeBaY Rogan on his real striking",
+  "after_beat": "b_089",
+  "anchor": "platform closed the loop."
+ },
+ {
+  "kind": "INTERLUDE",
+  "payload": "int_bee H6iyQof5UG8 Beekeeper stunt coordinator on Statham",
+  "after_beat": "b_094",
+  "anchor": "year round on his own. He showed up in a great place."
+ },
+ {
+  "kind": "CARD",
+  "payload": "chapter YOUR PLAN",
+  "after_beat": "b_097",
+  "anchor": " don't need a SEAL in a stunt warehouse. You need his rules."
+ },
+ {
+  "kind": "CARD",
+  "payload": "checklist your-plan",
+  "after_beat": "b_108",
+  "anchor": "sugar, no flour, and more water than you think you need."
+ },
+ {
+  "kind": "CARD",
+  "payload": "comment-prompt",
+  "after_beat": "b_111",
+  "anchor": "-Five break you first? Drop your pick in the comments below."
+ },
+ {
+  "kind": "CARD",
+  "payload": "subscribe",
+  "after_beat": "b_112",
+  "anchor": "system, another legend, broken down with the real numbers."
+ },
+ {
+  "kind": "CARD",
+  "payload": "outro-montage + end screen",
+  "after_beat": "b_112",
+  "anchor": "system, another legend, broken down with the real numbers."
+ }
+]
