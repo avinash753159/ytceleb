@@ -9,7 +9,8 @@ export const V5 = {
   inkDim: 'rgba(255,255,255,0.68)',
   marker: 'rgba(255,220,50,0.85)',   // yellow highlighter
   ring: 'rgba(230,57,70,0.16)',
-  fontDisplay: '"Arial Black", "Segoe UI Black", sans-serif',
+  fontDisplay: '"Anton", "Arial Black", "Segoe UI Black", sans-serif',
+  brandRed: '#E3120B',
   fontBody: '"Segoe UI", Arial, sans-serif',
   radius: 16,
 };

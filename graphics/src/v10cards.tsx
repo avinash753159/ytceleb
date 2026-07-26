@@ -227,7 +227,7 @@ export const DocumentCard: React.FC<{
           boxShadow: '0 14px 44px rgba(0,0,0,0.6)',
         }}>
           <div style={{background: accent, color: '#fff',
-                       fontFamily: V5.font, fontWeight: 900, fontSize: 34,
+                       fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2, fontSize: 34,
                        letterSpacing: 2, padding: '16px 26px'}}>
             SOURCE
           </div>
@@ -245,3 +245,57 @@ export const DocumentCard: React.FC<{
     </Stage>
   );
 };
+
+
+// ------------------------------------------------ BrandIntro (channel sting)
+// Red circle sweep + CELEB WORKOUT in the channel's Anton style.
+export const BrandIntro: React.FC<{sub?: string}> = (
+    {sub = 'Workouts & Diet Secrets'}) => {
+  const {frame, fps, dur} = useT();
+  const circle = spring({frame, fps, config: {damping: 16,
+                                              stiffness: 90, mass: 0.9}});
+  const namep = spring({frame: frame - 10, fps,
+                        config: {damping: 13, stiffness: 150, mass: 0.7}});
+  const subp = spring({frame: frame - 22, fps,
+                       config: {damping: 13, stiffness: 150, mass: 0.7}});
+  const out = interpolate(frame, [dur - 10, dur - 1], [1, 0],
+                          {extrapolateLeft: 'clamp',
+                           extrapolateRight: 'clamp'});
+  return (
+    <Stage accent="#E3120B">
+      <AbsoluteFill style={{justifyContent: 'center',
+                            alignItems: 'center', opacity: out}}>
+        <div style={{position: 'absolute', width: 1500 * circle,
+                     height: 1500 * circle, borderRadius: '50%',
+                     background: 'radial-gradient(circle,' +
+                       ' rgba(227,18,11,0.32), rgba(227,18,11,0.05) 70%)',
+                     border: '3px solid rgba(227,18,11,0.5)'}}/>
+        <div style={{
+          opacity: namep, transform: `scale(${0.8 + namep * 0.2})`,
+          fontFamily: V5.fontDisplay, fontSize: 170, letterSpacing: 6,
+          color: '#fff', textTransform: 'uppercase', lineHeight: 0.95,
+          textAlign: 'center',
+          textShadow: '0 10px 60px rgba(0,0,0,0.8)'}}>
+          CELEB<span style={{color: '#E3120B'}}> WORKOUT</span>
+        </div>
+        <div style={{
+          opacity: subp, transform: `translateY(${(1 - subp) * 30}px)`,
+          marginTop: 26, fontFamily: V5.fontDisplay, fontSize: 44,
+          letterSpacing: 10, color: '#EDEAE2',
+          textTransform: 'uppercase'}}>{sub}</div>
+      </AbsoluteFill>
+    </Stage>
+  );
+};
+
+// ------------------------------------------------ LogoBug (corner watermark)
+export const LogoBug: React.FC = () => (
+  <AbsoluteFill>
+    <div style={{position: 'absolute', right: 44, top: 38, opacity: 0.85,
+                 fontFamily: V5.fontDisplay, fontSize: 30, letterSpacing: 2,
+                 color: '#fff', textTransform: 'uppercase',
+                 textShadow: '0 2px 14px rgba(0,0,0,0.9)'}}>
+      CELEB<span style={{color: '#E3120B'}}> WORKOUT</span>
+    </div>
+  </AbsoluteFill>
+);

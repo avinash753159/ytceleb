@@ -107,12 +107,18 @@ def interlude_seg(it, dest):
     vs = assemble._video_start(src)
     t0 = max(it["t0"], vs + 0.05)
     ta = max(t0 - jlead, vs + 0.05)   # audio input starts earlier (J-cut)
+    cb = it.get("crop_box")
+    pre = ""
+    if cb and any(cb):
+        l, tp, r, btm = cb
+        pre = (f"crop=iw*{1 - l - r:.3f}:ih*{1 - tp - btm:.3f}:"
+               f"iw*{l:.3f}:ih*{tp:.3f},")
     run(["ffmpeg", "-ss", f"{t0:.2f}", "-i", str(src),
          "-c:v", "libvpx", "-i", str(webm),
          "-ss", f"{ta:.2f}", "-i", str(src),
          "-t", f"{dur:.2f}",
          "-filter_complex",
-         "[0:v]scale=1920:1080:force_original_aspect_ratio=increase,"
+         f"[0:v]{pre}scale=1920:1080:force_original_aspect_ratio=increase,"
          f"crop=1920:1080,fps={FPS}[b];[b][1:v]overlay=0:0:eof_action=pass;"
          f"[2:a]afade=t=in:d=0.2,afade=t=out:st={max(dur - 0.2, 0):.2f}"
          ":d=0.2[a]",

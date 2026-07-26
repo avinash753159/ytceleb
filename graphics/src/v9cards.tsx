@@ -70,7 +70,7 @@ export const PhotoTiles2: React.FC<{
                             alignItems: 'center', gap: 56}}>
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
-                     color: '#fff', fontFamily: V5.font, fontWeight: 900,
+                     color: '#fff', fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2,
                      fontSize: 100, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 46px ${V5.accentSoft}`}}>
@@ -147,7 +147,7 @@ export const PhotoBurst: React.FC<{
           background: 'rgba(12,12,15,0.92)',
           border: `3px solid ${V5.accent}`,
           borderRadius: 24, padding: '34px 60px',
-          color: '#fff', fontFamily: V5.font, fontWeight: 900,
+          color: '#fff', fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2,
           fontSize: 76, letterSpacing: 3, textTransform: 'uppercase',
           textAlign: 'center', maxWidth: 760,
           boxShadow: `0 0 ${56 + Math.sin(frame / 9) * 22}px ${V5.accent}`,
@@ -207,7 +207,7 @@ export const StepCards2: React.FC<{
                             alignItems: 'center', gap: 48}}>
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
-                     color: '#fff', fontFamily: V5.font, fontWeight: 900,
+                     color: '#fff', fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2,
                      fontSize: 96, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 40px ${V5.accentSoft}`}}>{title}</div>
@@ -274,7 +274,7 @@ export const Checklist2: React.FC<{
                             alignItems: 'center', gap: 46}}>
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
-                     color: '#fff', fontFamily: V5.font, fontWeight: 900,
+                     color: '#fff', fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2,
                      fontSize: 96, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 40px ${V5.accentSoft}`}}>{title}</div>
@@ -347,7 +347,7 @@ export const ChapterChip: React.FC<{part: string; title: string}> = (
         boxShadow: `0 10px 34px rgba(0,0,0,0.55)`,
       }}>
         <div style={{background: V5.accent, color: '#fff',
-                     fontFamily: V5.font, fontWeight: 900, fontSize: 34,
+                     fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2, fontSize: 34,
                      letterSpacing: 2, padding: '14px 22px'}}>{part}</div>
         <div style={{background: 'rgba(10,10,13,0.9)', color: '#fff',
                      fontFamily: V5.font, fontWeight: 800, fontSize: 34,

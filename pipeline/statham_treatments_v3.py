@@ -45,6 +45,16 @@ def shot_clamp(src, t_hint, need):
 
 A = {}
 
+# watermark kill: crop fractions [left, top, right, bottom] per source
+CROPS = {
+ "tf_d2V5ZgSDKFE": [0.0, 0.10, 0.12, 0.0],     # BB logo top-right
+ "tf_kxTYWZHEOzI": [0.12, 0.10, 0.0, 0.0],     # title text top-left
+ "tf_hfTRYwnoPZU": [0.0, 0.06, 0.06, 0.08],    # edge bugs/banners
+ "xrxH5n93CzM": [0.10, 0.09, 0.0, 0.0],        # BBC bug top-left
+ "AiAnWmlT4Bc": [0.08, 0.0, 0.0, 0.12],        # ET bug lower-left
+ "C6YTQsvuiBw": [0.0, 0.08, 0.14, 0.0],        # DVDFilmBonus top-right
+}
+
 
 def cut(bid, src, t_hint):
     b = bmap[bid]
@@ -53,6 +63,8 @@ def cut(bid, src, t_hint):
     entry = {"type": "cut", "src": str(DOS / f"{src}.mp4"),
              "t0": t0, "t1": round(t0 + need + 0.2, 2),
              "vid": f"{src}@{t_hint}", "verified": True}
+    if src in CROPS:
+        entry["crop_box"] = CROPS[src]
     if loop:
         entry["loop"] = True
         entry["t1"] = round(t0 + min(
@@ -81,18 +93,18 @@ POOLS = {
            ("tr_lockstock", 60)],
  "system": [(HF, 2), ("tr_deathrace", 50), (D2, 90), (HF, 44), (D2, 156),
             (KX, 90), (HF, 110), (D2, 167), (HF, 56), (D2, 134),
-            ("C6YTQsvuiBw", 232), (HF, 14), (D2, 101), (HF, 122),
+            (HF, 50), (HF, 14), (D2, 101), (HF, 122),
             (D2, 35), (HF, 140), (D2, 200), (HF, 74), (D2, 123),
-            ("C6YTQsvuiBw", 300)],
+            (D2, 178)],
  "week": [(D2, 46), (D2, 57), (D2, 68), (HF, 80), (D2, 101), (KX, 12),
           (D2, 145), (HF, 14), (D2, 35), (KX, 40), (D2, 156), (HF, 110),
           (D2, 134), (KX, 22), (D2, 79)],
- "diet": [(D2, 2), ("C6YTQsvuiBw", 275), (D2, 233), ("tr_beekeeper", 23),
-          (D2, 13), ("C6YTQsvuiBw", 375)],
- "evo": [("tr_meg", 116), ("tf_UJkTRcqJz-4", 30), ("tr_wrath", 2),
+ "diet": [(D2, 2), (D2, 112), ("tr_beekeeper", 23),
+          (D2, 189), (HF, 62), (KX, 34)],
+ "evo": [("tr_meg", 116), (HF, 134), ("tr_wrath", 2),
          ("tr_meg", 134), ("tr_beekeeper", 114), (D2, 222),
          ("AiAnWmlT4Bc", 45), ("tr_beekeeper", 128), (D2, 211),
-         ("AiAnWmlT4Bc", 60), ("tr_beekeeper", 135), ("C6YTQsvuiBw", 555)],
+         ("AiAnWmlT4Bc", 60), ("tr_beekeeper", 135), (HF, 104)],
  "plan": [("exloop:trail_run", 0), (D2, 46), ("exloop:boxing", 0),
           (HF, 74), ("exloop:rowing_erg", 0), (D2, 90),
           ("exloop:pullup", 0), (KX, 90), ("exloop:burpee", 0),
@@ -166,16 +178,11 @@ json.dump(A, open(MAN / "assets_v5.json", "w"), indent=1)
 inters = json.loads((MAN / "interludes.json").read_text())
 keep = [i for i in inters if i["id"] not in ("int_fallon", "int_jre")]
 have = {i["id"] for i in keep}
-if "int_choreo" not in have:
-    t0, _ = shot_clamp("tf_UJkTRcqJz-4", 25, 16)
-    keep.append({"id": "int_choreo", "after": "b_089",
-                 "vid": "tf_UJkTRcqJz-4", "t0": t0, "t1": round(t0 + 16, 2),
-                 "label": "Sylvester Stallone — choreographing Statham, Expendables 4"})
-if "int_pushup" not in have:
-    t0, _ = shot_clamp("tf_pNa_iXFyLso", 12, 13)
-    keep.append({"id": "int_pushup", "after": "b_084",
-                 "vid": "tf_pNa_iXFyLso", "t0": t0, "t1": round(t0 + 13, 2),
-                 "label": "Statham — self-shot, 22 Pushup Challenge"})
+keep = [i for i in keep if i["id"] not in ("int_choreo", "int_pushup")]
+if "int_wgn" not in have:
+    keep.append({"id": "int_wgn", "after": "b_089",
+                 "vid": "n4oQnRG40c0", "t0": 55.0, "t1": 78.0,
+                 "label": "Jason Statham — on his training, WGN"})
 sec_order = {b: i for i, b in enumerate(order)}
 keep.sort(key=lambda i: sec_order.get(i["after"], 999))
 json.dump(keep, open(MAN / "interludes.json", "w"), indent=1)

@@ -119,16 +119,46 @@ def main():
         if (idx + 1) % 25 == 0:
             print(f"  [video {idx + 1}/{len(order)}]", flush=True)
 
+    # ---- brand intro sting (prepended, carries its own audio) ---------
+    intro = V6W / "brand_intro.mp4"
+    if not intro.exists():
+        iv = V6W / "brand_intro_v.mp4"
+        assemble.WORK = WORK
+        assemble.render_remotion("BrandIntro", {}, iv, 2.5, alpha=False)
+        wh0 = V6W / "sfx_whoosh2.wav"
+        if not wh0.exists():
+            run(["ffmpeg", "-f", "lavfi",
+                 "-i", "anoisesrc=color=brown:duration=0.34:"
+                 "sample_rate=48000",
+                 "-af", "highpass=f=220,lowpass=f=1400,"
+                 "afade=t=in:d=0.08,afade=t=out:st=0.14:d=0.2,volume=0.5",
+                 "-y", str(wh0)])
+        run(["ffmpeg", "-i", str(iv), "-i", str(wh0),
+             "-filter_complex",
+             "[1:a]aformat=channel_layouts=stereo,apad[a]",
+             "-map", "0:v", "-map", "[a]", "-c:v", "copy",
+             "-c:a", "aac", "-ar", "48000", "-shortest",
+             "-y", str(intro)])
+    vids.insert(0, (intro, "interlude", ({"id": "brand_intro"},)))
+
     lst = V6W / "concat_v10.txt"
     lst.write_text("\n".join(
         f"file '{Path(p).absolute().as_posix()}'" for p, _, _ in vids),
         encoding="utf-8")
+    # single pass: concat + logo bug burned in one encode
+    total_est = sum(probe_dur(p) for p, _, _ in vids)
+    bug = V6W / "logo_bug.png"   # pre-generated (PIL + Anton TTF)
     vtrack = V6W / "v10_video.mp4"
     run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
+         "-i", str(bug),
+         "-filter_complex",
+         f"[0:v]fps={FPS}[base];[base][1:v]overlay=0:0",
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
-         "-pix_fmt", "yuv420p", "-r", str(FPS), "-an",
-         "-y", str(vtrack)], timeout=7200)
-    print("[OK] video track", flush=True)
+         "-pix_fmt", "yuv420p", "-an", "-y", str(vtrack)], timeout=7200)
+    for pth, kind, _ in vids:
+        if kind == "beat":
+            Path(pth).unlink(missing_ok=True)   # v_ segs re-cut cheaply
+    print("[OK] video track + brand", flush=True)
 
     # ---------------- AUDIO: continuous narration + inserts --------------
     # groups of consecutive beats -> one uncut narration span each

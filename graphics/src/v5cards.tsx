@@ -8,6 +8,15 @@ import {
   useVideoConfig,
 } from 'remotion';
 import {V5, msF} from './tokens_v5';
+import {staticFile} from 'remotion';
+
+const FontFace: React.FC = () => (
+  <style>{`@font-face {
+    font-family: 'Anton';
+    src: url('${staticFile('fonts/Anton-Regular.ttf')}') format('truetype');
+    font-display: block;
+  }`}</style>
+);
 
 const useT = () => {
   const frame = useCurrentFrame();
@@ -32,6 +41,7 @@ export const Stage: React.FC<{children?: React.ReactNode;
     <AbsoluteFill style={{
       background: `radial-gradient(ellipse at 50% 60%, ${V5.bg1}, ${V5.bg0})`,
       overflow: 'hidden'}}>
+      <FontFace/>
       {[420, 680, 940].map((r, i) => (
         <div key={i} style={{
           position: 'absolute', left: '50%', top: '50%',

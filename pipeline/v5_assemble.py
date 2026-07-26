@@ -33,7 +33,7 @@ def cut_piece(a, dur, dest):
     vs = assemble._video_start(src)
     t0 = max(float(a["t0"]), vs + 0.05)
     asset = {"src": src, "start": t0, "end": max(float(a["t1"]), t0 + dur),
-             "id": f"v5cut_{a['vid']}"}
+             "id": f"v5cut_{a['vid']}", "crop_box": a.get("crop_box")}
     return assemble.clip_piece(asset, dur, dest)
 
 
