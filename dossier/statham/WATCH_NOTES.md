@@ -25,3 +25,13 @@ Udx8WX116Xs JimSam (1725s) | unscanned - long-form backup
 
 # Era-montage stills to extract (for PhotoBurst cold-open card):
 # lockstock@90(scene, verify), transporter@30, crank@14, expendables@62, meg@38, beekeeper@114
+
+# TRAINING FOOTAGE (frame-verified 2026-07-26) - fitness-first pool
+tf_d2V5ZgSDKFE (286s) PRIMARY - near-all real Statham: 2/13 IG selfie talking, 35/68/79 planche pushups home, 46 ring muscle-up, 57 bar front lever, 90 shirtless prison-yard walk, 101 pullup lat, 123 physique, 134 plate raise, 145 beach rings hang, 156 cable row shirtless, 167 tanktop shoulders, 200 rope pull, 211 desert tanktop, 222 ring smile, 233-255 selfie talk
+tf_hfTRYwnoPZU (148s) SECONDARY - 2 padwork, 14 outdoor bag, 38 cell lat-spread (DeathRace era), 44/80/140 gym rings+rack, 56/74 B&W boxing shoot, 110/122 bag kicks | AVOID 92 (Getty wm), 128 (mensfitness wm), 8/20/26/32 (movie/other)
+tf_kxTYWZHEOzI (99s) PARTIAL - 10-50 home planche/pushup clips (real), 90 tire punching | AVOID 2 (tattoo NOT JS), 6/26/54/86 (karate randoms), 30 (photo-of-photo)
+tf_g-Sbnw5mn2w REJECTED - generic calisthenics athletes, NOT Statham
+tf_UJkTRcqJz-4 (141s) - Stallone choreographing JS fight, vertical, real BTS - interlude candidate
+tf_pNa_iXFyLso (247s) - real self-shot 22-pushup-challenge clips w/ his voice - interlude candidate
+tf_-7LyChJmWto (195s) - unscanned, backup
+# DIARY DOCS: library/statham_refs/diary/ - cover oct2007, diary_pdf_p1-6 (REAL tables: deadlift 135-365 p2, rowing times+front squat p4), wayback_p1-4

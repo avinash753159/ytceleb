@@ -130,7 +130,7 @@ def db_muscles(name):
 
 pm, sm = db_muscles("Barbell Deadlift")
 A["b_051"] = {"type": "v5card", "comp": "ExerciseCard", "props": {
-    "name": "Deadlift Day", "videoSrc": vurl("deadlift"),
+    "name": "Deadlift Day", "videoStatic": "exloops/deadlift.mp4",
     "primaryMuscles": pm, "secondaryMuscles": sm,
     "sets": "9", "reps": "135→365 lb", "rest": "singles",
     "accent": ACCENT}}
@@ -144,14 +144,14 @@ A["b_055"] = {"type": "v5card", "comp": "StepCards2", "props": {
         {"text": "Knees-to-elbows · 10→1 ladder · 55 reps",
          "src": expic("leg_raise"), "atMs": 2700}]}}
 A["b_058"] = {"type": "v5card", "comp": "ExerciseCard", "props": {
-    "name": "Rowing Intervals", "videoSrc": vurl("rowing_erg"),
+    "name": "Rowing Intervals", "videoStatic": "exloops/rowing_erg.mp4",
     "primaryMuscles": ["middle back", "quadriceps"],
     "secondaryMuscles": ["biceps", "hamstrings"],
     "sets": "6×500m", "reps": "1:38–1:50", "rest": "3 min",
     "accent": ACCENT}}
 pm, sm = db_muscles("Front Barbell Squat")
 A["b_061"] = {"type": "v5card", "comp": "ExerciseCard", "props": {
-    "name": "Front Squat Day", "videoSrc": vurl("front_squat"),
+    "name": "Front Squat Day", "videoStatic": "exloops/front_squat.mp4",
     "primaryMuscles": pm or ["quadriceps"],
     "secondaryMuscles": sm or ["glutes", "abdominals"],
     "sets": "5×5", "reps": "1.25× BW", "rest": "90s",

@@ -68,11 +68,23 @@ def main():
     # ---------------- VIDEO: exact-frame beat videos + interludes --------
     vids = []                # (path, kind, meta)
     for idx, bid in enumerate(order):
+        if a5[bid].get("type") == "spanned":
+            if bid in inters:
+                it = inters[bid]
+                iseg = V6W / f"seg_{idx:03d}_zz_{it['id']}.mp4"
+                if not iseg.exists() or iseg.stat().st_size < 10000:
+                    raise SystemExit(f"missing interlude seg {it['id']}")
+                vids.append((iseg, "interlude", (it,)))
+            continue
         piece = WORK / f"p_{idx:03d}_{bid}.mp4"
         if not piece.exists():
             raise SystemExit(f"missing piece {bid}")
         b = beats[bid]
-        nfr = round((b["end"] - b["start"]) * FPS)
+        if "span_until" in a5[bid]:
+            nfr = round((beats[a5[bid]["span_until"]]["end"] -
+                         b["start"]) * FPS)
+        else:
+            nfr = round((b["end"] - b["start"]) * FPS)
         vseg = V6W / f"v_{idx:03d}_{bid}.mp4"
         if not vseg.exists():
             vf = "fps=30"
@@ -130,7 +142,9 @@ def main():
             j = i
             while j < len(vids) and vids[j][1] == "beat":
                 j += 1
-            g1 = beats[vids[j - 1][2][0]]["end"]
+            last_bid = vids[j - 1][2][0]
+            la = a5[last_bid]
+            g1 = beats[la.get("span_until", last_bid)]["end"]
             f = AW / f"narr_{gi:02d}.wav"
             run(["ffmpeg", "-i", str(vo), "-af",
                  f"atrim=start={g0}:end={g1},asetpts=PTS-STARTPTS",
@@ -154,6 +168,8 @@ def main():
              "-filter_complex",
              f"[0:a][1:a]acrossfade=d={XFADE}:c1=tri:c2=tri",
              "-y", str(merged)])
+        if str(cur).startswith(str(AW)) and "chain_" in str(cur):
+            Path(cur).unlink(missing_ok=True)   # keep disk flat
         cur = merged
     atrack = AW / "narration_chain.wav"
     Path(cur).replace(atrack)
@@ -166,7 +182,11 @@ def main():
             bid, b = meta
             if a5[bid].get("type") == "v5card":
                 delays.append(t)
-            t += round((b["end"] - b["start"]) * FPS) / FPS
+            if "span_until" in a5[bid]:
+                t += round((beats[a5[bid]["span_until"]]["end"] -
+                            b["start"]) * FPS) / FPS
+            else:
+                t += round((b["end"] - b["start"]) * FPS) / FPS
         else:
             t += probe_dur(p)
     wh = V6W / "sfx_whoosh2.wav"

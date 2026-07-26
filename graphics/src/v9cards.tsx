@@ -71,7 +71,7 @@ export const PhotoTiles2: React.FC<{
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
                      color: '#fff', fontFamily: V5.font, fontWeight: 900,
-                     fontSize: 88, letterSpacing: 4,
+                     fontSize: 100, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 46px ${V5.accentSoft}`}}>
           {title}
@@ -108,7 +108,7 @@ export const PhotoTiles2: React.FC<{
                              boxShadow: `0 0 22px ${V5.accent}`}}/>
                 <div style={{padding: '26px 22px', textAlign: 'center',
                              color: '#fff', fontFamily: V5.font,
-                             fontWeight: 800, fontSize: 54,
+                             fontWeight: 800, fontSize: 62,
                              lineHeight: 1.12}}>
                   {t.label}
                 </div>
@@ -148,7 +148,7 @@ export const PhotoBurst: React.FC<{
           border: `3px solid ${V5.accent}`,
           borderRadius: 24, padding: '34px 60px',
           color: '#fff', fontFamily: V5.font, fontWeight: 900,
-          fontSize: 66, letterSpacing: 3, textTransform: 'uppercase',
+          fontSize: 76, letterSpacing: 3, textTransform: 'uppercase',
           textAlign: 'center', maxWidth: 760,
           boxShadow: `0 0 ${56 + Math.sin(frame / 9) * 22}px ${V5.accent}`,
         }}>{label}</div>
@@ -180,7 +180,7 @@ export const PhotoBurst: React.FC<{
               </div>
               <div style={{padding: '16px 14px', textAlign: 'center',
                            color: '#fff', fontFamily: V5.font,
-                           fontWeight: 800, fontSize: 37,
+                           fontWeight: 800, fontSize: 42,
                            borderTop: `5px solid ${V5.accent}`}}>
                 {s.label}
               </div>
@@ -208,7 +208,7 @@ export const StepCards2: React.FC<{
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
                      color: '#fff', fontFamily: V5.font, fontWeight: 900,
-                     fontSize: 84, letterSpacing: 4,
+                     fontSize: 96, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 40px ${V5.accentSoft}`}}>{title}</div>
         <div style={{display: 'flex', flexDirection: 'column', gap: 34}}>
@@ -233,7 +233,7 @@ export const StepCards2: React.FC<{
                              background: V5.accent, display: 'flex',
                              alignItems: 'center', justifyContent: 'center',
                              color: '#fff', fontFamily: V5.font,
-                             fontWeight: 900, fontSize: 84,
+                             fontWeight: 900, fontSize: 96,
                              boxShadow: `0 0 34px ${V5.accent}`}}>
                   {i + 1}
                 </div>
@@ -275,7 +275,7 @@ export const Checklist2: React.FC<{
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
                      color: '#fff', fontFamily: V5.font, fontWeight: 900,
-                     fontSize: 84, letterSpacing: 4,
+                     fontSize: 96, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 40px ${V5.accentSoft}`}}>{title}</div>
         <div style={{display: 'flex', flexDirection: 'column', gap: 30}}>
@@ -306,7 +306,7 @@ export const Checklist2: React.FC<{
                         strokeDashoffset={40 * (1 - draw)}/>
                 </svg>
                 <div style={{flex: 1, color: '#fff', fontFamily: V5.font,
-                             fontWeight: 800, fontSize: 56,
+                             fontWeight: 800, fontSize: 64,
                              lineHeight: 1.08}}>{it.text}</div>
                 {it.src ? (
                   <div style={{width: 260, height: 130, borderRadius: 16,

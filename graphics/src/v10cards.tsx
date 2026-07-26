@@ -137,7 +137,7 @@ export const ExerciseCard: React.FC<{
                        flexDirection: 'column', gap: 16,
                        overflow: 'hidden'}}>
             <div style={{color: '#fff', fontFamily: V5.font,
-                         fontWeight: 900, fontSize: 52, lineHeight: 1.05}}>
+                         fontWeight: 900, fontSize: 58, lineHeight: 1.05}}>
               {name}
             </div>
             <div style={{display: 'flex', gap: 18, flex: 1,
@@ -149,7 +149,7 @@ export const ExerciseCard: React.FC<{
                     accent={accent} pulse={pulse}/>
             </div>
             <div style={{color: '#9aa6b0', fontFamily: V5.font,
-                         fontWeight: 700, fontSize: 30,
+                         fontWeight: 700, fontSize: 34,
                          textTransform: 'capitalize'}}>
               {primaryMuscles.join(' · ')}
             </div>
@@ -165,7 +165,7 @@ export const ExerciseCard: React.FC<{
                       border: `2px solid ${accent}55`}}>
                       <div style={{color: '#fff', fontFamily: V5.font,
                                    fontWeight: 900,
-                                   fontSize: 36}}>{s.v}</div>
+                                   fontSize: 40}}>{s.v}</div>
                       <div style={{color: '#8b95a0', fontFamily: V5.font,
                                    fontWeight: 700, fontSize: 20,
                                    letterSpacing: 2}}>{s.l}</div>
@@ -173,6 +173,71 @@ export const ExerciseCard: React.FC<{
                   );
                 })}
               </div>
+            ) : null}
+          </div>
+        </div>
+      </AbsoluteFill>
+    </Stage>
+  );
+};
+
+
+// ------------------------------------------------ DocumentCard
+// The ACTUAL published document on screen: page image slowly panning,
+// paper-tilt presentation, source citation bar (outlet / date / author).
+export const DocumentCard: React.FC<{
+  src: string;                       // page image (data URL)
+  outlet: string; date: string; author?: string;
+  note?: string;                     // e.g. "the original diary, page 2"
+  accent?: string;
+  panFrom?: number; panTo?: number;  // 0-1 vertical focus sweep
+}> = ({src, outlet, date, author, note, accent = V5.accent,
+       panFrom = 0.1, panTo = 0.75}) => {
+  const {frame, fps, dur} = useT();
+  const enter = pop(frame, 3, fps);
+  const pan = interpolate(frame, [12, dur - 8], [panFrom, panTo],
+                          {extrapolateLeft: 'clamp',
+                           extrapolateRight: 'clamp'});
+  return (
+    <Stage accent={accent}>
+      <AbsoluteFill style={{justifyContent: 'center',
+                            alignItems: 'center'}}>
+        <div style={{
+          opacity: enter,
+          transform: `scale(${0.92 + enter * 0.08})
+                      rotate(${(1 - enter) * -3 - 0.6}deg)`,
+          width: 1150, height: 830, borderRadius: 14,
+          overflow: 'hidden', background: '#fff',
+          boxShadow: `0 40px 110px rgba(0,0,0,0.75),
+                      0 0 60px ${accent}33`,
+          position: 'relative',
+        }}>
+          <Img src={src} style={{
+            width: '100%',
+            transform: `translateY(${-pan * 55}%)`,
+          }}/>
+          <div style={{position: 'absolute', inset: 0, boxShadow:
+            'inset 0 0 90px rgba(0,0,0,0.28)'}}/>
+        </div>
+        <div style={{
+          opacity: pop(frame, 16, fps),
+          marginTop: -34, zIndex: 3, display: 'flex',
+          alignItems: 'center', gap: 0, borderRadius: 14,
+          overflow: 'hidden',
+          boxShadow: '0 14px 44px rgba(0,0,0,0.6)',
+        }}>
+          <div style={{background: accent, color: '#fff',
+                       fontFamily: V5.font, fontWeight: 900, fontSize: 34,
+                       letterSpacing: 2, padding: '16px 26px'}}>
+            SOURCE
+          </div>
+          <div style={{background: 'rgba(10,10,13,0.95)', color: '#fff',
+                       fontFamily: V5.font, fontWeight: 700, fontSize: 34,
+                       padding: '16px 30px'}}>
+            {outlet} · {date}{author ? ` · ${author}` : ''}
+            {note ? (
+              <span style={{color: '#9aa6b0', fontSize: 26}}>
+                {'  —  '}{note}</span>
             ) : null}
           </div>
         </div>

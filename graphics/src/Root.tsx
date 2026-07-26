@@ -16,7 +16,7 @@ import {
 import {CommentPrompt, LikeSubBug, SubscribeCard} from './v8cards';
 import {ChapterChip, Checklist2, PhotoBurst, PhotoTiles2,
         StepCards2} from './v9cards';
-import {ExerciseCard} from './v10cards';
+import {DocumentCard, ExerciseCard} from './v10cards';
 
 // One composition per treatment graphic. Duration/fps come from input props
 // (--props=./props.json; inline JSON is broken on Windows shells).
@@ -147,5 +147,8 @@ export const Root: React.FC = () => (
     <Composition id="ExerciseCard" component={ExerciseCard as React.FC}
       durationInFrames={DUR} fps={FPS} width={W} height={H}
       defaultProps={{name: 'x', img0: '', img1: ''}} />
+    <Composition id="DocumentCard" component={DocumentCard as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{src: '', outlet: 'x', date: 'x'}} />
   </>
 );

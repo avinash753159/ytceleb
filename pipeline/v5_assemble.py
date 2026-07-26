@@ -58,7 +58,14 @@ def main():
     for idx, bid in enumerate(order):
         a5 = assets5[bid]
         b = beats[bid]
-        dur = round(b["end"] - b["start"], 3)
+        if a5.get("type") == "spanned":
+            print(f"  [{idx + 1}/{len(order)}] {bid} spanned", flush=True)
+            pieces.append(None)
+            continue
+        if "span_until" in a5:
+            dur = round(beats[a5["span_until"]]["end"] - b["start"], 3)
+        else:
+            dur = round(b["end"] - b["start"], 3)
         piece = WORK / f"p_{idx:03d}_{bid}.mp4"
         if not piece.exists():
             if a5["type"] == "cut":
@@ -83,7 +90,8 @@ def main():
 
     lst = WORK / "concat.txt"
     lst.write_text("\n".join(f"file '{p.absolute().as_posix()}'"
-                             for p in pieces), encoding="utf-8")
+                             for p in pieces if p is not None),
+                   encoding="utf-8")
     silent = WORK / "v5_silent.mp4"
     assemble.run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
                   "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
