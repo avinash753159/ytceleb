@@ -190,19 +190,27 @@ def main():
             chunks.append(f)
             i += 1
 
-    # crossfade-join the chain (audio joins only at interlude borders)
-    cur = chunks[0]
-    for k, nxt in enumerate(chunks[1:], 1):
-        merged = AW / f"chain_{k:02d}.wav"
-        run(["ffmpeg", "-i", str(cur), "-i", str(nxt),
-             "-filter_complex",
-             f"[0:a][1:a]acrossfade=d={XFADE}:c1=tri:c2=tri",
-             "-y", str(merged)])
-        if str(cur).startswith(str(AW)) and "chain_" in str(cur):
-            Path(cur).unlink(missing_ok=True)   # keep disk flat
-        cur = merged
+    # SYNC-EXACT joins: butt-concat with 30ms edge fades (no overlap).
+    # acrossfade OVERLAPPED chunks, shortening audio 0.3s per junction ->
+    # ~4s cumulative A/V drift ("audio is ahead") in V2-V4. Never again.
+    faded = []
+    for k, ch in enumerate(chunks):
+        d = probe_dur(ch)
+        f = AW / f"fd_{k:02d}.wav"
+        run(["ffmpeg", "-i", str(ch), "-af",
+             f"afade=t=in:d=0.03,afade=t=out:st={max(d - 0.03, 0):.3f}"
+             ":d=0.03,aformat=channel_layouts=stereo:sample_rates=48000",
+             "-y", str(f)])
+        faded.append(f)
+    clist = AW / "achain.txt"
+    clist.write_text("\n".join(
+        f"file '{f.absolute().as_posix()}'" for f in faded),
+        encoding="utf-8")
     atrack = AW / "narration_chain.wav"
-    Path(cur).replace(atrack)
+    run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(clist),
+         "-c", "copy", "-y", str(atrack)])
+    for f in faded:
+        pass  # kept until mux, deleted with AW cleanup
 
     # whooshes at card starts (timeline offsets on the VIDEO timeline)
     t = 0.0
@@ -242,6 +250,12 @@ def main():
              "-y", str(awh)])
         atrack = awh
     print("[OK] audio track", flush=True)
+
+    # ---------------- SYNC GATE: A/V must match ------------------------
+    vd, ad = probe_dur(vtrack), probe_dur(atrack)
+    print(f"[SYNC] video={vd:.2f}s audio={ad:.2f}s drift={vd - ad:+.2f}s")
+    if abs(vd - ad) > 0.25:
+        raise SystemExit(f"A/V DRIFT {vd - ad:+.2f}s - refusing to ship")
 
     # ---------------- MUX + 2-pass linear loudnorm ----------------------
     merged = V6W / "v10_merged.mp4"

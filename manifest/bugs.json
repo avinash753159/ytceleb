@@ -1,0 +1,48 @@
+{
+ "b_007": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 1",
+   "title": "The Diver"
+  }
+ },
+ "b_016": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 2",
+   "title": "The System"
+  }
+ },
+ "b_046": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 3",
+   "title": "The Week"
+  }
+ },
+ "b_071": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 4",
+   "title": "The Diet"
+  }
+ },
+ "b_084": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 5",
+   "title": "The Evolution"
+  }
+ },
+ "b_097": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 6",
+   "title": "Your Plan"
+  }
+ },
+ "b_030": {
+  "comp": "LikeSubBug",
+  "props": {}
+ }
+}
