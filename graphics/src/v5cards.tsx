@@ -317,11 +317,47 @@ export const TypeOn: React.FC<{
   startMs?: number;
   cps?: number;                       // chars per second
   accent?: string;
-}> = ({text, startMs = 400, cps = 24, accent}) => {
+  variant?: 'search' | 'quote';
+}> = ({text, startMs = 400, cps = 24, accent, variant = 'search'}) => {
   const {frame, fps} = useT();
   const t = Math.max(0, frame / fps - startMs / 1000);
   const n = Math.min(text.length, Math.floor(t * cps));
   const enter = pop(frame, 0, fps);
+  if (variant === 'quote') {
+    // big-type quote card: full-screen centered lines, no search chrome
+    const lines = text.split('\n');
+    let used = 0;
+    return (
+      <Stage accent={accent}>
+        <AbsoluteFill style={{justifyContent: 'center',
+                              alignItems: 'center'}}>
+          <div style={{opacity: enter,
+                       transform: `scale(${0.95 + enter * 0.05})`,
+                       display: 'flex', flexDirection: 'column',
+                       alignItems: 'center', gap: 18, maxWidth: 1560}}>
+            {lines.map((ln, i) => {
+              const start = used;
+              used += ln.length + 1;
+              const vis = Math.max(0, Math.min(ln.length, n - start));
+              const isAttr = ln.trim().startsWith('-');
+              return (
+                <div key={i} style={{
+                  fontFamily: V5.fontDisplay, fontWeight: 400,
+                  fontSize: isAttr ? 42 : 76, letterSpacing: 2,
+                  textTransform: isAttr ? 'none' : 'uppercase',
+                  color: isAttr ? (accent || V5.accent) : '#fff',
+                  textAlign: 'center', lineHeight: 1.15,
+                  textShadow: `0 0 46px ${V5.accentSoft}`,
+                }}>
+                  {ln.slice(0, vis)}
+                </div>
+              );
+            })}
+          </div>
+        </AbsoluteFill>
+      </Stage>
+    );
+  }
   return (
     <Stage accent={accent}>
       <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center'}}>

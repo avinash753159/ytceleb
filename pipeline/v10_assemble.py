@@ -91,6 +91,10 @@ def main():
             if bid in bugs:
                 co = bugs[bid]
                 webm = V6W / f"co_{bid}.webm"
+                # size gate: killed runs leave 0-byte corpses that pass
+                # a bare exists() check (bit us twice)
+                if webm.exists() and webm.stat().st_size < 10000:
+                    webm.unlink()
                 if not webm.exists():
                     assemble.WORK = WORK
                     assemble.render_remotion(

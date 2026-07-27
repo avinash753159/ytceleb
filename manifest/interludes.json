@@ -1,46 +1,65 @@
 [
  {
-  "id": "int_dive1",
-  "after": "b_010",
-  "vid": "xrxH5n93CzM",
-  "t0": 17.16,
-  "t1": 51.64,
-  "label": "Auckland 1990 \u2014 BBC archive",
+  "id": "int_styles",
+  "after": "b_031",
+  "vid": "uk1lzkH-e4U",
+  "t0": 419.9,
+  "t1": 458.0,
+  "label": "Bruce Lee \u2014 The Pierre Berton Show, 1971",
+  "mode": "audio_over",
+  "broll": [
+   [
+    "2yp-O580Ru0",
+    1740.0,
+    1790.0
+   ]
+  ]
+ },
+ {
+  "id": "int_trainbody",
+  "after": "b_059",
+  "vid": "uk1lzkH-e4U",
+  "t0": 488.5,
+  "t1": 537.2,
+  "label": "Bruce Lee \u2014 The Pierre Berton Show, 1971",
+  "mode": "video",
   "crop_box": [
+   0.125,
    0.1,
-   0.09,
-   0.0,
-   0.0
+   0.125,
+   0.16
   ]
  },
  {
-  "id": "int_gym",
-  "after": "b_039",
-  "vid": "fSS10kxDFVk",
-  "t0": 137.0,
-  "t1": 171.0,
-  "label": "Jason Statham \u2014 on training heavy"
- },
- {
-  "id": "int_wgn",
-  "after": "b_089",
-  "vid": "n4oQnRG40c0",
-  "t0": 51.73,
-  "t1": 82.39,
-  "label": "Jason Statham \u2014 on his training, WGN",
-  "crop_box": [
-   0.0,
-   0.07,
-   0.07,
-   0.1
+  "id": "int_water",
+  "after": "b_072",
+  "vid": "uk1lzkH-e4U",
+  "t0": 948.5,
+  "t1": 975.7,
+  "label": "Bruce Lee \u2014 \"Be water, my friend\", 1971",
+  "mode": "audio_over",
+  "broll": [
+   [
+    "-OI1zyajOpw",
+    109.0,
+    137.0
+   ]
   ]
  },
  {
-  "id": "int_bee",
-  "after": "b_094",
-  "vid": "H6iyQof5UG8",
-  "t0": 60.14,
-  "t1": 102.36,
-  "label": "Eddie Fernandez \u2014 Beekeeper stunt coordinator"
+  "id": "int_hollywood",
+  "after": "b_079",
+  "vid": "uk1lzkH-e4U",
+  "t0": 1162.9,
+  "t1": 1181.1,
+  "label": "Bruce Lee \u2014 The Pierre Berton Show, 1971",
+  "mode": "audio_over",
+  "broll": [
+   [
+    "YHHQF1SHHLw",
+    165.0,
+    190.0
+   ]
+  ]
  }
 ]
