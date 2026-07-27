@@ -79,10 +79,13 @@ export const ExerciseCard: React.FC<{
   videoStatic?: string;                // looping demo video (bundle public/)
   primaryMuscles?: string[]; secondaryMuscles?: string[];
   sets?: string; reps?: string; rest?: string;
+  setsLabel?: string; repsLabel?: string; restLabel?: string;
   accent?: string;
 }> = ({name, img0 = '', img1 = '', videoSrc, videoStatic,
        primaryMuscles = [], secondaryMuscles = [],
-       sets, reps, rest, accent = V5.accent}) => {
+       sets, reps, rest,
+       setsLabel = 'SETS', repsLabel = 'REPS', restLabel = 'REST',
+       accent = V5.accent}) => {
   const vsrc = videoStatic ? staticFile(videoStatic) : videoSrc;
   const {frame, fps} = useT();
   const enter = pop(frame, 3, fps);
@@ -95,9 +98,9 @@ export const ExerciseCard: React.FC<{
   const prim = toRegions(primaryMuscles);
   const sec = toRegions(secondaryMuscles);
   const stats = [
-    sets ? {v: sets, l: 'SETS'} : null,
-    reps ? {v: reps, l: 'REPS'} : null,
-    rest ? {v: rest, l: 'REST'} : null,
+    sets ? {v: sets, l: setsLabel} : null,
+    reps ? {v: reps, l: repsLabel} : null,
+    rest ? {v: rest, l: restLabel} : null,
   ].filter(Boolean) as {v: string; l: string}[];
   return (
     <Stage accent={accent}>

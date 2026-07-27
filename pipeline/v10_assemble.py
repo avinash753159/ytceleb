@@ -149,8 +149,11 @@ def main():
     total_est = sum(probe_dur(p) for p, _, _ in vids)
     bug = V6W / "logo_bug.png"   # pre-generated (PIL + Anton TTF)
     vtrack = V6W / "v10_video.mp4"
+    # -loop 1: without it the PNG stream ends after ONE frame and the
+    # bug silently vanishes for the rest of the video (caught by the
+    # watch agent on V5 round 1)
     run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
-         "-i", str(bug),
+         "-loop", "1", "-i", str(bug),
          "-filter_complex",
          f"[0:v]fps={FPS}[base];[base][1:v]overlay=0:0",
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",

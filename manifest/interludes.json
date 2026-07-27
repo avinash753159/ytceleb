@@ -14,34 +14,12 @@
   ]
  },
  {
-  "id": "int_dive2",
-  "after": "b_015",
-  "vid": "AiAnWmlT4Bc",
-  "t0": 15.38,
-  "t1": 49.4,
-  "label": "Entertainment Tonight \u2014 The Meg premiere",
-  "crop_box": [
-   0.08,
-   0.0,
-   0.0,
-   0.12
-  ]
- },
- {
   "id": "int_gym",
   "after": "b_039",
   "vid": "fSS10kxDFVk",
   "t0": 137.0,
   "t1": 171.0,
   "label": "Jason Statham \u2014 on training heavy"
- },
- {
-  "id": "int_ap",
-  "after": "b_069",
-  "vid": "mGAXoTU82T8",
-  "t0": 3.57,
-  "t1": 46.39,
-  "label": "Associated Press \u2014 Hobbs & Shaw junket"
  },
  {
   "id": "int_wgn",

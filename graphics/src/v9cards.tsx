@@ -201,17 +201,22 @@ export const StepCards2: React.FC<{
 }> = ({title, steps}) => {
   const {frame, fps, dur} = useT();
   const tp = pop(frame, 3, fps);
+  // 5+ rows overflow 1080p at full size - compact the layout
+  const compact = steps.length >= 5;
+  const rowH = compact ? 138 : 172;
+  const rowGap = compact ? 22 : 34;
   return (
     <Stage>
       <AbsoluteFill style={{justifyContent: 'center',
-                            alignItems: 'center', gap: 48}}>
+                            alignItems: 'center', gap: compact ? 36 : 48}}>
         <div style={{opacity: tp,
                      transform: `translateY(${(1 - tp) * -40}px)`,
                      color: '#fff', fontFamily: V5.fontDisplay, fontWeight: 400, letterSpacing: 2,
-                     fontSize: 96, letterSpacing: 4,
+                     fontSize: compact ? 84 : 96, letterSpacing: 4,
                      textTransform: 'uppercase',
                      textShadow: `0 0 40px ${V5.accentSoft}`}}>{title}</div>
-        <div style={{display: 'flex', flexDirection: 'column', gap: 34}}>
+        <div style={{display: 'flex', flexDirection: 'column',
+                     gap: rowGap}}>
           {steps.map((s, i) => {
             const f0 = Math.round((s.atMs / 1000) * fps);
             const p = pop(frame, f0, fps);
@@ -227,19 +232,21 @@ export const StepCards2: React.FC<{
                 border: '2px solid rgba(255,255,255,0.12)',
                 boxShadow: `0 18px 52px rgba(0,0,0,0.55),
                             0 0 26px ${V5.accentSoft}`,
-                width: 1240, height: 172,
+                width: 1240, height: rowH,
               }}>
                 <div style={{width: 130, alignSelf: 'stretch',
                              background: V5.accent, display: 'flex',
                              alignItems: 'center', justifyContent: 'center',
                              color: '#fff', fontFamily: V5.font,
-                             fontWeight: 900, fontSize: 96,
+                             fontWeight: 900,
+                             fontSize: compact ? 80 : 96,
                              boxShadow: `0 0 34px ${V5.accent}`}}>
                   {i + 1}
                 </div>
                 <div style={{flex: 1, padding: '0 40px', color: '#fff',
                              fontFamily: V5.font, fontWeight: 800,
-                             fontSize: 56, lineHeight: 1.08}}>
+                             fontSize: compact ? 50 : 56,
+                             lineHeight: 1.08}}>
                   {s.text}
                 </div>
                 {s.src ? (
