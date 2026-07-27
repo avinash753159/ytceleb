@@ -346,7 +346,7 @@ export const ChapterChip: React.FC<{part: string; title: string}> = (
   return (
     <AbsoluteFill>
       <div style={{
-        position: 'absolute', left: 64, top: 60,
+        position: 'absolute', left: 64, top: 124,   // below the wordmark
         opacity: Math.min(p, out),
         transform: `translateX(${(1 - p) * -120}px)`,
         display: 'flex', alignItems: 'center', gap: 0,

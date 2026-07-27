@@ -1,803 +1,802 @@
 {
- "duration": 542.16,
  "beats": [
   {
    "beat_id": "b_000",
    "text": "In 1969, an out -of -work actor sat down and wrote a letter to himself.",
    "start": 0.0,
-   "end": 5.4333,
+   "end": 4.8667,
    "word_start": 0,
    "word_end": 14
   },
   {
    "beat_id": "b_001",
    "text": "He marked it secret. It said, quote, I, Bruce Lee,",
-   "start": 5.4333,
-   "end": 10.2,
+   "start": 4.8667,
+   "end": 8.6667,
    "word_start": 15,
    "word_end": 24
   },
   {
    "beat_id": "b_002",
    "text": "will be the first highest -paid Oriental superstar in the United States.",
-   "start": 10.2,
-   "end": 14.7333,
+   "start": 8.6667,
+   "end": 13.3,
    "word_start": 25,
    "word_end": 36
   },
   {
    "beat_id": "b_003",
    "text": "Starting 1970 I will achieve world fame, and from then onward till the end of 1980 I will have in my possession $10 million.",
-   "start": 14.7333,
-   "end": 22.7,
+   "start": 13.3,
+   "end": 22.5,
    "word_start": 37,
    "word_end": 60
   },
   {
    "beat_id": "b_004",
    "text": "His TV show had been cancelled. He was teaching kung fu to pay rent.",
-   "start": 22.7,
-   "end": 28.1,
+   "start": 22.5,
+   "end": 27.2333,
    "word_start": 61,
    "word_end": 74
   },
   {
    "beat_id": "b_005",
    "text": "Four years later, every line of that letter had come true. And he was dead at 32.",
-   "start": 28.1,
-   "end": 34.6667,
+   "start": 27.2333,
+   "end": 33.0333,
    "word_start": 75,
    "word_end": 91
   },
   {
    "beat_id": "b_006",
    "text": "This is how Bruce Lee built the most famous body in martial arts history. Twice.",
-   "start": 34.6667,
-   "end": 40.6667,
+   "start": 33.0333,
+   "end": 37.6,
    "word_start": 92,
    "word_end": 106
   },
   {
    "beat_id": "b_007",
    "text": "And unlike almost every celebrity workout you've ever heard about, he wrote it all down.",
-   "start": 40.6667,
-   "end": 45.9,
+   "start": 37.6,
+   "end": 42.7,
    "word_start": 107,
    "word_end": 121
   },
   {
    "beat_id": "b_008",
    "text": "It starts in San Francisco, 1940.",
-   "start": 45.9,
-   "end": 49.4333,
+   "start": 42.7,
+   "end": 46.0,
    "word_start": 122,
    "word_end": 127
   },
   {
    "beat_id": "b_009",
    "text": "A baby born while his father toured with the Cantonese opera, given a girl's name,",
-   "start": 49.4333,
-   "end": 53.5666,
+   "start": 46.0,
+   "end": 51.0667,
    "word_start": 128,
    "word_end": 142
   },
   {
    "beat_id": "b_010",
    "text": "small phoenix, by a superstitious mother trying to hide him from spirits.",
-   "start": 53.5666,
-   "end": 58.8666,
+   "start": 51.0667,
+   "end": 55.3667,
    "word_start": 143,
    "word_end": 154
   },
   {
    "beat_id": "b_011",
    "text": "He grew up in Hong Kong instead. A child movie actor by six.",
-   "start": 58.8666,
-   "end": 64.2333,
+   "start": 55.3667,
+   "end": 59.4667,
    "word_start": 155,
    "word_end": 167
   },
   {
    "beat_id": "b_012",
    "text": "A teenager who kept finding trouble on the rooftops, fight after fight.",
-   "start": 64.2333,
-   "end": 68.8333,
+   "start": 59.4667,
+   "end": 63.6,
    "word_start": 168,
    "word_end": 179
   },
   {
    "beat_id": "b_013",
    "text": "So at 13, he was taken to learn Wing Chun under the legendary IP man.",
-   "start": 68.8333,
-   "end": 74.0666,
+   "start": 63.6,
+   "end": 68.0333,
    "word_start": 180,
    "word_end": 194
   },
   {
    "beat_id": "b_014",
    "text": "When the other students found out he had European blood, most refused to train beside him.",
-   "start": 74.0666,
-   "end": 79.3666,
+   "start": 68.0333,
+   "end": 73.3333,
    "word_start": 195,
    "word_end": 210
   },
   {
    "beat_id": "b_015",
    "text": "He trained anyway. And in 1958 he proved the point twice in one year,",
-   "start": 79.3666,
-   "end": 84.7333,
+   "start": 73.3333,
+   "end": 78.2,
    "word_start": 211,
    "word_end": 224
   },
   {
    "beat_id": "b_016",
    "text": "he won the Hong Kong school's boxing tournament, knocking out the reigning champion, and won the crown colony cha -cha championship.",
-   "start": 84.7333,
-   "end": 92.3666,
+   "start": 78.2,
+   "end": 86.1333,
    "word_start": 225,
    "word_end": 245
   },
   {
    "beat_id": "b_017",
    "text": "Same year. Same feat. In 1959 he was sent to America with almost nothing.",
-   "start": 92.3666,
-   "end": 101.2999,
+   "start": 86.1333,
+   "end": 93.7666,
    "word_start": 246,
    "word_end": 259
   },
   {
    "beat_id": "b_018",
    "text": "Waiting tables. By 1961 he was at the University of Washington,",
-   "start": 101.2999,
-   "end": 106.1999,
+   "start": 93.7666,
+   "end": 97.6666,
    "word_start": 260,
    "word_end": 270
   },
   {
    "beat_id": "b_019",
    "text": "teaching his own kung fu to anyone who wanted to learn, whatever their race.",
-   "start": 106.1999,
-   "end": 110.9666,
+   "start": 97.6666,
+   "end": 102.8666,
    "word_start": 271,
    "word_end": 284
   },
   {
    "beat_id": "b_020",
    "text": "And in August 1964, at the Long Beach International Karate Championships,",
-   "start": 110.9666,
-   "end": 115.9666,
+   "start": 102.8666,
+   "end": 107.3333,
    "word_start": 285,
    "word_end": 295
   },
   {
    "beat_id": "b_021",
    "text": "the martial arts world found out who he was. Push -ups on two fingers of one hand.",
-   "start": 115.9666,
-   "end": 122.1333,
+   "start": 107.3333,
+   "end": 112.1333,
    "word_start": 296,
    "word_end": 312
   },
   {
    "beat_id": "b_022",
    "text": "And a punch thrown from one inch away that knocked a volunteer off his feet.",
-   "start": 122.1333,
-   "end": 126.5666,
+   "start": 112.1333,
+   "end": 116.9666,
    "word_start": 313,
    "word_end": 327
   },
   {
    "beat_id": "b_023",
    "text": "That volunteer, Bob Baker, later said, quote, I told Bruce not to do this type of demonstration again.",
-   "start": 126.5666,
-   "end": 133.7666,
+   "start": 116.9666,
+   "end": 123.0666,
    "word_start": 328,
    "word_end": 345
   },
   {
    "beat_id": "b_024",
    "text": "When he punched me that last time, I had to stay home from work because the pain in my chest was unbearable.",
-   "start": 133.7666,
-   "end": 139.9333,
+   "start": 123.0666,
+   "end": 129.1999,
    "word_start": 346,
    "word_end": 367
   },
   {
    "beat_id": "b_025",
    "text": "But the fight that actually built the body you're thinking of happened later that year, behind closed doors.",
-   "start": 139.9333,
-   "end": 146.1333,
+   "start": 129.1999,
+   "end": 135.4666,
    "word_start": 368,
    "word_end": 385
   },
   {
    "beat_id": "b_026",
    "text": "Oakland. A challenge from a kung fu man named Wong Jack Man.",
-   "start": 146.1333,
-   "end": 151.4333,
+   "start": 135.4666,
+   "end": 140.3666,
    "word_start": 386,
    "word_end": 397
   },
   {
    "beat_id": "b_027",
    "text": "The accounts disagree about almost everything, his wife said three minutes, witnesses said 20.",
-   "start": 151.4333,
-   "end": 157.6333,
+   "start": 140.3666,
+   "end": 146.4666,
    "word_start": 398,
    "word_end": 411
   },
   {
    "beat_id": "b_028",
    "text": "What nobody disputes is what it did to Bruce Lee. He won, and he hated how he won.",
-   "start": 157.6333,
-   "end": 163.9333,
+   "start": 146.4666,
+   "end": 151.4999,
    "word_start": 412,
    "word_end": 429
   },
   {
    "beat_id": "b_029",
    "text": "He was winded. His hands were swollen.",
-   "start": 163.9333,
-   "end": 167.8,
+   "start": 151.4999,
+   "end": 154.2332,
    "word_start": 430,
    "word_end": 436
   },
   {
    "beat_id": "b_030",
    "text": "He told Black Belt magazine, quote, I realized Wing Chun was not too practical, and began to alter my way of fighting.",
-   "start": 167.8,
-   "end": 175.5333,
+   "start": 154.2332,
+   "end": 161.9665,
    "word_start": 437,
    "word_end": 458
   },
   {
    "beat_id": "b_031",
    "text": "Most people lose a fight and change. Bruce Lee won a fight and changed everything.",
-   "start": 175.5333,
-   "end": 181.2666,
+   "start": 161.9665,
+   "end": 166.9998,
    "word_start": 459,
    "word_end": 473
   },
   {
    "beat_id": "b_032",
    "text": "Here's where this story becomes something you can actually use.",
-   "start": 181.2666,
-   "end": 185.0333,
+   "start": 166.9998,
+   "end": 170.2331,
    "word_start": 474,
    "word_end": 483
   },
   {
    "beat_id": "b_033",
    "text": "Because the rebuild is documented, in his own handwriting, in dated letters.",
-   "start": 185.0333,
-   "end": 190.3666,
+   "start": 170.2331,
+   "end": 176.0664,
    "word_start": 484,
    "word_end": 495
   },
   {
    "beat_id": "b_034",
    "text": "August 1965, from Hong Kong, he mails his training partner a complete written program,",
-   "start": 190.3666,
-   "end": 196.2333,
+   "start": 176.0664,
+   "end": 181.9331,
    "word_start": 496,
    "word_end": 509
   },
   {
    "beat_id": "b_035",
    "text": "limbering for the waist, legs, shoulders and wrists, then punching, then kicking, then technique.",
-   "start": 196.2333,
-   "end": 202.7333,
+   "start": 181.9331,
+   "end": 189.1998,
    "word_start": 510,
    "word_end": 523
   },
   {
    "beat_id": "b_036",
    "text": "And one instruction that explains everything that came after, quote, the hell with conventional methods and opinions.",
-   "start": 202.7333,
-   "end": 209.7666,
+   "start": 189.1998,
+   "end": 197.2665,
    "word_start": 524,
    "word_end": 540
   },
   {
    "beat_id": "b_037",
    "text": "That same year the equipment starts appearing in the letters.",
-   "start": 209.7666,
-   "end": 213.2333,
+   "start": 197.2665,
+   "end": 200.3332,
    "word_start": 541,
    "word_end": 550
   },
   {
    "beat_id": "b_038",
    "text": "Eight iron rings he made himself, three pounds each, worn on the forearms during Wing Chun drills.",
-   "start": 213.2333,
-   "end": 219.6,
+   "start": 200.3332,
+   "end": 206.7665,
    "word_start": 551,
    "word_end": 567
   },
   {
    "beat_id": "b_039",
    "text": "A wrist roller and a grip machine, custom built by a student.",
-   "start": 219.6,
-   "end": 223.7667,
+   "start": 206.7665,
+   "end": 210.7332,
    "word_start": 568,
    "word_end": 579
   },
   {
    "beat_id": "b_040",
    "text": "And protein powder, ordered across the Pacific, as of today, I haven't yet received the protein,",
-   "start": 223.7667,
-   "end": 229.5334,
+   "start": 210.7332,
+   "end": 216.8665,
    "word_start": 580,
    "word_end": 595
   },
   {
    "beat_id": "b_041",
    "text": "but I'm sure it should arrive tomorrow. That's 1965.",
-   "start": 229.5334,
-   "end": 234.4334,
+   "start": 216.8665,
+   "end": 220.1332,
    "word_start": 596,
    "word_end": 604
   },
   {
    "beat_id": "b_042",
    "text": "He was mixing supplements before most gyms had heard of them.",
-   "start": 234.4334,
-   "end": 238.3334,
+   "start": 220.1332,
+   "end": 224.5332,
    "word_start": 605,
    "word_end": 615
   },
   {
    "beat_id": "b_043",
    "text": "By January 1968, the system was running at full volume.",
-   "start": 238.3334,
-   "end": 243.0334,
+   "start": 224.5332,
+   "end": 228.6999,
    "word_start": 616,
    "word_end": 625
   },
   {
    "beat_id": "b_044",
    "text": "His own letter, quote, I now train an average of two and a half hours a day,",
-   "start": 243.0334,
-   "end": 247.8667,
+   "start": 228.6999,
+   "end": 233.7666,
    "word_start": 626,
    "word_end": 642
   },
   {
    "beat_id": "b_045",
    "text": "including hand exercises, leg exercises, running, isometrics,",
-   "start": 247.8667,
-   "end": 252.6334,
+   "start": 233.7666,
+   "end": 239.5666,
    "word_start": 643,
    "word_end": 649
   },
   {
    "beat_id": "b_046",
    "text": "stomach exercises, sparring exercises, free hand exercises.",
-   "start": 252.6334,
-   "end": 257.5334,
+   "start": 239.5666,
+   "end": 244.8666,
    "word_start": 650,
    "word_end": 656
   },
   {
    "beat_id": "b_047",
    "text": "And when his notes were published, the actual circuits were in them.",
-   "start": 257.5334,
-   "end": 261.9667,
+   "start": 244.8666,
+   "end": 249.1666,
    "word_start": 657,
    "word_end": 668
   },
   {
    "beat_id": "b_048",
    "text": "Monday, Wednesday, Friday, rope jumping, forward bend, cat stretch,",
-   "start": 261.9667,
-   "end": 266.9334,
+   "start": 249.1666,
+   "end": 255.7666,
    "word_start": 669,
    "word_end": 677
   },
   {
    "beat_id": "b_049",
    "text": "jumping jack, squat, high kick.",
-   "start": 266.9334,
-   "end": 270.0667,
+   "start": 255.7666,
+   "end": 259.3999,
    "word_start": 678,
    "word_end": 682
   },
   {
    "beat_id": "b_050",
    "text": "Tuesday, Thursday, Saturday, groin stretch, side leg raise,",
-   "start": 270.0667,
-   "end": 275.0334,
+   "start": 259.3999,
+   "end": 264.2666,
    "word_start": 683,
    "word_end": 690
   },
   {
    "beat_id": "b_051",
    "text": "jumping squat, shoulder circling, alternate splits, leg stretch.",
-   "start": 275.0334,
-   "end": 279.9334,
+   "start": 264.2666,
+   "end": 270.0999,
    "word_start": 691,
    "word_end": 698
   },
   {
    "beat_id": "b_052",
    "text": "A forearm and waist sequence on top, curls, Roman chair.",
-   "start": 279.9334,
-   "end": 284.7334,
+   "start": 270.0999,
+   "end": 274.7999,
    "word_start": 699,
    "word_end": 708
   },
   {
    "beat_id": "b_053",
    "text": "Side bends, the wrist roller. And the nine station power routine,",
-   "start": 284.7334,
-   "end": 289.6334,
+   "start": 274.7999,
+   "end": 279.6999,
    "word_start": 709,
    "word_end": 719
   },
   {
    "beat_id": "b_054",
    "text": "press lockout, press start, rise on toes, pull, squat, shrug,",
-   "start": 289.6334,
-   "end": 294.7667,
+   "start": 279.6999,
+   "end": 284.4666,
    "word_start": 720,
    "word_end": 729
   },
   {
    "beat_id": "b_055",
    "text": "deadlift, quarter squat, frog kick. The cardio was published too.",
-   "start": 294.7667,
-   "end": 300.8334,
+   "start": 284.4666,
+   "end": 289.1666,
    "word_start": 730,
    "word_end": 739
   },
   {
    "beat_id": "b_056",
    "text": "For miles a day, in 24 to 25 minutes, long even strides broken with sprints.",
-   "start": 300.8334,
-   "end": 306.8667,
+   "start": 289.1666,
+   "end": 295.1666,
    "word_start": 740,
    "word_end": 754
   },
   {
    "beat_id": "b_057",
    "text": "Then the exercise, 35 to 40 miles an hour, for 45 minutes to an hour, often straight after the run.",
-   "start": 306.8667,
-   "end": 314.5667,
+   "start": 295.1666,
+   "end": 303.7333,
    "word_start": 755,
    "word_end": 774
   },
   {
    "beat_id": "b_058",
    "text": "His training manual put it simply, training is one of the most neglected phases of athletics.",
-   "start": 314.5667,
-   "end": 320.4334,
+   "start": 303.7333,
+   "end": 309.8666,
    "word_start": 775,
    "word_end": 790
   },
   {
    "beat_id": "b_059",
    "text": "Too much time is given to the development of skill, and too little to the development of the individual.",
-   "start": 320.4334,
-   "end": 325.6334,
+   "start": 309.8666,
+   "end": 316.1999,
    "word_start": 791,
    "word_end": 809
   },
   {
    "beat_id": "b_060",
    "text": "The diet ran on one idea, a high performance body is like a high performance engine.",
-   "start": 325.6334,
-   "end": 331.7001,
+   "start": 316.1999,
+   "end": 321.8666,
    "word_start": 810,
    "word_end": 825
   },
   {
    "beat_id": "b_061",
    "text": "Wrong fuel, and it runs sluggish. So refined flour and baked goods were out,",
-   "start": 331.7001,
-   "end": 336.9334,
+   "start": 321.8666,
+   "end": 327.5333,
    "word_start": 826,
    "word_end": 839
   },
   {
    "beat_id": "b_062",
    "text": "empty calories that did nothing for his body.",
-   "start": 336.9334,
-   "end": 339.9334,
+   "start": 327.5333,
+   "end": 330.4666,
    "word_start": 840,
    "word_end": 847
   },
   {
    "beat_id": "b_063",
    "text": "He ate Chinese food over western portions, rice, vegetables, fish, beef, shrimp, chicken, tofu.",
-   "start": 339.9334,
-   "end": 347.9334,
+   "start": 330.4666,
+   "end": 339.8666,
    "word_start": 848,
    "word_end": 861
   },
   {
    "beat_id": "b_064",
    "text": "Four or five smaller meals a day instead of three big ones, fruit in between.",
-   "start": 347.9334,
-   "end": 353.0667,
+   "start": 339.8666,
+   "end": 344.7666,
    "word_start": 862,
    "word_end": 876
   },
   {
    "beat_id": "b_065",
    "text": "He hated dairy, so milk became powdered milk, blended into protein shakes,",
-   "start": 353.0667,
-   "end": 358.1667,
+   "start": 344.7666,
+   "end": 350.1666,
    "word_start": 877,
    "word_end": 888
   },
   {
    "beat_id": "b_066",
    "text": "sometimes with vegetables straight into the blender. Tea, never coffee.",
-   "start": 358.1667,
-   "end": 363.5334,
+   "start": 350.1666,
+   "end": 355.8666,
    "word_start": 889,
    "word_end": 898
   },
   {
    "beat_id": "b_067",
    "text": "Nothing about it was complicated. Everything about it was consistent.",
-   "start": 363.5334,
-   "end": 368.5667,
+   "start": 355.8666,
+   "end": 360.0666,
    "word_start": 899,
    "word_end": 908
   },
   {
    "beat_id": "b_068",
    "text": "Then, in 1970, the whole machine stopped. A severe back injury.",
-   "start": 368.5667,
-   "end": 374.7667,
+   "start": 360.0666,
+   "end": 365.7666,
    "word_start": 909,
    "word_end": 919
   },
   {
    "beat_id": "b_069",
    "text": "His doctors ordered him to quit training and stay in bed.",
-   "start": 374.7667,
-   "end": 378.1,
+   "start": 365.7666,
+   "end": 369.4999,
    "word_start": 920,
    "word_end": 930
   },
   {
    "beat_id": "b_070",
    "text": "He stayed there, flat on his back, for six months, while his wife worked evenings to support the family.",
-   "start": 378.1,
-   "end": 385.2667,
+   "start": 369.4999,
+   "end": 375.2666,
    "word_start": 931,
    "word_end": 949
   },
   {
    "beat_id": "b_071",
    "text": "Most careers end there. Bruce Lee wrote.",
-   "start": 385.2667,
-   "end": 389.2667,
+   "start": 375.2666,
+   "end": 378.1999,
    "word_start": 950,
    "word_end": 956
   },
   {
    "beat_id": "b_072",
    "text": "The notes he filled from that bed became Tao of Jeet Kyun Do, the book that still sells today, half a century later.",
-   "start": 389.2667,
-   "end": 396.4667,
+   "start": 378.1999,
+   "end": 385.8332,
    "word_start": 957,
    "word_end": 979
   },
   {
    "beat_id": "b_073",
    "text": "And when the back allowed, he rebuilt the body a second time, leaner, faster, sharper than before, and took it to Hong Kong.",
-   "start": 396.4667,
-   "end": 404.3667,
+   "start": 385.8332,
+   "end": 394.3332,
    "word_start": 980,
    "word_end": 1002
   },
   {
    "beat_id": "b_074",
    "text": "The big boss broke records. Fist of Fury broke them again.",
-   "start": 404.3667,
-   "end": 409.5,
+   "start": 394.3332,
+   "end": 398.9665,
    "word_start": 1003,
    "word_end": 1013
   },
   {
    "beat_id": "b_075",
    "text": "By October 1971 he's riding to the head of Warner Bros.",
-   "start": 409.5,
-   "end": 412.8,
+   "start": 398.9665,
+   "end": 402.2665,
    "word_start": 1014,
    "word_end": 1024
   },
   {
    "beat_id": "b_076",
    "text": "on Golden Harvest Letterhead, quote, The last picture I made is on its way to break all records in Hong Kong.",
-   "start": 412.8,
-   "end": 419.4333,
+   "start": 402.2665,
+   "end": 409.5665,
    "word_start": 1025,
    "word_end": 1045
   },
   {
    "beat_id": "b_077",
    "text": "Dan the Torpedo, Full speed ahead.",
-   "start": 419.4333,
-   "end": 422.4333,
+   "start": 409.5665,
+   "end": 412.2665,
    "word_start": 1046,
    "word_end": 1051
   },
   {
    "beat_id": "b_078",
    "text": "Two months later he sat for the Pierre Burton show, the longest on -camera interview he ever gave,",
-   "start": 422.4333,
-   "end": 427.7666,
+   "start": 412.2665,
+   "end": 417.9332,
    "word_start": 1052,
    "word_end": 1069
   },
   {
    "beat_id": "b_079",
    "text": "and explained, in perfect English, why Hollywood still wouldn't put a Chinese lead in an American series.",
-   "start": 427.7666,
-   "end": 433.9333,
+   "start": 417.9332,
+   "end": 423.5665,
    "word_start": 1070,
    "word_end": 1086
   },
   {
    "beat_id": "b_080",
    "text": "So he became the lead somewhere else. July 20, 1973.",
-   "start": 433.9333,
-   "end": 440.5666,
+   "start": 423.5665,
+   "end": 428.6665,
    "word_start": 1087,
    "word_end": 1096
   },
   {
    "beat_id": "b_081",
    "text": "Six days before Enter the Dragon opened in Hollywood, Bruce Lee died of a cerebral edema.",
-   "start": 440.5666,
-   "end": 446.1333,
+   "start": 428.6665,
+   "end": 434.2332,
    "word_start": 1097,
    "word_end": 1112
   },
   {
    "beat_id": "b_082",
    "text": "He was 32 years old. Five foot seven and a half,",
-   "start": 446.1333,
-   "end": 450.6,
+   "start": 434.2332,
+   "end": 437.5332,
    "word_start": 1113,
    "word_end": 1123
   },
   {
    "beat_id": "b_083",
    "text": "141 pounds, and the most influential martial artist who ever lived.",
-   "start": 450.6,
-   "end": 455.8667,
+   "start": 437.5332,
+   "end": 442.4332,
    "word_start": 1124,
    "word_end": 1134
   },
   {
    "beat_id": "b_084",
    "text": "But here's what makes him different from every other legend on this channel. He left the paperwork.",
-   "start": 455.8667,
-   "end": 461.6667,
+   "start": 442.4332,
+   "end": 448.4332,
    "word_start": 1135,
    "word_end": 1151
   },
   {
    "beat_id": "b_085",
    "text": "Seven years of day planners, workout diaries and letters,",
-   "start": 461.6667,
-   "end": 465.5667,
+   "start": 448.4332,
+   "end": 451.9332,
    "word_start": 1152,
    "word_end": 1160
   },
   {
    "beat_id": "b_086",
    "text": "a training system written down page by page while he was building it. So you don't need his genetics.",
-   "start": 465.5667,
-   "end": 472.1667,
+   "start": 451.9332,
+   "end": 458.0332,
    "word_start": 1161,
    "word_end": 1179
   },
   {
    "beat_id": "b_087",
    "text": "You need his rules, and they're on paper. Rule one, train the engine, not just the skill.",
-   "start": 472.1667,
-   "end": 479.1667,
+   "start": 458.0332,
+   "end": 463.9332,
    "word_start": 1180,
    "word_end": 1196
   },
   {
    "beat_id": "b_088",
    "text": "Skill work and conditioning are separate jobs, every single day.",
-   "start": 479.1667,
-   "end": 483.4667,
+   "start": 463.9332,
+   "end": 467.9999,
    "word_start": 1197,
    "word_end": 1206
   },
   {
    "beat_id": "b_089",
    "text": "Rule two, circuit your week. Alternating six exercise sequences,",
-   "start": 483.4667,
-   "end": 488.4334,
+   "start": 467.9999,
+   "end": 472.7332,
    "word_start": 1207,
    "word_end": 1215
   },
   {
    "beat_id": "b_090",
    "text": "three days each, so nothing gets neglected and nothing burns out.",
-   "start": 488.4334,
-   "end": 493.0667,
+   "start": 472.7332,
+   "end": 477.0332,
    "word_start": 1216,
    "word_end": 1226
   },
   {
    "beat_id": "b_091",
    "text": "Rule three, burn your cardio. Runs with tempo changes, not slow jogs,",
-   "start": 493.0667,
-   "end": 498.5334,
+   "start": 477.0332,
+   "end": 484.3665,
    "word_start": 1227,
    "word_end": 1238
   },
   {
    "beat_id": "b_092",
    "text": "and hard intervals on the bike after. Rule four, build the details.",
-   "start": 498.5334,
-   "end": 504.1667,
+   "start": 484.3665,
+   "end": 489.2998,
    "word_start": 1239,
    "word_end": 1250
   },
   {
    "beat_id": "b_093",
    "text": "Grip, forearms, waist. The small muscles are the ones that transfer.",
-   "start": 504.1667,
-   "end": 509.9,
+   "start": 489.2998,
+   "end": 494.0665,
    "word_start": 1251,
    "word_end": 1261
   },
   {
    "beat_id": "b_094",
    "text": "Rule five, fuel like an engine. Smaller meals, real food, no empty calories.",
-   "start": 509.9,
-   "end": 516.8333,
+   "start": 494.0665,
+   "end": 500.4332,
    "word_start": 1262,
    "word_end": 1274
   },
   {
    "beat_id": "b_095",
    "text": "And rule six, in his own words, absorb what is useful and the hell with conventional methods and opinions.",
-   "start": 516.8333,
-   "end": 524.0,
+   "start": 500.4332,
+   "end": 506.9665,
    "word_start": 1275,
    "word_end": 1293
   },
   {
    "beat_id": "b_096",
    "text": "Honest question, and drop your answer in the comments.",
-   "start": 524.0,
-   "end": 526.9333,
+   "start": 506.9665,
+   "end": 510.5332,
    "word_start": 1294,
    "word_end": 1302
   },
   {
    "beat_id": "b_097",
    "text": "Could you survive his two and a half hour training day, or would the four mile run finish you before the circuits even start?",
-   "start": 526.9333,
-   "end": 533.4333,
+   "start": 510.5332,
+   "end": 518.2332,
    "word_start": 1303,
    "word_end": 1326
   },
   {
    "beat_id": "b_098",
    "text": "If this breakdown earned it, subscribe. The training diaries of the next legend are already on the desk.",
-   "start": 533.4333,
-   "end": 539.6666,
+   "start": 518.2332,
+   "end": 524.9332,
    "word_start": 1327,
    "word_end": 1344
   },
   {
    "beat_id": "b_099",
    "text": "Walk on.",
-   "start": 539.6666,
-   "end": 542.1666,
+   "start": 524.9332,
+   "end": 525.8332,
    "word_start": 1345,
    "word_end": 1346
   }

@@ -2,50 +2,50 @@
  "b_008": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 1 \u00b7 THE KID",
-   "accent": "#F2C230"
+   "part": "PART 1",
+   "title": "THE KID"
   }
  },
  "b_017": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 2 \u00b7 ONE INCH",
-   "accent": "#F2C230"
+   "part": "PART 2",
+   "title": "ONE INCH"
   }
  },
  "b_025": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 3 \u00b7 THE FIGHT",
-   "accent": "#F2C230"
+   "part": "PART 3",
+   "title": "THE FIGHT"
   }
  },
  "b_032": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 4 \u00b7 THE SYSTEM",
-   "accent": "#F2C230"
+   "part": "PART 4",
+   "title": "THE SYSTEM"
   }
  },
  "b_060": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 5 \u00b7 THE FUEL",
-   "accent": "#F2C230"
+   "part": "PART 5",
+   "title": "THE FUEL"
   }
  },
  "b_068": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 6 \u00b7 BUILT TWICE",
-   "accent": "#F2C230"
+   "part": "PART 6",
+   "title": "BUILT TWICE"
   }
  },
  "b_087": {
   "comp": "ChapterChip",
   "props": {
-   "label": "PART 7 \u00b7 YOUR TURN",
-   "accent": "#F2C230"
+   "part": "PART 7",
+   "title": "YOUR TURN"
   }
  },
  "b_018": {

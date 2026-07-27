@@ -159,10 +159,13 @@ def main():
     # with a looped image input - otherwise the encode never terminates
     # (the looped PNG stream has no EOF; first rebuild hit the 2h
     # timeout encoding past the end of the concat).
+    # [1:v]fps=30: without it the 25fps looped PNG misses frames around
+    # concat junction PTS jitter and the wordmark blinks out at cuts
     run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
          "-loop", "1", "-i", str(bug),
          "-filter_complex",
-         f"[0:v]fps={FPS}[base];[base][1:v]overlay=0:0:shortest=1",
+         f"[0:v]fps={FPS}[base];[1:v]fps={FPS}[lg];"
+         "[base][lg]overlay=0:0:shortest=1",
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
          "-pix_fmt", "yuv420p", "-an", "-y", str(vtrack)], timeout=7200)
     for pth, kind, _ in vids:
