@@ -151,11 +151,14 @@ def main():
     vtrack = V6W / "v10_video.mp4"
     # -loop 1: without it the PNG stream ends after ONE frame and the
     # bug silently vanishes for the rest of the video (caught by the
-    # watch agent on V5 round 1)
+    # watch agent on V5 round 1). shortest=1 on the overlay is REQUIRED
+    # with a looped image input - otherwise the encode never terminates
+    # (the looped PNG stream has no EOF; first rebuild hit the 2h
+    # timeout encoding past the end of the concat).
     run(["ffmpeg", "-f", "concat", "-safe", "0", "-i", str(lst),
          "-loop", "1", "-i", str(bug),
          "-filter_complex",
-         f"[0:v]fps={FPS}[base];[base][1:v]overlay=0:0",
+         f"[0:v]fps={FPS}[base];[base][1:v]overlay=0:0:shortest=1",
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
          "-pix_fmt", "yuv420p", "-an", "-y", str(vtrack)], timeout=7200)
     for pth, kind, _ in vids:
