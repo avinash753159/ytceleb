@@ -49,7 +49,9 @@ def merge_words(words, max_gap=0.6, max_dur=MAX_BITE_S):
             elif t1 - cur[0][0] > max_dur:
                 flush()
         cur.append((t0, t1, word))
-        if SENT_END.search(word):
+        if cur[-1][1] - cur[0][0] > max_dur:
+            flush()
+        elif SENT_END.search(word):
             flush()
     flush()
     return out
