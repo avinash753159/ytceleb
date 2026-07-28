@@ -209,3 +209,27 @@ def test_sync_gate_does_not_raise_at_exactly_the_tolerance():
     # without this, in either drift direction.
     check_sync(100.0, 100.25)
     check_sync(100.25, 100.0)
+
+
+from v11_assemble import audio_chunk_order  # noqa: E402
+
+
+def test_chunk_order_interleaves_runs_and_bites():
+    names = [p.name for p in audio_chunk_order(_edl(), WORK)]
+    assert names == ["narr_00.wav", "bite_b0.wav", "narr_01.wav"]
+
+
+def test_chunk_order_ignores_cards_and_beats():
+    e = EDL(segs=[Seg(kind="card", dur=3.0, seg_id="c0",
+                      chapter="protocol"),
+                  Seg(kind="beat", dur=2.0, seg_id="s0", chapter="open"),
+                  Seg(kind="narr", dur=4.0, seg_id="n0", chapter="open")],
+            protocol_chapter="protocol", subject_speaker="subject")
+    names = [p.name for p in audio_chunk_order(e, WORK)]
+    assert names == ["narr_00.wav"]
+
+
+def test_chunk_order_is_empty_for_an_empty_edl():
+    e = EDL(segs=[], protocol_chapter="protocol",
+            subject_speaker="subject")
+    assert audio_chunk_order(e, WORK) == []

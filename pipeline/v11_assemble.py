@@ -169,3 +169,57 @@ def probe_dur(f):
         ["ffprobe", "-v", "error", "-show_entries", "format=duration",
          "-of", "csv=p=0", str(f)], capture_output=True,
         text=True).stdout.strip())
+
+
+def audio_chunk_order(edl, workdir):
+    """Speech chunks in timeline order: narration runs and bites.
+
+    Cards and music-only beats carry no speech; their silence comes from
+    the video timeline and the music bed.
+    """
+    run_at = {i: k for k, (i, _) in enumerate(edl.runs())}
+    out = []
+    for i, s in enumerate(edl.segs):
+        if i in run_at:
+            out.append(Path(workdir) / f"narr_{run_at[i]:02d}.wav")
+        elif s.kind == "bite":
+            out.append(Path(workdir) / f"bite_{s.seg_id}.wav")
+    return out
+
+
+def build_audio(edl, run_wavs, source_paths, workdir,
+                music_plan=None, cue_dir=None):
+    """Normalise, extract, fade, butt-join, then lay the music bed.
+
+    run_wavs: one already-generated TTS wav per narration run, in run
+    order. Never a master to be sliced - see narration_texts().
+    """
+    work = Path(workdir)
+    work.mkdir(parents=True, exist_ok=True)
+
+    if len(run_wavs) != len(edl.runs()):
+        raise ValueError(f"got {len(run_wavs)} run wavs for "
+                         f"{len(edl.runs())} narration runs")
+    for cmd, _ in norm_cmds(run_wavs, work, "narr"):
+        run(cmd)
+    for cmd, _ in bite_cmds(edl, source_paths, work):
+        run(cmd)
+
+    chunks = [(p, probe_dur(p)) for p in audio_chunk_order(edl, work)]
+    faded = []
+    for cmd, dst in fade_cmds(chunks, work):
+        run(cmd)
+        faded.append(dst)
+
+    listfile = work / "achain.txt"
+    listfile.write_text(
+        "\n".join(f"file '{f.absolute().as_posix()}'" for f in faded),
+        encoding="utf-8")
+    speech = work / "speech.wav"
+    run(concat_cmd(faded, listfile, speech))
+
+    if not music_plan:
+        return speech
+    mixed = work / "speech_music.wav"
+    run(music_mix_cmd(speech, music_plan, cue_dir, mixed))
+    return mixed
