@@ -39,7 +39,7 @@ class Seg:
 
     def __post_init__(self):
         if self.kind not in KINDS:
-            raise ValueError(f"bad kind {self.kind!r}, want one of {KINDS}")
+            raise ValueError(f"{self.seg_id}: bad kind {self.kind!r}, want one of {KINDS}")
         if self.dur <= 0:
             raise ValueError(f"{self.seg_id}: dur must be > 0")
 
@@ -196,7 +196,18 @@ from pathlib import Path
 def build_edl(doc):
     """Build an EDL from a cut-list dict. Raises ValueError on bad input."""
     segs, seen = [], set()
-    for raw in doc.get("segments", []):
+    for i, raw in enumerate(doc.get("segments", [])):
+        # Validate required keys with helpful error messages
+        required_keys = ["id", "kind", "dur", "chapter"]
+        for key in required_keys:
+            if key not in raw:
+                if key == "id":
+                    raise ValueError(f"segment {i}: missing required key {key!r}")
+                elif "id" in raw:
+                    raise ValueError(f"segment {i} (id {raw['id']!r}): missing required key {key!r}")
+                else:
+                    raise ValueError(f"segment {i}: missing required key {key!r}")
+
         sid = raw["id"]
         if sid in seen:
             raise ValueError(f"duplicate segment id {sid!r}")

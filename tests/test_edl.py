@@ -149,3 +149,40 @@ def test_build_edl_rejects_duplicate_ids():
         assert "n0" in str(ex)
     else:
         raise AssertionError("expected ValueError")
+
+
+def test_build_edl_missing_required_key_with_id():
+    doc = {"segments": [{"kind": "narr", "dur": 1.0, "id": "n0",
+                         "chapter": "open"},
+                        {"kind": "bite", "id": "b0", "chapter": "open"}]}
+    try:
+        build_edl(doc)
+    except ValueError as ex:
+        assert "segment 1" in str(ex)
+        assert "b0" in str(ex)
+        assert "dur" in str(ex)
+    else:
+        raise AssertionError("expected ValueError")
+
+
+def test_build_edl_missing_required_key_without_id():
+    doc = {"segments": [{"kind": "narr", "dur": 1.0, "chapter": "open"}]}
+    try:
+        build_edl(doc)
+    except ValueError as ex:
+        assert "segment 0" in str(ex)
+        assert "id" in str(ex)
+    else:
+        raise AssertionError("expected ValueError")
+
+
+def test_build_edl_bad_kind_includes_segment_id():
+    doc = {"segments": [{"kind": "sfx", "dur": 1.0, "id": "x",
+                         "chapter": "open"}]}
+    try:
+        build_edl(doc)
+    except ValueError as ex:
+        assert "x" in str(ex)
+        assert "sfx" in str(ex)
+    else:
+        raise AssertionError("expected ValueError")
