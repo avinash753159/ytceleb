@@ -1533,7 +1533,11 @@ def concat_cmd(faded, listfile, out):
 def music_mix_cmd(base, plan, cue_dir, out):
     """Overlay scored cues onto the speech track at chapter offsets."""
     ins = ["-i", str(base)]
-    parts, mix = [], "[0:a]"
+    # F7 rule 2 applies to EVERY amix input including the base - relying on
+    # an upstream invariant is how a mono base sneaks in and puts narration
+    # back 3dB hot.
+    parts = ["[0:a]aformat=channel_layouts=stereo:sample_rates=48000[base]"]
+    mix = "[base]"
     for k, p in enumerate(plan):
         ins += ["-i", str(Path(cue_dir) / p["cue"])]
         ms = int(round(p["at"] * 1000))
