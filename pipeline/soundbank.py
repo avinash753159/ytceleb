@@ -86,6 +86,34 @@ def index_source(src_path, source_id, speaker, model):
             for u in merge_words(_transcribe(src_path, model))]
 
 
+def _score(r, topic, emotion):
+    s = 0.0
+    if topic:
+        if topic in r.get("topic_tags", []):
+            s += 2.0
+        elif topic.lower() in r.get("text", "").lower():
+            s += 1.0
+    if emotion and r.get("emotion") == emotion:
+        s += 1.0
+    if r.get("audio_clean"):
+        s += 0.5
+    return s
+
+
+def query(bank, topic="", speaker="", emotion="", max_dur=MAX_BITE_S,
+          limit=20):
+    """Rank soundbites for a chapter. Hard filters first, then score."""
+    hits = []
+    for r in bank:
+        if speaker and r.get("speaker") != speaker:
+            continue
+        if (r["t1"] - r["t0"]) > max_dur:
+            continue
+        hits.append((_score(r, topic, emotion), -(r["t1"] - r["t0"]), r))
+    hits.sort(key=lambda x: (-x[0], -x[1]))
+    return [r for _, _, r in hits[:limit]]
+
+
 def main():
     """Index every source listed in manifest/bank_sources.json.
 

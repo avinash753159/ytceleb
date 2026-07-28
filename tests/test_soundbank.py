@@ -74,3 +74,50 @@ def test_merge_mixed_normal_and_oversized():
     # Oversized word will exceed max_dur (cannot be split)
     assert out[2]["text"] == "bye"
     assert out[2]["t1"] - out[2]["t0"] <= 10.0
+
+
+from soundbank import query  # noqa: E402
+
+
+def rec(sid, t0, t1, speaker, text, tags=(), emotion="", clean=True):
+    return {"source_id": sid, "t0": t0, "t1": t1, "speaker": speaker,
+            "text": text, "topic_tags": list(tags), "emotion": emotion,
+            "on_camera": True, "audio_clean": clean}
+
+
+BANK = [
+    rec("a", 0, 5, "subject", "I was going ten times a day.",
+        tags=["crohns"], emotion="pain"),
+    rec("b", 0, 4, "coach", "He never missed a session.", tags=["training"]),
+    rec("c", 0, 40, "subject", "Long rambling crohns answer.",
+        tags=["crohns"]),
+    rec("d", 0, 3, "subject", "The crohns thing was brutal.", clean=False),
+]
+
+
+def test_query_filters_by_speaker():
+    out = query(BANK, speaker="coach")
+    assert [r["source_id"] for r in out] == ["b"]
+
+
+def test_query_excludes_bites_over_max_dur():
+    out = query(BANK, topic="crohns", max_dur=30.0)
+    assert "c" not in [r["source_id"] for r in out]
+
+
+def test_query_ranks_tag_match_above_text_match():
+    out = query(BANK, topic="crohns", max_dur=30.0)
+    assert out[0]["source_id"] == "a"
+
+
+def test_query_emotion_boosts_score():
+    out = query(BANK, topic="crohns", emotion="pain", max_dur=30.0)
+    assert out[0]["source_id"] == "a"
+
+
+def test_query_respects_limit():
+    assert len(query(BANK, limit=2)) == 2
+
+
+def test_query_with_no_criteria_returns_everything_under_max_dur():
+    assert len(query(BANK, max_dur=30.0)) == 3
