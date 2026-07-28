@@ -2074,10 +2074,11 @@ git commit -m "feat(v11): 3-minute slice proof with join + clipping checks"
 
 ## Definition of done
 
-- [ ] `py -3.12 -m pytest tests/ -v` → 65 passed
+- [ ] `py -3.12 -m pytest tests/ -v` → 80 passed
 - [ ] `py -3.12 pipeline/qc_v11.py manifest/slice_cutlist.json` → exit 0
-- [ ] `py -3.12 pipeline/v11_slice.py` → exit 0, `V11_SLICE.mp4` exists at ~170–200 s
-      (exact length depends on measured TTS run durations)
+- [ ] `py -3.12 pipeline/v11_slice.py` → exit 0, `V11_SLICE.mp4` exists.
+      Measured on the reference run: **152.3 s**, sync drift **+0.03 s**. Length is
+      TTS-driven, so treat this as the observed figure rather than a target.
 - [ ] Every join's `max_volume` is below 0.0 dB
 - [ ] No media committed (`git log --stat` shows only `.py`, `.md`, `.json`)
 
