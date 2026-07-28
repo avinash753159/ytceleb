@@ -1898,6 +1898,7 @@ Write `manifest/slice_cutlist.json`, ~180 s total, deliberately built to pass ev
     {"kind": "beat", "dur": 3.0, "id": "s1", "chapter": "open",
      "fitness": true},
     {"kind": "narr", "dur": 10.0, "id": "n1", "chapter": "protocol",
+     "fitness": true,
      "text": "Every join in this file is a butt join with thirty millisecond edge fades, because crossfading overlaps the inputs and drifts the picture."},
     {"kind": "card", "dur": 14.0, "id": "c0", "chapter": "protocol",
      "fitness": true},
