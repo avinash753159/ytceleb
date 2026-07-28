@@ -1,47 +1,47 @@
 {
- "b_008": {
+ "b_009": {
   "comp": "ChapterChip",
   "props": {
    "part": "PART 1",
-   "title": "THE KID"
+   "title": "THE THEATER KID"
   }
  },
- "b_017": {
+ "b_020": {
   "comp": "ChapterChip",
   "props": {
    "part": "PART 2",
-   "title": "ONE INCH"
+   "title": "TWO SECRETS"
   }
  },
- "b_025": {
+ "b_031": {
   "comp": "ChapterChip",
   "props": {
    "part": "PART 3",
-   "title": "THE FIGHT"
+   "title": "THE LONELY MATH"
   }
  },
- "b_032": {
+ "b_049": {
   "comp": "ChapterChip",
   "props": {
    "part": "PART 4",
-   "title": "THE SYSTEM"
-  }
- },
- "b_060": {
-  "comp": "ChapterChip",
-  "props": {
-   "part": "PART 5",
    "title": "THE FUEL"
   }
  },
- "b_068": {
+ "b_063": {
+  "comp": "ChapterChip",
+  "props": {
+   "part": "PART 5",
+   "title": "THE DOUBLE FORTY"
+  }
+ },
+ "b_071": {
   "comp": "ChapterChip",
   "props": {
    "part": "PART 6",
-   "title": "BUILT TWICE"
+   "title": "THE PAYOFF"
   }
  },
- "b_087": {
+ "b_084": {
   "comp": "ChapterChip",
   "props": {
    "part": "PART 7",

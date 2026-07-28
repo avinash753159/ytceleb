@@ -1,64 +1,63 @@
 [
  {
-  "id": "int_styles",
-  "after": "b_031",
-  "vid": "uk1lzkH-e4U",
-  "t0": 419.9,
-  "t1": 458.0,
-  "label": "Bruce Lee \u2014 The Pierre Berton Show, 1971",
-  "mode": "audio_over",
-  "broll": [
-   [
-    "2yp-O580Ru0",
-    1595.0,
-    1650.0
-   ]
-  ]
- },
- {
-  "id": "int_trainbody",
-  "after": "b_059",
-  "vid": "uk1lzkH-e4U",
-  "t0": 488.5,
-  "t1": 537.2,
-  "label": "Bruce Lee \u2014 The Pierre Berton Show, 1971",
+  "id": "int_mandate",
+  "after": "b_030",
+  "vid": "u8zoxUlFo7E",
+  "t0": 422.8,
+  "t1": 434.8,
+  "label": "David Corenswet \u2014 GQ, 2025",
   "mode": "video",
   "crop_box": [
-   0.125,
-   0.1,
-   0.125,
-   0.16
+   0.0,
+   0.0,
+   0.0,
+   0.0
   ]
  },
  {
-  "id": "int_water",
-  "after": "b_072",
-  "vid": "uk1lzkH-e4U",
-  "t0": 948.5,
-  "t1": 975.7,
-  "label": "Bruce Lee \u2014 \"Be water, my friend\", 1971",
+  "id": "int_stunts",
+  "after": "b_042",
+  "vid": "u8zoxUlFo7E",
+  "t0": 322.4,
+  "t1": 337.3,
+  "label": "David Corenswet \u2014 GQ, 2025",
+  "mode": "video",
+  "crop_box": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "int_yogurt",
+  "after": "b_060",
+  "vid": "bv3W8GmhYZM",
+  "t0": 765.2,
+  "t1": 777.4,
+  "label": "David Corenswet \u2014 on his diet, 2025",
   "mode": "audio_over",
   "broll": [
    [
-    "2yp-O580Ru0",
-    700.0,
-    760.0
+    "u8zoxUlFo7E",
+    96,
+    128
    ]
   ]
  },
  {
-  "id": "int_hollywood",
-  "after": "b_079",
-  "vid": "uk1lzkH-e4U",
-  "t0": 1162.9,
-  "t1": 1181.1,
-  "label": "Bruce Lee \u2014 The Pierre Berton Show, 1971",
+  "id": "int_240again",
+  "after": "b_083",
+  "vid": "bv3W8GmhYZM",
+  "t0": 2371.8,
+  "t1": 2375.2,
+  "label": "David Corenswet, 2025",
   "mode": "audio_over",
   "broll": [
    [
-    "YHHQF1SHHLw",
-    165.0,
-    190.0
+    "Ox8ZLF6cGM0",
+    133,
+    138
    ]
   ]
  }
