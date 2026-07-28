@@ -233,3 +233,77 @@ def test_chunk_order_is_empty_for_an_empty_edl():
     e = EDL(segs=[], protocol_chapter="protocol",
             subject_speaker="subject")
     assert audio_chunk_order(e, WORK) == []
+
+
+# ---- timeline_audio_plan(): the fix for the card/beat gap --------------
+
+from v11_assemble import silence_cmd, timeline_audio_plan  # noqa: E402
+
+
+def _edl_with_gaps():
+    """narr, beat, bite, card, then a two-segment narration run - covers
+    every kind audio_chunk_order() drops (card, beat) plus a multi-
+    segment run, so silence placement and run-folding are both exercised.
+    """
+    return EDL(
+        segs=[Seg(kind="narr", dur=10.0, seg_id="n0", chapter="open",
+                  text="He was fifteen."),
+              Seg(kind="beat", dur=3.0, seg_id="s0", chapter="open"),
+              Seg(kind="bite", dur=6.0, seg_id="b0", chapter="open",
+                  source="vid1", t0=42.0, speaker="subject"),
+              Seg(kind="card", dur=14.0, seg_id="c0", chapter="protocol"),
+              Seg(kind="narr", dur=8.0, seg_id="n1", chapter="protocol",
+                  text="Nobody knew."),
+              Seg(kind="narr", dur=5.0, seg_id="n2", chapter="protocol",
+                  text="Not for eight years.")],
+        protocol_chapter="protocol", subject_speaker="subject")
+
+
+def test_plan_interleaves_silence_at_the_correct_position():
+    e = _edl_with_gaps()
+    plan = timeline_audio_plan(e, WORK)
+    # Must fail if silence were appended at the tail instead of spliced
+    # in place: the exact (kind, seg_id) sequence, in timeline order.
+    assert [(p["kind"], p["seg_id"]) for p in plan] == [
+        ("chunk", "n0"),
+        ("silence", "s0"),
+        ("chunk", "b0"),
+        ("silence", "c0"),
+        ("chunk", "n1"),   # run start; n2 folds into this entry
+    ]
+
+
+def test_plan_silence_dur_matches_its_segment():
+    e = _edl_with_gaps()
+    plan = timeline_audio_plan(e, WORK)
+    by_id = {p["seg_id"]: p for p in plan}
+    assert by_id["s0"]["dur"] == 3.0
+    assert by_id["c0"]["dur"] == 14.0
+
+
+def test_plan_total_duration_matches_edl_total():
+    e = _edl_with_gaps()
+    plan = timeline_audio_plan(e, WORK)
+    assert round(sum(p["dur"] for p in plan), 6) == e.total()
+
+
+def test_plan_names_match_audio_chunk_order_naming():
+    e = _edl_with_gaps()
+    plan = timeline_audio_plan(e, WORK)
+    chunks = [p for p in plan if p["kind"] == "chunk"]
+    assert [p["path"].name for p in chunks] == ["narr_00.wav", "bite_b0.wav",
+                                                 "narr_01.wav"]
+
+
+def test_plan_with_no_cards_or_beats_matches_audio_chunk_order():
+    e = _edl()
+    plan = timeline_audio_plan(e, WORK)
+    assert all(p["kind"] == "chunk" for p in plan)
+    assert [p["path"] for p in plan] == audio_chunk_order(e, WORK)
+
+
+def test_silence_cmd_is_48k_stereo_for_exact_duration():
+    cmd = silence_cmd(3.5, WORK / "sil.wav")
+    joined = " ".join(cmd)
+    assert "anullsrc=r=48000:cl=stereo" in joined
+    assert cmd[cmd.index("-t") + 1] == "3.5"

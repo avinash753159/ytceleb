@@ -175,7 +175,9 @@ def audio_chunk_order(edl, workdir):
     """Speech chunks in timeline order: narration runs and bites.
 
     Cards and music-only beats carry no speech; their silence comes from
-    the video timeline and the music bed.
+    the video timeline and the music bed. Kept as-is - other code and
+    tests use it directly. See timeline_audio_plan() for the full-timeline
+    version build_audio() actually consumes.
     """
     run_at = {i: k for k, (i, _) in enumerate(edl.runs())}
     out = []
@@ -187,12 +189,93 @@ def audio_chunk_order(edl, workdir):
     return out
 
 
+def _run_span_dur(edl, i, j):
+    return round(sum(edl.segs[k].dur for k in range(i, j)), 6)
+
+
+def timeline_audio_plan(edl, workdir):
+    """Pure planner: the FULL timeline in order, chunks and silence
+    interleaved. No filesystem, no ffmpeg - paths are constructed, not
+    created; silence entries carry only a duration to be generated later.
+
+    THE GAP THIS CLOSES: audio_chunk_order() (kept above, unchanged)
+    drops cards and music-only beats entirely, on the assumption that
+    their silent screen time will be filled later by a music bed. That
+    bed does not exist yet (the cue library ships schema-only, deferred
+    to Phase 2), so a speech track built from audio_chunk_order() alone
+    comes out sum(card/beat durations) shorter than the picture - wrong
+    length, AND every music cue placed against it by chapter-offset
+    later lands at the wrong position, because a cue's `at` is computed
+    against the full EDL timeline while this compressed track's internal
+    clock has had that time surgically removed. Neither bug is silent
+    tolerance-wise for length (the sync gate catches it) but the cue
+    mis-placement is - no gate checks a music cue's position. Building
+    the full timeline correctly here, once, fixes both: a later music
+    mix is applied against a base track whose clock already matches the
+    EDL's, so `adelay` offsets computed from the full timeline land
+    where they should.
+
+    Every segment is accounted for, in edl.segs order:
+      - the first segment of each narration RUN becomes one "chunk"
+        entry (dur = the run's total measured duration, i.e. the sum of
+        its segments' - by this point already fitted from real TTS);
+        later segments of the same run are folded into it and do not
+        get their own entry. Naming matches audio_chunk_order() exactly
+        (narr_NN.wav by run index) so norm_cmds()/bite_cmds() line up.
+      - each bite becomes one "chunk" entry (dur = its own duration),
+        named bite_<seg_id>.wav exactly as audio_chunk_order() does.
+      - each card or music-only beat becomes one "silence" entry
+        (dur = its own duration) - this is what audio_chunk_order()
+        drops.
+
+    Returned entries, in timeline order:
+      {"kind": "chunk", "path": Path, "seg_id": str, "dur": float}
+      {"kind": "silence", "dur": float, "seg_id": str}
+    """
+    workdir = Path(workdir)
+    runs = edl.runs()
+    run_at = {i: k for k, (i, j) in enumerate(runs)}
+    run_dur = {i: _run_span_dur(edl, i, j) for i, j in runs}
+    in_run_tail = {k for i, j in runs for k in range(i + 1, j)}
+    out = []
+    for i, s in enumerate(edl.segs):
+        if i in in_run_tail:
+            continue  # non-first segment of a run - folded into its entry
+        if i in run_at:
+            k = run_at[i]
+            out.append({"kind": "chunk",
+                        "path": workdir / f"narr_{k:02d}.wav",
+                        "seg_id": s.seg_id, "dur": run_dur[i]})
+        elif s.kind == "bite":
+            out.append({"kind": "chunk",
+                        "path": workdir / f"bite_{s.seg_id}.wav",
+                        "seg_id": s.seg_id, "dur": s.dur})
+        else:  # card or beat - no speech, stands in for the music bed
+            out.append({"kind": "silence", "dur": s.dur,
+                        "seg_id": s.seg_id})
+    return out
+
+
+def silence_cmd(dur, dst):
+    """Pure silence, 48kHz stereo, for exactly `dur` seconds - the
+    stand-in for the music bed at a card/beat gap. Same format as every
+    other chunk so the concat demuxer can stream-copy it in seamlessly.
+    """
+    return ["ffmpeg", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+            "-t", str(dur), "-c:a", "pcm_s16le", "-y", str(dst)]
+
+
 def build_audio(edl, run_wavs, source_paths, workdir,
                 music_plan=None, cue_dir=None):
-    """Normalise, extract, fade, butt-join, then lay the music bed.
+    """Normalise, extract, generate silence, fade, butt-join the FULL
+    timeline, then lay the music bed.
 
     run_wavs: one already-generated TTS wav per narration run, in run
     order. Never a master to be sliced - see narration_texts().
+
+    Consumes timeline_audio_plan() so the resulting speech track spans
+    edl.total() - chunks AND silence together - rather than only the
+    speech-bearing segments. See that function's docstring for why.
     """
     work = Path(workdir)
     work.mkdir(parents=True, exist_ok=True)
@@ -205,7 +288,14 @@ def build_audio(edl, run_wavs, source_paths, workdir,
     for cmd, _ in bite_cmds(edl, source_paths, work):
         run(cmd)
 
-    chunks = [(p, probe_dur(p)) for p in audio_chunk_order(edl, work)]
+    plan = timeline_audio_plan(edl, work)
+    for p in plan:
+        if p["kind"] == "silence":
+            dst = work / f"sil_{p['seg_id']}.wav"
+            run(silence_cmd(p["dur"], dst))
+            p["path"] = dst
+
+    chunks = [(p["path"], probe_dur(p["path"])) for p in plan]
     faded = []
     for cmd, dst in fade_cmds(chunks, work):
         run(cmd)

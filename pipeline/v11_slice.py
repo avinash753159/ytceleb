@@ -18,8 +18,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from edl import load_edl  # noqa: E402
 from qc_v11 import report  # noqa: E402
 from v11_assemble import (ROOT, build_audio, check_sync,  # noqa: E402
-                          concat_cmd, fit_run_durations, narration_texts,
-                          probe_dur, run)
+                          fit_run_durations, narration_texts, probe_dur,
+                          run)
 
 WORK = ROOT / "final_video" / "v11_work"
 OUT = ROOT / "final_video" / "V11_SLICE.mp4"
@@ -42,56 +42,6 @@ def draft_runs(texts):
         run(["ffmpeg", "-i", str(mp3), "-ar", "48000", "-ac", "2",
              "-y", str(wav)])
         out.append(wav)
-    return out
-
-
-def silence_cmd(dur, dst):
-    """Stand-in for the music bed: pure silence, same stereo/48k format
-    as every fd_*.wav chunk, so the concat demuxer can stream-copy it in.
-    """
-    return ["ffmpeg", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
-            "-t", str(dur), "-c:a", "pcm_s16le", "-y", str(dst)]
-
-
-def full_timeline_audio(edl, speech_chunks, work):
-    """Splice silence into the speech-only chain at every card/beat gap.
-
-    build_audio() (Task 8) deliberately drops cards and music-only beats
-    from its speech concat - audio_chunk_order() skips them by design
-    (see test_chunk_order_ignores_cards_and_beats). In the finished film
-    their silent screen time is meant to be filled by the music bed, but
-    the cue library is deferred to Phase 2 and ships schema-only here.
-    Without a stand-in, the audio track is exactly
-    sum(card/beat durations) shorter than the picture, which is why the
-    sync gate refuses it - correctly. This is not a gate problem, it is
-    a missing piece of THIS driver, so the fix goes here rather than in
-    v11_assemble.py or edl.py.
-
-    speech_chunks: the fd_*.wav files build_audio() already produced,
-    sorted in chronological order (bites and narration runs, interleaved
-    exactly as audio_chunk_order() emits them). Each already fades to
-    true zero at its edges, so butt-joining silence against it introduces
-    no click.
-    """
-    run_at = {i: k for k, (i, j) in enumerate(edl.runs())}
-    in_run_tail = {k for i, j in edl.runs() for k in range(i + 1, j)}
-    chunks = iter(speech_chunks)
-    order = []
-    for idx, s in enumerate(edl.segs):
-        if idx in in_run_tail:
-            continue  # non-first segment of a run - already in one chunk
-        if idx in run_at or s.kind == "bite":
-            order.append(next(chunks))
-        else:  # card or beat - no speech, stand in silence for the music
-            sil = work / f"sil_{idx:03d}.wav"
-            run(silence_cmd(s.dur, sil))
-            order.append(sil)
-    listfile = work / "full_achain.txt"
-    listfile.write_text(
-        "\n".join(f"file '{p.absolute().as_posix()}'" for p in order),
-        encoding="utf-8")
-    out = work / "full_audio.wav"
-    run(concat_cmd(order, listfile, out))
     return out
 
 
@@ -119,18 +69,13 @@ def main():
         if not p.exists():
             raise SystemExit(f"missing source {sid}: {p}")
 
-    speech = build_audio(edl, run_wavs, sources, WORK)
-    print(f"[audio-speech] {probe_dur(speech):.2f}s "
-          f"(bites + narration runs only)")
-
-    # build_audio() skips cards/beats (their time is meant to come from
-    # the music bed, deferred to Phase 2) - splice silence into those
-    # gaps so the audio track spans the full timeline. See
-    # full_timeline_audio()'s docstring for why this belongs here.
-    fd_chunks = sorted(WORK.glob("fd_*.wav"))
-    audio = full_timeline_audio(edl, fd_chunks, WORK)
+    # build_audio() now consumes timeline_audio_plan() internally, so the
+    # returned track already spans the full EDL timeline - cards/beats
+    # are filled with silence standing in for the not-yet-built music
+    # bed, in their correct timeline position (not appended at the tail).
+    audio = build_audio(edl, run_wavs, sources, WORK)
     ad = probe_dur(audio)
-    print(f"[audio-full] {ad:.2f}s (silence stands in for the music bed)")
+    print(f"[audio] {ad:.2f}s (full timeline: speech + silence)")
 
     vtrack = WORK / "slice_video.mp4"
     run(["ffmpeg", "-f", "lavfi",
