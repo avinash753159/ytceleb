@@ -103,3 +103,49 @@ def test_fitness_ratio_fails_when_protocol_act_is_not_training(good_edl):
 def test_validate_aggregates_all_gates(good_edl):
     codes = {p.code for p in validate(good_edl)}
     assert codes == {"V4"}                 # only the beat-count gate fails
+
+
+from edl import build_edl  # noqa: E402
+
+
+def test_build_edl_maps_id_to_seg_id():
+    doc = {"protocol_chapter": "protocol", "subject_speaker": "subject",
+           "segments": [{"kind": "narr", "dur": 2.0, "id": "n0",
+                         "chapter": "open"}]}
+    e = build_edl(doc)
+    assert e.segs[0].seg_id == "n0"
+    assert e.protocol_chapter == "protocol"
+    assert e.subject_speaker == "subject"
+
+
+def test_build_edl_applies_defaults():
+    doc = {"segments": [{"kind": "bite", "dur": 2.0, "id": "b0",
+                         "chapter": "open"}]}
+    e = build_edl(doc)
+    assert e.segs[0].jcut == 0.0
+    assert e.segs[0].fitness is False
+    assert e.protocol_chapter == "protocol"
+
+
+def test_build_edl_rejects_unknown_kind():
+    doc = {"segments": [{"kind": "sfx", "dur": 1.0, "id": "x",
+                         "chapter": "open"}]}
+    try:
+        build_edl(doc)
+    except ValueError as ex:
+        assert "sfx" in str(ex)
+    else:
+        raise AssertionError("expected ValueError")
+
+
+def test_build_edl_rejects_duplicate_ids():
+    doc = {"segments": [{"kind": "narr", "dur": 1.0, "id": "n0",
+                         "chapter": "open"},
+                        {"kind": "narr", "dur": 1.0, "id": "n0",
+                         "chapter": "open"}]}
+    try:
+        build_edl(doc)
+    except ValueError as ex:
+        assert "n0" in str(ex)
+    else:
+        raise AssertionError("expected ValueError")

@@ -187,3 +187,38 @@ def validate(edl):
     for g in GATES:
         out.extend(g(edl))
     return out
+
+
+import json
+from pathlib import Path
+
+
+def build_edl(doc):
+    """Build an EDL from a cut-list dict. Raises ValueError on bad input."""
+    segs, seen = [], set()
+    for raw in doc.get("segments", []):
+        sid = raw["id"]
+        if sid in seen:
+            raise ValueError(f"duplicate segment id {sid!r}")
+        seen.add(sid)
+        segs.append(Seg(
+            kind=raw["kind"],
+            dur=float(raw["dur"]),
+            seg_id=sid,
+            chapter=raw["chapter"],
+            source=raw.get("source", ""),
+            t0=float(raw.get("t0", 0.0)),
+            speaker=raw.get("speaker", ""),
+            jcut=float(raw.get("jcut", 0.0)),
+            promise=raw.get("promise", ""),
+            resolves=raw.get("resolves", ""),
+            fitness=bool(raw.get("fitness", False)),
+            text=raw.get("text", ""),
+        ))
+    return EDL(segs=segs,
+               protocol_chapter=doc.get("protocol_chapter", "protocol"),
+               subject_speaker=doc.get("subject_speaker", "subject"))
+
+
+def load_edl(path):
+    return build_edl(json.loads(Path(path).read_text(encoding="utf-8")))
