@@ -1109,6 +1109,12 @@ def _chapter_spans(edl):
         else:
             spans.append([s.chapter, t, s.dur])
         t += s.dur
+    names = [c for c, _, _ in spans]
+    for c in names:
+        if names.count(c) > 1:
+            raise ValueError(
+                f"chapter {c!r} appears in {names.count(c)} non-contiguous "
+                "runs; chapters must be contiguous blocks")
     return [(c, round(a, 6), round(d, 6)) for c, a, d in spans]
 
 
