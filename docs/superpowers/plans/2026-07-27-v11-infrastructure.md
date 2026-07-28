@@ -12,7 +12,8 @@
 
 - Repo root: `C:\Users\avina\ytceleb`. All paths below are relative to it.
 - Python is invoked as `py -3.12`. Never bare `python`.
-- **Commit only `*.py`, `*.md`, `*.tsx`, `*.json` manifests.** Never commit media (`*.mp4`, `*.wav`, `*.mp3`, `*.png`). `.gitignore` already covers these — do not weaken it.
+- **Never commit media** (`*.mp4`, `*.wav`, `*.mp3`, `*.png`, renders, footage). Source, docs, config and small JSON manifests are all fine to track.
+- `.gitignore` is **deny-all with an allowlist** (line 2 is `*`, then `!*.py`, `!*.md`, `!manifest/*.json`, …). A new non-`.py` file therefore needs its own `!` allow rule before it can be staged. Add the rule — never `git add -f` past the guard, which leaves the next person's `git status` lying to them. Verify with `git check-ignore -v <path>` printing nothing. Do not weaken the media denials.
 - API keys live in gitignored `*_key.txt` files at repo root. Never inline a key in source.
 - **F7 audio rules, verbatim and non-negotiable:**
   - `amix` must always carry `normalize=0`

@@ -4,6 +4,7 @@
 !*.py
 !*.md
 !.gitignore
+!pytest.ini
 # committed classification data (small); footage/renders never are
 !sheets_map*.json
 !vision_tags*.json
