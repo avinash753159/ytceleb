@@ -1,0 +1,12 @@
+[
+  {
+    "file": "PLACEHOLDER-DELETE-ME.mp3",
+    "function": "dread",
+    "bpm": 70,
+    "dur": 0.0,
+    "source": "YouTube Audio Library",
+    "license": "YTAL - free to use, no attribution, cannot be claimed",
+    "content_id_checked": false,
+    "note": "Schema example only. content_id_checked=false makes it ineligible. Replace with real cues; 20-30 tracks across dread/grind/the-turn/protocol/elegy/payoff."
+  }
+]

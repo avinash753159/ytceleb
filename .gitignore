@@ -15,6 +15,7 @@
 !graphics/src/**
 !manifest/*.json
 !library/ingest_report.json
+!library/music/cues.json
 !qc_report.json
 !profiles/*.yaml
 # never commit heavy artifacts
