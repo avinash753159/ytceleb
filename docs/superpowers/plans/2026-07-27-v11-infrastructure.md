@@ -674,6 +674,14 @@ def test_merge_splits_when_utterance_exceeds_max_dur():
     assert len(out) >= 4
 
 
+def test_merge_emits_an_oversized_single_word_alone():
+    words = [w(0.0, 15.0, "looooong"), w(15.2, 15.6, "next")]
+    out = merge_words(words, max_gap=2.0, max_dur=10.0)
+    assert out[0]["text"] == "looooong"
+    assert out[0]["t0"] == 0.0 and out[0]["t1"] == 15.0
+    assert out[1]["text"] == "next"
+
+
 def test_merge_handles_quoted_sentence_end():
     words = [w(0.0, 0.5, 'gone."'), w(0.6, 1.0, "Next")]
     out = merge_words(words)
@@ -745,7 +753,13 @@ def merge_words(words, max_gap=0.6, max_dur=MAX_BITE_S):
             elif t1 - cur[0][0] > max_dur:
                 flush()
         cur.append((t0, t1, word))
-        if SENT_END.search(word):
+        # post-append bound: the pre-append check above only runs while cur
+        # is non-empty, so a single word whose OWN span exceeds max_dur
+        # would otherwise be emitted over the cap. A lone over-long word
+        # cannot be split - it becomes its own utterance, which is correct.
+        if cur[-1][1] - cur[0][0] > max_dur:
+            flush()
+        elif SENT_END.search(word):
             flush()
     flush()
     return out
