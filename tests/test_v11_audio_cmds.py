@@ -1,0 +1,164 @@
+import sys
+from pathlib import Path
+
+import pytest
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
+
+from edl import EDL, Seg  # noqa: E402
+from v11_assemble import (  # noqa: E402
+    SyncError, bite_cmds, check_sync, concat_cmd, fade_cmds,
+    fit_run_durations, music_mix_cmd, narration_texts, norm_cmds,
+)
+
+WORK = Path("/tmp/v11work")
+
+
+def _edl():
+    return EDL(
+        segs=[Seg(kind="narr", dur=10.0, seg_id="n0", chapter="open",
+                  text="He was fifteen."),
+              Seg(kind="narr", dur=8.0, seg_id="n1", chapter="open",
+                  text="Nobody knew."),
+              Seg(kind="bite", dur=6.0, seg_id="b0", chapter="open",
+                  source="vid1", t0=42.0, speaker="subject"),
+              Seg(kind="narr", dur=5.0, seg_id="n2", chapter="open",
+                  text="Not for eight years.")],
+        protocol_chapter="protocol", subject_speaker="subject")
+
+
+# ---- F7(3): narration is GENERATED per run, never sliced -------------
+
+def test_one_tts_input_per_run_not_per_segment():
+    texts = narration_texts(_edl())
+    assert len(texts) == 2          # two runs, not three narr segments
+
+
+def test_run_text_joins_its_segments_in_order():
+    assert narration_texts(_edl())[0] == "He was fifteen. Nobody knew."
+
+
+def test_fit_distributes_measured_duration_across_a_run():
+    e = _edl()
+    fit_run_durations(e, [30.0, 5.0])
+    # run 0 texts are 15 and 12 chars -> 30s split 15:12
+    assert round(e.segs[0].dur + e.segs[1].dur, 3) == 30.0
+    assert e.segs[0].dur > e.segs[1].dur
+    assert e.segs[3].dur == 5.0
+
+
+def test_fit_leaves_bites_untouched():
+    e = _edl()
+    fit_run_durations(e, [30.0, 5.0])
+    assert e.segs[2].dur == 6.0
+
+
+def test_fit_rejects_wrong_number_of_runs():
+    try:
+        fit_run_durations(_edl(), [30.0])
+    except ValueError as ex:
+        assert "2 runs" in str(ex)
+    else:
+        raise AssertionError("expected ValueError")
+
+
+# ---- F7(4): never acrossfade -----------------------------------------
+
+def test_no_command_ever_uses_acrossfade():
+    e = _edl()
+    all_cmds = [c for c, _ in norm_cmds([Path("r0.wav")], WORK, "narr")]
+    all_cmds += [c for c, _ in bite_cmds(e, {"vid1": Path("v1.mp4")}, WORK)]
+    all_cmds += [c for c, _ in fade_cmds([(Path("a.wav"), 5.0)], WORK)]
+    all_cmds.append(concat_cmd([Path("a.wav")], WORK / "l.txt",
+                               WORK / "o.wav"))
+    all_cmds.append(music_mix_cmd(
+        WORK / "base.wav",
+        [{"chapter": "open", "cue": "c.mp3", "at": 0.0, "dur": 10.0}],
+        Path("cues"), WORK / "m.wav"))
+    for c in all_cmds:
+        assert "acrossfade" not in " ".join(c)
+
+
+# ---- butt-join with 30ms edge fades ----------------------------------
+
+def test_fade_applies_30ms_in_and_out_at_the_right_offset():
+    (cmd, _), = fade_cmds([(Path("a.wav"), 5.0)], WORK)
+    joined = " ".join(cmd)
+    assert "afade=t=in:d=0.03" in joined
+    assert "afade=t=out:st=4.970:d=0.03" in joined
+
+
+def test_fade_out_start_never_goes_negative_on_a_tiny_chunk():
+    (cmd, _), = fade_cmds([(Path("a.wav"), 0.01)], WORK)
+    assert "afade=t=out:st=0.000:d=0.03" in " ".join(cmd)
+
+
+def test_fade_normalises_to_stereo_48k():
+    (cmd, _), = fade_cmds([(Path("a.wav"), 5.0)], WORK)
+    joined = " ".join(cmd)
+    assert "channel_layouts=stereo" in joined
+    assert "sample_rates=48000" in joined
+
+
+def test_concat_uses_the_demuxer_and_stream_copy():
+    cmd = concat_cmd([Path("a.wav")], WORK / "l.txt", WORK / "o.wav")
+    assert "-f" in cmd and "concat" in cmd
+    assert "-c" in cmd and "copy" in cmd
+
+
+# ---- F7(1)+(2): amix normalize=0, stereo before mixing ---------------
+
+def test_music_mix_disables_amix_renormalisation():
+    cmd = music_mix_cmd(
+        WORK / "base.wav",
+        [{"chapter": "open", "cue": "c.mp3", "at": 0.0, "dur": 10.0}],
+        Path("cues"), WORK / "m.wav")
+    assert "normalize=0" in " ".join(cmd)
+
+
+def test_every_music_input_is_stereo_before_mixing():
+    cmd = music_mix_cmd(
+        WORK / "base.wav",
+        [{"chapter": "open", "cue": "a.mp3", "at": 0.0, "dur": 10.0},
+         {"chapter": "protocol", "cue": "b.mp3", "at": 10.0, "dur": 8.0}],
+        Path("cues"), WORK / "m.wav")
+    joined = " ".join(cmd)
+    assert joined.count("channel_layouts=stereo") >= 2
+
+
+def test_music_cue_is_delayed_to_its_chapter_offset():
+    cmd = music_mix_cmd(
+        WORK / "base.wav",
+        [{"chapter": "protocol", "cue": "b.mp3", "at": 12.5, "dur": 8.0}],
+        Path("cues"), WORK / "m.wav")
+    assert "adelay=12500|12500" in " ".join(cmd)
+
+
+# ---- bites ------------------------------------------------------------
+
+def test_bite_is_extracted_from_its_source_window():
+    (cmd, _), = bite_cmds(_edl(), {"vid1": Path("v1.mp4")}, WORK)
+    joined = " ".join(cmd)
+    assert "-ss" in cmd and "42.0" in joined
+    assert "-t" in cmd and "6.0" in joined
+
+
+def test_bite_for_missing_source_raises():
+    with pytest.raises(KeyError):
+        bite_cmds(_edl(), {}, WORK)
+
+
+# ---- the hard sync gate ----------------------------------------------
+
+def test_sync_gate_passes_within_tolerance():
+    check_sync(100.0, 100.2)
+
+
+def test_sync_gate_raises_past_tolerance():
+    with pytest.raises(SyncError):
+        check_sync(100.0, 100.4)
+
+
+def test_sync_gate_is_symmetric():
+    with pytest.raises(SyncError):
+        check_sync(100.4, 100.0)
