@@ -1,3 +1,4 @@
+import ast
 import sys
 from pathlib import Path
 
@@ -5,6 +6,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
+import v11_assemble  # noqa: E402
 from edl import EDL, Seg  # noqa: E402
 from v11_assemble import (  # noqa: E402
     SyncError, bite_cmds, check_sync, concat_cmd, fade_cmds,
@@ -78,6 +80,23 @@ def test_no_command_ever_uses_acrossfade():
     for c in all_cmds:
         assert "acrossfade" not in " ".join(c)
 
+    # Source-level guard: the enumeration above only covers builders known
+    # at test-writing time, so a future builder could add acrossfade and
+    # silently escape it. Scan the module's own source instead. The rule
+    # is legitimately named in docstrings, so strip docstrings via the
+    # AST (not string matching) before asserting the literal is gone from
+    # everything else - including any f-string template a builder emits.
+    src = Path(v11_assemble.__file__).read_text()
+    tree = ast.parse(src)
+    for node in ast.walk(tree):
+        if isinstance(node, (ast.Module, ast.FunctionDef,
+                             ast.AsyncFunctionDef, ast.ClassDef)):
+            if (node.body and isinstance(node.body[0], ast.Expr)
+                    and isinstance(node.body[0].value, ast.Constant)
+                    and isinstance(node.body[0].value.value, str)):
+                node.body[0].value.value = ""
+    assert "acrossfade" not in ast.unparse(tree)
+
 
 # ---- butt-join with 30ms edge fades ----------------------------------
 
@@ -126,6 +145,19 @@ def test_every_music_input_is_stereo_before_mixing():
     assert joined.count("channel_layouts=stereo") >= 2
 
 
+def test_music_mix_aformats_the_base_track_before_mixing():
+    # Correctness for rule 2 must hold inside this function, not rest on
+    # an upstream invariant that fade_cmds/concat_cmd already produced
+    # stereo - if a mono base ever reaches here, rule 2's original bug
+    # (narration comes back 3dB hot) must still be impossible.
+    cmd = music_mix_cmd(
+        WORK / "base.wav",
+        [{"chapter": "open", "cue": "c.mp3", "at": 0.0, "dur": 10.0}],
+        Path("cues"), WORK / "m.wav")
+    joined = " ".join(cmd)
+    assert "[0:a]aformat=channel_layouts=stereo:sample_rates=48000" in joined
+
+
 def test_music_cue_is_delayed_to_its_chapter_offset():
     cmd = music_mix_cmd(
         WORK / "base.wav",
@@ -138,9 +170,17 @@ def test_music_cue_is_delayed_to_its_chapter_offset():
 
 def test_bite_is_extracted_from_its_source_window():
     (cmd, _), = bite_cmds(_edl(), {"vid1": Path("v1.mp4")}, WORK)
-    joined = " ".join(cmd)
-    assert "-ss" in cmd and "42.0" in joined
-    assert "-t" in cmd and "6.0" in joined
+    # Exact argv positions, not unanchored substrings - "-t 16.0" or a
+    # t0 of 142.0 would still contain "6.0"/"42.0" as substrings.
+    assert cmd[cmd.index("-ss") + 1] == "42.0"
+    assert cmd[cmd.index("-t") + 1] == "6.0"
+
+
+def test_bite_seeks_before_input_not_after():
+    (cmd, _), = bite_cmds(_edl(), {"vid1": Path("v1.mp4")}, WORK)
+    # -ss after -i silently switches ffmpeg from fast, accurate
+    # input-seeking to slow output-seeking.
+    assert cmd.index("-ss") < cmd.index("-i")
 
 
 def test_bite_for_missing_source_raises():
@@ -162,3 +202,10 @@ def test_sync_gate_raises_past_tolerance():
 def test_sync_gate_is_symmetric():
     with pytest.raises(SyncError):
         check_sync(100.4, 100.0)
+
+
+def test_sync_gate_does_not_raise_at_exactly_the_tolerance():
+    # code correctly uses > not >= - a mutation to >= would go uncaught
+    # without this, in either drift direction.
+    check_sync(100.0, 100.25)
+    check_sync(100.25, 100.0)

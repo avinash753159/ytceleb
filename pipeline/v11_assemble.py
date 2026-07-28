@@ -126,9 +126,15 @@ def concat_cmd(faded, listfile, out):
 
 
 def music_mix_cmd(base, plan, cue_dir, out):
-    """Overlay scored cues onto the speech track at chapter offsets."""
+    """Overlay scored cues onto the speech track at chapter offsets.
+
+    The base speech track is aformat-ed to stereo/48k same as every cue -
+    rule 2 ("every amix input is aformat-ed to stereo BEFORE mixing")
+    must hold inside this function, not rely on an upstream invariant.
+    """
     ins = ["-i", str(base)]
-    parts, mix = [], "[0:a]"
+    parts = ["[0:a]aformat=channel_layouts=stereo:sample_rates=48000[base]"]
+    mix = "[base]"
     for k, p in enumerate(plan):
         ins += ["-i", str(Path(cue_dir) / p["cue"])]
         ms = int(round(p["at"] * 1000))
