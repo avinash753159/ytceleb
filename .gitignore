@@ -32,3 +32,6 @@ pexels_videos/
 vision_frames*/
 vision_sheets*/
 elevenlabs_key.txt
+
+# SDD workspace (git-ignored scratch)
+.superpowers/

@@ -1840,9 +1840,14 @@ The spec requires v11 be proven on a short slice before a 30-minute film touches
 
 Use two already-downloaded sources so nothing needs fetching. List them:
 
-Run: `cd /c/Users/avina/ytceleb && ls dossier/statham/*.mp4 | head -4`
+Run: `cd /c/Users/avina/ytceleb && ls dossier/statham/*.mp4`
 
-Write `manifest/slice_cutlist.json` using two of those ids, ~180 s total, deliberately built to pass every gate: ≥40% bite time, ≥6 beat segments, cards only in `"protocol"`, one promise resolved at the end, fitness picture ≥35% overall and ≥90% in protocol.
+The cut list below uses `fSS10kxDFVk` (Flaa junket, 277 s — WATCH_NOTES verifies
+clean speech at 131–180 s) and `xrxH5n93CzM` (BBC diving feature, 154 s — all
+windows verified). Both are present in the repo. Do NOT substitute ids from the
+OneDrive mirror; several sources there were never committed and are absent here.
+
+Write `manifest/slice_cutlist.json`, ~180 s total, deliberately built to pass every gate: ≥40% bite time, ≥6 beat segments, cards only in `"protocol"`, one promise resolved at the end, fitness picture ≥35% overall and ≥90% in protocol.
 
 ```json
 {
@@ -1850,14 +1855,14 @@ Write `manifest/slice_cutlist.json` using two of those ids, ~180 s total, delibe
   "subject_speaker": "subject",
   "segments": [
     {"kind": "bite", "dur": 20.0, "id": "b0", "chapter": "open",
-     "source": "VN0sYjtuWGU", "t0": 71.0, "speaker": "subject",
+     "source": "fSS10kxDFVk", "t0": 131.0, "speaker": "subject",
      "promise": "the_dive", "fitness": false},
     {"kind": "narr", "dur": 12.0, "id": "n0", "chapter": "open",
      "text": "This is a proving run for the version eleven audio assembly. The narration you are hearing was generated one run at a time, never sliced from a master."},
     {"kind": "beat", "dur": 3.0, "id": "s0", "chapter": "open",
      "fitness": true},
     {"kind": "bite", "dur": 18.0, "id": "b1", "chapter": "open",
-     "source": "GXE8FxLeBaY", "t0": 46.0, "speaker": "subject",
+     "source": "xrxH5n93CzM", "t0": 20.0, "speaker": "subject",
      "fitness": true},
     {"kind": "beat", "dur": 3.0, "id": "s1", "chapter": "open",
      "fitness": true},
@@ -1872,7 +1877,7 @@ Write `manifest/slice_cutlist.json` using two of those ids, ~180 s total, delibe
     {"kind": "beat", "dur": 3.0, "id": "s3", "chapter": "protocol",
      "fitness": true},
     {"kind": "bite", "dur": 20.0, "id": "b2", "chapter": "protocol",
-     "source": "VN0sYjtuWGU", "t0": 91.0, "speaker": "subject",
+     "source": "fSS10kxDFVk", "t0": 151.0, "speaker": "subject",
      "fitness": true},
     {"kind": "beat", "dur": 3.0, "id": "s4", "chapter": "payoff",
      "fitness": true},
@@ -1881,7 +1886,7 @@ Write `manifest/slice_cutlist.json` using two of those ids, ~180 s total, delibe
     {"kind": "beat", "dur": 3.0, "id": "s5", "chapter": "payoff",
      "fitness": true},
     {"kind": "bite", "dur": 22.0, "id": "b3", "chapter": "payoff",
-     "source": "GXE8FxLeBaY", "t0": 12.0, "speaker": "subject",
+     "source": "xrxH5n93CzM", "t0": 90.0, "speaker": "subject",
      "resolves": "the_dive", "fitness": true}
   ]
 }
