@@ -12,6 +12,13 @@ Segment kinds:
 """
 from dataclasses import dataclass, field
 
+MIN_VOICE_RATIO = 0.40        # real archival audio, share of runtime
+MIN_BEAT_RATIO = 0.025        # music-only breathing room
+MIN_BEAT_COUNT = 6
+MAX_SUPPORT_SPEAKER_S = 90.0  # any speaker who is not the subject
+MIN_FITNESS_PROTOCOL = 0.90   # picture, inside the Protocol Act
+MIN_FITNESS_OVERALL = 0.35    # picture, whole film
+
 KINDS = ("bite", "narr", "card", "beat")
 
 
@@ -66,3 +73,117 @@ class EDL:
             out.append((i, j))
             i = j
         return out
+
+
+@dataclass
+class Problem:
+    code: str
+    msg: str
+
+
+def _dur(segs):
+    return round(sum(s.dur for s in segs), 6)
+
+
+def gate_voice_ratio(edl):
+    """V1 - real archival audio must carry >=40% of runtime."""
+    total = edl.total()
+    if not total:
+        return []
+    got = _dur([s for s in edl.segs if s.kind == "bite"]) / total
+    if got < MIN_VOICE_RATIO:
+        return [Problem("V1", f"real-voice ratio {got:.1%} < "
+                              f"{MIN_VOICE_RATIO:.0%}")]
+    return []
+
+
+def gate_card_containment(edl):
+    """V2 - cards may only appear inside the Protocol Act."""
+    bad = [s.seg_id for s in edl.segs
+           if s.kind == "card" and s.chapter != edl.protocol_chapter]
+    if bad:
+        return [Problem("V2", "cards outside the Protocol Act: "
+                              + ", ".join(bad))]
+    return []
+
+
+def gate_promise_resolved(edl):
+    """V3 - every withheld promise resolves, and resolves later."""
+    out = []
+    made = {}
+    for i, s in enumerate(edl.segs):
+        if s.promise:
+            made[s.promise] = i
+    resolved = {}
+    for i, s in enumerate(edl.segs):
+        if s.resolves:
+            resolved[s.resolves] = i
+    for pid, i in made.items():
+        if pid not in resolved:
+            out.append(Problem("V3", f"promise {pid!r} is never resolved"))
+        elif resolved[pid] <= i:
+            out.append(Problem("V3", f"promise {pid!r} resolves at index "
+                                     f"{resolved[pid]} before it is made "
+                                     f"at {i}"))
+    for pid in resolved:
+        if pid not in made:
+            out.append(Problem("V3", f"resolves unknown promise {pid!r}"))
+    return out
+
+
+def gate_silence_budget(edl):
+    """V4 - the film must breathe: enough music-only beats."""
+    beats = [s for s in edl.segs if s.kind == "beat"]
+    total = edl.total()
+    if len(beats) < MIN_BEAT_COUNT:
+        return [Problem("V4", f"{len(beats)} music-only beats < "
+                              f"{MIN_BEAT_COUNT}")]
+    if total and _dur(beats) / total < MIN_BEAT_RATIO:
+        return [Problem("V4", f"music-only time {_dur(beats) / total:.1%} < "
+                              f"{MIN_BEAT_RATIO:.1%}")]
+    return []
+
+
+def gate_speaker_cap(edl):
+    """V5 - no supporting speaker may dominate. Subject is exempt."""
+    tally = {}
+    for s in edl.segs:
+        if s.kind != "bite" or not s.speaker:
+            continue
+        if s.speaker == edl.subject_speaker:
+            continue
+        tally[s.speaker] = tally.get(s.speaker, 0.0) + s.dur
+    return [Problem("V5", f"speaker {k!r} has {v:.0f}s > "
+                          f"{MAX_SUPPORT_SPEAKER_S:.0f}s")
+            for k, v in sorted(tally.items()) if v > MAX_SUPPORT_SPEAKER_S]
+
+
+def gate_fitness_ratio(edl):
+    """V6 - F4 reinterpreted. Measured on PICTURE, not audio."""
+    out = []
+    total = edl.total()
+    if total:
+        got = _dur([s for s in edl.segs if s.fitness]) / total
+        if got < MIN_FITNESS_OVERALL:
+            out.append(Problem("V6", f"whole-film fitness picture {got:.1%} "
+                                     f"< {MIN_FITNESS_OVERALL:.0%}"))
+    pro = [s for s in edl.segs if s.chapter == edl.protocol_chapter]
+    pd = _dur(pro)
+    if pd:
+        got = _dur([s for s in pro if s.fitness]) / pd
+        if got < MIN_FITNESS_PROTOCOL:
+            out.append(Problem("V6", f"Protocol Act fitness picture "
+                                     f"{got:.1%} < "
+                                     f"{MIN_FITNESS_PROTOCOL:.0%}"))
+    return out
+
+
+GATES = (gate_voice_ratio, gate_card_containment, gate_promise_resolved,
+         gate_silence_budget, gate_speaker_cap, gate_fitness_ratio)
+
+
+def validate(edl):
+    out = []
+    for g in GATES:
+        out.extend(g(edl))
+    return out
