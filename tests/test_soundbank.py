@@ -121,3 +121,29 @@ def test_query_respects_limit():
 
 def test_query_with_no_criteria_returns_everything_under_max_dur():
     assert len(query(BANK, max_dur=30.0)) == 3
+
+
+def test_query_tie_break_prefers_shorter_bite():
+    """When two records score identically, shorter duration wins."""
+    bank = [
+        rec("short", 0, 4, "subject", "I have crohns disease.",
+            tags=["crohns"], emotion="pain", clean=True),
+        rec("long", 0, 20, "subject", "I have crohns disease and it was very painful.",
+            tags=["crohns"], emotion="pain", clean=True),
+    ]
+    out = query(bank, topic="crohns", emotion="pain")
+    assert [r["source_id"] for r in out] == ["short", "long"]
+
+
+def test_query_orders_by_score_then_duration():
+    """Score dominates over duration; within ties, shorter wins."""
+    bank = [
+        rec("high_score_medium", 0, 15, "subject", "crohns disease management",
+            tags=["crohns"], emotion="pain", clean=True),
+        rec("high_score_long", 0, 25, "subject", "I have crohns and it affects everything",
+            tags=["crohns"], emotion="pain", clean=True),
+        rec("low_score_short", 0, 3, "subject", "The crohns thing",
+            tags=["training"], emotion="", clean=True),
+    ]
+    out = query(bank, topic="crohns", emotion="pain")
+    assert [r["source_id"] for r in out] == ["high_score_medium", "high_score_long", "low_score_short"]
