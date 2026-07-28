@@ -821,7 +821,7 @@ if __name__ == "__main__":
 - [ ] **Step 6: Run tests again to confirm nothing broke**
 
 Run: `cd /c/Users/avina/ytceleb && py -3.12 -m pytest tests/ -v`
-Expected: PASS — 23 passed
+Expected: PASS — 26 passed
 
 - [ ] **Step 7: Commit**
 
@@ -1158,7 +1158,7 @@ redundant under the deny-all and only obscure the real rule.
 - [ ] **Step 6: Run the full suite**
 
 Run: `cd /c/Users/avina/ytceleb && py -3.12 -m pytest tests/ -v`
-Expected: PASS — 36 passed
+Expected: PASS — 39 passed
 
 - [ ] **Step 7: Commit**
 
@@ -1558,7 +1558,7 @@ Expected: PASS — 18 passed
 - [ ] **Step 5: Run the full suite**
 
 Run: `cd /c/Users/avina/ytceleb && py -3.12 -m pytest tests/ -v`
-Expected: PASS — 54 passed
+Expected: PASS — 57 passed
 
 - [ ] **Step 6: Commit**
 
@@ -1684,7 +1684,7 @@ def build_audio(edl, run_wavs, source_paths, workdir,
 - [ ] **Step 4: Run tests to verify they pass**
 
 Run: `cd /c/Users/avina/ytceleb && py -3.12 -m pytest tests/ -v`
-Expected: PASS — 57 passed
+Expected: PASS — 60 passed
 
 - [ ] **Step 5: Commit**
 
@@ -1819,7 +1819,7 @@ if __name__ == "__main__":
 - [ ] **Step 4: Run tests to verify they pass**
 
 Run: `cd /c/Users/avina/ytceleb && py -3.12 -m pytest tests/ -v`
-Expected: PASS — 62 passed
+Expected: PASS — 65 passed
 
 - [ ] **Step 5: Commit**
 
@@ -2049,7 +2049,7 @@ git commit -m "feat(v11): 3-minute slice proof with join + clipping checks"
 
 ## Definition of done
 
-- [ ] `py -3.12 -m pytest tests/ -v` → 62 passed
+- [ ] `py -3.12 -m pytest tests/ -v` → 65 passed
 - [ ] `py -3.12 pipeline/qc_v11.py manifest/slice_cutlist.json` → exit 0
 - [ ] `py -3.12 pipeline/v11_slice.py` → exit 0, `V11_SLICE.mp4` exists at ~170–200 s
       (exact length depends on measured TTS run durations)
