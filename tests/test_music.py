@@ -3,6 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
+from edl import EDL, Seg  # noqa: E402
 from music import score_plan  # noqa: E402
 
 
@@ -72,3 +73,44 @@ def test_score_plan_raises_when_no_cue_for_a_used_function(good_edl):
 def test_score_plan_ignores_chapters_with_no_dramatic_function(good_edl):
     plan = score_plan(good_edl, CUES, {"protocol": "protocol"})
     assert [p["chapter"] for p in plan] == ["protocol"]
+
+
+def test_score_plan_rejects_a_non_contiguous_chapter():
+    """Non-contiguous chapters (e.g., open, protocol, open) must raise ValueError."""
+    segs = [
+        Seg(kind="bite", dur=10.0, seg_id="b0", chapter="open",
+            speaker="subject", promise="test", fitness=False),
+        Seg(kind="narr", dur=10.0, seg_id="n0", chapter="protocol"),
+        Seg(kind="beat", dur=10.0, seg_id="s0", chapter="open", fitness=True),
+    ]
+    edl = EDL(segs=segs, protocol_chapter="protocol",
+              subject_speaker="subject")
+    try:
+        score_plan(edl, CUES, CHAPTER_FN)
+    except ValueError as ex:
+        assert "open" in str(ex)
+    else:
+        raise AssertionError("expected ValueError for non-contiguous chapter")
+
+
+def test_chapter_spans_allows_a_chapter_repeated_contiguously():
+    """Contiguous segments sharing a chapter must collapse into ONE span."""
+    segs = [
+        Seg(kind="bite", dur=15.0, seg_id="b0", chapter="open",
+            speaker="subject", promise="test", fitness=False),
+        Seg(kind="narr", dur=20.0, seg_id="n0", chapter="open"),
+        Seg(kind="beat", dur=10.0, seg_id="s0", chapter="open", fitness=True),
+        Seg(kind="card", dur=25.0, seg_id="c0", chapter="protocol",
+            fitness=True),
+    ]
+    edl = EDL(segs=segs, protocol_chapter="protocol",
+              subject_speaker="subject")
+    plan = score_plan(edl, CUES, {"open": "dread", "protocol": "protocol"})
+    # open chapter: 15+20+10 = 45s at offset 0.0
+    # protocol chapter: 25s at offset 45.0
+    assert plan[0]["chapter"] == "open"
+    assert plan[0]["at"] == 0.0
+    assert plan[0]["dur"] == 45.0
+    assert plan[1]["chapter"] == "protocol"
+    assert plan[1]["at"] == 45.0
+    assert plan[1]["dur"] == 25.0

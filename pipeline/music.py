@@ -34,6 +34,15 @@ def _chapter_spans(edl):
         else:
             spans.append([s.chapter, t, s.dur])
         t += s.dur
+    # Check for non-contiguous chapters (same chapter appearing in multiple spans)
+    chapter_counts = {}
+    for c, a, d in spans:
+        chapter_counts[c] = chapter_counts.get(c, 0) + 1
+    for chapter, count in chapter_counts.items():
+        if count > 1:
+            raise ValueError(
+                f"chapter {chapter!r} appears in {count} non-contiguous runs; "
+                f"chapters must be contiguous blocks")
     return [(c, round(a, 6), round(d, 6)) for c, a, d in spans]
 
 
