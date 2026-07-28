@@ -1141,12 +1141,18 @@ Expected: PASS — 7 passed
 ]
 ```
 
-Add to `.gitignore` so the audio itself never gets committed:
+`.gitignore` in this repo is **deny-all with an allowlist** (line 2 is `*`,
+followed by `!*.py`, `!manifest/*.json`, etc.). Audio is therefore already
+ignored — but so is `cues.json`, which means it cannot be staged until you add
+an allow rule. Add exactly this line, next to the other `!` entries:
 
 ```
-library/music/*.mp3
-library/music/*.wav
+!library/music/cues.json
 ```
+
+Verify before committing: `git check-ignore -v library/music/cues.json` must
+print nothing. Do NOT add `library/music/*.mp3` / `*.wav` deny rules — they are
+redundant under the deny-all and only obscure the real rule.
 
 - [ ] **Step 6: Run the full suite**
 
