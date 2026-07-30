@@ -68,6 +68,17 @@ Stages, in order (all resumable — re-running skips finished work):
   log for "ElevenLabs failed" / "no key found").
 - Thumbnail + title + description written (manual for now — see backlog).
 
+**Beyond "not broken" — is it incredible?** `qc.py` only checks the render isn't
+broken. To score whether a video will actually be *clicked, watched, and subscribed
+to*, run the Incredible eval against the retention-first rubric in `eval/RUBRIC.md`:
+```bash
+py -3.12 pipeline/eval.py --slug <slug> --mp4 final_video/<SLUG>_FINAL.mp4 \
+    --title "<title>" --thumb <thumb.png>       # -> eval_report.json + top_fixes
+py -3.12 pipeline/eval.py --calibrate            # sanity-check the scorer (offline)
+```
+It reuses `qc.py` for the technical A/V dimension and anchors 10/10 to Gavia's
+Khamzat film; the channel's own drafts should land ~4–6.
+
 ---
 
 ## 3. Upload (optional, semi-automated)

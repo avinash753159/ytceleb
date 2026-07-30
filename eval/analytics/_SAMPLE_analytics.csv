@@ -1,0 +1,16 @@
+# Post-publish analytics - MANUAL INPUT v1.
+# Copy this file to eval/analytics/<slug>_analytics.csv and fill the values from
+# YouTube Studio (Analytics -> Advanced mode). When present, eval.py switches to
+# MEASURED mode: these numbers become the Incredible Score and the report emits
+# the prediction-vs-actual error.
+#
+# metric,value    (fractions as decimals, not percentages; duration in minutes)
+# Recognized keys (see pipeline/eval_rubric.py OUTCOME):
+ctr,0.045
+retention_30s,0.62
+avg_pct_viewed,0.38
+avg_view_minutes,7.5
+sub_conversion,0.006
+like_ratio,0.03
+# Future upgrade (not built): swap this CSV for a YouTube Analytics API pull using
+# the OAuth/pickle token tooling referenced in CELEBVID_CHARTER.md section 3.

@@ -7,6 +7,10 @@
 # committed classification data (small); footage/renders never are
 !sheets_map*.json
 !vision_tags*.json
+# eval: calibration fixtures + the analytics template (real per-slug analytics
+# CSVs stay ignored - operator data, not committed)
+!eval/fixtures/*.json
+!eval/analytics/_SAMPLE_analytics.csv
 # v2: graphics sources + manifest contract + reports
 !graphics/package.json
 !graphics/tsconfig.json

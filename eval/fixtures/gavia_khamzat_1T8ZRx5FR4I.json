@@ -1,0 +1,27 @@
+{
+ "kind": "reference",
+ "label": "Patrick Gavia - The Girl Who Broke Khamzat Chimaev",
+ "video_id": "1T8ZRx5FR4I",
+ "note": "The channel's declared 10/10. Artifacts stored so calibration is cheap and offline - the 25-min MP4 is never fetched live. golden_scorecard is hand-authored: this film IS the top anchor for every dimension.",
+ "artifacts": {
+  "runtime_seconds": 1524,
+  "title": "The Girl Who Broke Khamzat Chimaev",
+  "views": 8500000,
+  "chapters": ["The Girl", "Welcome to Hell", "The Answer", "At Death's Door",
+               "Smash Bros For Life", "Arrested", "The Fall", "Vanished"],
+  "cold_open": "Opens on an orphan girl whispering to Khamzat; narrator says outright 'I'll reveal later what she whispered.' Paid off at 24:13, the final beat.",
+  "real_voice_ratio": 0.5,
+  "measured_analytics": {
+   "note": "Public/observed figures used only as MEASURED-mode anchors; not needed for offline calibration.",
+   "ctr": 0.09, "retention_30s": 0.78, "avg_pct_viewed": 0.55,
+   "avg_view_minutes": 14.0, "sub_conversion": 0.015, "like_ratio": 0.05
+  }
+ },
+ "golden_scorecard": {
+  "hook":      {"withheld_promise": 10, "first_line_loop": 10, "arresting_first_frame": 10, "time_to_hook": 10},
+  "story":     {"story_not_briefing": 10, "escalating_antagonist": 10, "payoff_resolves_loop": 10, "chapters_are_hooks": 10, "real_voices": 10},
+  "pacing":    {"breathing_room": 10, "no_sagging_middle": 10, "workout_delivers": 9, "visual_variety": 10},
+  "packaging": {"thumbnail_curiosity": 10, "title_hook_front": 9, "title_thumb_coherence": 10}
+ },
+ "failing_gates": []
+}

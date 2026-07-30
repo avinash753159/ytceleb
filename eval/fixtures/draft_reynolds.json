@@ -1,0 +1,12 @@
+{
+ "kind": "draft",
+ "label": "Celeb Workout - Ryan Reynolds reference trial (iJyAcSuuuq8 audio reused)",
+ "note": "The pipeline's end-to-end proof, reusing a polished reference narration. Cleaner packaging and delivery than the from-scratch drafts, but the same briefing structure - no withheld cold-open, no antagonist. Top of the band.",
+ "golden_scorecard": {
+  "hook":      {"withheld_promise": 4, "first_line_loop": 5, "arresting_first_frame": 6, "time_to_hook": 7},
+  "story":     {"story_not_briefing": 5, "escalating_antagonist": 3, "payoff_resolves_loop": 4, "chapters_are_hooks": 4, "real_voices": 3},
+  "pacing":    {"breathing_room": 4, "no_sagging_middle": 5, "workout_delivers": 8, "visual_variety": 6},
+  "packaging": {"thumbnail_curiosity": 6, "title_hook_front": 6, "title_thumb_coherence": 6}
+ },
+ "failing_gates": []
+}

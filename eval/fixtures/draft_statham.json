@@ -1,0 +1,12 @@
+{
+ "kind": "draft",
+ "label": "Celeb Workout - Jason Statham V5 (shipped)",
+ "note": "The V11 spec's own anti-example: 'an excellent magazine article read aloud - thesis in sentence three, chronology, the diary, the diet, five copyable rules. Nothing is withheld, nothing is at stake.' Scored to expose the gap; must land in the discrimination band, not near 10.",
+ "golden_scorecard": {
+  "hook":      {"withheld_promise": 2, "first_line_loop": 3, "arresting_first_frame": 5, "time_to_hook": 6},
+  "story":     {"story_not_briefing": 3, "escalating_antagonist": 1, "payoff_resolves_loop": 2, "chapters_are_hooks": 2, "real_voices": 2},
+  "pacing":    {"breathing_room": 3, "no_sagging_middle": 4, "workout_delivers": 8, "visual_variety": 6},
+  "packaging": {"thumbnail_curiosity": 5, "title_hook_front": 4, "title_thumb_coherence": 6}
+ },
+ "failing_gates": []
+}

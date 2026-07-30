@@ -1,0 +1,12 @@
+{
+ "kind": "draft",
+ "label": "Celeb Workout - Bruce Lee V1 (shipped)",
+ "note": "A shipped explainer with inherently dramatic subject matter, but still briefing-shaped: chapters are topics, one synthetic voice, cold open states the premise. Slightly above Statham on story, still mid-band.",
+ "golden_scorecard": {
+  "hook":      {"withheld_promise": 4, "first_line_loop": 4, "arresting_first_frame": 6, "time_to_hook": 6},
+  "story":     {"story_not_briefing": 5, "escalating_antagonist": 3, "payoff_resolves_loop": 4, "chapters_are_hooks": 3, "real_voices": 3},
+  "pacing":    {"breathing_room": 4, "no_sagging_middle": 5, "workout_delivers": 7, "visual_variety": 6},
+  "packaging": {"thumbnail_curiosity": 6, "title_hook_front": 5, "title_thumb_coherence": 6}
+ },
+ "failing_gates": []
+}
