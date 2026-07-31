@@ -46,11 +46,12 @@ EDL: 40 narration + 25 bite + 8 beat + 1 card = 74 segments, 736.107s.
 | Layer | Segments | Runtime | Shots | Source |
 |---|---|---|---|---|
 | Lead-in | 1 | 2.00s | 1 | Veo 3.1 Lite |
+| Title break | 1 | 4.00s | 1 | Veo 3.1 Lite |
 | Generated | 49 narr/beat/card | 459.02s | **102** | Veo 3.1 Lite |
 | Generated | 8 orphan bites | 65.68s | **14** | Veo 3.1 Lite |
 | Real footage | **17 sync bites** | 205.41s | 17 | `jimmy_pool2` windows |
 | Silent tail | — | 2.50s | fade | — |
-| | | **738.61s** | **117 generated** | |
+| | | **738.61s** | **118 generated** | |
 
 Derived from `manifest/bite_windows.json`: a bite is sync-capable when it has
 at least one run that is `verified_jimmy` and not `has_text`. Exactly 17
@@ -71,6 +72,30 @@ was that the alternative was bad stock footage. Generation removes that reason.
 
 **When Jimmy talks, you see Jimmy.** A bite's picture is the real interview at
 the real timecode — never generated, never a cutaway.
+
+`src_t0` comes from the **EDL's** `src_t0`, never from a bite window's `t0`.
+`bite_windows.py` builds its runs by widening the search to `[t0-1.5, t1+1.5]`
+and nudging each edge by `+0.25`, so a run's `t0` is the in-point minus 1.25s
+by construction. Cutting there put over a second of wrong picture under his own
+recorded voice on all 17 sync shots, and it passed every check that looked only
+at whether the field was present and positive.
+
+### The sync footage is not fully verified, and the manifest now says so
+
+Every sync shot carries `verified_ratio`: the fraction of the shot covered by a
+window a human actually eyeballed. **Ten of seventeen are below 1.0.**
+
+| Shot | Length | `verified_ratio` |
+|---|---|---|
+| `s032s` | 18.62s | **0.148** |
+| `s044s` | 14.54s | 0.331 |
+| `s071s` | 3.79s | 0.462 — the film's closing line |
+| `s038s` | 22.62s | 0.499 |
+
+The verified windows are capped at 6.0s by the scanner, so a 22-second bite can
+never be fully covered by one. This is a limitation of the source data, not of
+the code, and it cannot be fixed by rescanning alone. It is recorded rather than
+resolved so the eyes-on pass knows exactly which shots are exposed.
 
 ## 4. Shot splitting
 
@@ -98,9 +123,10 @@ table above omits:
 | | Shots | Billed | Cost |
 |---|---|---|---|
 | Lead-in | 1 | 4s | $0.20 |
-| 49 gen segments | 102 | 582s | $29.10 |
+| Title break (54.098-58.098) | 1 | 4s | $0.20 |
+| 49 gen segments | 102 | 576s | $28.80 |
 | 8 orphan bites | 14 | 78s | $3.90 |
-| **Full pass** | **117** | **664s** | **$33.20** |
+| **Full pass** | **118** | **658s** | **$32.90** |
 
 Extension was ruled out twice over: Veo 3.1 Lite does not support it, and it
 bills in 7s chunks regardless of what is used.
@@ -120,8 +146,8 @@ bearer returns `API_KEY_SERVICE_BLOCKED`, which looks exactly like a dead key.
 
 ### Budget
 
-$21.08 buys **421 billed seconds** at $0.05/s. A full 117-shot pass needs
-**664s ($33.20)**, so the prepay covers **63%** of one pass. A top-up is needed
+$21.08 buys **421 billed seconds** at $0.05/s. A full 118-shot pass needs
+**658s ($32.90)**, so the prepay covers **64%** of one pass. A top-up is needed
 to finish a complete pass, but not before the proof has been reviewed.
 
 ### Frame budget, 24fps
@@ -141,7 +167,7 @@ first fix padded with a frozen frame, producing an 18-second stall.
 ## 6. Components
 
 ```
-manifest/flow_shots.json    ~102-entry shot list — single source of truth
+manifest/flow_shots.json    135-entry shot list — single source of truth
   ↑ built by
 pipeline/flow_plan.py       Doc prompts × EDL timings → split into ≤6s beats
 pipeline/flow_gen.py        background worker: submit → poll → download → mark
