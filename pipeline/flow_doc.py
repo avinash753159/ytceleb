@@ -12,6 +12,13 @@ two markers are independent booleans on a block, not a choice between them.
 Which of those two paths a later task actually takes is decided elsewhere,
 against a different file -- this module only reports what the document says.
 
+Every DocBlock's `kind` is one of six values: lead_in, narration, bite,
+beat, title_break, card. That set is dictated by manifest/edl_full.json,
+the authoritative timeline this parser's output is joined against later --
+in particular `card` exists as its own kind (not folded into title_break)
+because the EDL carries a distinct "card" segment kind and this document's
+one CARD heading is that same segment.
+
 The document's own timestamps are NOT authoritative. They exist to write
 the prompts against something, but they are hand-typed and drift: this is
 parsed only for ordering blocks and cross-checking them against the real
@@ -61,17 +68,29 @@ REAL = re.compile(r"\*\*USE THE REAL FOOTAGE\.\*\*(?P<rest>[^\n]*)")
 REF_TABLE_ROW = re.compile(r"^\|.*$", re.MULTILINE)
 REF_CAPTION = re.compile(r"^references only.*$", re.MULTILINE)
 
+# The document's own chapter headings ("## **4 — THE PACT**") sit between
+# one block's body and the next block's heading, so they land inside
+# whichever block happens to run up against them -- once concatenated
+# straight onto the end of real spoken narration with no separator. Strip
+# any markdown ATX heading line, not just the specific "##" the document
+# happens to use, since ######-level headings are the same hazard.
+CHAPTER_HEADING = re.compile(r"^#{1,6}\s.*$", re.MULTILINE)
+
 # Prefix match against a heading's label, longest/most-specific first where
 # one prefix could shadow another. Two heading kinds the brief didn't know
-# about turned up in the real document and are folded into the closest of
-# the five contractual kinds: CARD is a graphic flash held on screen exactly
-# like the document's one TITLE BREAK, and TAIL ("TAIL — music only") is the
-# closing bookend of the same music-only, no-narration shot the document
-# already calls a BEAT throughout the body of the film.
+# about turned up in the real document. CARD keeps its own "card" kind
+# because manifest/edl_full.json -- the authoritative timeline this parser
+# exists to be joined against -- has a distinct "card" segment kind
+# (seg_id c048, start 491.706) that the document's one CARD heading matches
+# to within 4ms; folding it into title_break would make no DocBlock ever
+# reconcile against that EDL segment. TAIL ("TAIL — music only") has no
+# competing authority: it falls entirely after the EDL's last segment
+# (end 736.107) and corresponds to no real segment, so it is folded into
+# beat, the closest of the six kinds to its music-only/no-narration shape.
 KINDS = (
     ("LEAD-IN", "lead_in"),
     ("TITLE BREAK", "title_break"),
-    ("CARD", "title_break"),
+    ("CARD", "card"),
     ("NARRATION", "narration"),
     ("BITE", "bite"),
     ("BEAT", "beat"),
@@ -112,6 +131,7 @@ def _clean_text(body: str) -> str:
     body = REAL.sub("", body)
     body = REF_TABLE_ROW.sub("", body)
     body = REF_CAPTION.sub("", body)
+    body = CHAPTER_HEADING.sub("", body)
     return " ".join(body.split())
 
 

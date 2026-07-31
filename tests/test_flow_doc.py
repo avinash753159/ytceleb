@@ -126,6 +126,25 @@ def test_real_document_has_twentyfive_real_footage_bites():
 def test_real_document_kind_is_always_a_known_value():
     doc = (ROOT / "dossier/mrbeast/FLOW_DOC.md").read_text(encoding="utf-8")
     blocks = parse_doc(doc)
-    allowed = {"lead_in", "narration", "bite", "beat", "title_break"}
+    allowed = {"lead_in", "narration", "bite", "beat", "title_break", "card"}
     for b in blocks:
         assert b.kind in allowed, f"unknown kind {b.kind!r} at {b.start}"
+
+
+def test_narration_text_never_absorbs_a_chapter_heading():
+    """A chapter title concatenated onto spoken narration corrupts the
+    dialogue, not just the block list."""
+    doc = (ROOT / "dossier/mrbeast/FLOW_DOC.md").read_text(encoding="utf-8")
+    for b in parse_doc(doc):
+        assert "##" not in b.text, (b.kind, b.start, b.text[:120])
+        assert "THE PACT" not in b.text, (b.kind, b.start)
+
+
+def test_card_heading_is_parsed_as_card_and_matches_the_edl():
+    import json
+    doc = (ROOT / "dossier/mrbeast/FLOW_DOC.md").read_text(encoding="utf-8")
+    cards = [b for b in parse_doc(doc) if b.kind == "card"]
+    assert len(cards) == 1, cards
+    edl = json.loads((ROOT / "manifest/edl_full.json").read_text(encoding="utf-8"))
+    seg = next(s for s in edl["segs"] if s["kind"] == "card")
+    assert abs(cards[0].start - seg["start"]) < 0.05
