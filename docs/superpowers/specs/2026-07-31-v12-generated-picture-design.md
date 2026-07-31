@@ -43,15 +43,21 @@ authoritative.
 
 EDL: 40 narration + 25 bite + 8 beat + 1 card = 74 segments, 736.107s.
 
-| Layer | Segments | Runtime | Source |
-|---|---|---|---|
-| Generated | 49 narr/beat/card → **~102 shots** | 459.0s | Veo 3.1 Lite |
-| Real footage | **17 bites** | ~230s | `jimmy_pool2` windows |
-| Generated | 8 orphan bites (no clean Jimmy window) | ~41s | Veo 3.1 Lite |
+| Layer | Segments | Runtime | Shots | Source |
+|---|---|---|---|---|
+| Lead-in | 1 | 2.00s | 1 | Veo 3.1 Lite |
+| Generated | 49 narr/beat/card | 459.02s | **102** | Veo 3.1 Lite |
+| Generated | 8 orphan bites | 65.68s | **14** | Veo 3.1 Lite |
+| Real footage | **17 sync bites** | 205.41s | 17 | `jimmy_pool2` windows |
+| Silent tail | — | 2.50s | fade | — |
+| | | **738.61s** | **117 generated** | |
 
-The 8 orphan bites are 6 from Airrack's video, where no Jimmy-only frame
-exists, and 2 from a Rogan stretch with the Crohn's & Colitis Foundation
-website burned into a studio monitor behind him.
+Derived from `manifest/bite_windows.json`: a bite is sync-capable when it has
+at least one run that is `verified_jimmy` and not `has_text`. Exactly 17
+qualify. The 8 that do not are **6 from Airrack's video** (`7r3ORKgNUjw`),
+where no Jimmy-only frame exists, and **2 from Rogan** (`cLRLEnPaJLM`, i=18 and
+i=20) where the Crohn's & Colitis Foundation website sits on a studio monitor
+behind him. This matches the Doc's own account of the eight exactly.
 
 ### Sync policy — reversal of the Slides note
 
@@ -80,11 +86,21 @@ chosen as the smallest that covers the beat.
 Splitting is also cheaper than the alternatives, because 4s and 6s generations
 are billed for what they are:
 
-| Strategy | Billed | Cost @ $0.05/s | Shots |
+| Strategy (49 gen segments only) | Billed | Cost @ $0.05/s | Shots |
 |---|---|---|---|
 | **Split ≤6s (chosen)** | 582s | **$29.10** | 102 |
 | Extend (7s chunks) | 658s | $65.80 (Fast only — Lite cannot extend) | 49 |
 | One 8s + retime | 392s | $19.60 | 49 |
+
+**Whole-film cost**, including the lead-in and the 14 orphan-bite shots the
+table above omits:
+
+| | Shots | Billed | Cost |
+|---|---|---|---|
+| Lead-in | 1 | 4s | $0.20 |
+| 49 gen segments | 102 | 582s | $29.10 |
+| 8 orphan bites | 14 | 78s | $3.90 |
+| **Full pass** | **117** | **664s** | **$33.20** |
 
 Extension was ruled out twice over: Veo 3.1 Lite does not support it, and it
 bills in 7s chunks regardless of what is used.
@@ -104,9 +120,21 @@ bearer returns `API_KEY_SERVICE_BLOCKED`, which looks exactly like a dead key.
 
 ### Budget
 
-$21.08 buys **421 billed seconds** at $0.05/s. A full 102-shot pass needs
-**582s ($29.10)**, so the prepay covers ~72% of one pass. A top-up is needed to
-finish a complete pass, but not before the proof has been reviewed.
+$21.08 buys **421 billed seconds** at $0.05/s. A full 117-shot pass needs
+**664s ($33.20)**, so the prepay covers **63%** of one pass. A top-up is needed
+to finish a complete pass, but not before the proof has been reviewed.
+
+### Frame budget, 24fps
+
+| | Seconds | Frames |
+|---|---|---|
+| Picture, 0 → EDL end | 736.107 | **17,667** |
+| Silent tail (fade to black) | 2.499 | 60 |
+| **Total** | 738.606 | **17,727** |
+
+Per-shot frame counts are integers that sum to exactly 17,667 for the picture
+body. Rounding across 130 shots previously accumulated ~3.8s of drift, and the
+first fix padded with a frozen frame, producing an 18-second stall.
 
 `flow_gen.py` carries a **hard spend cap that stops submission**, not a warning.
 
