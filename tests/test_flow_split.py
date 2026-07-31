@@ -81,9 +81,18 @@ def test_allocate_frames_respects_weights():
     assert allocate_frames(120, [1.0, 2.0, 3.0]) == [20, 40, 60]
 
 
-def test_allocate_frames_never_returns_zero():
-    got = allocate_frames(10, [1.0] * 10)
-    assert all(f >= 1 for f in got)
+def test_allocate_frames_never_returns_zero_even_with_skewed_weights():
+    """max(1, floor(x)) can overshoot the total; the correction must not
+    claw frames back from a shot that was already clamped to the floor."""
+    got = allocate_frames(10, [8.0, 0.1, 0.1, 0.1])
+    assert sum(got) == 10
+    assert all(f >= 1 for f in got), got
+
+
+def test_allocate_frames_rejects_impossible_allocation():
+    """Cannot allocate N frames to M shots if N < M (minimum 1 per shot)."""
+    with pytest.raises(ValueError):
+        allocate_frames(3, [1.0, 1.0, 1.0, 1.0])
 
 
 def test_zero_length_segment_is_rejected():

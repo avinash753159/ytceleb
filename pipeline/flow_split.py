@@ -61,7 +61,8 @@ def allocate_frames(total_frames: int, weights: list[float]) -> list[int]:
     """Split `total_frames` across `weights`, summing to exactly the total.
 
     Largest-remainder: floor everything, then hand the shortfall to whoever
-    lost the most in the rounding.
+    lost the most in the rounding. Every shot is guaranteed at least 1 frame;
+    if the minimum constraint cannot be satisfied, raises ValueError.
     """
     if total_frames < len(weights):
         raise ValueError(
@@ -70,11 +71,26 @@ def allocate_frames(total_frames: int, weights: list[float]) -> list[int]:
     exact = [w * scale for w in weights]
     out = [max(1, math.floor(x)) for x in exact]
     short = total_frames - sum(out)
-    order = sorted(range(len(out)), key=lambda i: exact[i] - out[i],
-                   reverse=(short > 0))
-    step = 1 if short > 0 else -1
-    for i in range(abs(short)):
-        out[order[i % len(order)]] += step
+
+    if short != 0:
+        # When subtracting (negative shortfall), only take from indices where
+        # out[i] > 1 to maintain the ≥1 frame guarantee
+        if short < 0:
+            eligible_indices = [i for i in range(len(out)) if out[i] > 1]
+            if not eligible_indices:
+                raise ValueError(
+                    f"Cannot allocate {total_frames} frames across {len(weights)} shots: "
+                    f"minimum guarantee (≥1 frame per shot) requires {sum(out)} frames")
+            order = sorted(eligible_indices, key=lambda i: exact[i] - out[i],
+                           reverse=False)
+        else:
+            order = sorted(range(len(out)), key=lambda i: exact[i] - out[i],
+                           reverse=True)
+
+        step = 1 if short > 0 else -1
+        for i in range(abs(short)):
+            out[order[i % len(order)]] += step
+
     return out
 
 
