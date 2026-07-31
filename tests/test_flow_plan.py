@@ -69,7 +69,20 @@ def test_no_boundary_drifts_more_than_half_a_frame(shots):
 
 
 def test_frames_telescope_to_the_exact_total_without_reconciliation(shots):
-    assert sum(s["frames"] for s in shots) == 17667
+    """The property that actually makes the grand total exact: every
+    unit's own frame count equals frame_at(its end) - frame_at(its start),
+    with no pool and no reconciliation step to paper over a shortfall."""
+    from flow_plan import _frame_at
+
+    units: dict[int, list[dict]] = {}
+    for s in shots:
+        units.setdefault(s["seg_i"], []).append(s)
+
+    for seg_i, group in units.items():
+        group.sort(key=lambda s: s["beat_idx"])
+        unit_start, unit_end = group[0]["start"], group[-1]["end"]
+        assert sum(s["frames"] for s in group) == (
+            _frame_at(unit_end) - _frame_at(unit_start)), seg_i
 
 
 def test_frames_sum_to_the_picture_budget(shots):
@@ -82,16 +95,16 @@ def test_shots_are_contiguous_with_no_gaps_or_overlaps(shots):
 
 
 def test_timeline_starts_at_zero_and_ends_at_the_edl_end(shots):
-    # Frames are allocated once, globally, across all 135 spans (see
-    # flow_plan.build_shots); the last shot's end is the cumulative frame
-    # position, not the EDL's own literal float, so it can land up to a
-    # frame short of/past edl["end"] (measured: 736.125 vs 736.107, 18ms).
-    # A non-integer number of frames is not an option, so the tolerance is
-    # one frame rather than the timestamp's own precision.
+    # Every boundary is quantized independently, frame_at(t) = round(t *
+    # FPS) (flow_plan._frame_at); the last shot's end is
+    # frame_at(edl["end"]) / FPS, not edl["end"] itself, so it can land up
+    # to half a frame short of/past it (measured: 736.125 vs 736.107,
+    # 18ms). A non-integer number of frames is not an option, so the
+    # tolerance is half a frame -- the real guarantee -- not a whole one.
     edl = json.loads((ROOT / "manifest/edl_full.json").read_text(
         encoding="utf-8"))
     assert shots[0]["start"] == pytest.approx(0.0)
-    assert shots[-1]["end"] == pytest.approx(edl["end"], abs=1 / FPS)
+    assert shots[-1]["end"] == pytest.approx(edl["end"], abs=0.5 / FPS + 1e-9)
 
 
 def test_no_generated_shot_exceeds_six_seconds(shots):
@@ -120,15 +133,18 @@ def test_gen_dur_covers_every_generated_shot(shots):
             assert s["gen_dur"] >= s["end"] - s["start"], s["shot_id"]
 
 
-def test_billed_seconds_match_the_budget(shots):
-    # 658 = 93 shots @ 6s + 25 shots @ 4s (558 + 100). Under per-boundary
-    # quantization (ruling 3), segment i=25's first beat quantizes to
-    # exactly [247.0, 251.0) -- 4.0s, not the 4.0417s a pooled allocation
-    # estimated in ruling 2 -- so gen_duration(4.0) returns 4 instead of 6
-    # for shot s025a. That is the one shot (of 118 generated) whose bucket
-    # differs from ruling 2's committed figure of 660.
-    billed = sum(s["gen_dur"] for s in shots if s["kind"] == "gen")
-    assert billed == 658
+def test_billed_seconds_are_bounded_and_legal(shots):
+    # Not a golden value: 658 (93 shots @ 6s + 25 @ 4s) is what the current
+    # manifest bills, but it has moved three times already as the boundary
+    # construction changed underneath it and is not something this test
+    # should re-pin. What must actually hold: no shot is billed a duration
+    # Veo doesn't support, every shot's billed duration covers its own
+    # span (tested separately below), and the total can't run away -- a
+    # ceiling catches over-splitting without freezing today's exact count.
+    gen = [s for s in shots if s["kind"] == "gen"]
+    assert set(s["gen_dur"] for s in gen) <= {4, 6, 8}
+    billed = sum(s["gen_dur"] for s in gen)
+    assert billed <= 700
 
 
 def test_sync_shots_carry_their_source_id(shots):
@@ -137,22 +153,76 @@ def test_sync_shots_carry_their_source_id(shots):
             assert s["source"], s["shot_id"]
 
 
-def test_sync_shots_carry_the_timecode_to_cut_from(shots):
-    """Without src_t0 the assembler renders every sync shot from t=0 of a
-    two-hour podcast instead of the moment he says the line."""
+def test_sync_shots_cut_from_the_bite_in_point_not_the_scan_window(shots):
+    """bite_windows.py widens its search by 1.5s and nudges edges by 0.25s,
+    so run["t0"] sits ~1.25s BEFORE the words. Cutting there puts a second
+    of wrong picture under his own voice."""
+    edl = json.loads((ROOT / "manifest/edl_full.json").read_text(encoding="utf-8"))
+    by_i = {s["i"]: s for s in edl["segs"]}
     for s in shots:
         if s["kind"] == "sync":
-            assert s.get("src_t0", 0) > 0, s["shot_id"]
+            assert s["src_t0"] == pytest.approx(by_i[s["seg_i"]]["src_t0"]), s["shot_id"]
 
 
-def test_best_run_prefers_the_longest_usable_window():
+def test_sync_shots_report_how_much_of_the_shot_is_verified(shots):
+    """usable is capped at MAX_SHOT and best_run can only fall back to it
+    when no run covers the true in-point, so a shot can legitimately play
+    longer than its verified window. That shortfall must be visible on the
+    shot, not just discoverable by watching the render."""
+    short = []
+    for s in shots:
+        if s["kind"] != "sync":
+            continue
+        assert s["verified_ratio"] > 0, s["shot_id"]
+        assert s["verified_through"] > 0, s["shot_id"]
+        if s["verified_ratio"] < 1.0:
+            short.append((s["shot_id"], round(s["verified_ratio"], 3)))
+    # Not an assertion on the count -- the data problem is real and not
+    # this task's to fix -- but recorded so it isn't only found by eye.
+    print(f"\n{len(short)} sync shots under-verified: {short}")
+
+
+def test_best_run_prefers_the_run_that_contains_the_bite_in_point():
+    """Reproduces i=32 (colin_why_he_started) verbatim: a short run at
+    754.71 that actually covers src_t0=755.96, and a longer run at 760.68
+    (saturated at usable=6.0, the MAX_SHOT cap -- this dataset's common
+    case, not a synthetic edge value) that starts after the words already
+    began. The old "longest usable wins" rule picked 760.68 and discarded
+    the one run that covers the in-point; that was the bug."""
     from flow_plan import best_run
-    bite = {"sync_possible": True, "runs": [
-        {"key": "a@1", "t0": 1.0, "usable": 2.8,
+    bite = {"sync_possible": True, "src_t0": 755.96, "runs": [
+        {"key": "a@754.71", "t0": 754.71, "run_end": 758.72, "usable": 4.01,
          "verified_jimmy": True, "has_text": False},
-        {"key": "a@9", "t0": 9.0, "usable": 5.1,
+        {"key": "a@760.68", "t0": 760.68, "run_end": 769.15, "usable": 6.0,
          "verified_jimmy": True, "has_text": False},
-        {"key": "a@4", "t0": 4.0, "usable": 9.9,
+    ]}
+    assert best_run(bite)["key"] == "a@754.71"
+
+
+def test_best_run_breaks_a_saturated_tie_by_usable_then_list_order():
+    """Two runs both capped at usable=6.0 and neither containing src_t0 --
+    the common real shape (16 of 26 verified runs in bite_windows.json sit
+    at exactly 6.0). With no run to prefer by containment, the longest-
+    usable fallback is a tie, and Python's max() returns the first maximal
+    element -- documented here as the actual, not incidental, behaviour."""
+    from flow_plan import best_run
+    bite = {"sync_possible": True, "src_t0": 100.0, "runs": [
+        {"key": "first@6.0", "t0": 110.0, "run_end": 116.0, "usable": 6.0,
+         "verified_jimmy": True, "has_text": False},
+        {"key": "second@6.0", "t0": 120.0, "run_end": 126.0, "usable": 6.0,
+         "verified_jimmy": True, "has_text": False},
+    ]}
+    assert best_run(bite)["key"] == "first@6.0"
+
+
+def test_best_run_falls_back_to_longest_usable_when_nothing_contains_src_t0():
+    from flow_plan import best_run
+    bite = {"sync_possible": True, "src_t0": 500.0, "runs": [
+        {"key": "a@1", "t0": 1.0, "run_end": 3.8, "usable": 2.8,
+         "verified_jimmy": True, "has_text": False},
+        {"key": "a@9", "t0": 9.0, "run_end": 14.1, "usable": 5.1,
+         "verified_jimmy": True, "has_text": False},
+        {"key": "a@4", "t0": 4.0, "run_end": 13.9, "usable": 9.9,
          "verified_jimmy": True, "has_text": True},
     ]}
     assert best_run(bite)["key"] == "a@9"

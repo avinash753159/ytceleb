@@ -74,6 +74,24 @@ neighbour (and never on a sync boundary, since sync bites are never split).
 `gen_dur` is derived from each beat's *final* quantized start/end via
 flow_split.gen_duration, not estimated beforehand, since a boundary that
 moves by half a frame can occasionally cross a legal-duration line.
+
+A sync shot's cut point is the bite's own recorded in-point,
+edl_full.json's `seg["src_t0"]`, never `bite_windows.py`'s `run["t0"]`.
+That scanner widens its search window by 1.5s on each side and then nudges
+every candidate edge by 0.25s, so in the common case `run["t0"] ==
+seg["src_t0"] - 1.25` by construction -- a fixed, structural offset, not
+noise. `run["t0"]`/`run["key"]` are kept only as `src_run_key`, a record of
+which scanned window a human verified as clean, not a cut point. Similarly,
+`best_run()` prefers the run whose span *contains* `seg["src_t0"]` over
+merely the longest verified one: `usable` is capped at MAX_SHOT (6.0) by
+the scanner, so many runs tie at exactly 6.0 and "longest" mostly picks by
+list order, sometimes discarding the one run that actually covers the
+words in favour of a longer one that starts after them. Every sync shot
+also carries `verified_through` (how far the chosen run's clean window
+extends) and `verified_ratio` (what fraction of the shot's real-footage
+span that window actually covers) so a shot whose window runs out before
+the bite does -- a real camera cut mid-shot -- is visible in the manifest
+rather than only discoverable by watching the render.
 """
 
 from __future__ import annotations
@@ -118,17 +136,35 @@ def sync_capable(bite: dict) -> bool:
 
 
 def best_run(bite: dict) -> dict | None:
-    """The longest verified, text-free run inside this bite's own span.
+    """The verified, text-free run that actually covers this bite's words.
 
     Verdicts are keyed by sid@t0, never by sheet index: verify_pool.py once
     hard-coded tile indices, so adding a source re-sorted the thumbnails and
     silently re-pointed every verdict at a different frame.
+
+    Prefers the run whose [t0, run_end) span contains the bite's own
+    src_t0 over the run with the largest `usable`: `usable` is capped at
+    MAX_SHOT by the scanner, so a plain "longest wins" rule mostly breaks
+    ties by list order among runs saturated at exactly 6.0, and can
+    actively steer away from the one run that covers the actual in-point in
+    favour of a longer run that starts after the words already began (see
+    module docstring). Falls back to the longest verified run when none
+    contains src_t0 -- a real data gap this function reports rather than
+    hides; see `verified_ratio` on the shots this feeds.
     """
     if not bite.get("sync_possible"):
         return None
     ok = [r for r in bite.get("runs", [])
           if r.get("verified_jimmy") and not r.get("has_text")]
-    return max(ok, key=lambda r: r.get("usable", 0.0)) if ok else None
+    if not ok:
+        return None
+    src_t0 = bite.get("src_t0")
+    if src_t0 is not None:
+        containing = [r for r in ok
+                      if r.get("t0", 0.0) <= src_t0 <= r.get("run_end", 0.0)]
+        if containing:
+            return max(containing, key=lambda r: r.get("usable", 0.0))
+    return max(ok, key=lambda r: r.get("usable", 0.0))
 
 
 def _prompt_for(blocks: list[dict], start: float, end: float) -> str:
@@ -204,6 +240,11 @@ def build_shots() -> list[dict]:
     prev_end = lead_end
     for seg in edl["segs"]:
         i, kind = seg["i"], seg["kind"]
+        if kind not in GEN_KINDS and kind != "bite":
+            # A segment kind this module doesn't know about must fail
+            # loudly, not fall through to the generated branch below and
+            # silently pick up a neighbour's prompt.
+            raise ValueError(f"unrecognised segment kind {kind!r} (seg i={i})")
 
         # A segment-driven loop skips any stretch that isn't a segment. The
         # 4s title-break hold between i=6 and i=7 is exactly that stretch:
@@ -213,6 +254,11 @@ def build_shots() -> list[dict]:
             gap_start, gap_end = prev_end, seg["start"]
             gen_unit(-2, "title_break", gap_start, gap_end,
                      _prompt_for(blocks, gap_start, gap_end), "")
+        elif seg["start"] < prev_end - 1e-9:
+            raise ValueError(
+                f"seg i={i} starts at {seg['start']} before the previous "
+                f"segment's end {prev_end}; segments must be ordered and "
+                f"non-overlapping")
 
         bite = bites.get(i)
         is_sync = kind == "bite" and bite is not None and sync_capable(bite)
@@ -223,15 +269,34 @@ def build_shots() -> list[dict]:
             # rounding slack can ever land on it.
             run = best_run(bite)
             f0, f1 = _frame_at(seg["start"]), _frame_at(seg["end"])
+            shot_start, shot_end = f0 / FPS, f1 / FPS
+
+            # How much of the real footage this shot actually needs, and
+            # how much of that the verified window covers -- so a run that
+            # ends before the bite does (a real camera cut mid-shot) is
+            # visible in the manifest instead of only found by watching
+            # the render.
+            req_start = seg["src_t0"]
+            req_end = req_start + (shot_end - shot_start)
+            covered = max(0.0, min(req_end, run["run_end"])
+                          - max(req_start, run["t0"]))
+            verified_ratio = covered / (req_end - req_start)
+
             shots.append({
                 "shot_id": f"s{i:03d}s", "seg_i": i, "seg_id": seg["seg_id"],
-                "kind": "sync", "start": f0 / FPS, "end": f1 / FPS,
+                "kind": "sync", "start": shot_start, "end": shot_end,
                 "frames": f1 - f0,
                 "gen_dur": 0, "beat_idx": 0, "beat_of": 1,
                 "prompt": "", "narration": seg["text"], "source": seg["source"],
-                # Where in the interview to cut from. Without this the
-                # assembler renders every sync shot from t=0 of the source.
-                "src_t0": run["t0"], "src_run_key": run["key"],
+                # The bite's own recorded in-point (EDL-authoritative).
+                # NOT run["t0"] -- bite_windows.py's scan window is widened
+                # by 1.5s and its edges nudged by 0.25s, so run["t0"] sits
+                # ~1.25s before the words in the common case. run["key"] is
+                # kept as provenance: which scanned window a human verified
+                # clean, not where to cut from.
+                "src_t0": seg["src_t0"], "src_run_key": run["key"],
+                "verified_through": run["run_end"],
+                "verified_ratio": verified_ratio,
                 "status": "pending",
             })
         else:
