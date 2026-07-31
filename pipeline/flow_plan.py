@@ -42,25 +42,38 @@ papered over:
    emits this shot the moment it notices seg i+1's start doesn't match seg
    i's own end, rather than assuming `segs` has no holes.
 
-Frame allocation is global, not per unit. Phase 1 below walks the whole
-timeline once and records every shot's *span* (lead-in, title break, each
-EDL segment's beats or single sync cut) in chronological order, without
-assigning any of them frames yet. Phase 2 hands all of those span widths to
-flow_split.allocate_frames() in a single call against the one true target,
-round(edl["end"] * FPS), and derives every shot's final start/end from its
-cumulative position in the resulting frame sequence. Rounding each unit's
-own width independently and summing -- the obvious alternative -- drifts
-away from the rounded total (measured: 17,669 frames against a target of
-17,667, from 74 units each rounding a few hundredths of a frame off in
-either direction with no reason to cancel); it is the exact "accumulated
-drift" flow_split.py's own docstring describes for a single segment's beats,
-one level up, and it once cost this project an 18-second frozen frame to
-paper over. Allocating once, globally, makes both exactness and contiguity
-hold by construction instead of by luck -- at the cost of nudging every
-shot boundary by at worst a frame or two away from its pure-seconds value
-(so `gen_dur` is derived from each shot's *final* start/end, not from
-flow_split.Beat's pre-allocation estimate, since a boundary that moves by a
-couple of frames can occasionally cross a legal-duration line).
+Every segment boundary is quantized independently from the EDL's own
+authoritative time -- `frame_at(t) = round(t * FPS)` -- rather than
+accumulated from a running position. Two earlier approaches were tried and
+rejected for this:
+
+- Rounding each of the 74 segments' own *duration* independently and
+  summing drifts 2 frames away from round(edl["end"] * FPS) (measured:
+  17,669 vs 17,667) -- the accumulated-rounding failure flow_split.py's own
+  docstring describes for a single segment's beats, one level up.
+- Pooling all 17,667 frames and allocating them globally with
+  flow_split.allocate_frames() fixes that total exactly, but the
+  largest-remainder top-up can land its slack on *any* span in the pool,
+  including a sync bite's boundary -- measured drift up to 1.35 frames
+  (56ms) on `s006s`/`s008s`. A generated cutaway landing a frame early is
+  invisible; a sync cut landing 56ms off the subject's own recorded voice
+  is the exact defect the previous cut of this film was rejected for.
+
+Quantizing each boundary independently fixes both at once: max error
+against the true time is half a frame (~0.021s) and never compounds
+(`test_no_boundary_drifts_more_than_half_a_frame`), and the grand total is
+exactly 17,667 with no reconciliation step, because per-segment frame
+counts telescope across a contiguous timeline --
+`sum(round(seg.end*FPS) - round(seg.start*FPS)) == round(736.107*FPS) - 0`
+(`test_frames_telescope_to_the_exact_total_without_reconciliation`). A
+generated unit's beats then divide *that* unit's already-quantized frame
+count among themselves with `allocate_frames(unit_frames, [1.0] * n)` -- a
+purely local allocation whose slack can only ever land on that unit's own
+interior beat boundaries, never on a segment boundary shared with a
+neighbour (and never on a sync boundary, since sync bites are never split).
+`gen_dur` is derived from each beat's *final* quantized start/end via
+flow_split.gen_duration, not estimated beforehand, since a boundary that
+moves by half a frame can occasionally cross a legal-duration line.
 """
 
 from __future__ import annotations
@@ -68,7 +81,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from flow_split import FPS, allocate_frames, gen_duration, split_segment
+from flow_split import FPS, allocate_frames, beat_count, gen_duration
 
 ROOT = Path(__file__).resolve().parents[1]
 EDL = ROOT / "manifest/edl_full.json"
@@ -144,23 +157,44 @@ def _prompt_for(blocks: list[dict], start: float, end: float) -> str:
     return best
 
 
+def _frame_at(t: float) -> int:
+    """This instant's index on the film's 24fps grid."""
+    return round(t * FPS)
+
+
 def build_shots() -> list[dict]:
     edl = json.loads(EDL.read_text(encoding="utf-8"))
     blocks = json.loads(BLOCKS.read_text(encoding="utf-8"))
     bites = {b["i"]: b for b in json.loads(BITES.read_text(encoding="utf-8"))}
 
-    # ---- Phase 1: the ordered list of spans. No frames assigned yet. ----
-    units: list[dict] = []
+    shots: list[dict] = []
 
     def gen_unit(seg_i: int, seg_id: str, start: float, end: float,
                  prompt: str, narration: str) -> None:
-        beats = split_segment(start, end)
-        for b in beats:
-            units.append({
-                "seg_i": seg_i, "seg_id": seg_id, "kind": "gen",
-                "raw_start": b.start, "raw_end": b.end,
-                "beat_idx": b.idx, "beat_of": len(beats),
-                "prompt": prompt, "narration": narration, "source": "",
+        """A generated unit: its own two boundaries are quantized once,
+        and its beats split *that* integer frame count locally -- slack
+        from the beat split can only ever land inside this unit, never on
+        the segment boundary it shares with a neighbour.
+        """
+        f0, f1 = _frame_at(start), _frame_at(end)
+        n = beat_count(end - start)
+        beat_frames = allocate_frames(f1 - f0, [1.0] * n)
+        cum = f0
+        for idx, bf in enumerate(beat_frames):
+            b_start, cum = cum / FPS, cum + bf
+            b_end = cum / FPS
+            if seg_i == -1:
+                shot_id = "s_lead"
+            elif seg_i == -2:
+                shot_id = "s_break"
+            else:
+                shot_id = f"s{seg_i:03d}{chr(97 + idx)}"
+            shots.append({
+                "shot_id": shot_id, "seg_i": seg_i, "seg_id": seg_id,
+                "kind": "gen", "start": b_start, "end": b_end,
+                "frames": bf, "gen_dur": gen_duration(b_end - b_start),
+                "beat_idx": idx, "beat_of": n, "prompt": prompt,
+                "narration": narration, "source": "", "status": "pending",
             })
 
     # The lead-in: 0 -> first segment, music only, generated.
@@ -183,15 +217,22 @@ def build_shots() -> list[dict]:
         bite = bites.get(i)
         is_sync = kind == "bite" and bite is not None and sync_capable(bite)
         if is_sync:
+            # A sync boundary is the subject's own recorded voice starting
+            # or stopping. It is quantized directly from the EDL and never
+            # split or pooled with anything else, so no other shot's
+            # rounding slack can ever land on it.
             run = best_run(bite)
-            units.append({
-                "seg_i": i, "seg_id": seg["seg_id"], "kind": "sync",
-                "raw_start": seg["start"], "raw_end": seg["end"],
-                "beat_idx": 0, "beat_of": 1, "prompt": "",
-                "narration": seg["text"], "source": seg["source"],
+            f0, f1 = _frame_at(seg["start"]), _frame_at(seg["end"])
+            shots.append({
+                "shot_id": f"s{i:03d}s", "seg_i": i, "seg_id": seg["seg_id"],
+                "kind": "sync", "start": f0 / FPS, "end": f1 / FPS,
+                "frames": f1 - f0,
+                "gen_dur": 0, "beat_idx": 0, "beat_of": 1,
+                "prompt": "", "narration": seg["text"], "source": seg["source"],
                 # Where in the interview to cut from. Without this the
                 # assembler renders every sync shot from t=0 of the source.
                 "src_t0": run["t0"], "src_run_key": run["key"],
+                "status": "pending",
             })
         else:
             # Every remaining segment (narr/beat/card, or a bite that
@@ -202,39 +243,11 @@ def build_shots() -> list[dict]:
 
         prev_end = seg["end"]
 
-    # ---- Phase 2: allocate every frame in one call, then derive times. ----
-    want = round(edl["end"] * FPS)
-    weights = [u["raw_end"] - u["raw_start"] for u in units]
-    frames = allocate_frames(want, weights)
-
-    shots: list[dict] = []
-    cum = 0
-    for u, f in zip(units, frames):
-        start, cum = cum / FPS, cum + f
-        end = cum / FPS
-        if u["seg_i"] == -1:
-            shot_id = "s_lead"
-        elif u["seg_i"] == -2:
-            shot_id = "s_break"
-        elif u["kind"] == "sync":
-            shot_id = f"s{u['seg_i']:03d}s"
-        else:
-            shot_id = f"s{u['seg_i']:03d}{chr(97 + u['beat_idx'])}"
-
-        shot = {
-            "shot_id": shot_id, "seg_i": u["seg_i"], "seg_id": u["seg_id"],
-            "kind": u["kind"], "start": start, "end": end, "frames": f,
-            "gen_dur": 0 if u["kind"] == "sync" else gen_duration(end - start),
-            "beat_idx": u["beat_idx"], "beat_of": u["beat_of"],
-            "prompt": u["prompt"], "narration": u["narration"],
-            "source": u["source"], "status": "pending",
-        }
-        if u["kind"] == "sync":
-            shot["src_t0"] = u["src_t0"]
-            shot["src_run_key"] = u["src_run_key"]
-        shots.append(shot)
-
+    # No reconciliation step: round(seg.end*FPS) - round(seg.start*FPS)
+    # telescopes across a contiguous timeline, so this is a verification of
+    # that fact, not a fix for a shortfall it could not otherwise close.
     total = sum(s["frames"] for s in shots)
+    want = round(edl["end"] * FPS)
     if total != want:
         raise SystemExit(f"frame budget {total} != {want}; refusing to pad")
     return shots

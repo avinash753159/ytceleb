@@ -40,18 +40,36 @@ def test_the_title_break_is_its_own_generated_shot(shots):
     """A 4s music-only hold before the diagnosis. It is not a segment, so a
     segment-driven loop skips it and leaves a hole in the timeline.
 
-    The tolerance is wider than one frame (0.1s, not 0.05s): global
-    largest-remainder allocation (flow_split.allocate_frames, called once
-    across all 135 spans) does not guarantee every *intermediate* cut lands
-    within a frame of its pure-seconds value, only that the final total is
-    exact -- measured drift here is 0.056s, more than the 0.018s drift at
-    the very end of the film, because the units earlier in the sequence
-    happened to carry more of the largest-remainder top-up.
+    Every boundary is now quantized independently from the EDL's own time
+    (frame_at(t) = round(t * FPS)), not accumulated through a shared frame
+    pool, so the true error against 58.098 is at most half a frame
+    (~0.021s) and 0.05 is a real constraint again.
     """
     tb = [s for s in shots if 54.0 < s["start"] < 54.2 and s["kind"] == "gen"]
     assert len(tb) == 1, tb
-    assert abs(tb[0]["end"] - 58.098) < 0.1
+    assert abs(tb[0]["end"] - 58.098) < 0.05
     assert tb[0]["prompt"].strip()
+
+
+def test_no_boundary_drifts_more_than_half_a_frame(shots):
+    """Drift on a sync boundary is 50ms of wrong picture under his own
+    voice. Quantised boundaries cannot drift; distributed ones can."""
+    by_i = {s["i"]: s for s in
+            json.loads((ROOT / "manifest/edl_full.json").read_text(
+                encoding="utf-8"))["segs"]}
+    half = 0.5 / FPS + 1e-9
+    for s in shots:
+        seg = by_i.get(s["seg_i"])
+        if seg is None:
+            continue
+        if s["beat_idx"] == 0:
+            assert abs(s["start"] - seg["start"]) <= half, (s["shot_id"], "start")
+        if s["beat_idx"] == s["beat_of"] - 1:
+            assert abs(s["end"] - seg["end"]) <= half, (s["shot_id"], "end")
+
+
+def test_frames_telescope_to_the_exact_total_without_reconciliation(shots):
+    assert sum(s["frames"] for s in shots) == 17667
 
 
 def test_frames_sum_to_the_picture_budget(shots):
@@ -103,14 +121,14 @@ def test_gen_dur_covers_every_generated_shot(shots):
 
 
 def test_billed_seconds_match_the_budget(shots):
-    # 660, not the 662 arrived at by adding the title break's raw 4s to the
-    # pre-allocation total: global allocation (ruling 2) nudges one shot's
-    # final duration across the 4s/6s legal-duration line versus its
-    # pure-seconds estimate, which is the "changes boundaries by a frame or
-    # two, which is correct and expected" effect applied to gen_dur rather
-    # than to a start/end timestamp. See flow_plan.py's module docstring.
+    # 658 = 93 shots @ 6s + 25 shots @ 4s (558 + 100). Under per-boundary
+    # quantization (ruling 3), segment i=25's first beat quantizes to
+    # exactly [247.0, 251.0) -- 4.0s, not the 4.0417s a pooled allocation
+    # estimated in ruling 2 -- so gen_duration(4.0) returns 4 instead of 6
+    # for shot s025a. That is the one shot (of 118 generated) whose bucket
+    # differs from ruling 2's committed figure of 660.
     billed = sum(s["gen_dur"] for s in shots if s["kind"] == "gen")
-    assert billed == 660
+    assert billed == 658
 
 
 def test_sync_shots_carry_their_source_id(shots):
