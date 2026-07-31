@@ -60,9 +60,10 @@ def beat_count(dur: float) -> int:
 def allocate_frames(total_frames: int, weights: list[float]) -> list[int]:
     """Split `total_frames` across `weights`, summing to exactly the total.
 
-    Largest-remainder: floor everything, then hand the shortfall to whoever
-    lost the most in the rounding. Every shot is guaranteed at least 1 frame;
-    if the minimum constraint cannot be satisfied, raises ValueError.
+    Largest-remainder: floor everything, then distribute remainders one frame
+    at a time, re-evaluating eligibility at each step. Every shot is
+    guaranteed at least 1 frame; if the minimum constraint cannot be
+    satisfied, raises ValueError.
     """
     if total_frames < len(weights):
         raise ValueError(
@@ -70,26 +71,30 @@ def allocate_frames(total_frames: int, weights: list[float]) -> list[int]:
     scale = total_frames / sum(weights)
     exact = [w * scale for w in weights]
     out = [max(1, math.floor(x)) for x in exact]
-    short = total_frames - sum(out)
 
-    if short != 0:
-        # When subtracting (negative shortfall), only take from indices where
-        # out[i] > 1 to maintain the ≥1 frame guarantee
-        if short < 0:
-            eligible_indices = [i for i in range(len(out)) if out[i] > 1]
-            if not eligible_indices:
+    # Distribute one frame at a time until sum matches exactly
+    while True:
+        current_sum = sum(out)
+        if current_sum == total_frames:
+            break
+
+        if current_sum < total_frames:
+            # Add 1 frame to index with largest fractional remainder
+            remainders = [exact[i] - out[i] for i in range(len(out))]
+            idx = max(range(len(out)), key=lambda i: remainders[i])
+            out[idx] += 1
+        else:  # current_sum > total_frames
+            # Remove 1 frame from an index with out[i] > 1 and smallest
+            # fractional remainder. Re-check capacity at each step.
+            candidates = [i for i in range(len(out)) if out[i] > 1]
+            if not candidates:
                 raise ValueError(
                     f"Cannot allocate {total_frames} frames across {len(weights)} shots: "
                     f"minimum guarantee (≥1 frame per shot) requires {sum(out)} frames")
-            order = sorted(eligible_indices, key=lambda i: exact[i] - out[i],
-                           reverse=False)
-        else:
-            order = sorted(range(len(out)), key=lambda i: exact[i] - out[i],
-                           reverse=True)
-
-        step = 1 if short > 0 else -1
-        for i in range(abs(short)):
-            out[order[i % len(order)]] += step
+            remainders = [exact[i] - out[i] for i in candidates]
+            best_idx = min(range(len(candidates)),
+                          key=lambda j: remainders[j])
+            out[candidates[best_idx]] -= 1
 
     return out
 

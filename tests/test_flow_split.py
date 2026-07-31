@@ -95,6 +95,27 @@ def test_allocate_frames_rejects_impossible_allocation():
         allocate_frames(3, [1.0, 1.0, 1.0, 1.0])
 
 
+def test_allocate_frames_survives_many_clamped_indices():
+    """A rotation computed once cannot know an index ran out of capacity.
+    This input drove a count to -1 under the round-robin correction."""
+    got = allocate_frames(24, [2.9, 20.9] + [0.05] * 8)
+    assert sum(got) == 24
+    assert all(f >= 1 for f in got), got
+
+
+def test_allocate_frames_is_never_negative_under_fuzz():
+    """Fuzz test: capacity-aware correction cannot produce negative frames."""
+    import random
+    rng = random.Random(20260731)
+    for _ in range(2000):
+        n = rng.randint(1, 12)
+        weights = [rng.choice([0.05, 0.1, 1.0, 3.0, 20.0]) for _ in range(n)]
+        total = rng.randint(n, 200)
+        got = allocate_frames(total, weights)
+        assert sum(got) == total, (total, weights, got)
+        assert all(f >= 1 for f in got), (total, weights, got)
+
+
 def test_zero_length_segment_is_rejected():
     with pytest.raises(ValueError):
         split_segment(10.0, 10.0)
