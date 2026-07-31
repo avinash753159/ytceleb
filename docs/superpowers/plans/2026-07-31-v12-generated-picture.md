@@ -650,6 +650,34 @@ def test_sync_shots_carry_their_source_id(shots):
     for s in shots:
         if s["kind"] == "sync":
             assert s["source"], s["shot_id"]
+
+
+def test_sync_shots_carry_the_timecode_to_cut_from(shots):
+    """Without src_t0 the assembler renders every sync shot from t=0 of a
+    two-hour podcast instead of the moment he says the line."""
+    for s in shots:
+        if s["kind"] == "sync":
+            assert s.get("src_t0", 0) > 0, s["shot_id"]
+
+
+def test_best_run_prefers_the_longest_usable_window():
+    from flow_plan import best_run
+    bite = {"sync_possible": True, "runs": [
+        {"key": "a@1", "t0": 1.0, "usable": 2.8,
+         "verified_jimmy": True, "has_text": False},
+        {"key": "a@9", "t0": 9.0, "usable": 5.1,
+         "verified_jimmy": True, "has_text": False},
+        {"key": "a@4", "t0": 4.0, "usable": 9.9,
+         "verified_jimmy": True, "has_text": True},
+    ]}
+    assert best_run(bite)["key"] == "a@9"
+
+
+def test_best_run_returns_none_when_nothing_is_verified():
+    from flow_plan import best_run
+    assert best_run({"sync_possible": True, "runs": [
+        {"key": "a@1", "t0": 1.0, "usable": 9.0,
+         "verified_jimmy": False, "has_text": False}]}) is None
 ```
 
 - [ ] **Step 2: Run tests to verify they fail**
@@ -697,10 +725,21 @@ GEN_KINDS = {"narr", "beat", "card"}
 
 def sync_capable(bite: dict) -> bool:
     """True when this bite can show the real man saying the real words."""
+    return best_run(bite) is not None
+
+
+def best_run(bite: dict) -> dict | None:
+    """The longest verified, text-free run inside this bite's own span.
+
+    Verdicts are keyed by sid@t0, never by sheet index: verify_pool.py once
+    hard-coded tile indices, so adding a source re-sorted the thumbnails and
+    silently re-pointed every verdict at a different frame.
+    """
     if not bite.get("sync_possible"):
-        return False
-    return any(r.get("verified_jimmy") and not r.get("has_text")
-               for r in bite.get("runs", []))
+        return None
+    ok = [r for r in bite.get("runs", [])
+          if r.get("verified_jimmy") and not r.get("has_text")]
+    return max(ok, key=lambda r: r.get("usable", 0.0)) if ok else None
 
 
 def _prompt_for(blocks: list[dict], start: float, end: float) -> str:
@@ -740,13 +779,18 @@ def build_shots() -> list[dict]:
         is_sync = kind == "bite" and bite is not None and sync_capable(bite)
 
         if is_sync:
+            run = best_run(bite)
             shots.append({
                 "shot_id": f"s{i:03d}s", "seg_i": i, "seg_id": seg["seg_id"],
                 "kind": "sync", "start": seg["start"], "end": seg["end"],
                 "frames": round((seg["end"] - seg["start"]) * FPS),
                 "gen_dur": 0, "beat_idx": 0, "beat_of": 1,
                 "prompt": "", "narration": seg["text"],
-                "source": seg["source"], "status": "pending",
+                "source": seg["source"],
+                # Where in the interview to cut from. Without this the
+                # assembler renders every sync shot from t=0 of the source.
+                "src_t0": run["t0"], "src_run_key": run["key"],
+                "status": "pending",
             })
             continue
 
@@ -791,9 +835,9 @@ if __name__ == "__main__":
 - [ ] **Step 4: Run tests to verify they pass**
 
 Run: `python -m pytest tests/test_flow_plan.py -v`
-Expected: PASS, 12 tests
+Expected: PASS, 15 tests
 
-Note `test_every_generated_shot_has_a_prompt` will fail at this point for split beats — every beat of a segment currently inherits the same segment-level prompt. That is expected and correct for now; Task 5 replaces them with per-beat prompts.
+At this point every beat of a split segment inherits the same segment-level prompt, so three sibling shots would generate three near-identical images. That is not yet a test failure — the prompts are non-empty — and Task 5 replaces them with authored per-beat prompts and adds the test that catches the duplication.
 
 - [ ] **Step 5: Generate the manifest and commit**
 
@@ -886,7 +930,7 @@ def test_every_split_beat_has_its_own_authored_prompt(shots):
 - [ ] **Step 5: Run the tests**
 
 Run: `python -m pytest tests/test_flow_plan.py -v`
-Expected: PASS, 13 tests
+Expected: PASS, 16 tests
 
 - [ ] **Step 6: Regenerate and commit**
 
@@ -1457,14 +1501,31 @@ def gate_format(shot: dict, meta: dict) -> str | None:
 
 
 def _frames(path: Path, n: int = 6) -> list[np.ndarray]:
+    """`n` frames spread evenly across the clip, as greyscale arrays.
+
+    Sampled by seeking to computed timestamps rather than with an fps filter:
+    a clip is 4-8 seconds, so an fps rate low enough to yield n frames rounds
+    badly and can return one frame or none. Cached per clip, because a gap in
+    a PNG sequence makes ffmpeg's image2 demuxer stop dead.
+    """
     work = ROOT / "work/flow_qc" / path.stem
     work.mkdir(parents=True, exist_ok=True)
-    subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-i", str(path),
-         "-vf", f"fps={n}/max(1\\,{n})", "-frames:v", str(n),
-         str(work / "f%02d.png")], check=True)
-    return [np.asarray(Image.open(p).convert("L"), dtype=np.float64)
-            for p in sorted(work.glob("f*.png"))]
+    meta = probe(path)
+    dur = meta["frames"] / meta["fps"] if meta["fps"] else 0.0
+    out = []
+    for i in range(n):
+        # Inset from both ends; the last frame of a generated clip is often
+        # a fade and reads as black.
+        t = dur * (i + 0.5) / n
+        png = work / f"f{i:02d}.png"
+        if not png.exists():
+            subprocess.run(
+                ["ffmpeg", "-y", "-v", "error", "-ss", f"{t:.3f}",
+                 "-i", str(path), "-frames:v", "1", str(png)], check=True)
+        if png.exists():
+            out.append(np.asarray(Image.open(png).convert("L"),
+                                  dtype=np.float64))
+    return out
 
 
 def gate_black(path: Path) -> str | None:
