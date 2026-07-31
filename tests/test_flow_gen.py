@@ -208,10 +208,14 @@ def test_build_config_carries_the_negative_prompt():
     assert cfg.negative_prompt == NEGATIVE_PROMPT
 
 
-def test_build_config_seeds_from_the_shot_id():
-    shot = mk("s042")
-    cfg = build_config(shot)
-    assert cfg.seed == seed_for("s042")
+def test_build_config_does_not_set_seed():
+    """Round 3: the Developer API tier this project's key runs under rejects
+    `seed=` client-side (`ValueError: seed parameter is only supported in
+    Gemini Enterprise Agent Platform mode, not in Gemini Developer API
+    mode`) -- this was hit on the first live run. seed_for() still exists
+    and is still recorded in the ledger as provenance, just never sent."""
+    cfg = build_config(mk("s042"))
+    assert cfg.seed is None
 
 
 def test_build_config_uses_the_locked_format():
@@ -317,30 +321,76 @@ def test_download_failure_retries_the_download_not_the_generation(
 
 def test_a_shot_needing_two_submissions_is_charged_twice(
         tmp_path, monkeypatch):
-    """The other half of charge-at-submission: on_submit fires once per
-    submission attempt, so a shot that failed once before succeeding must
-    show two charges, not one."""
+    """The other half of charge-at-submission: `charge` fires once per
+    *accepted* submission attempt (generate_videos() returned without
+    raising), so a shot whose first attempt was accepted but then failed
+    during polling, before succeeding on a second attempt, must show two
+    charges, not one."""
     monkeypatch.setattr(flow_gen.time, "sleep", lambda s: None)
     calls = {"n": 0}
 
     def make_op():
         calls["n"] += 1
         if calls["n"] == 1:
-            return FakeOpBadShape()    # first submission looks broken
+            return FakeOpBadShape()    # accepted, but poll access fails
         return FakeOpOK([FakeVideo()])  # second submission succeeds
 
     client = FakeClient(make_op)
     shot = mk("s_retry", gen_dur=6)
     charges = []
 
-    def on_submit():
+    def charge():
         charges.append(shot["gen_dur"] * RATE_PER_SECOND)
 
-    dest = generate_one(client, shot, tmp_path, on_submit=on_submit)
+    dest = generate_one(client, shot, tmp_path, charge=charge)
 
     assert client.generate_calls == 2
     assert len(charges) == 2
     assert dest.exists()
+
+
+def test_client_side_raise_before_acceptance_charges_nothing(
+        tmp_path, monkeypatch):
+    """Round 3, defect 2: reproduces the first live run's actual failure --
+    `generate_videos()` itself raises (the real one raised
+    `ValueError: seed parameter is only supported in Gemini Enterprise
+    Agent Platform mode, not in Gemini Developer API mode`, a purely
+    client-side validation error). Nothing was ever sent to Google, so
+    `charge` must never fire and `spent` must stay at $0.00."""
+    monkeypatch.setattr(flow_gen.time, "sleep", lambda s: None)
+
+    class ExplodingModels:
+        def __init__(self):
+            self.calls = 0
+
+        def generate_videos(self, **kwargs):
+            self.calls += 1
+            raise ValueError(
+                "seed parameter is only supported in Gemini Enterprise "
+                "Agent Platform mode, not in Gemini Developer API mode.")
+
+    class ExplodingClient:
+        def __init__(self):
+            self.models = ExplodingModels()
+            self.operations = FakeOperations()
+            self.files = FakeFiles()
+
+    client = ExplodingClient()
+    shot = mk("s_boom", gen_dur=6)
+    status_path = tmp_path / "status.json"
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+
+    run([shot], status_path, client, cap=100.0, out_dir=out_dir)
+
+    # every submission attempt raised before acceptance -- none billed
+    assert client.models.calls == flow_gen.SUBMIT_RETRIES + 1
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    entry = status["s_boom"]
+    assert entry["state"] == "failed"
+    assert entry["charged"] == 0.0
+    assert entry["submissions"] == 0
+    assert "seed parameter" in entry["error"]
 
 
 # ---------------------------------------------------- guarded record() ---
@@ -387,11 +437,12 @@ def test_record_raises_loudly_if_replace_never_succeeds(
 
 def test_cap_stop_mid_shot_records_the_interrupted_shot(tmp_path, monkeypatch):
     """Reproduces the round-2 finding exactly: cost $0.30 (a 6s shot), cap
-    $0.35. Attempt 1 is billed (on_submit charges $0.30) then fails inside
-    submit_and_wait (bad response shape). Attempt 2's on_submit check
+    $0.35. Attempt 1 is accepted (charge fires, $0.30) then fails inside
+    submit_and_wait (bad response shape). Attempt 2's check_cap
     (0.30 + 0.30 > 0.35) correctly raises CapReached before a second billed
     call. The shot must not vanish: it needs a ledger entry recording the
-    $0.30 already spent on it, and it must still be pending()."""
+    $0.30 already spent on it, WHY the prior attempt failed (round 3), and
+    it must still be pending()."""
     monkeypatch.setattr(flow_gen.time, "sleep", lambda s: None)
     client = FakeClient(lambda: FakeOpBadShape())
     shot = mk("s_mid", gen_dur=6)          # cost = $0.30
@@ -409,6 +460,9 @@ def test_cap_stop_mid_shot_records_the_interrupted_shot(tmp_path, monkeypatch):
     assert entry["state"] == "interrupted"      # not done, not failed
     assert entry["charged"] == pytest.approx(0.30)
     assert entry["submissions"] == 1
+    assert "done" in entry["error"], (
+        "round 3: the interrupted record must say why -- here, the "
+        "AttributeError from the bad-shape fake op's missing `.done`")
     assert pending([shot], status) == [shot], (
         "an interrupted shot must still be retried once funding allows")
 
