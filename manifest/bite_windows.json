@@ -1,0 +1,664 @@
+[
+  {
+    "i": 1,
+    "prog_start": 11.892,
+    "prog_end": 13.992,
+    "dur": 2.1,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_least_energetic",
+    "src_t0": 5265.4,
+    "src_t1": 5267.5,
+    "chapter": "open",
+    "text": "I'm probably one of the least energetic people you'll ever meet.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@5264.91",
+        "t0": 5264.91,
+        "run_end": 5267.7,
+        "usable": 2.79,
+        "thumb": "cLRLEnPaJLM_5265.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg1 - Jimmy alone, side-on, clean"
+      }
+    ]
+  },
+  {
+    "i": 6,
+    "prog_start": 44.498,
+    "prog_end": 54.098,
+    "dur": 9.6,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_baseball_to_crohns",
+    "src_t0": 5198.0,
+    "src_t1": 5207.6,
+    "chapter": "origin",
+    "text": "I played baseball nonstop, and then when I got Crohn's I lost like 50 pounds.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@5196.75",
+        "t0": 5196.75,
+        "run_end": 5199.06,
+        "usable": 2.31,
+        "thumb": "cLRLEnPaJLM_5197.jpg",
+        "verified_jimmy": false,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg6 - JOE ROGAN single: bald, pink hoodie, seated under the JOE ROGAN EXPERIENCE neon sign. Banned from the film"
+      },
+      {
+        "key": "cLRLEnPaJLM@5199.51",
+        "t0": 5199.51,
+        "run_end": 5208.77,
+        "usable": 6.0,
+        "thumb": "cLRLEnPaJLM_5200.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg6 - Jimmy alone, 3/4 on, clean"
+      }
+    ]
+  },
+  {
+    "i": 8,
+    "prog_start": 69.43,
+    "prog_end": 85.43,
+    "dur": 16.0,
+    "source": "FjrJ2DJN_pA",
+    "bite_id": "doaceo_weight_collapse",
+    "src_t0": 825.0,
+    "src_t1": 841.0,
+    "chapter": "origin",
+    "text": "When I turned 15, I got Crohn's and I went from like 190 pounds down to 139. I lost all muscle I had, and so I was like, all right, I'm not playing baseball in college anymore. So then I was like, it's just all in on YouTube.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "FjrJ2DJN_pA@823.75",
+        "t0": 823.75,
+        "run_end": 842.3,
+        "usable": 6.0,
+        "thumb": "FjrJ2DJN_pA_824.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg8 - Jimmy alone, hands clasped, grey marble wall and brass sconce, clean"
+      }
+    ]
+  },
+  {
+    "i": 12,
+    "prog_start": 109.435,
+    "prog_end": 128.355,
+    "dur": 18.92,
+    "source": "FjrJ2DJN_pA",
+    "bite_id": "doaceo_symptoms",
+    "src_t0": 918.0,
+    "src_t1": 936.92,
+    "chapter": "illness",
+    "text": "When I was 15, I just started going to the bathroom eight, nine, ten times a day, not digesting any food because my GI tract is literally just attacking itself. Your immune system in your gut thinks your gut is a foreign invader, and so it just starts attacking itself.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "FjrJ2DJN_pA@916.75",
+        "t0": 916.75,
+        "run_end": 938.22,
+        "usable": 6.0,
+        "thumb": "FjrJ2DJN_pA_917.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg12 - Jimmy alone, clean"
+      }
+    ]
+  },
+  {
+    "i": 18,
+    "prog_start": 195.321,
+    "prog_end": 201.021,
+    "dur": 5.7,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_flare_dead",
+    "src_t0": 5353.9,
+    "src_t1": 5359.6,
+    "chapter": "illness",
+    "text": "Sometimes I'll flare up and then I'm just like, I'm dead. I just lay in bed all day, and I can't really do anything.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@5352.65",
+        "t0": 5352.65,
+        "run_end": 5360.32,
+        "usable": 6.0,
+        "thumb": "cLRLEnPaJLM_5353.jpg",
+        "verified_jimmy": false,
+        "has_text": true,
+        "text_reason": "text: 1that causes / Crohn's dsease and ulcerative colitis and improving / Crohn's dsease and uloerative colitis and improving / Crohns dsease and ulcerative colitis and improving",
+        "verdict_reason": "seg18 - Jimmy present but the studio monitor is showing the Crohn's & Colitis Foundation web page in the lower right, and it overlaps him horizontally, so no crop removes it. Panel map: contaminated 5349.50-5360.50, i.e. the whole bite"
+      }
+    ]
+  },
+  {
+    "i": 20,
+    "prog_start": 212.399,
+    "prog_end": 218.249,
+    "dur": 5.85,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_remicade",
+    "src_t0": 5363.35,
+    "src_t1": 5369.2,
+    "chapter": "illness",
+    "text": "I'm on what's called Remicade, and so every eight weeks they just do an IV with a huge bag, which essentially suppresses my immune system.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@5364.04",
+        "t0": 5364.04,
+        "run_end": 5370.5,
+        "usable": 6.0,
+        "thumb": "cLRLEnPaJLM_5364.jpg",
+        "verified_jimmy": false,
+        "has_text": true,
+        "text_reason": "text: Crohns disease and ulcerative colitis and improving / Founded:December 17,1965 / Founder:Wilian Modell / Headquarters location:New York.NY",
+        "verdict_reason": "seg20 - the screen-share panel enters partway through this window (panel map: clean only 5365.25-5367.50 inside the bite). OCR caught it; the midpoint frame did not"
+      }
+    ]
+  },
+  {
+    "i": 22,
+    "prog_start": 230.648,
+    "prog_end": 235.748,
+    "dur": 5.1,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_triggers",
+    "src_t0": 5308.8,
+    "src_t1": 5313.9,
+    "chapter": "illness",
+    "text": "Corn. Anything spicy. Anything like overly, overly processed.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@5307.55",
+        "t0": 5307.55,
+        "run_end": 5315.2,
+        "usable": 6.0,
+        "thumb": "cLRLEnPaJLM_5308.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg22 - Jimmy alone; panel map confirms the monitor is dark 5306.75-5330.75"
+      }
+    ]
+  },
+  {
+    "i": 26,
+    "prog_start": 255.017,
+    "prog_end": 262.117,
+    "dur": 7.1,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_decade_of_obsession",
+    "src_t0": 174.0,
+    "src_t1": 181.1,
+    "chapter": "machine",
+    "text": "I was as awkward as they came\u2014no money, no nothing\u2014and I just basically obsessed over YouTube every day for a decade.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@172.75",
+        "t0": 172.75,
+        "run_end": 180.85,
+        "usable": 6.0,
+        "thumb": "cLRLEnPaJLM_173.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg26 - Jimmy alone, red curtain, headphones, clean frame"
+      }
+    ]
+  },
+  {
+    "i": 28,
+    "prog_start": 273.448,
+    "prog_end": 294.568,
+    "dur": 21.12,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_social_cost",
+    "src_t0": 538.6,
+    "src_t1": 559.72,
+    "chapter": "machine",
+    "text": "I didn't talk to anyone. I hardly had any friends because I was so obsessed with YouTube. Back then, no one cared. I thought I didn't even know how to speak. I couldn't hold a conversation because people would tell me, all you talk about is YouTube.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@537.35",
+        "t0": 537.35,
+        "run_end": 560.16,
+        "usable": 6.0,
+        "thumb": "cLRLEnPaJLM_537.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg28 - Jimmy alone, clean frame"
+      }
+    ]
+  },
+  {
+    "i": 32,
+    "prog_start": 317.83,
+    "prog_end": 336.47,
+    "dur": 18.64,
+    "source": "9IQ_ldV9z_A",
+    "bite_id": "colin_why_he_started",
+    "src_t0": 755.96,
+    "src_t1": 774.6,
+    "chapter": "contract",
+    "text": "I was so laser-focused on the channel, and I just realized one day: I have not been working out or taking care of myself. Then I called Eric and I was like, this is a problem. Let's do this.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "9IQ_ldV9z_A@754.71",
+        "t0": 754.71,
+        "run_end": 758.72,
+        "usable": 4.01,
+        "thumb": "9IQ_ldV9z_A_755.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg32 - Jimmy alone, hand raised, clean"
+      },
+      {
+        "key": "9IQ_ldV9z_A@760.68",
+        "t0": 760.68,
+        "run_end": 769.15,
+        "usable": 6.0,
+        "thumb": "9IQ_ldV9z_A_761.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "text: DEEZ NUTZ",
+        "verdict_reason": "seg32 - Jimmy alone, thumb up, clean",
+        "text_override": "OCR read 'DEEZ NUTZ' - it is a Feastables bar standing on the desk beside a water bottle, i.e. a physical prop in the interview set and his own brand, not burned-in third-party text. It is on the desk in essentially every frame of this source, so rejecting on it would delete the whole Colin & Samir 2023 interview including six sync windows. Frames checked at 761.5 / 763.0 / 765.0."
+      }
+    ]
+  },
+  {
+    "i": 34,
+    "prog_start": 347.616,
+    "prog_end": 353.566,
+    "dur": 5.95,
+    "source": "7r3ORKgNUjw",
+    "bite_id": "airrack_contract_premise",
+    "src_t0": 0.0,
+    "src_t1": 5.95,
+    "chapter": "contract",
+    "text": "I signed a legally binding contract with MrBeast that says that we both have to work out every single day for 600 days.",
+    "sync_possible": false,
+    "runs": [],
+    "note": "Airrack's video - no Jimmy-only window exists; this bite gets illustrative picture"
+  },
+  {
+    "i": 36,
+    "prog_start": 355.748,
+    "prog_end": 361.788,
+    "dur": 6.04,
+    "source": "7r3ORKgNUjw",
+    "bite_id": "airrack_tattoo_stakes",
+    "src_t0": 13.44,
+    "src_t1": 19.48,
+    "chapter": "contract",
+    "text": "That contract says that if I miss a single day of working out, I have to get MrBeast's name tattooed on my forehead.",
+    "sync_possible": false,
+    "runs": [],
+    "note": "Airrack's video - no Jimmy-only window exists; this bite gets illustrative picture"
+  },
+  {
+    "i": 38,
+    "prog_start": 374.188,
+    "prog_end": 396.828,
+    "dur": 22.64,
+    "source": "9IQ_ldV9z_A",
+    "bite_id": "colin_day_310_contract",
+    "src_t0": 731.96,
+    "src_t1": 754.6,
+    "chapter": "contract",
+    "text": "Today was day 310. Me and Eric signed a contract: we'd work out every day, and if we didn't we'd get a tattoo of each other. You're okay to have a day off if it's an actual part of your program, so occasionally we have rest days. For the most part, we've worked out every single day and held each other accountable.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "9IQ_ldV9z_A@730.71",
+        "t0": 730.71,
+        "run_end": 743.25,
+        "usable": 6.0,
+        "thumb": "9IQ_ldV9z_A_731.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg38 - Jimmy alone, clean"
+      },
+      {
+        "key": "9IQ_ldV9z_A@744.62",
+        "t0": 744.62,
+        "run_end": 752.26,
+        "usable": 6.0,
+        "thumb": "9IQ_ldV9z_A_745.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg38 - Jimmy alone, clean"
+      }
+    ]
+  },
+  {
+    "i": 42,
+    "prog_start": 420.833,
+    "prog_end": 432.913,
+    "dur": 12.08,
+    "source": "9IQ_ldV9z_A",
+    "bite_id": "colin_three_things",
+    "src_t0": 708.92,
+    "src_t1": 721.0,
+    "chapter": "protocol",
+    "text": "Right now it's really three things that my entire world revolves around: I work out every day, I work on main-channel videos, and I work on Feastables. I wake up, I do that, and when I'm done I go to bed.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "9IQ_ldV9z_A@707.67",
+        "t0": 707.67,
+        "run_end": 719.77,
+        "usable": 6.0,
+        "thumb": "9IQ_ldV9z_A_708.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg42 - Jimmy alone, grey cap, maroon tee, plywood wall, clean"
+      }
+    ]
+  },
+  {
+    "i": 44,
+    "prog_start": 436.164,
+    "prog_end": 450.724,
+    "dur": 14.56,
+    "source": "9IQ_ldV9z_A",
+    "bite_id": "colin_daily_protocol",
+    "src_t0": 812.92,
+    "src_t1": 827.48,
+    "chapter": "protocol",
+    "text": "In the short term, I'd probably upload more and get more done if I didn't work out. It's like an hour and a half every day, and then the food, and I do 15,000 steps a day. All that is very time-consuming.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "9IQ_ldV9z_A@812.19",
+        "t0": 812.19,
+        "run_end": 817.74,
+        "usable": 5.56,
+        "thumb": "9IQ_ldV9z_A_812.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg44 - Jimmy alone, clean"
+      },
+      {
+        "key": "9IQ_ldV9z_A@823.20",
+        "t0": 823.2,
+        "run_end": 827.75,
+        "usable": 4.55,
+        "thumb": "9IQ_ldV9z_A_823.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg44 - Jimmy alone, gesturing, clean"
+      }
+    ]
+  },
+  {
+    "i": 46,
+    "prog_start": 466.095,
+    "prog_end": 473.455,
+    "dur": 7.36,
+    "source": "9IQ_ldV9z_A",
+    "bite_id": "colin_fat_loss_phase",
+    "src_t0": 779.08,
+    "src_t1": 786.44,
+    "chapter": "protocol",
+    "text": "Up to this point, I've just been losing fat. It's a lot harder to put on muscle when you're losing fat.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "9IQ_ldV9z_A@777.83",
+        "t0": 777.83,
+        "run_end": 784.25,
+        "usable": 6.0,
+        "thumb": "9IQ_ldV9z_A_778.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg46 - Jimmy alone, clean"
+      },
+      {
+        "key": "9IQ_ldV9z_A@784.70",
+        "t0": 784.7,
+        "run_end": 787.17,
+        "usable": 2.47,
+        "thumb": "9IQ_ldV9z_A_785.jpg",
+        "verified_jimmy": false,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg46 - COLIN AND SAMIR two-shot, both hosts on camera, no Jimmy in frame"
+      }
+    ]
+  },
+  {
+    "i": 49,
+    "prog_start": 492.906,
+    "prog_end": 506.186,
+    "dur": 13.28,
+    "source": "9IQ_ldV9z_A",
+    "bite_id": "colin_three_month_habit",
+    "src_t0": 794.2,
+    "src_t1": 807.48,
+    "chapter": "protocol",
+    "text": "All you have to do, really, is work out for like three months really consistently, and then it'll just become part of your lifestyle. A year ago I couldn't fathom how I was ever going to do this religiously. But now it's truly a habit.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "9IQ_ldV9z_A@792.95",
+        "t0": 792.95,
+        "run_end": 807.23,
+        "usable": 6.0,
+        "thumb": "9IQ_ldV9z_A_793.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg49 - Jimmy alone, clean"
+      }
+    ]
+  },
+  {
+    "i": 53,
+    "prog_start": 526.941,
+    "prog_end": 541.621,
+    "dur": 14.68,
+    "source": "7r3ORKgNUjw",
+    "bite_id": "airrack_jimmy_harder_than_expected",
+    "src_t0": 489.48,
+    "src_t1": 504.16,
+    "chapter": "limit",
+    "text": "Way harder\u2014infinitely harder. I thought I'd just work out for like an hour and it'd be relatively easy, but it's very time-consuming because we're trying to get what normal people would get, gains-wise, in like two years in one.",
+    "sync_possible": false,
+    "runs": [],
+    "note": "Airrack's video - no Jimmy-only window exists; this bite gets illustrative picture"
+  },
+  {
+    "i": 55,
+    "prog_start": 551.466,
+    "prog_end": 568.426,
+    "dur": 16.96,
+    "source": "7r3ORKgNUjw",
+    "bite_id": "airrack_jimmy_progress_reality",
+    "src_t0": 1082.02,
+    "src_t1": 1098.98,
+    "chapter": "limit",
+    "text": "A hundred percent. I tell Alex all the time, I can't believe how little progress I've made in the amount of time. When we started, we both thought if we just went to the gym and worked out really hard, we would end up in the same spot. We were so stupid.",
+    "sync_possible": false,
+    "runs": [],
+    "note": "Airrack's video - no Jimmy-only window exists; this bite gets illustrative picture"
+  },
+  {
+    "i": 59,
+    "prog_start": 588.669,
+    "prog_end": 603.869,
+    "dur": 15.2,
+    "source": "FjrJ2DJN_pA",
+    "bite_id": "doaceo_something_had_to_give",
+    "src_t0": 2776.0,
+    "src_t1": 2791.2,
+    "chapter": "fall",
+    "text": "Beast Games is such a monster of a project, and I have to maintain the same YouTube upload schedule, and then I do a lot on Feastables now and then I have a couple other businesses. So I just honestly, something had to give, and sadly it was working out.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "FjrJ2DJN_pA@2774.75",
+        "t0": 2774.75,
+        "run_end": 2787.72,
+        "usable": 6.0,
+        "thumb": "FjrJ2DJN_pA_2775.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg59 - Jimmy alone, close, gesturing, clean"
+      },
+      {
+        "key": "FjrJ2DJN_pA@2788.17",
+        "t0": 2788.17,
+        "run_end": 2792.5,
+        "usable": 4.33,
+        "thumb": "FjrJ2DJN_pA_2788.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg59 - Jimmy alone, clean"
+      }
+    ]
+  },
+  {
+    "i": 60,
+    "prog_start": 603.869,
+    "prog_end": 606.799,
+    "dur": 2.93,
+    "source": "FjrJ2DJN_pA",
+    "bite_id": "doaceo_workout_collapsed",
+    "src_t0": 2721.87,
+    "src_t1": 2724.8,
+    "chapter": "fall",
+    "text": "Months, it's just, it's really killing me, to be honest.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "FjrJ2DJN_pA@2720.62",
+        "t0": 2720.62,
+        "run_end": 2726.1,
+        "usable": 5.48,
+        "thumb": "FjrJ2DJN_pA_2721.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg60 - Jimmy alone, hands covering his face; matches 'it's really killing me' exactly"
+      }
+    ]
+  },
+  {
+    "i": 62,
+    "prog_start": 619.988,
+    "prog_end": 634.968,
+    "dur": 14.98,
+    "source": "FjrJ2DJN_pA",
+    "bite_id": "doaceo_sleep_first",
+    "src_t0": 2792.72,
+    "src_t1": 2807.7,
+    "chapter": "fall",
+    "text": "It only needs to be 45 minutes, 5 days a week. It doesn't need to be hard, but the bigger problem is I'm just not sleeping like I used to. When I hit it hard in the gym and then I don't get enough sleep, that causes pretty extreme fatigue the next day. So it's like, I got to fix sleep first.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "FjrJ2DJN_pA@2791.47",
+        "t0": 2791.47,
+        "run_end": 2809.0,
+        "usable": 6.0,
+        "thumb": "FjrJ2DJN_pA_2791.jpg",
+        "verified_jimmy": true,
+        "has_text": false,
+        "text_reason": "",
+        "verdict_reason": "seg62 - Jimmy alone, hands clasped, looking down, clean"
+      }
+    ]
+  },
+  {
+    "i": 67,
+    "prog_start": 669.469,
+    "prog_end": 677.669,
+    "dur": 8.2,
+    "source": "7r3ORKgNUjw",
+    "bite_id": "airrack_jimmy_changed_life",
+    "src_t0": 1102.86,
+    "src_t1": 1111.06,
+    "chapter": "resolution",
+    "text": "You look like a different human being. I do think that we both have severely changed our life for the better, and I'm very grateful for us doing this challenge.",
+    "sync_possible": false,
+    "runs": [],
+    "note": "Airrack's video - no Jimmy-only window exists; this bite gets illustrative picture"
+  },
+  {
+    "i": 69,
+    "prog_start": 690.533,
+    "prog_end": 692.833,
+    "dur": 2.3,
+    "source": "7r3ORKgNUjw",
+    "bite_id": "airrack_jimmy_continue",
+    "src_t0": 1115.85,
+    "src_t1": 1118.15,
+    "chapter": "resolution",
+    "text": "Oh, of course. I mean, mostly because I just don't want to die.",
+    "sync_possible": false,
+    "runs": [],
+    "note": "Airrack's video - no Jimmy-only window exists; this bite gets illustrative picture"
+  },
+  {
+    "i": 71,
+    "prog_start": 702.028,
+    "prog_end": 705.828,
+    "dur": 3.8,
+    "source": "cLRLEnPaJLM",
+    "bite_id": "jre_its_just_life",
+    "src_t0": 5416.15,
+    "src_t1": 5419.95,
+    "chapter": "resolution",
+    "text": "Honestly, I haven't really thought about it. It's just one of those things - I'm so used to it. It's just life.",
+    "sync_possible": true,
+    "runs": [
+      {
+        "key": "cLRLEnPaJLM@5415.69",
+        "t0": 5415.69,
+        "run_end": 5421.25,
+        "usable": 5.56,
+        "thumb": "cLRLEnPaJLM_5416.jpg",
+        "verified_jimmy": false,
+        "has_text": true,
+        "text_reason": "text: About 59,700,000 results (0.60 seconds) / About 59,700.000 results (0.60 seconds) / Aboutfeatured snppets / Existing cases(prevalence):Extrapolating from the Olmsted County study data to the",
+        "verdict_reason": "seg71 - panel enters at 5418.2. Superseded by the trimmed window cLRLEnPaJLM@5415.70 below"
+      },
+      {
+        "key": "cLRLEnPaJLM@5415.70",
+        "t0": 5415.7,
+        "run_end": 5417.9,
+        "usable": 2.2,
+        "thumb": "",
+        "verified_jimmy": true,
+        "has_text": false,
+        "verdict_reason": "seg71 'it's just life' - hand-trimmed to end before the screen-share panel enters at 5418.2 (frame strip verified)",
+        "hand_trimmed": true
+      }
+    ]
+  }
+]
