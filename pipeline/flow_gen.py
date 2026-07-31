@@ -35,9 +35,27 @@ CIRCUIT_BREAKER_STREAK exists because a bug in either phase is
 structurally indistinguishable, in a single shot, from ordinary bad luck --
 the only way to tell them apart is whether it keeps happening. Three
 consecutive shot failures in a row halts the whole run rather than grinding
-through the other ~115 shots at $0.05-$0.40 a submission attempt each: a
-wrong response-shape assumption must cost at most a few dollars, not the
-balance.
+through the other ~115 shots. The worst case is arithmetic, not a guess:
+CIRCUIT_BREAKER_STREAK (3) x (SUBMIT_RETRIES (2) + 1) = 9 submissions before
+the breaker trips, and at this film's largest gen shot (6s, $0.30/attempt)
+that is $2.70 -- three shots, not the balance.
+
+That breaker only catches CONSECUTIVE failures. An alternating fail/succeed
+pattern never reaches a streak of 3 and would otherwise be free to burn the
+whole run one submission at a time, so MAX_TOTAL_FAILURES is a second,
+unconditional bound: this many failures anywhere in the run, streak or no
+streak, halts it. Neither breaker is the real backstop against a slow bleed
+of intermittent failures across all 118 shots, though -- `--cap` is. The
+breakers exist to catch a fast, obvious systemic bug in a handful of dollars;
+the cap is what still holds if the bug is subtle enough to hide inside an
+occasional failure per shot for the whole run.
+
+A shot that a cap-stop interrupts mid-attempt (already billed once, but
+the retry that would have finished it was refused by the cap) is recorded
+with state="interrupted", not "done" (nothing was delivered) and not
+"failed" (that implies nothing was owed) -- carrying the amount already
+charged and the submission count, so the ledger shows money spent on a
+shot with no output, and `pending()` still retries it once funding allows.
 
 Every prompt in manifest/flow_shots.json already ends with "no text, no
 logos", but generated video invents signage anyway -- a known Veo failure
@@ -101,7 +119,17 @@ DOWNLOAD_RETRIES = 2
 # e.g. a renamed SDK attribute -- burns at most a few shots' worth of the
 # balance instead of grinding through all 118. Do not raise this without
 # also re-verifying the SDK response shape against a live call.
+# Worst case: CIRCUIT_BREAKER_STREAK x (SUBMIT_RETRIES + 1) = 9 submissions
+# before this trips, $2.70 at the film's 6s max shot cost -- see docstring.
 CIRCUIT_BREAKER_STREAK = 3
+
+# A second, unconditional bound: this many shot failures ANYWHERE in the
+# run -- streak or no streak -- halts it. Exists because the streak breaker
+# above can be starved by an alternating fail/succeed pattern, which would
+# otherwise be free to burn the whole run one submission at a time. Neither
+# breaker is the true backstop against a slow bleed of intermittent
+# failures across the whole 118-shot run -- `--cap` is; see docstring.
+MAX_TOTAL_FAILURES = 8
 
 # Status-file rename retry: on Windows, antivirus or a backup indexer can
 # transiently hold the destination open, turning a routine `Path.replace`
@@ -302,36 +330,50 @@ def run(todo: list[dict], status_path: Path, client, cap: float,
         out_dir: Path) -> int:
     """Drive the shot loop: charge at submission, retry download without
     resubmitting, halt after CIRCUIT_BREAKER_STREAK consecutive shot
-    failures. Returns a process exit code (0 clean/cap-stopped, 1 circuit
-    breaker tripped).
+    failures or MAX_TOTAL_FAILURES failures overall. Returns a process exit
+    code (0 clean/cap-stopped, 1 a breaker tripped).
     """
     total = len(todo)
     spent = 0.0
     consecutive_failures = 0
+    total_failures = 0
 
     for i, shot in enumerate(todo, 1):
         cost = shot["gen_dur"] * RATE_PER_SECOND
         charged = 0.0
+        submissions = 0
 
         def on_submit(cost=cost):
-            nonlocal spent, charged
+            nonlocal spent, charged, submissions
             if spent + cost > cap:
                 raise CapReached(
                     f"cap ${cap:.2f} reached (spent ${spent:.2f})")
             spent += cost
             charged += cost
+            submissions += 1
 
         try:
             dest = generate_one(client, shot, out_dir, on_submit=on_submit)
         except CapReached as exc:
-            print(f"STOP: {exc}; {total - i + 1} shots left")
+            # The cap can interrupt a shot mid-attempt: an earlier retry
+            # within this same shot may already have been billed (charged
+            # > 0) before this attempt was refused. That money is real and
+            # must be visible -- not "done" (nothing delivered), not
+            # "failed" (that implies nothing was owed).
+            record(status_path, shot["shot_id"], state="interrupted",
+                   charged=charged, submissions=submissions,
+                   seed=seed_for(shot["shot_id"]))
+            print(f"STOP: {exc} at {shot['shot_id']} "
+                  f"(charged ${charged:.2f} for it); "
+                  f"{total - i + 1} shots left")
             print(f"spent ${spent:.2f}")
             return 0
         except Exception as exc:                # noqa: BLE001
             consecutive_failures += 1
+            total_failures += 1
             record(status_path, shot["shot_id"], state="failed",
                    error=str(exc)[:300], seed=seed_for(shot["shot_id"]),
-                   charged=charged)
+                   charged=charged, submissions=submissions)
             print(f"[{i}/{total}] {shot['shot_id']} FAILED: "
                   f"{str(exc)[:120]}  (charged ${charged:.2f})")
             if consecutive_failures >= CIRCUIT_BREAKER_STREAK:
@@ -339,6 +381,13 @@ def run(todo: list[dict], status_path: Path, client, cap: float,
                       f"failures -- halting before the rest of the backlog "
                       f"burns on what looks like a systemic bug, not bad "
                       f"luck.")
+                print(f"spent ${spent:.2f}")
+                return 1
+            if total_failures >= MAX_TOTAL_FAILURES:
+                print(f"STOP: {MAX_TOTAL_FAILURES} total shot failures -- "
+                      f"an alternating fail/succeed pattern can starve the "
+                      f"consecutive-failure breaker, so this bound is "
+                      f"unconditional.")
                 print(f"spent ${spent:.2f}")
                 return 1
             continue

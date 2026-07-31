@@ -381,3 +381,90 @@ def test_record_raises_loudly_if_replace_never_succeeds(
 
     with pytest.raises(RuntimeError, match="s000a"):
         record(p, "s000a", state="done")
+
+
+# -------------------------------------------- fix round 2: cap-stop mid-shot
+
+def test_cap_stop_mid_shot_records_the_interrupted_shot(tmp_path, monkeypatch):
+    """Reproduces the round-2 finding exactly: cost $0.30 (a 6s shot), cap
+    $0.35. Attempt 1 is billed (on_submit charges $0.30) then fails inside
+    submit_and_wait (bad response shape). Attempt 2's on_submit check
+    (0.30 + 0.30 > 0.35) correctly raises CapReached before a second billed
+    call. The shot must not vanish: it needs a ledger entry recording the
+    $0.30 already spent on it, and it must still be pending()."""
+    monkeypatch.setattr(flow_gen.time, "sleep", lambda s: None)
+    client = FakeClient(lambda: FakeOpBadShape())
+    shot = mk("s_mid", gen_dur=6)          # cost = $0.30
+    status_path = tmp_path / "status.json"
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+
+    code = run([shot], status_path, client, cap=0.35, out_dir=out_dir)
+
+    assert code == 0
+    assert status_path.exists(), "the interrupted shot must be recorded"
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    assert "s_mid" in status
+    entry = status["s_mid"]
+    assert entry["state"] == "interrupted"      # not done, not failed
+    assert entry["charged"] == pytest.approx(0.30)
+    assert entry["submissions"] == 1
+    assert pending([shot], status) == [shot], (
+        "an interrupted shot must still be retried once funding allows")
+
+
+def test_cap_stop_names_the_interrupted_shot(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(flow_gen.time, "sleep", lambda s: None)
+    client = FakeClient(lambda: FakeOpBadShape())
+    shot = mk("s_named", gen_dur=6)
+    status_path = tmp_path / "status.json"
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+
+    run([shot], status_path, client, cap=0.35, out_dir=out_dir)
+
+    out = capsys.readouterr().out
+    stop_lines = [ln for ln in out.splitlines() if ln.startswith("STOP:")]
+    assert stop_lines, "expected a STOP line"
+    assert "s_named" in stop_lines[0], (
+        "the STOP line must name which shot was mid-flight")
+
+
+def test_alternating_failures_are_bounded_by_max_total_failures(
+        tmp_path, monkeypatch):
+    """The consecutive-failure breaker resets on every success, so an
+    alternating fail/succeed pattern never reaches a streak of
+    CIRCUIT_BREAKER_STREAK and would otherwise be free to burn the whole
+    run. MAX_TOTAL_FAILURES is the unconditional backstop: it must trip on
+    total failure count regardless of streak."""
+    monkeypatch.setattr(flow_gen.time, "sleep", lambda s: None)
+    # The successful shots in this test record a `done` path relative to
+    # ROOT; point ROOT at tmp_path so that works from an out-of-tree tmpdir.
+    monkeypatch.setattr(flow_gen, "ROOT", tmp_path)
+
+    # Each failing shot consumes SUBMIT_RETRIES+1=3 calls (all bad-shape);
+    # each succeeding shot consumes exactly 1 (good on the first attempt).
+    outcomes = []
+    for _ in range(10):
+        outcomes += [False, False, False, True]
+    outcomes_iter = iter(outcomes)
+
+    def make_op():
+        return FakeOpOK([FakeVideo()]) if next(outcomes_iter) \
+            else FakeOpBadShape()
+
+    client = FakeClient(make_op)
+    shots = [mk(f"s{i}", gen_dur=6) for i in range(40)]
+    status_path = tmp_path / "status.json"
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+
+    code = run(shots, status_path, client, cap=100.0, out_dir=out_dir)
+
+    assert code == 1
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    failed = [v for v in status.values() if v["state"] == "failed"]
+    done = [v for v in status.values() if v["state"] == "done"]
+    assert len(failed) == flow_gen.MAX_TOTAL_FAILURES
+    assert len(done) == flow_gen.MAX_TOTAL_FAILURES - 1, (
+        "successes interleave 1-for-1 between failures right up to the trip")
