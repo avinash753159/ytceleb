@@ -42,7 +42,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "High aerial slowly descending over an enormous outdoor film set at night - lighting towers, camera cranes, generator trucks, scaffold rigs and dozens of crew working around one huge built structure, the whole thing lit like a stadium in the middle of total darkness, the descent continuously revealing more set beyond the edge of frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Slow track along a colossal purpose-built practical set piece in the dark - a full-scale structure rigged with hydraulics, water tanks and pyrotechnic charges, surrounded by rows of identical vehicles and stacked shipping containers waiting to be destroyed for a single take, the scale of the money on the ground made obvious and the frame never finding its edge. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "This is the most productive person on the internet. Three hundred million subscribers. Videos that cost more than films. A pace nobody in the industry has matched.",
   "source": "",
   "status": "pending"
@@ -78,7 +78,7 @@
   "gen_dur": 4,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "Dark-field microscopy inside a human gut: a dense swarm of pale immune cells converging on smooth healthy pink tissue and turning it raw and angry red everywhere they land, the damage spreading outward across the surface, wet and biological rather than gory, macro, slow drift. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Dark-field microscopy inside a human gut: a dense swarm of pale immune cells drifting in from the black and converging on smooth healthy pink tissue, gathering thicker and thicker along one fold of the surface before anything has been damaged, macro, slow drift. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "He is not being modest. Since he was fifteen, his own immune system has been attacking him from the inside, and there are days it wins.",
   "source": "",
   "status": "pending"
@@ -94,7 +94,7 @@
   "gen_dur": 4,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "Dark-field microscopy inside a human gut: a dense swarm of pale immune cells converging on smooth healthy pink tissue and turning it raw and angry red everywhere they land, the damage spreading outward across the surface, wet and biological rather than gory, macro, slow drift. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "The same gut surface after the swarm has settled on it - the pale pink gone, the tissue turned raw and angry red across the whole visible field, small ulcerated pits opening where the cells sit thickest, the damage still spreading outward at the edges, wet and biological rather than gory. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "He is not being modest. Since he was fifteen, his own immune system has been attacking him from the inside, and there are days it wins.",
   "source": "",
   "status": "pending"
@@ -110,7 +110,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "A plain wooden table in a black room holding a boy's things - a worn baseball glove, a bat, a full dinner plate - under one hard overhead light. One by one the objects are lifted away by nothing visible until only bare table is left. Then a single hand enters frame from the dark and pulls one object firmly back. Locked-off medium, slow. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A plain wooden table in a black room holding a boy's things - a worn baseball glove, a bat, a full dinner plate - under one hard overhead light. One by one the objects are lifted away by nothing visible and carried out of frame into the dark until only bare table is left. Locked-off medium, slow. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "So this is not a story about a workout. It is a story about a body that kept taking things away from a kid, and what he did to take some of it back.",
   "source": "",
   "status": "pending"
@@ -126,7 +126,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "A plain wooden table in a black room holding a boy's things - a worn baseball glove, a bat, a full dinner plate - under one hard overhead light. One by one the objects are lifted away by nothing visible until only bare table is left. Then a single hand enters frame from the dark and pulls one object firmly back. Locked-off medium, slow. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "The bare table alone under the hard overhead light in the black room, held for a beat, then a single adult hand entering from the darkness at the edge of frame, closing on the worn glove and dragging it firmly back into the light, cropped at the wrist so no body is in frame. Locked-off medium, slow. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "So this is not a story about a workout. It is a story about a body that kept taking things away from a kid, and what he did to take some of it back.",
   "source": "",
   "status": "pending"
@@ -174,7 +174,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "Low tracking at knee height across a worn baseball diamond in late golden light, drifting past scuffed home plate, a chalk baseline, a bat leaning on the fence and a glove left in the dirt, dust and insects hanging in the low sun, nobody present. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Tight tracking along the outside of a chain-link batting cage at dusk, a pitching machine inside firing ball after ball into the empty netting in a rhythm that never varies, balls piling up in the dirt where a hitter should be standing, the machine going on and on with nobody there to stop it. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Before any of it, he was an athlete. A kid who played constantly, and who assumed \u2014 the way you do at that age \u2014 that his body would keep doing whatever he asked of it.",
   "source": "",
   "status": "pending"
@@ -242,7 +242,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "Photoreal anatomical render of a human digestive tract rotating slowly against pure black, the last stretch of small intestine glowing hot inflamed red while everything around it sits pale and translucent, soft rim light, slow orbit. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Continuous push in toward that one inflamed stretch until the render stops being a diagram and becomes tissue - the outer surface resolving into wet swollen folds, fat creeping up over the bowel, the wall visibly thicker and hotter than everything either side of it, the camera going closer than these images usually go. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "The diagnosis had a name. Crohn's disease. What it was doing to him is the part almost nobody explains \u2014 and we will, properly, in a minute. First, what it took.",
   "source": "",
   "status": "pending"
@@ -278,7 +278,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "One continuous move in a single shot: a bank of stadium floodlights powers down to nothing, and as the frame travels on through darkness a small computer monitor flickers up in a suburban bedroom, the only light left in the world. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A bank of stadium floodlights at full blaze seen from below in total darkness, powering down tower by tower in sequence, each one cooling from white through dull orange to nothing, until the last filament dies and the field beneath is completely black. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "That is the whole pivot, in about ten seconds. A body. A future closing. A decision. He did not choose the internet over baseball. Baseball was taken, and the internet was what was left.",
   "source": "",
   "status": "pending"
@@ -294,7 +294,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "One continuous move in a single shot: a bank of stadium floodlights powers down to nothing, and as the frame travels on through darkness a small computer monitor flickers up in a suburban bedroom, the only light left in the world. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "The dark ballfield afterwards, seen through the mesh of a locked gate at the entrance to the stands, a heavy chain drawn through the bars and pulled tight, the diamond beyond it barely readable in the last blue light, nobody on either side of the gate. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "That is the whole pivot, in about ten seconds. A body. A future closing. A decision. He did not choose the internet over baseball. Baseball was taken, and the internet was what was left.",
   "source": "",
   "status": "pending"
@@ -310,7 +310,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "One continuous move in a single shot: a bank of stadium floodlights powers down to nothing, and as the frame travels on through darkness a small computer monitor flickers up in a suburban bedroom, the only light left in the world. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A small computer monitor flickering up to life in a dark suburban bedroom, its glow reaching a cheap microphone and a tangle of cables on the desk and getting no further, the only light left anywhere in the world, empty chair, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "That is the whole pivot, in about ten seconds. A body. A future closing. A decision. He did not choose the internet over baseball. Baseball was taken, and the internet was what was left.",
   "source": "",
   "status": "pending"
@@ -358,7 +358,7 @@
   "gen_dur": 4,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "A closed door at the far end of a long dark hallway with a hard strip of cold light underneath it, the shot holding far longer than is comfortable, nobody coming and nobody going, locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A single moulded plastic chair against a tiled wall in an empty corridor under one flat strip light at night, the chair facing nothing, the shot simply staying with it while nothing at all happens and no one arrives. Locked-off, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Most videos skip this part, because it is not inspiring. But you cannot understand anything he did later without sitting in it first.",
   "source": "",
   "status": "pending"
@@ -410,7 +410,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "Locked-off overhead on a full plate of hot food on a bare table. As the shot holds, the food disappears portion by portion with nobody touching it and no cutlery moving, until the plate is completely clean and nothing has been gained by it. Static, unsentimental. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro along a worn leather belt lying coiled on a dark table under hard raking light, the buckle mark and the shine of years pressed into one hole, and then a run of raw new holes punched further and further along the strap, each one crueller than the last, the leather curling where it no longer sits. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Not discomfort. A body that will not keep what you feed it. You can eat and still starve. And while everyone around him grew into their frames, his was being subtracted.",
   "source": "",
   "status": "pending"
@@ -426,7 +426,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "Photoreal cross-section of a bowel wall split into two halves side by side, the left smooth and pale pink and intact, the right with inflammation burning through every single layer from the inner lining outward, slow rotation revealing the full thickness of both. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Photoreal exterior of a coiled length of human small intestine suspended in pure black, soft rim light on the wet outer surface, the camera moving steadily in and then through the wall itself, the layers opening around the lens as it passes inside. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "Here is what is actually happening inside him. Crohn's is an inflammatory bowel disease. The immune system \u2014 the part of you built to attack infections \u2014 misidentifies the lining of your own digestive tract as the enemy and attacks that instead.",
   "source": "",
   "status": "pending"
@@ -442,7 +442,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "Photoreal cross-section of a bowel wall split into two halves side by side, the left smooth and pale pink and intact, the right with inflammation burning through every single layer from the inner lining outward, slow rotation revealing the full thickness of both. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Macro dark-field view of the immune system doing its actual job: pale white cells closing around clusters of invading bacteria in the tissue, engulfing and dissolving them cleanly, the surrounding pink surface calm and undamaged, precise and almost beautiful. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "Here is what is actually happening inside him. Crohn's is an inflammatory bowel disease. The immune system \u2014 the part of you built to attack infections \u2014 misidentifies the lining of your own digestive tract as the enemy and attacks that instead.",
   "source": "",
   "status": "pending"
@@ -458,7 +458,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "Photoreal cross-section of a bowel wall split into two halves side by side, the left smooth and pale pink and intact, the right with inflammation burning through every single layer from the inner lining outward, slow rotation revealing the full thickness of both. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "The same pale cells turning away from the bacteria and rounding on the smooth pink lining behind them instead, burrowing into their own tissue, the healthy surface flushing red and breaking open under them, the attack now pointed entirely the wrong way. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "Here is what is actually happening inside him. Crohn's is an inflammatory bowel disease. The immune system \u2014 the part of you built to attack infections \u2014 misidentifies the lining of your own digestive tract as the enemy and attacks that instead.",
   "source": "",
   "status": "pending"
@@ -474,7 +474,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "Macro endoscopic view travelling forward through an inflamed intestine, cobblestone ulceration and deep fissures in the tissue passing the lens, wet surfaces catching a small onboard light, and ahead the passage visibly thickening and narrowing to a tight scarred ring the lens cannot pass through. Slow forward tracking. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Photoreal cross-section of a bowel wall standing on end against black, inflammation burning outward from the inner lining and pushing through every single layer in turn until it reaches the outer surface, the full thickness of the wall lit hot from the inside, slow rotation. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "And it does not attack the surface only. The inflammation goes through the entire thickness of the bowel wall. That wall thickens, narrows, and scars, so the passage through it gets tighter \u2014 and the tissue that is supposed to pull nutrients out of your food stops being able to do it.",
   "source": "",
   "status": "pending"
@@ -490,7 +490,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "Macro endoscopic view travelling forward through an inflamed intestine, cobblestone ulceration and deep fissures in the tissue passing the lens, wet surfaces catching a small onboard light, and ahead the passage visibly thickening and narrowing to a tight scarred ring the lens cannot pass through. Slow forward tracking. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Macro endoscopic view travelling forward through an inflamed intestine, cobblestone ulceration and deep fissures passing the lens, wet surfaces catching a small onboard light, and ahead the passage visibly thickening and narrowing to a tight pale scarred ring the lens cannot pass through. Slow forward tracking. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "And it does not attack the surface only. The inflammation goes through the entire thickness of the bowel wall. That wall thickens, narrows, and scars, so the passage through it gets tighter \u2014 and the tissue that is supposed to pull nutrients out of your food stops being able to do it.",
   "source": "",
   "status": "pending"
@@ -506,7 +506,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "Macro endoscopic view travelling forward through an inflamed intestine, cobblestone ulceration and deep fissures in the tissue passing the lens, wet surfaces catching a small onboard light, and ahead the passage visibly thickening and narrowing to a tight scarred ring the lens cannot pass through. Slow forward tracking. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Extreme macro across a field of intestinal villi - a dense forest of fine finger-like fronds waving in fluid and drawing in glowing motes - and then the same field scarred flat, the fronds blunted, fused and motionless, nothing being taken in anywhere across the surface. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "And it does not attack the surface only. The inflammation goes through the entire thickness of the bowel wall. That wall thickens, narrows, and scars, so the passage through it gets tighter \u2014 and the tissue that is supposed to pull nutrients out of your food stops being able to do it.",
   "source": "",
   "status": "pending"
@@ -522,7 +522,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A translucent anatomical human figure against black, glowing warm particles of nutrition entering at the mouth and travelling down through the digestive tract, then dimming and dissolving to nothing before any of them can cross the wall and be absorbed, while the figure itself grows visibly thinner. Slow push. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "A heavy cast-iron balance scale in a black room under one hard light, its pan loaded with a stack of solid iron weights, the weights lifting away one at a time by nothing visible until the pan is almost empty and the beam swings up hard and keeps swinging. Locked-off, slow. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Which is the part that explains a teenager losing fifty pounds. He was eating. The food was going through him without ever being absorbed. His body was starving with a full stomach \u2014 and taking his muscle apart to stay alive.",
   "source": "",
   "status": "pending"
@@ -538,7 +538,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A translucent anatomical human figure against black, glowing warm particles of nutrition entering at the mouth and travelling down through the digestive tract, then dimming and dissolving to nothing before any of them can cross the wall and be absorbed, while the figure itself grows visibly thinner. Slow push. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "A translucent anatomical human figure against black, glowing warm particles of nutrition entering at the mouth and travelling down through the digestive tract in a steady stream, then dimming and dissolving to nothing against the inflamed wall, not one of them ever crossing it. Slow push. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "Which is the part that explains a teenager losing fifty pounds. He was eating. The food was going through him without ever being absorbed. His body was starving with a full stomach \u2014 and taking his muscle apart to stay alive.",
   "source": "",
   "status": "pending"
@@ -554,7 +554,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A translucent anatomical human figure against black, glowing warm particles of nutrition entering at the mouth and travelling down through the digestive tract, then dimming and dissolving to nothing before any of them can cross the wall and be absorbed, while the figure itself grows visibly thinner. Slow push. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "prompt": "Extreme macro inside skeletal muscle: bundles of red fibre packed tight, then unwinding strand by strand from the inside, filaments loosening and dissolving into faint particles that drift away through the tissue, the bundle visibly thinner where they have gone. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
   "narration": "Which is the part that explains a teenager losing fifty pounds. He was eating. The food was going through him without ever being absorbed. His body was starving with a full stomach \u2014 and taking his muscle apart to stay alive.",
   "source": "",
   "status": "pending"
@@ -570,7 +570,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A large wall calendar in a dark room where individual days ignite and burn out at completely unpredictable intervals, embers dropping from the page, no pattern to which days catch and no rhythm to it, locked-off medium. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A large wall calendar in a dark room where individual days ignite and burn out at completely unpredictable intervals, embers dropping from the page, no pattern to which days catch and no rhythm to it, locked-off medium. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "It also does not run on a schedule. It flares and it quiets, and the Crohn's and Colitis Foundation is clear that severity varies enormously between patients. You cannot plan around it. It arrives when it arrives.",
   "source": "",
   "status": "pending"
@@ -586,7 +586,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A large wall calendar in a dark room where individual days ignite and burn out at completely unpredictable intervals, embers dropping from the page, no pattern to which days catch and no rhythm to it, locked-off medium. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A vast dark plane seen from high above scattered with small fires, no two the same - some barely a spark that dies as you watch it, some steady and low, one or two burning so hard they light the ground for a hundred metres around them - the difference between them enormous and unexplained. Slow drift. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "It also does not run on a schedule. It flares and it quiets, and the Crohn's and Colitis Foundation is clear that severity varies enormously between patients. You cannot plan around it. It arrives when it arrives.",
   "source": "",
   "status": "pending"
@@ -602,7 +602,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A large wall calendar in a dark room where individual days ignite and burn out at completely unpredictable intervals, embers dropping from the page, no pattern to which days catch and no rhythm to it, locked-off medium. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A heavy door at the end of a bare dark room swinging wide open on its own with a wash of hot red light behind it, then falling shut, then opening again at intervals with no rhythm anyone could plan around, nobody on either side of it. Locked-off, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "It also does not run on a schedule. It flares and it quiets, and the Crohn's and Colitis Foundation is clear that severity varies enormously between patients. You cannot plan around it. It arrives when it arrives.",
   "source": "",
   "status": "pending"
@@ -650,7 +650,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "Hundreds of thousands of small identical glowing points spread across a vast dark plane, each one a person, camera pulling back steadily and continuously to reveal there is no edge to them in any direction. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A wall of identical steel drawers running away into the dark in every direction, one drawer sliding open under a hard overhead light to show it is completely empty inside - no file, no bottle, nothing - the camera holding on that emptiness while the rest of the wall stays shut. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Hundreds of thousands of Americans live with this. There is no cure. Not a difficult cure, not an expensive one \u2014 there isn't one. There is only management, and management has a cost of its own.",
   "source": "",
   "status": "pending"
@@ -698,7 +698,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "Macro on an IV drip chamber, a single drop forming and falling in slow motion, then the identical shot repeating over and over while the light through the window behind it cycles day to night to day to night, time passing with nothing about the shot changing. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A long defensive wall in the dark lined with tall floodlights and watch positions all burning steadily, then every one of them shutting down in sequence from the far end toward the lens, the wall and everything it was guarding going black. Slow track. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "For the rest of his life. The only way to call off a defence system that has turned on you is to shut the whole thing down \u2014 which means everything else gets in more easily. He has traded one illness for a permanent open door.",
   "source": "",
   "status": "pending"
@@ -714,7 +714,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "Macro on an IV drip chamber, a single drop forming and falling in slow motion, then the identical shot repeating over and over while the light through the window behind it cycles day to night to day to night, time passing with nothing about the shot changing. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A single heavy steel door standing wide open at the end of that unlit wall, cold air and dust streaming in through the gap, the door never once swinging back, the darkness beyond it completely open to whatever wants to come through. Slow push toward the opening. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "For the rest of his life. The only way to call off a defence system that has turned on you is to shut the whole thing down \u2014 which means everything else gets in more easily. He has traded one illness for a permanent open door.",
   "source": "",
   "status": "pending"
@@ -766,7 +766,7 @@
   "gen_dur": 4,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "The same plain meal on the same plate on the same table shot from directly overhead, the plate swapping out again and again while the meal never varies at all, seasons of light sweeping across the tabletop in time-lapse around it. Locked-off overhead. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro on a kitchen counter in flat cold light, a hand picking up one ordinary item of food after another, turning each one over, and setting every single one back down untouched beside a folded handwritten page, nothing ever leaving the counter, cropped at the wrist so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "This is the part people underestimate. Not the pain. The permanence. Every meal, every year, forever, checked against a list.",
   "source": "",
   "status": "pending"
@@ -798,7 +798,7 @@
   "gen_dur": 4,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "A single empty recovery armchair in the centre of a bare room, and around it in fast time-lapse a workspace assembles itself over months - desks, monitors, cameras, lights, stacked hard drives - closing in until the chair is completely walled in and unreachable and nobody has ever sat in it. Locked-off wide, day-night cycles flickering past. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A single empty recovery armchair in the centre of a completely bare room under one overhead light, a folded blanket over its arm, absolutely nothing else in the space, the shot holding on it long enough that its emptiness becomes the subject. Locked-off wide. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Now put everything you just heard underneath what he did next. Because he did not do it after he got better. There was no after.",
   "source": "",
   "status": "pending"
@@ -814,7 +814,7 @@
   "gen_dur": 4,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "A single empty recovery armchair in the centre of a bare room, and around it in fast time-lapse a workspace assembles itself over months - desks, monitors, cameras, lights, stacked hard drives - closing in until the chair is completely walled in and unreachable and nobody has ever sat in it. Locked-off wide, day-night cycles flickering past. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "The same chair while a workspace assembles itself around it in fast time-lapse over months - desks, monitors, cameras, lights, stacked hard drives - closing in from every side until the chair is walled in and unreachable and nobody has ever sat in it. Locked-off wide, day-night cycles flickering past. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Now put everything you just heard underneath what he did next. Because he did not do it after he got better. There was no after.",
   "source": "",
   "status": "pending"
@@ -850,7 +850,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "A dark room where an editing timeline is scrubbed back and forth on a monitor, cuts made and undone, while behind the desk a wall fills up with hundreds of printed rejected thumbnail variations pinned in grid after grid, the seasons changing in the window across the whole shot. Over-shoulder, screen slightly out of focus, chair empty. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A dark room where an editing timeline is scrubbed back and forth on a monitor, cuts made and undone and made again, while behind the desk a wall fills up with hundreds of printed rejected thumbnail variations pinned in grid after grid, the seasons changing in the window across the whole shot. Over-shoulder, screen slightly out of focus, chair empty. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Ten years of treating one problem as solvable \u2014 testing, failing, rebuilding \u2014 carried out by someone who has already told you he runs out of energy walking across a room.",
   "source": "",
   "status": "pending"
@@ -866,7 +866,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "A dark room where an editing timeline is scrubbed back and forth on a monitor, cuts made and undone, while behind the desk a wall fills up with hundreds of printed rejected thumbnail variations pinned in grid after grid, the seasons changing in the window across the whole shot. Over-shoulder, screen slightly out of focus, chair empty. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Camera set almost on the floor of a very long empty room, one hard light at the far end and a single chair beneath it, the distance between lens and chair stretched out by the low angle until crossing it looks like a journey, dust drifting, nobody attempting it. Locked-off, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Ten years of treating one problem as solvable \u2014 testing, failing, rebuilding \u2014 carried out by someone who has already told you he runs out of energy walking across a room.",
   "source": "",
   "status": "pending"
@@ -902,7 +902,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "An enormous machine of interlocking gears and conveyor belts running at speed in a dark industrial hall, taking in a steady feed of glowing material at one end and giving nothing back, camera tracking alongside it, relentless and indifferent. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "An enormous machine of interlocking gears and conveyor belts running at speed in a dark industrial hall, camera tracking alongside it, relentless and indifferent, no operator anywhere on the floor. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "The machine he built was extraordinary, and it was hungry, and the first thing it ate was everything that was not the machine. Including him.",
   "source": "",
   "status": "pending"
@@ -918,7 +918,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "An enormous machine of interlocking gears and conveyor belts running at speed in a dark industrial hall, taking in a steady feed of glowing material at one end and giving nothing back, camera tracking alongside it, relentless and indifferent. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "The intake mouth of that machine in close, a conveyor feeding a steady stream of glowing material into it and ordinary domestic things carried along in the same feed - a chair, a plate, a pair of shoes - all going in and nothing at all coming out the other side. Slow push into the throat of it. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "The machine he built was extraordinary, and it was hungry, and the first thing it ate was everything that was not the machine. Including him.",
   "source": "",
   "status": "pending"
@@ -966,7 +966,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "A vast clockwork mechanism turning in the dark with one small warm light held at its centre, gears sweeping past and through the space around that light, the light dimming further every time the machine speeds up. Slow orbit. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Extreme macro on one steel tooth of that mechanism under load, a hairline fracture opening at its root and travelling up through the metal, glowing faintly with heat, the whole machine going on turning at the same speed as though nothing has happened. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "A man who could optimise anything, running a system that consumed every hour, inside a body he had never been able to optimise at all. Something was going to break.",
   "source": "",
   "status": "pending"
@@ -1002,7 +1002,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "Two plain chairs facing each other across a bare table in an empty room, one single sheet of paper on the table between them, one hard light directly above. Nothing else anywhere in the room. Slow push down onto the paper. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A fresh unmarked calendar page hanging alone on the wall of an empty dark room under one bare bulb, every square blank, a corner lifting and dropping in a draught, dust in the light, absolutely nothing written and nobody there to write it. Locked-off, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Notice what the fix was not. Not motivation. Not a new year. It was a second person and a rule \u2014 because he already knew his own intentions were not reliable enough to bet on.",
   "source": "",
   "status": "pending"
@@ -1066,7 +1066,7 @@
   "gen_dur": 4,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "Extreme macro of a tattoo needle loaded with black ink descending toward bare skin and making first contact, slow motion, clinical and permanent, cropped so no face or identifying feature is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Extreme macro on a steel tray in hard clinical light, a tattoo machine being assembled and a fresh needle bar loaded with dense black ink, the ink drawn up and beading at the tip, everything cold and surgical, no face or identifying feature anywhere in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "That contract says that if I miss a single day of working out, I have to get MrBeast's name tattooed on my forehead.",
   "source": "",
   "status": "pending"
@@ -1082,7 +1082,7 @@
   "gen_dur": 4,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "Extreme macro of a tattoo needle loaded with black ink descending toward bare skin and making first contact, slow motion, clinical and permanent, cropped so no face or identifying feature is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Extreme macro of that loaded needle descending toward bare skin and making first contact in slow motion, the surface dimpling and the black ink going in, clinical and permanent, cropped so tight that no face or identifying feature is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "That contract says that if I miss a single day of working out, I have to get MrBeast's name tattooed on my forehead.",
   "source": "",
   "status": "pending"
@@ -1098,7 +1098,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A single signed sheet of paper pinned at eye height on a wall in a busy public corridor, held in hard focus while blurred figures pass continuously in front of it in both directions, the page never once out of view. Locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Extreme macro of a single drop of dense black ink hitting still clear water in a glass tank against black and blooming outward, threading through the whole volume in slow motion until the water is uniformly clouded and there is no version of it that can be undone. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Another man's name, on your face, permanently. It sounds like a bit. It is good behavioural engineering \u2014 make quitting immediate, public and irreversible, and the worst day stops being a decision.",
   "source": "",
   "status": "pending"
@@ -1114,7 +1114,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A single signed sheet of paper pinned at eye height on a wall in a busy public corridor, held in hard focus while blurred figures pass continuously in front of it in both directions, the page never once out of view. Locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A single signed sheet of paper pinned at eye height on a wall in a busy public corridor, held in hard focus while blurred anonymous figures pass continuously in front of it in both directions, the page never once out of view. Locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Another man's name, on your face, permanently. It sounds like a bit. It is good behavioural engineering \u2014 make quitting immediate, public and irreversible, and the worst day stops being a decision.",
   "source": "",
   "status": "pending"
@@ -1130,7 +1130,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A single signed sheet of paper pinned at eye height on a wall in a busy public corridor, held in hard focus while blurred figures pass continuously in front of it in both directions, the page never once out of view. Locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro on a heavy industrial lever switch in a dark plant room, already thrown hard over to one side and locked there with a steel hasp and padlock, the return position empty and unreachable, one hard raking light, nothing left to decide. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Another man's name, on your face, permanently. It sounds like a bit. It is good behavioural engineering \u2014 make quitting immediate, public and irreversible, and the worst day stops being a decision.",
   "source": "",
   "status": "pending"
@@ -1182,7 +1182,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A calendar grid of three hundred and ten squares on black filling in one at a time at speed, with scattered squares deliberately skipped and marked in deep red as they are passed, revealing at the end that the run was never unbroken and was never meant to be. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "An empty gym in the middle of the day, one loaded barbell racked and untouched, chalk dust hanging perfectly still in a shaft of light across the floor, the whole room deliberately at rest rather than abandoned. Locked-off wide, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "One correction the internet always drops. That was not three hundred and ten unbroken sessions. Programmed rest counted, deliberately, from the start. A plan that treats recovery as failure is not a plan. It is a countdown to injury.",
   "source": "",
   "status": "pending"
@@ -1198,7 +1198,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A calendar grid of three hundred and ten squares on black filling in one at a time at speed, with scattered squares deliberately skipped and marked in deep red as they are passed, revealing at the end that the run was never unbroken and was never meant to be. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Extreme macro along a steel cable pulled taut under heavy load in the dark, individual filaments springing loose one after another with a snap and curling back, the line still holding and visibly thinner every second, hard rim light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "One correction the internet always drops. That was not three hundred and ten unbroken sessions. Programmed rest counted, deliberately, from the start. A plan that treats recovery as failure is not a plan. It is a countdown to injury.",
   "source": "",
   "status": "pending"
@@ -1302,7 +1302,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A dense grid of small glowing rectangles on black, each one a finished video, filling steadily left to right at a relentless rate; then the rate visibly slows and a clean empty band opens across the grid and is deliberately left empty as the filling continues past it. Elegant motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A motorised treadmill belt running in an otherwise dark room, shot in tight macro from the side so the belt fills the frame and travels endlessly past the lens, the tread going by mile after mile with nobody on it, a single hard light across the surface. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "The number that should stop you is not the step count. It is the admission attached to it. He knew this was costing him uploads and did it anyway. For a person whose entire identity was output, choosing to produce less is the most radical thing in this story.",
   "source": "",
   "status": "pending"
@@ -1334,7 +1334,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A dense grid of small glowing rectangles on black, each one a finished video, filling steadily left to right at a relentless rate; then the rate visibly slows and a clean empty band opens across the grid and is deliberately left empty as the filling continues past it. Elegant motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A vast production line running at full speed in a dark hall, and a single hand entering frame to pull a heavy red stop lever, the belts slowing and coming to rest with product still on them, the hall going completely quiet while dust settles through the light, cropped at the wrist so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "The number that should stop you is not the step count. It is the admission attached to it. He knew this was costing him uploads and did it anyway. For a person whose entire identity was output, choosing to produce less is the most radical thing in this story.",
   "source": "",
   "status": "pending"
@@ -1386,7 +1386,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 4,
-  "prompt": "A single sheet of paper on black carrying only three or four short lines of handwriting at the very top, the rest of the page completely blank, camera pushing in slowly until the blankness fills the frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A deep card-index drawer pulled open under one hard light in a dark archive, a hand walking back through hundreds of stiff index cards, every single card completely blank on both sides, the drawer running further back than the light reaches, cropped at the wrist so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "And the limits of the record, stated plainly: he has never published a training split, a set and rep scheme, or a calorie target. Any video handing you one is filling in blanks. What he has described is a system \u2014 train, rest, walk, eat within the rules his body set.",
   "source": "",
   "status": "pending"
@@ -1402,7 +1402,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 4,
-  "prompt": "A single sheet of paper on black carrying only three or four short lines of handwriting at the very top, the rest of the page completely blank, camera pushing in slowly until the blankness fills the frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro on a fountain pen filling in the empty ruled lines of a page with fast confident handwriting, the ink fading out and lifting off the paper a second after each line is finished, the page returning to blank as quickly as it is filled. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "And the limits of the record, stated plainly: he has never published a training split, a set and rep scheme, or a calorie target. Any video handing you one is filling in blanks. What he has described is a system \u2014 train, rest, walk, eat within the rules his body set.",
   "source": "",
   "status": "pending"
@@ -1418,7 +1418,7 @@
   "gen_dur": 6,
   "beat_idx": 3,
   "beat_of": 4,
-  "prompt": "A single sheet of paper on black carrying only three or four short lines of handwriting at the very top, the rest of the page completely blank, camera pushing in slowly until the blankness fills the frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Four ordinary objects laid out in a single row on black under one hard overhead light, evenly spaced and equally lit - a knurled barbell collar, a folded blanket, a well-worn trainer, a plain white plate - the camera tracking slowly along the line and giving no one of them more weight than another. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "And the limits of the record, stated plainly: he has never published a training split, a set and rep scheme, or a calorie target. Any video handing you one is filling in blanks. What he has described is a system \u2014 train, rest, walk, eat within the rules his body set.",
   "source": "",
   "status": "pending"
@@ -1470,7 +1470,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "Time-lapse across three months from one fixed camera position looking out of a window, the light and the weather and the season changing completely while the same small routine repeats below at the same time every day, until it stops reading as effort at all. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Time-lapse across three months from one fixed camera position looking out of a window, the light and the weather and the season changing completely, frost giving way to rain giving way to hard low sun, the frame itself never moving an inch. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "A season. That is all it takes to stop deciding, and it is the mechanism underneath everything else here. Not discipline as a personality trait. Repetition, continued until the choice disappears.",
   "source": "",
   "status": "pending"
@@ -1486,7 +1486,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "Time-lapse across three months from one fixed camera position looking out of a window, the light and the weather and the season changing completely while the same small routine repeats below at the same time every day, until it stops reading as effort at all. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro on a simple cam and follower turning over in the dark, oiled and warm, lifting and dropping in exactly the same arc again and again with no strain and no drama at all, one hard rim light, extremely shallow focus. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "A season. That is all it takes to stop deciding, and it is the mechanism underneath everything else here. Not discipline as a personality trait. Repetition, continued until the choice disappears.",
   "source": "",
   "status": "pending"
@@ -1502,7 +1502,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "Time-lapse across three months from one fixed camera position looking out of a window, the light and the weather and the season changing completely while the same small routine repeats below at the same time every day, until it stops reading as effort at all. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro at floor level on a single stone stair tread worn into a deep smooth hollow by decades of use, hard side light raking across the dip, the stone polished where the decision used to be made and rough everywhere else, nobody on the stairs. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "A season. That is all it takes to stop deciding, and it is the mechanism underneath everything else here. Not discipline as a personality trait. Repetition, continued until the choice disappears.",
   "source": "",
   "status": "pending"
@@ -1566,7 +1566,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A loaded barbell moving up and down in an unbroken mechanical rhythm, shot in tight macro on the plates and the knurled bar, chalk dust and sweat catching the light, relentless repetition, cropped so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Time-lapse in a dim gym from one fixed position, the blade of daylight from a high window travelling the full width of the floor and dying out, the same loaded bar sitting in the same place through all of it, hours going by inside one set of walls. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Way harder\u2014infinitely harder. I thought I'd just work out for like an hour and it'd be relatively easy, but it's very time-consuming because we're trying to get what normal people would get, gains-wise, in like two years in one.",
   "source": "",
   "status": "pending"
@@ -1582,7 +1582,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A loaded barbell moving up and down in an unbroken mechanical rhythm, shot in tight macro on the plates and the knurled bar, chalk dust and sweat catching the light, relentless repetition, cropped so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Two identical hourglasses standing side by side on black under one hard light, the left one draining at an ordinary pace and the right one pouring at twice the speed, the glass of the fast one fogging and stressing under the rate it is being asked to run at. Macro, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Way harder\u2014infinitely harder. I thought I'd just work out for like an hour and it'd be relatively easy, but it's very time-consuming because we're trying to get what normal people would get, gains-wise, in like two years in one.",
   "source": "",
   "status": "pending"
@@ -1598,7 +1598,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "A clean mathematical equation drawn in light on black that refuses to balance, one side collapsing again and again no matter how carefully the other side is adjusted, elegant motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A clean diagram drawn in fine light on pure black, three linked nodes and two arrows building themselves precisely left to right, spare and confident and entirely convincing, elegant motion graphics holding on the finished figure. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "He had modelled it the way he models everything. Input, time, output. Bodies do not read the spreadsheet \u2014 and his had a head start on refusing.",
   "source": "",
   "status": "pending"
@@ -1630,7 +1630,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A steel tape measure on a black surface being drawn out by an unseen hand to exactly the same mark, released, and drawn out to that same mark again and again, the number identical every single time, macro, cold flat light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A steel tape measure on a black surface being drawn out by an unseen hand to exactly the same mark, released, and drawn out to that same mark again and again, the stop identical every single time, macro, cold flat light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "A hundred percent. I tell Alex all the time, I can't believe how little progress I've made in the amount of time. When we started, we both thought if we just went to the gym and worked out really hard, we would end up in the same spot. We were so stupid.",
   "source": "",
   "status": "pending"
@@ -1646,7 +1646,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A steel tape measure on a black surface being drawn out by an unseen hand to exactly the same mark, released, and drawn out to that same mark again and again, the number identical every single time, macro, cold flat light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Two identical barbells loaded with identical plates set out side by side on the floor of an empty gym under one hard light, chalk on both bars, everything about them matched and level, nobody in the room. Locked-off, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "A hundred percent. I tell Alex all the time, I can't believe how little progress I've made in the amount of time. When we started, we both thought if we just went to the gym and worked out really hard, we would end up in the same spot. We were so stupid.",
   "source": "",
   "status": "pending"
@@ -1662,7 +1662,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A steel tape measure on a black surface being drawn out by an unseen hand to exactly the same mark, released, and drawn out to that same mark again and again, the number identical every single time, macro, cold flat light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro raking light across a dark wall carrying two parallel columns of chalk tally marks that started at the same line, one column climbing steadily up out of frame and the other barely lifting off its starting point, the gap between them the whole subject. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "A hundred percent. I tell Alex all the time, I can't believe how little progress I've made in the amount of time. When we started, we both thought if we just went to the gym and worked out really hard, we would end up in the same spot. We were so stupid.",
   "source": "",
   "status": "pending"
@@ -1678,7 +1678,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A massive hydraulic ram pressing at full force against a solid concrete wall in an empty industrial space, the pressure gauge pinned hard at maximum and shaking, the wall completely unmarked and unmoved. Wide locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A massive hydraulic ram in an empty industrial space extending at full force against a solid concrete wall, hoses swelling, the pressure gauge climbing and then pinning hard at maximum and shaking there. Wide locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Sit with how strange that is. The man whose entire brand is that enough effort beats any problem, saying on camera that he put in the effort and the problem did not move. That is not modesty. That is the method failing.",
   "source": "",
   "status": "pending"
@@ -1694,7 +1694,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A massive hydraulic ram pressing at full force against a solid concrete wall in an empty industrial space, the pressure gauge pinned hard at maximum and shaking, the wall completely unmarked and unmoved. Wide locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "An enormous stone block on a dark floor with thick ropes drawn taut from every side, all of them straining and singing under load, dust lifting around the base, and the block not shifting a single millimetre in any direction. Wide locked-off, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Sit with how strange that is. The man whose entire brand is that enough effort beats any problem, saying on camera that he put in the effort and the problem did not move. That is not modesty. That is the method failing.",
   "source": "",
   "status": "pending"
@@ -1710,7 +1710,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A massive hydraulic ram pressing at full force against a solid concrete wall in an empty industrial space, the pressure gauge pinned hard at maximum and shaking, the wall completely unmarked and unmoved. Wide locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Macro on the hydraulic pressure gauge, the glass fogging and then cracking across, the needle shuddering and dropping all the way back to rest as a hose lets go somewhere off frame and the whole system goes slack. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Sit with how strange that is. The man whose entire brand is that enough effort beats any problem, saying on camera that he put in the effort and the problem did not move. That is not modesty. That is the method failing.",
   "source": "",
   "status": "pending"
@@ -1798,7 +1798,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A counter of six hundred glowing days laid out as a grid on black, complete and steady, then going dark from one end in a single continuous sweep until none are lit. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A counter of six hundred glowing days laid out as a complete grid on black, every square lit and steady, the camera holding on the full field of them long enough to feel how much of it there is. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Six hundred days of proof that he could do it, and it still lost to a production schedule. If you have ever built a habit you were proud of and watched it evaporate the month work got hard \u2014 that is this story, with fewer zeros.",
   "source": "",
   "status": "pending"
@@ -1814,7 +1814,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A counter of six hundred glowing days laid out as a grid on black, complete and steady, then going dark from one end in a single continuous sweep until none are lit. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "A production wall in a dark office filling in time-lapse with rank after rank of pinned schedule cards and call sheets, the paper spreading across the whole wall and papering straight over one small handwritten page that was already there, until it is completely covered. Locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Six hundred days of proof that he could do it, and it still lost to a production schedule. If you have ever built a habit you were proud of and watched it evaporate the month work got hard \u2014 that is this story, with fewer zeros.",
   "source": "",
   "status": "pending"
@@ -1830,7 +1830,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A counter of six hundred glowing days laid out as a grid on black, complete and steady, then going dark from one end in a single continuous sweep until none are lit. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "prompt": "The full grid of six hundred glowing days going dark from one end in a single continuous sweep, the light travelling across the whole field without pausing until not one square is lit and only black is left. Clean motion graphics. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "Six hundred days of proof that he could do it, and it still lost to a production schedule. If you have ever built a habit you were proud of and watched it evaporate the month work got hard \u2014 that is this story, with fewer zeros.",
   "source": "",
   "status": "pending"
@@ -1866,7 +1866,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "A small, calm version of the same routine at first light - one pair of trainers set by a door, a clock reading forty-five minutes, curtains drawn open onto early morning - three quiet static frames, sustainable rather than heroic. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A very large technical drawing spread across a table under one hard light, a pair of hands folding it down carefully panel by panel until it is small enough to sit in a palm, every line of it still intact at that size, cropped at the wrists so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "That is not surrender. It is the first moment in the whole story where he sizes a plan to the life he actually has instead of the one he wishes he had. And notice what he refuses to fix first. It is not the training.",
   "source": "",
   "status": "pending"
@@ -1882,7 +1882,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "A small, calm version of the same routine at first light - one pair of trainers set by a door, a clock reading forty-five minutes, curtains drawn open onto early morning - three quiet static frames, sustainable rather than heroic. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "One pair of worn trainers set neatly by a door in the first grey light of morning, curtains just drawn open behind them, a plain wall clock on the wall above, the whole frame quiet and small and entirely sustainable. Static, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "That is not surrender. It is the first moment in the whole story where he sizes a plan to the life he actually has instead of the one he wishes he had. And notice what he refuses to fix first. It is not the training.",
   "source": "",
   "status": "pending"
@@ -1898,7 +1898,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "A small, calm version of the same routine at first light - one pair of trainers set by a door, a clock reading forty-five minutes, curtains drawn open onto early morning - three quiet static frames, sustainable rather than heroic. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A bed in a dark bedroom with the sheets turned back and waiting, curtains closed against the last of the evening, the room cool and completely still, the shot treating the empty bed as the most important object in the film. Locked-off, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "That is not surrender. It is the first moment in the whole story where he sizes a plan to the life he actually has instead of the one he wishes he had. And notice what he refuses to fix first. It is not the training.",
   "source": "",
   "status": "pending"
@@ -1946,7 +1946,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "The same baseball diamond years later - weeds through the infield dirt, backstop rusted through, floodlights dead - and the camera drifting off it to find one narrow worn path leading away into darkness with everything either side of it closed off and impassable. Dusk. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "The same baseball diamond years later at dusk - weeds pushing up through the infield dirt, the backstop rusted through, the floodlights dead and one lamp housing hanging loose - the camera drifting slowly across a place that has been given nothing back. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "No. It took a future from a teenager and handed him nothing back. What it did was narrow the road until one path was left, and he ran down that one harder than anybody alive. That is not a gift. He has never once called it one.",
   "source": "",
   "status": "pending"
@@ -1962,7 +1962,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "The same baseball diamond years later - weeds through the infield dirt, backstop rusted through, floodlights dead - and the camera drifting off it to find one narrow worn path leading away into darkness with everything either side of it closed off and impassable. Dusk. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Slow forward move down a passage between high walls that close steadily in from both sides as the camera travels, every opening to left and right sealed off and impassable, the way ahead narrowing until only one gap the width of a person is left. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "No. It took a future from a teenager and handed him nothing back. What it did was narrow the road until one path was left, and he ran down that one harder than anybody alive. That is not a gift. He has never once called it one.",
   "source": "",
   "status": "pending"
@@ -1978,7 +1978,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "The same baseball diamond years later - weeds through the infield dirt, backstop rusted through, floodlights dead - and the camera drifting off it to find one narrow worn path leading away into darkness with everything either side of it closed off and impassable. Dusk. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Low on one narrow worn path running away into darkness, the ground down the middle of it beaten completely bare and polished hard by use while thick growth crowds it either side, the path going further out than the light does. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "No. It took a future from a teenager and handed him nothing back. What it did was narrow the road until one path was left, and he ran down that one harder than anybody alive. That is not a gift. He has never once called it one.",
   "source": "",
   "status": "pending"
@@ -1994,7 +1994,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "",
+  "prompt": "An old shirt hanging alone on a rail in a dark wardrobe under one thin shaft of light, the collar stretched and the fabric holding the deep set creases of a body that no longer fills it, the empty shape of it turning slightly in the still air. Macro, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "You look like a different human being. I do think that we both have severely changed our life for the better, and I'm very grateful for us doing this challenge.",
   "source": "",
   "status": "pending"
@@ -2010,7 +2010,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "",
+  "prompt": "Two pairs of heavily worn training shoes set down side by side on a floor by a door in hard first light, both broken in exactly the same way at the heel and the toe, laces loose, nobody in the room and nothing to say which pair belongs to whom. Static, held. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "You look like a different human being. I do think that we both have severely changed our life for the better, and I'm very grateful for us doing this challenge.",
   "source": "",
   "status": "pending"
@@ -2026,7 +2026,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 3,
-  "prompt": "Trainers waiting by a door in the blue dark of very early morning, a hand entering frame to pick them up, then a door opening onto hard first light, cropped at the wrist so no body is in frame, three slow static frames. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Trainers waiting by a door in the blue dark of very early morning, the house completely silent, a hand entering frame to pick them up before any light has reached the window, cropped at the wrist so no body is in frame. Static, slow. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "What he got to keep is not a physique. It is a pattern. Reserve the time before the day takes it. Put the promise somewhere another person can see it. Let recovery count. Then lose it, and start again.",
   "source": "",
   "status": "pending"
@@ -2042,7 +2042,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 3,
-  "prompt": "Trainers waiting by a door in the blue dark of very early morning, a hand entering frame to pick them up, then a door opening onto hard first light, cropped at the wrist so no body is in frame, three slow static frames. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A small handwritten page fixed with a magnet to a kitchen door at head height in a shared home, dawn light across it, placed exactly where somebody else has to walk past it, the room otherwise empty. Locked-off, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
   "narration": "What he got to keep is not a physique. It is a pattern. Reserve the time before the day takes it. Put the promise somewhere another person can see it. Let recovery count. Then lose it, and start again.",
   "source": "",
   "status": "pending"
@@ -2058,7 +2058,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 3,
-  "prompt": "Trainers waiting by a door in the blue dark of very early morning, a hand entering frame to pick them up, then a door opening onto hard first light, cropped at the wrist so no body is in frame, three slow static frames. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A door swinging open from inside onto hard first light, the frame moving out through it into cold bright morning air, the dark interior falling away behind, cropped so no body is anywhere in frame. Slow forward move. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "What he got to keep is not a physique. It is a pattern. Reserve the time before the day takes it. Put the promise somewhere another person can see it. Let recovery count. Then lose it, and start again.",
   "source": "",
   "status": "pending"
@@ -2090,7 +2090,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 2,
-  "prompt": "Time-lapse macro of running water wearing a hard stone visibly smooth over years, patient and relentless and never once forcing it, hard side light against black. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A tall studio mirror in a dark empty gym reflecting nothing but the room, an unpowered ring light and a dead camera on a tripod standing in front of it, all the apparatus of being looked at switched off and gathering dust. Locked-off, slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "Not to look good. Not for a thumbnail. Because his body has spent a decade trying to shut him down, and training is one of the few arguments he still gets to win.",
   "source": "",
   "status": "pending"
@@ -2142,7 +2142,7 @@
   "gen_dur": 6,
   "beat_idx": 0,
   "beat_of": 4,
-  "prompt": "Slow crane up and back from one small warm lamp burning alone on the floor of a vast dark space, the space opening out further and further around it as the camera rises, the lamp never dimming and never going out. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A kitchen counter at two in the morning in flat cold light, an ordinary glass of water and a small unmarked pill bottle set down side by side, a hand entering frame and taking them without hesitation and without ceremony, cropped at the wrist so no body is in frame. Macro. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "It's just life. Said by a man who lost fifty pounds at fifteen, built the biggest channel on earth exhausted, and still shows up to a gym on the days his body would rather he didn't. The disease did not build him. He built himself, in spite of it \u2014 over and over, because it never stops asking him to.",
   "source": "",
   "status": "pending"
@@ -2158,7 +2158,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 4,
-  "prompt": "Slow crane up and back from one small warm lamp burning alone on the floor of a vast dark space, the space opening out further and further around it as the camera rises, the lamp never dimming and never going out. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Very high aerial at night on the enormous film set again, now tiny in the frame, the whole lit operation running at full speed as a single small bright island in an enormous black landscape, camera rising steadily away from it. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "It's just life. Said by a man who lost fifty pounds at fifteen, built the biggest channel on earth exhausted, and still shows up to a gym on the days his body would rather he didn't. The disease did not build him. He built himself, in spite of it \u2014 over and over, because it never stops asking him to.",
   "source": "",
   "status": "pending"
@@ -2174,7 +2174,7 @@
   "gen_dur": 6,
   "beat_idx": 2,
   "beat_of": 4,
-  "prompt": "Slow crane up and back from one small warm lamp burning alone on the floor of a vast dark space, the space opening out further and further around it as the camera rises, the lamp never dimming and never going out. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "A heavy gym door pushed open from outside before dawn, cold light spilling in across an empty rubber floor and racked weights, a hand still on the push bar, the room beyond dark and waiting, cropped at the wrist so no body is in frame. Locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "It's just life. Said by a man who lost fifty pounds at fifteen, built the biggest channel on earth exhausted, and still shows up to a gym on the days his body would rather he didn't. The disease did not build him. He built himself, in spite of it \u2014 over and over, because it never stops asking him to.",
   "source": "",
   "status": "pending"
@@ -2222,7 +2222,7 @@
   "gen_dur": 6,
   "beat_idx": 1,
   "beat_of": 2,
-  "prompt": "A single practical light in a dark room switched off by an unseen hand, the frame settling to black, locked-off. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "prompt": "Out of that black, one hard overhead light rising slowly over a heavily loaded barbell resting on the floor of an empty space, chalk dust drifting up through the beam, everything beyond the pool of light still pure black, nobody there yet. Slow push. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
   "narration": "If this changed how you see him, tell me in the comments which part you did not know. And subscribe \u2014 the next one is about a man whose body was the entire job, right up until it nearly ended him.",
   "source": "",
   "status": "pending"

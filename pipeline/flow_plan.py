@@ -25,10 +25,19 @@ papered over:
    most -- would silently hand that bite a neighbouring narration block's
    prompt, putting the wrong picture on screen with nothing failing. Instead
    _prompt_for() requires a block to cover most of the shorter of the two
-   spans before it may supply a prompt at all, and returns "" otherwise. The
-   resulting gap is pinned in KNOWN_MISSING_PROMPTS so it cannot regress and
-   so the next task (which authors the missing prompt) knows exactly where
-   to look.
+   spans before it may supply a prompt at all, and returns "" otherwise.
+   KNOWN_MISSING_PROMPTS pins the resulting gap so it cannot regress
+   silently; it is empty now because Task 5 authored i=67's prompts
+   directly into flow_beat_prompts.json (point 3 below), not because the
+   document defect stopped being true.
+
+   Every beat of a split segment used to inherit that one segment-level
+   prompt verbatim -- three sibling beats generating three near-identical
+   images. manifest/flow_beat_prompts.json is a flat {shot_id: prompt}
+   file of authored per-beat prompts; build_shots() prefers an authored
+   entry for a shot's own shot_id and falls back to the segment-level
+   prompt only when the file has nothing for that id (including entirely,
+   before the file exists, so this module keeps running mid-authoring).
 
 2. edl_full.json's `segs` list has exactly one gap: seg i=6 (a bite, 44.498
    -> 54.098) is followed by seg i=7 (a narration, 58.098 -> ...), a bare
@@ -105,6 +114,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EDL = ROOT / "manifest/edl_full.json"
 BLOCKS = ROOT / "manifest/flow_doc_blocks.json"
 BITES = ROOT / "manifest/bite_windows.json"
+BEAT_PROMPTS = ROOT / "manifest/flow_beat_prompts.json"
 OUT = ROOT / "manifest/flow_shots.json"
 
 GEN_KINDS = {"narr", "beat", "card"}
@@ -123,11 +133,13 @@ GEN_KINDS = {"narr", "beat", "card"}
 # line).
 MIN_OVERLAP_FRACTION = 0.6
 
-# The document has no FLOW PROMPT for this bite at all -- not a parsing
-# bug, a gap in FLOW_DOC.md itself. Pinned here so a future re-run of this
-# module can't silently start borrowing a neighbour's prompt again, and so
-# the task that authors the missing prompt knows exactly where to look.
-KNOWN_MISSING_PROMPTS = {67}
+# The document had no FLOW PROMPT for this bite at all -- not a parsing
+# bug, a gap in FLOW_DOC.md itself. i=67's prompts were authored directly
+# into flow_beat_prompts.json in Task 5, so the gap is closed and this is
+# empty; kept (rather than deleted) so test_only_the_known_document_gap_
+# lacks_a_prompt keeps guarding against silent borrowing if it ever
+# reopens.
+KNOWN_MISSING_PROMPTS: set[int] = set()
 
 
 def sync_capable(bite: dict) -> bool:
@@ -202,6 +214,8 @@ def build_shots() -> list[dict]:
     edl = json.loads(EDL.read_text(encoding="utf-8"))
     blocks = json.loads(BLOCKS.read_text(encoding="utf-8"))
     bites = {b["i"]: b for b in json.loads(BITES.read_text(encoding="utf-8"))}
+    beat_prompts = (json.loads(BEAT_PROMPTS.read_text(encoding="utf-8"))
+                    if BEAT_PROMPTS.exists() else {})
 
     shots: list[dict] = []
 
@@ -229,7 +243,11 @@ def build_shots() -> list[dict]:
                 "shot_id": shot_id, "seg_i": seg_i, "seg_id": seg_id,
                 "kind": "gen", "start": b_start, "end": b_end,
                 "frames": bf, "gen_dur": gen_duration(b_end - b_start),
-                "beat_idx": idx, "beat_of": n, "prompt": prompt,
+                "beat_idx": idx, "beat_of": n,
+                # An authored per-beat prompt if Task 5 wrote one for this
+                # shot_id, else the segment-level prompt every beat used to
+                # share (three near-identical images from one description).
+                "prompt": beat_prompts.get(shot_id, prompt),
                 "narration": narration, "source": "", "status": "pending",
             })
 

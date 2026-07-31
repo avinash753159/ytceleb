@@ -122,6 +122,31 @@ def test_only_the_known_document_gap_lacks_a_prompt(shots):
     assert missing == sorted(KNOWN_MISSING_PROMPTS), missing
 
 
+def test_no_two_beats_of_a_segment_share_a_prompt(shots):
+    """Sibling beats inheriting the segment prompt generate three
+    near-identical shots in a row. Each beat must carry its own picture."""
+    from collections import defaultdict
+    seen = defaultdict(list)
+    for s in shots:
+        if s["kind"] == "gen" and s["beat_of"] > 1:
+            seen[(s["seg_i"], s["prompt"])].append(s["shot_id"])
+    dupes = {k[0]: v for k, v in seen.items() if len(v) > 1}
+    assert not dupes, f"segments with repeated prompts: {dupes}"
+
+
+def test_every_authored_prompt_reached_the_manifest(shots):
+    """A shot_id typo in the authored file would silently fall back to the
+    segment prompt rather than fail."""
+    import json as _json
+    authored = _json.loads(
+        (ROOT / "manifest/flow_beat_prompts.json").read_text(encoding="utf-8"))
+    by_id = {s["shot_id"]: s for s in shots}
+    unused = [k for k in authored if k not in by_id]
+    assert not unused, f"authored prompts for unknown shot_ids: {unused}"
+    for sid, text in authored.items():
+        assert by_id[sid]["prompt"] == text, sid
+
+
 def test_shot_ids_are_unique(shots):
     ids = [s["shot_id"] for s in shots]
     assert len(ids) == len(set(ids))
