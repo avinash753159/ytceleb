@@ -132,6 +132,19 @@ The API key goes in `api_key=` (an SDK-level API key), never as an OAuth
 bearer token. Passing this AQ.-format key as a bearer returns
 API_KEY_SERVICE_BLOCKED, which reads exactly like a revoked key and cost an
 hour of debugging on this project already.
+
+`load_key()` prefers `.veo_key` (a project-local, gitignored file) over
+the ambient `GEMINI_API_KEY`/`GOOGLE_API_KEY` environment variables, and
+this is deliberate, not incidental: a file checked into this project's
+directory is an explicit statement of intent, while an environment
+variable is ambient and may belong to something else entirely. It did,
+here -- three live runs (round 5) all authenticated with a stale, revoked
+`GOOGLE_API_KEY` left over in the operator's shell from an unrelated
+project, silently shadowing the correct, working key that sat unused in
+`.veo_key` the whole time, because the original priority order checked the
+environment first. `load_key()` now prints which source it used (key
+masked) every time it runs, specifically so this class of failure is never
+silent again.
 """
 
 from __future__ import annotations
@@ -206,13 +219,51 @@ class CapReached(Exception):
     of generate_one, not be mistaken for a transient submission failure."""
 
 
+def _mask_key(key: str) -> str:
+    """First 8 / last 4 characters, for logging a key without leaking it."""
+    if len(key) <= 12:
+        return key[:2] + "..."
+    return f"{key[:8]}...{key[-4:]}"
+
+
 def load_key() -> str:
-    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if not key and KEYFILE.exists():
+    """Resolve the API key -- .veo_key first, then the environment.
+
+    See module docstring for why the file wins: it is an explicit,
+    project-local statement of intent, while GEMINI_API_KEY/GOOGLE_API_KEY
+    are ambient and may (and here, did) belong to an unrelated project
+    still set in the operator's shell. Prints which source was used, key
+    masked, every call -- this class of failure was invisible for three
+    live runs precisely because nothing said where the credential came
+    from.
+    """
+    if KEYFILE.exists():
         key = KEYFILE.read_text(encoding="utf-8").strip()
+        source = ".veo_key"
+    else:
+        key = os.environ.get("GEMINI_API_KEY")
+        source = "GEMINI_API_KEY"
+        if not key:
+            key = os.environ.get("GOOGLE_API_KEY")
+            source = "GOOGLE_API_KEY"
+
     if not key:
         raise SystemExit(
             "No API key. Put it in .veo_key or set GEMINI_API_KEY.")
+
+    print(f"key source: {source} ({_mask_key(key)})")
+
+    # Shape sanity check only -- warn, never block. Key formats change
+    # (the classic "AIzaSy..." 39-char key vs. the newer "AQ...." format);
+    # a hard check here would be worse than the problem it catches.
+    looks_like_a_key = (
+        (key.startswith("AIzaSy") and len(key) == 39) or key.startswith("AQ.")
+    )
+    if not looks_like_a_key:
+        print(f"WARNING: key from {source} doesn't look like a Gemini API "
+              f"key (expected 'AIzaSy...' at 39 chars, or the newer "
+              f"'AQ....' format) -- proceeding anyway.")
+
     return key
 
 

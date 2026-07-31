@@ -16,6 +16,7 @@ from flow_gen import (  # noqa: E402
     build_config,
     estimate_cost,
     generate_one,
+    load_key,
     pending,
     record,
     run,
@@ -507,3 +508,64 @@ def test_alternating_failures_are_bounded_by_max_total_failures(
     assert len(failed) == flow_gen.MAX_TOTAL_FAILURES
     assert len(done) == flow_gen.MAX_TOTAL_FAILURES - 1, (
         "successes interleave 1-for-1 between failures right up to the trip")
+
+
+# -------------------------------------------------- fix round 5: key source
+
+def test_load_key_prefers_the_project_file_over_the_environment(
+        tmp_path, monkeypatch, capsys):
+    """The exact regression: .veo_key present AND GOOGLE_API_KEY set to a
+    different value (on the real machine: a stale, revoked key left in the
+    shell from an unrelated project). The file must win -- three live runs
+    authenticated with the dead environment credential while the correct
+    key sat unused in .veo_key, because the original priority checked the
+    environment first."""
+    keyfile = tmp_path / ".veo_key"
+    keyfile.write_text("AQ.the-real-project-key", encoding="utf-8")
+    monkeypatch.setattr(flow_gen, "KEYFILE", keyfile)
+    monkeypatch.setenv("GOOGLE_API_KEY", "AIzaSySTALEfromANunrelatedPROJECTxx")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+
+    assert load_key() == "AQ.the-real-project-key"
+    assert "key source: .veo_key" in capsys.readouterr().out
+
+
+def test_load_key_falls_back_to_gemini_api_key(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(flow_gen, "KEYFILE", tmp_path / "no-such-file")
+    monkeypatch.setenv("GEMINI_API_KEY", "AQ.from-gemini-env")
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+
+    assert load_key() == "AQ.from-gemini-env"
+    assert "key source: GEMINI_API_KEY" in capsys.readouterr().out
+
+
+def test_load_key_falls_back_to_google_api_key(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(flow_gen, "KEYFILE", tmp_path / "no-such-file")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("GOOGLE_API_KEY", "AQ.from-google-env")
+
+    assert load_key() == "AQ.from-google-env"
+    assert "key source: GOOGLE_API_KEY" in capsys.readouterr().out
+
+
+def test_load_key_raises_when_nothing_is_configured(tmp_path, monkeypatch):
+    monkeypatch.setattr(flow_gen, "KEYFILE", tmp_path / "no-such-file")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+
+    with pytest.raises(SystemExit, match=r"\.veo_key"):
+        load_key()
+
+
+def test_load_key_warns_but_does_not_raise_on_an_unfamiliar_shape(
+        tmp_path, monkeypatch, capsys):
+    """A shape check that blocks would be worse than the problem it
+    catches -- key formats change. This must warn, not raise."""
+    keyfile = tmp_path / ".veo_key"
+    keyfile.write_text("not-a-recognisable-key-shape", encoding="utf-8")
+    monkeypatch.setattr(flow_gen, "KEYFILE", keyfile)
+
+    key = load_key()          # must not raise
+
+    assert key == "not-a-recognisable-key-shape"
+    assert "WARNING" in capsys.readouterr().out
