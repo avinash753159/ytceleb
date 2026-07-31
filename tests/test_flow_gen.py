@@ -19,8 +19,15 @@ from flow_gen import (  # noqa: E402
     pending,
     record,
     run,
-    seed_for,
 )
+
+# Round 4: the only fields the Developer API tier this project's key runs
+# under actually accepts. Every other field this pipeline once set on
+# GenerateVideosConfig (seed, generate_audio, negative_prompt,
+# person_generation) is Enterprise/Vertex-only and raises client-side.
+ALLOWED_CONFIG_FIELDS = {
+    "number_of_videos", "duration_seconds", "aspect_ratio", "resolution",
+}
 
 
 def mk(shot_id, gen_dur=6, kind="gen", prompt="a prompt, no text, no logos"):
@@ -180,42 +187,25 @@ def test_record_never_silently_drops_a_failed_shot(tmp_path):
     assert got["s000a"]["state"] == "failed"
 
 
-# -------------------------------------------------------------- seeding ---
-
-def test_seed_is_deterministic_for_the_same_shot_id():
-    assert seed_for("s042") == seed_for("s042")
-
-
-def test_seed_differs_across_shot_ids():
-    assert seed_for("s042") != seed_for("s043")
-
-
-def test_seed_is_a_nonnegative_int():
-    s = seed_for("s_lead")
-    assert isinstance(s, int)
-    assert s >= 0
-
-
 # ---------------------------------------------------------- config shape ---
+#
+# Round 4: seed, generate_audio, negative_prompt and person_generation were
+# ALL rejected client-side by the Developer API tier this project's key runs
+# under -- discovered two live runs at a time (round 3: seed; round 4:
+# generate_audio) after the same root cause (reading GenerateVideosConfig's
+# full field list without checking the tier). build_config now sends only
+# the accepted fields; seed_for() was deleted since nothing calls it once
+# it's no longer recorded as ledger provenance either.
 
-def test_build_config_disables_generated_audio():
-    cfg = build_config(mk("a"))
-    assert cfg.generate_audio is False
-
-
-def test_build_config_carries_the_negative_prompt():
-    cfg = build_config(mk("a"))
-    assert cfg.negative_prompt == NEGATIVE_PROMPT
-
-
-def test_build_config_does_not_set_seed():
-    """Round 3: the Developer API tier this project's key runs under rejects
-    `seed=` client-side (`ValueError: seed parameter is only supported in
-    Gemini Enterprise Agent Platform mode, not in Gemini Developer API
-    mode`) -- this was hit on the first live run. seed_for() still exists
-    and is still recorded in the ledger as provenance, just never sent."""
-    cfg = build_config(mk("s042"))
-    assert cfg.seed is None
+def test_build_config_sends_only_developer_api_fields():
+    """seed, generate_audio, negative_prompt, person_generation, fps and
+    others are Vertex/Enterprise-only; the Developer API raises ValueError
+    client-side before the request is sent. This is an explicit allow-list
+    assertion so re-adding a rejected field fails in the suite, not on a
+    live (if free) call."""
+    cfg = build_config(mk("s000a"))
+    sent = {k for k, v in cfg.model_dump().items() if v is not None}
+    assert sent == ALLOWED_CONFIG_FIELDS, sent
 
 
 def test_build_config_uses_the_locked_format():
@@ -226,15 +216,10 @@ def test_build_config_uses_the_locked_format():
     assert cfg.number_of_videos == 1
 
 
-def test_build_config_does_not_set_fps():
-    """Task 7 verifies 24fps output empirically; fps is only passed here if
-    the model is confirmed to honour it, which has not been done."""
-    cfg = build_config(mk("a"))
-    assert cfg.fps is None
-
-
 def test_model_and_negative_prompt_constants():
     assert MODEL == "veo-3.1-lite-generate-preview"
+    # NEGATIVE_PROMPT is no longer sent to the API (round 4) -- it is kept
+    # as the documented "what we're excluding" text for a later QC step.
     assert NEGATIVE_PROMPT == (
         "text, letters, words, subtitles, captions, watermark, logo, "
         "brand name, signage, on-screen graphics, timestamp, numbers"

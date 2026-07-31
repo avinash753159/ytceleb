@@ -11,6 +11,26 @@ prepay against a $32.90 full pass (118 gen shots, 658 billed seconds at
 $0.05/s), so an unattended runaway would exhaust the balance before anyone
 looked. The default cap of $20.00 is deliberately below the prepay.
 
+`build_config` sends ONLY fields the Developer API tier this project's key
+actually runs under will accept. This was extracted from the SDK source
+after two live runs each independently discovered one more rejected field
+the hard way (round 3: `seed`; round 4: `generate_audio`) -- both were
+rejected client-side, before any request left the machine, so both cost
+$0.00, but two paid-run-shaped diagnostics for what turned out to be the
+same root cause (reading `GenerateVideosConfig`'s full field list without
+checking which fields this API *tier* accepts) was one too many.
+
+  REJECTED (raises ValueError client-side, Enterprise/Vertex-only): seed,
+  generate_audio, negative_prompt, person_generation, fps, enhance_prompt,
+  compression_quality, resize_mode, labels, mask, output_gcs_uri,
+  pubsub_topic.
+
+  ACCEPTED: aspect_ratio, duration_seconds, resolution, number_of_videos,
+  last_frame, reference_images, http_options, webhook_config.
+
+`reference_images` is accepted -- a look-book for visual consistency is
+still possible in a later task; it is not blocked by any of this.
+
 THE LEDGER MUST COUNT WHAT GOOGLE CHARGES FOR, NOT WHAT THE LOCAL CLIENT
 MANAGED TO PARSE. `client.models.generate_videos(...)` returns after Google
 has accepted and queued the job -- generation runs and is billed server-side
@@ -77,35 +97,36 @@ actual reason (see below) was only visible after a second, separate
 diagnostic run. The ledger is supposed to make that unnecessary.
 
 Every prompt in manifest/flow_shots.json already ends with "no text, no
-logos", but generated video invents signage anyway -- a known Veo failure
-mode that has already cost whole batches of earlier footage withdrawn over
-legible brand marks. NEGATIVE_PROMPT is passed on every call as a second
-line of defense the model prompt can't be relied on alone to provide.
+logos, no recognisable faces", but generated video invents signage anyway --
+a known Veo failure mode that has already cost whole batches of earlier
+footage withdrawn over legible brand marks. `negative_prompt` was meant to
+be a second, API-level line of defense, but it is Enterprise/Vertex-only
+and the Developer API rejects it client-side. THAT ENFORCEMENT NOW LIVES
+ENTIRELY IN THE PROMPT TEXT, backed up by post-hoc QC in a later task --
+this is a real, live gap, not a cosmetic one: NEGATIVE_PROMPT is kept below
+as a documented constant (the canonical "what we're excluding" text for
+that QC step) precisely so nobody re-adds it to the API call thinking it
+will help. It won't -- it will raise.
 
-generate_audio is forced off: the film's audio track is locked and already
-approved, so any audio Veo generates is pure waste and a leakage risk if a
-frame of it ever survives into the final mux.
+Two real, non-cosmetic losses fall out of the round-4 field cut, beyond the
+negative-prompt one above:
 
-`seed_for(shot_id)` still computes a deterministic per-shot value and it is
-still written into every status ledger entry as provenance -- but it is NOT
-sent to Veo. Setting `seed=` on GenerateVideosConfig was this project's
-original plan (a rerun would reproduce the same picture, and a deliberate
-reroll would be an explicit act), but the first live run raised, verbatim:
+  1. NO REPRODUCIBILITY. `seed` is rejected, so there is no way to pin a
+     shot's output and no way to "nudge" a rejected result -- regenerating
+     a shot produces a genuinely different picture every time. A shot that
+     needs a redo can only be re-rolled, not reproduced or steered.
+  2. NO FORCED-OFF AUDIO. `generate_audio` is also rejected, so this
+     process cannot tell Veo to skip audio generation. The film's own
+     audio track is locked and approved; whatever Veo's Developer-API
+     default behaviour turns out to be for audio, it must be verified
+     (and stripped at the mux if present) by whichever later task first
+     handles the raw clips -- this module can no longer guarantee it away.
 
-    ValueError: seed parameter is only supported in Gemini Enterprise Agent
-    Platform mode, not in Gemini Developer API mode.
-
-This project's API key runs in Developer API mode. Do not re-add `seed=`
-to `build_config` without first confirming a move to Enterprise Agent
-Platform mode -- the Developer API rejects it outright, client-side, before
-any request is sent.
-
-person_generation is set to "allow_adult" -- the installed SDK
-(google-genai 2.14.0)'s own field description names exactly two accepted
-values, "dont_allow" and "allow_adult", and this is a live-action human
-documentary. fps is left unset: the model's fidelity to a requested fps has
-not been verified, and Task 7 checks 24fps empirically against the actual
-output rather than trusting a request parameter.
+fps is left unset regardless -- it is also Enterprise-only, so this was
+never a choice to make: the model's fidelity to a requested fps was never
+going to be independently verified here anyway, and Task 7 checks 24fps
+empirically against the actual output rather than trusting a request
+parameter that the API would have rejected.
 
 The API key goes in `api_key=` (an SDK-level API key), never as an OAuth
 bearer token. Passing this AQ.-format key as a bearer returns
@@ -116,7 +137,6 @@ hour of debugging on this project already.
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import time
@@ -166,17 +186,18 @@ MAX_TOTAL_FAILURES = 8
 RECORD_RETRIES = 3
 RECORD_RETRY_SLEEP = 0.2      # seconds
 
-# Every prompt already says "no text, no logos", but Veo invents signage
-# anyway; this is the belt to that belt-and-suspenders. See module docstring.
+# NOT passed to GenerateVideosConfig -- `negative_prompt` is Enterprise/
+# Vertex-only and the Developer API rejects it client-side (round 4; see
+# module docstring). Kept as a documented constant only: it is the
+# canonical "what we're excluding" text, for a later QC task to check
+# generated footage against, since the API-level enforcement it was meant
+# to provide isn't available and the only defense left is the prompt's own
+# trailing "no text, no logos, no recognisable faces" plus that QC step.
+# Do not pass this to GenerateVideosConfig -- it will raise ValueError.
 NEGATIVE_PROMPT = (
     "text, letters, words, subtitles, captions, watermark, logo, brand "
     "name, signage, on-screen graphics, timestamp, numbers"
 )
-
-# The installed SDK's GenerateVideosConfig.person_generation field
-# description lists exactly two supported values: "dont_allow" and
-# "allow_adult". This is a live-action adult documentary, so "allow_adult".
-PERSON_GENERATION = "allow_adult"
 
 
 class CapReached(Exception):
@@ -237,30 +258,18 @@ def record(status_path: Path, shot_id: str, **fields) -> None:
     ) from last_exc
 
 
-def seed_for(shot_id: str) -> int:
-    """Deterministic per-shot seed, derived from the shot id.
-
-    A stable hash rather than random.seed()/hash() -- the latter is salted
-    per-process in CPython (PYTHONHASHSEED), so it would produce a different
-    "deterministic" seed on every run, defeating the point. sha256 is stable
-    across processes, machines and Python versions. Truncated to 32 bits: a
-    plain, small, well within any int64 seed field's range.
-    """
-    digest = hashlib.sha256(shot_id.encode("utf-8")).hexdigest()
-    return int(digest[:8], 16)
-
-
 def build_config(shot: dict):
     """Build the GenerateVideosConfig for one shot.
 
-    Split out from generate_one so the config shape -- audio off, negative
-    prompt, locked format -- can be tested without touching the network.
-
-    Deliberately does NOT set `seed`: the Developer API tier this project's
-    key runs under rejects it client-side (see module docstring for the
-    exact error the first live run hit). `seed_for(shot_id)` still exists
-    and is still recorded in the status ledger as provenance, just never
-    sent here.
+    Sends ONLY fields the Developer API tier this project's key runs under
+    accepts: aspect_ratio, resolution, duration_seconds, number_of_videos.
+    Everything this pipeline once also set here -- seed, generate_audio,
+    negative_prompt, person_generation -- is Enterprise/Vertex-only and
+    raises a client-side ValueError on this tier. See module docstring for
+    the full accepted/rejected lists and what losing each of these costs.
+    Split out from generate_one so this shape can be tested (see
+    test_build_config_sends_only_developer_api_fields) without touching
+    the network.
     """
     from google.genai import types
 
@@ -269,9 +278,6 @@ def build_config(shot: dict):
         resolution=RESOLUTION,
         duration_seconds=shot["gen_dur"],
         number_of_videos=1,
-        generate_audio=False,
-        negative_prompt=NEGATIVE_PROMPT,
-        person_generation=PERSON_GENERATION,
     )
 
 
@@ -421,7 +427,7 @@ def run(todo: list[dict], status_path: Path, client, cap: float,
             # printed and lost.
             record(status_path, shot["shot_id"], state="interrupted",
                    charged=charged, submissions=submissions,
-                   error=str(exc)[:300], seed=seed_for(shot["shot_id"]))
+                   error=str(exc)[:300])
             print(f"STOP: {exc} at {shot['shot_id']} "
                   f"(charged ${charged:.2f} for it); "
                   f"{total - i + 1} shots left")
@@ -431,7 +437,7 @@ def run(todo: list[dict], status_path: Path, client, cap: float,
             consecutive_failures += 1
             total_failures += 1
             record(status_path, shot["shot_id"], state="failed",
-                   error=str(exc)[:300], seed=seed_for(shot["shot_id"]),
+                   error=str(exc)[:300],
                    charged=charged, submissions=submissions)
             print(f"[{i}/{total}] {shot['shot_id']} FAILED: "
                   f"{str(exc)[:120]}  (charged ${charged:.2f})")
@@ -453,8 +459,7 @@ def run(todo: list[dict], status_path: Path, client, cap: float,
         else:
             consecutive_failures = 0
             record(status_path, shot["shot_id"], state="done",
-                   path=str(dest.relative_to(ROOT)), cost=charged,
-                   seed=seed_for(shot["shot_id"]))
+                   path=str(dest.relative_to(ROOT)), cost=charged)
             print(f"[{i}/{total}] {shot['shot_id']} "
                   f"{shot['gen_dur']}s  ${spent:.2f}")
 
