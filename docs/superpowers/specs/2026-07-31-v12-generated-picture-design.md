@@ -223,20 +223,37 @@ The prompt list is reviewed by the owner **before any generation at all**. The
 prompts are the film now; if they are wrong, no amount of clean pipeline saves
 it.
 
-## 12. Decisions still needed
+## 12. Delivery format
 
-These are flagged rather than assumed, because each changes the output:
+All four interview sources are **1280×720**, at four different frame rates:
 
-1. **Frame rate.** The film is 30fps; Veo outputs 24fps. Conforming 24→30 by
-   frame duplication judders on camera moves; retiming changes shot length.
-   Alternative: deliver V12 at 24fps, which matches both the prompts and the
-   documentary reference.
-2. **Resolution.** Lite at 720p is 1280×720 and needs a 1.5× upscale to the
-   film's 1080p. Native 1080p from Veo **requires 8s clips**, which forfeits
-   the 4s/6s saving: 816s billed, **$65.28** instead of $29.10.
-3. **The 2.5s discrepancy.** The audio file is 738.606s; the EDL ends at
-   736.107s. The tail is unaccounted for and must be identified before
-   frame-exact assembly, since the frame budget is derived from the audio.
+| Source | Frame rate | Resolution |
+|---|---|---|
+| `7r3ORKgNUjw` | 30 | 1280×720 |
+| `9IQ_ldV9z_A` | 23.976 | 1280×720 |
+| `FjrJ2DJN_pA` | 25 | 1280×720 |
+| `cLRLEnPaJLM` | 29.97 | 1280×720 |
+
+**1. Frame rate: deliver at 24fps.** V8/V9/V11 were 30fps; V12 changes this
+deliberately. Generated shots are 69% of the runtime and Veo outputs 24fps
+natively, so 24fps delivery leaves the majority pass-through and converts only
+the talking heads — where motion is least and judder shows least. Delivering
+30fps would frame-duplicate every slow deliberate camera move, which is the
+worst case for judder. 24fps also matches the Doc's prompts and the cinematic
+reference. Source rates differ anyway; conversion is unavoidable for some
+material either way.
+
+**2. Resolution: generate 720p, upscale to 1080p for delivery.** The film is
+capped at 720p by its own interview footage, so native 1080p generation
+(**$65.28**, forced to 8s clips) would buy nothing and would make generated
+shots visibly sharper than the bites they cut against. Upscaling to 1080p for
+upload is what the film already does, and YouTube allocates more bitrate to a
+1080p upload. **Cost stays $29.10/pass.**
+
+**3. The 2.5s tail is silence.** Measured at mean −69.9 dB / max −57.8 dB,
+against −17.8 dB for a genuine music-only beat. It is dead air, not an
+unaccounted music cue. The frame budget derives from the EDL's **736.107s**;
+the silent tail carries a fade to black.
 
 ## 13. Explicitly out of scope
 
