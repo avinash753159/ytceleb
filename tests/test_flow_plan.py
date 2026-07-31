@@ -135,8 +135,14 @@ def test_no_two_beats_of_a_segment_share_a_prompt(shots):
 
 
 def test_every_authored_prompt_reached_the_manifest(shots):
-    """A shot_id typo in the authored file would silently fall back to the
-    segment prompt rather than fail."""
+    """Catches an authored key that matches no shot at all (a typo landing
+    nowhere real, e.g. a stray character or a shot_id from a since-changed
+    segment). Does NOT catch a typo that lands on a SIBLING's real
+    shot_id -- that key exists, so `unused` stays empty, and the equality
+    check below is tautological (by_id[sid]["prompt"] was populated from
+    this same authored dict, so it trivially equals what the file says
+    regardless of which beat was supposed to receive it). See
+    test_every_multi_beat_shot_has_an_authored_prompt for that case."""
     import json as _json
     authored = _json.loads(
         (ROOT / "manifest/flow_beat_prompts.json").read_text(encoding="utf-8"))
@@ -145,6 +151,19 @@ def test_every_authored_prompt_reached_the_manifest(shots):
     assert not unused, f"authored prompts for unknown shot_ids: {unused}"
     for sid, text in authored.items():
         assert by_id[sid]["prompt"] == text, sid
+
+
+def test_every_multi_beat_shot_has_an_authored_prompt(shots):
+    """A typo landing on a SIBLING's shot_id steals that shot's prompt and
+    leaves the intended beat on the segment fallback. The stolen key is a
+    real id, so the reached-the-manifest check passes and the equality
+    assertion is tautological. Only this direction catches it."""
+    authored = json.loads(
+        (ROOT / "manifest/flow_beat_prompts.json").read_text(encoding="utf-8"))
+    orphaned = [s["shot_id"] for s in shots
+                if s["kind"] == "gen" and s["beat_of"] > 1
+                and s["shot_id"] not in authored]
+    assert not orphaned, f"beats with no authored prompt: {orphaned}"
 
 
 def test_shot_ids_are_unique(shots):
