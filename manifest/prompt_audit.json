@@ -1,0 +1,710 @@
+{
+ "s_lead": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s000a": {
+  "verdict": "WEAK",
+  "why": "shows production spend, not the audience figure this beat sits under; the stated fact is three hundred million subscribers",
+  "replacement": "A vast night-time crowd seen from high above, packed shoulder to shoulder from the foreground out past the horizon, individual faces far too small and too dark to read, the sea of people running unbroken to the edge of the world under one low band of cold light, blurred heads in the near foreground, dense crowd in the midground, the mass dissolving into haze at the back. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s000b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s002a": {
+  "verdict": "FAIL",
+  "why": "owner rejected: shows the moment before the sentence is true, set-up instead of illustration",
+  "replacement": "The gut wall in the middle of being attacked: dense masses of pale immune cells already buried deep in the pink lining across the whole field, the tissue split, weeping and bleeding around every one of them, fresh raw damage opening between them, one fold sharp in macro foreground, the inflamed surface receding into near-black behind. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "needs_video": false
+ },
+ "s002b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s003a": {
+  "verdict": "FAIL",
+  "why": "owner rejected: objects on a table standing for life events, a metaphor that must be decoded",
+  "replacement": "A hospital ward bay at night, an empty adolescent bed with the sheets thrown back and the side rail up in the sharp foreground, a drip stand carrying a half-empty bag beside it in the midground, the rest of the darkened ward and one cold window running away behind, nobody in the room. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s003b": {
+  "verdict": "FAIL",
+  "why": "owner rejected: same undecodable metaphor, and the hand-drags-it-back idea only exists as motion",
+  "replacement": "Two chalked adult male hands closed hard on the knurling of a heavily loaded barbell resting on a dark gym floor, macro on the grip in the foreground, loaded plates in the midground, the unlit gym running back behind, chalk dust in one hard light, cropped at the wrists so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s004a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s005a": {
+  "verdict": "WEAK",
+  "why": "shows the setting rather than the athlete, and repeats the glove-in-the-dirt object language the owner already rejected",
+  "replacement": "Wide from behind the chain-link backstop of a hard-used ball diamond in late golden light, the mesh sharp in the foreground, the infield beyond it churned and scuffed all over from constant play, dust hanging in the low sun, a scatter of small distant figures out by the far treeline far too small to identify. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s005b": {
+  "verdict": "WEAK",
+  "why": "the endless-firing machine is pure motion, and the absent hitter has to be decoded; as a still it reads as an abandoned cage",
+  "replacement": "Inside a batting cage at dusk, the worn plate and bare beaten earth sharp in the foreground, the netting bellied out and worn through in the midground, a hopper spilling hundreds of scuffed balls and the dead field lights beyond, every surface showing years of relentless use. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s_break": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s007a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s007b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s009a": {
+  "verdict": "WEAK",
+  "why": "the floodlights are the 'future closing' image and land a beat early; this beat sits on the words 'a body'",
+  "replacement": "A darkened radiology reading room, a wall lightbox glowing in the midground carrying a run of abdominal scan films with one stretch of bowel standing out bright and thickened, the desk edge and a stack of unmarked film sleeves sharp in the foreground, the corridor beyond the door pure black, every marking soft and unreadable. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s009b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s009c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s010a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s011a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s011b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s013a": {
+  "verdict": "FAIL",
+  "why": "food removed by an invisible force is the same undecodable device the owner rejected, and it cannot exist as a still",
+  "replacement": "A kitchen table in a dim house, a full hot meal laid out and steaming in sharp foreground, the chair behind it pushed back and empty in the midground, and past it a dark hallway with a bathroom door standing open and cold light spilling out across the floor. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s013b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s014a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s014b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s014c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s015a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s015b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s015c": {
+  "verdict": "WEAK",
+  "why": "needs two states in sequence; a still can only carry one unless both sit in the same frame",
+  "replacement": "Extreme macro across a field of intestinal villi, fine finger-like fronds standing tall and waving in fluid in the sharp foreground, blunting and fusing together through the midground, and behind them the same surface scarred completely flat and motionless out to the black, nothing being taken in anywhere on the far plain. photoreal medical visualisation, macro, wet biological surfaces, near-black surround, deep red and raw pink as the only saturated colours, slow deliberate camera move, shallow depth of field, no text, no labels, no logos, 24fps",
+  "needs_video": false
+ },
+ "s016a": {
+  "verdict": "FAIL",
+  "why": "weights lifted away by an invisible force is the rejected device, and it never shows the fifty pounds",
+  "replacement": "A cold clinical examination room, a physician's beam balance scale standing in the sharp foreground with its sliding counterweights run far down the bar and the platform empty, the examination couch and paper roll in the midground, the rest of the room dark, every beam marking soft and unreadable. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s016b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s016c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s017a": {
+  "verdict": "WEAK",
+  "why": "days igniting at random intervals is a motion gag a still cannot deliver",
+  "replacement": "A wall calendar in a dark kitchen, its grid burned clean through at scattered random days, charred holes with scorched curling edges and no pattern at all to which squares are gone, ash on the counter in the sharp foreground, the dark room running back behind it. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s017b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s017c": {
+  "verdict": "WEAK",
+  "why": "a door opening and shutting at random intervals is pure motion; as a still it is only a door, and it collides with the open-door shot at s021c",
+  "replacement": "A kitchen at night abandoned mid-meal, a plate of half-eaten food and a knocked-over glass sharp in the foreground, a chair shoved back hard from the table in the midground, a coat still on its hook and the dark hallway beyond, everything stopped exactly where it was. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s018a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": true
+ },
+ "s019a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s019b": {
+  "verdict": "WEAK",
+  "why": "one empty drawer in a wall of drawers needs decoding before 'there is no cure' lands",
+  "replacement": "A bedside drawer pulled wide open under one hard light, packed with the apparatus of permanent management - rows of pressed-out empty blister sheets, unlabelled bottles, alcohol wipes, a sharps bin - nothing in it that ends anything, the drawer front sharp in the foreground and the dark bedroom receding behind. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s020a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s021a": {
+  "verdict": "WEAK",
+  "why": "'for the rest of his life' is carried entirely by day-night cycling that a still cannot show",
+  "replacement": "An infusion suite seen from the doorway, an identical treatment chair, IV pole and full bag repeating away in an unbroken row down the room, the nearest drip chamber sharp in the foreground, the row receding past the reach of the light with no end visible. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s021b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s021c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s023a": {
+  "verdict": "WEAK",
+  "why": "permanence is carried only by plates swapping in time-lapse; a single plate says nothing",
+  "replacement": "A long table receding into darkness set end to end with dozens of identical plates carrying the identical plain meal, the nearest plate sharp in the foreground, the line of them running back to a vanishing point beyond the light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s023b": {
+  "verdict": "WEAK",
+  "why": "the point is carried by a hand picking items up and setting them back down, which a still cannot show",
+  "replacement": "A kitchen counter in flat cold light, a long row of ordinary foods laid out untouched across the midground, a folded handwritten page weighted open in the sharp foreground, and one small plain portion set apart on a plate at the far end - the only thing on the counter that is allowed. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s024a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s025a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s025b": {
+  "verdict": "WEAK",
+  "why": "the meaning is in the time-lapse build; the finished state says it in one frame instead",
+  "replacement": "A recovery armchair with a folded blanket completely walled in and buried by production gear - desks, monitors, flight cases and stacked drives packed hard against it on every side and stacked over the top of it - the nearest case sharp in the foreground, the chair barely visible and physically unreachable in the middle of it. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s027a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s027b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s029a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s029b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s030a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s031a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s031b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s033a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s033b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s034a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s035a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s036a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s036b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s037a": {
+  "verdict": "WEAK",
+  "why": "a third consecutive ink image, and the irreversibility lives entirely in the bloom, which a still cannot show",
+  "replacement": "Extreme macro on a slab of healed dense black tattoo ink settled deep into bare skin under hard raking light, the pigment permanent and very slightly raised, pores and fine hair sharp in the foreground, the skin falling away out of focus behind, cropped so tight that no face or identifying feature is anywhere in frame and the ink forms no readable shapes. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s037b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s037c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s039a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s039b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s039c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s040a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s041a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s043a": {
+  "verdict": "FAIL",
+  "why": "the line says there was room for exactly one; the shot adds two more chairs and contradicts it",
+  "replacement": "One plain chair standing alone in the exact centre of a vast stripped room in cold light, bare floor in the foreground, the chair small and solitary in the midground, the walls running away into darkness on every side with nothing else anywhere in the space. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s045a": {
+  "verdict": "WEAK",
+  "why": "a treadmill belt running with nobody on it reads as abandoned equipment rather than a step count",
+  "replacement": "A pair of walking shoes set down on a hard floor in the sharp foreground, the soles worn completely smooth and through at the heel, the uppers broken and creased from enormous distance, and behind them a long empty path running away out of the light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s045b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s045c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s047a": {
+  "verdict": "WEAK",
+  "why": "a near-repeat of the redacted page at s041a four shots earlier; it adds nothing new",
+  "replacement": "A bare pinboard on a gym wall under one hard light, four pushpins pressed into it holding nothing at all, the board empty edge to edge, racked weights out of focus in the foreground and the dark room behind. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s047b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s047c": {
+  "verdict": "FAIL",
+  "why": "writing that lifts off the page reads as memory loss, not as other people inventing the numbers",
+  "replacement": "A dozen printed pages fanned out across a dark table under one hard light, every one of them densely filled with confident handwritten training numbers and every one of them different from the next, the nearest sheet sharp in the foreground, the stack receding out of the light. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s047d": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s048a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s050a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": true
+ },
+ "s050b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s050c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s051a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s052a": {
+  "verdict": "FAIL",
+  "why": "an invisible force pushing a block with drag marks erasing themselves is the rejected device and pure motion",
+  "replacement": "A heavy industrial machine standing dead in a dark hall, its drive belt hanging slack and off the pulley in the sharp foreground, the stopped drum and cold motor in the midground, one work light on it and the rest of the hall silent and unlit. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s053a": {
+  "verdict": "WEAK",
+  "why": "as a still it is only a bar; all of the effort lives in the up-and-down motion",
+  "replacement": "Macro on two chalked adult male hands locked on the knurling of a heavily loaded barbell at the moment of maximum effort, forearms and knuckles taut and shaking, chalk dust and sweat in the light, loaded plates in the midground and the dark gym behind, cropped at the wrists so no body is in frame. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s053b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s053c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s054a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s054b": {
+  "verdict": "WEAK",
+  "why": "an equation collapsing over and over is pure motion, and nothing in it says the thing refusing is a body",
+  "replacement": "A clean diagram drawn in fine light on pure black, the first two nodes precise and geometric in the sharp foreground, the arrow running on into a third position that is not a node at all but a wet, irregular, inflamed mass of red tissue that the line simply disappears into, the black opening out behind it. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s055a": {
+  "verdict": "FAIL",
+  "why": "an unseen hand drawing a tape measure to the same mark is the rejected invisible-hand device and exists only as motion",
+  "replacement": "An open training logbook under one hard light, page after page of dated entries in the same handwriting, the final column of figures identical from the first page to the last, a thick brick of already-filled pages in the sharp foreground and the dark room behind. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, screens and paper carry soft unreadable text, no brand marks, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s055b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s055c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s056a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s056b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s056c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s057a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s058a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s061a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s061b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s061c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": true
+ },
+ "s063a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s063b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s063c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s064a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s065a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s066a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s066b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s066c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s067a": {
+  "verdict": "FAIL",
+  "why": "an empty stretched shirt reads as a body that shrank, the opposite of the change the line is praising",
+  "replacement": "Two plain t-shirts of the same design laid flat side by side on a dark surface under one hard light, the near one narrow through the chest and shoulders, the far one plainly broader and heavier across the same seams, the difference between the two the whole subject. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s067b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s068a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s068b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s068c": {
+  "verdict": "WEAK",
+  "why": "carries only 'start again', drops 'let recovery count', and repeats a door motif already used twice",
+  "replacement": "A dark wall in hard raking light carrying the faint scrubbed-out ghost of hundreds of chalk tally marks, and beside them one single fresh bright chalk stroke standing alone at the head of a new empty column, the floor and the dark room falling away behind. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s069a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s070a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s070b": {
+  "verdict": "WEAK",
+  "why": "water wearing a stone is a metaphor that has to be decoded, and it only works as time-lapse",
+  "replacement": "An empty gym at first light, a heavily loaded barbell resting on the floor in the sharp foreground with fresh wet chalk handprints on the knurling, sweat marks on the rubber where somebody stood, the rack in the midground and the rest of the dark room behind, the work plainly just finished. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s072a": {
+  "verdict": "WEAK",
+  "why": "near-identical to the pill-bottle-and-water shot fifteen seconds earlier at s069a",
+  "replacement": "An ordinary kitchen at dawn, a plain breakfast laid out on the table in the sharp foreground with a small unmarked blister sheet set beside the plate exactly like a piece of cutlery, the counter and kettle in the midground, the rest of the quiet house behind, nothing in the frame treated as unusual. cinematic, shot on anamorphic lenses, shallow depth of field, near-black shadows, muted desaturated palette with deep red as the only warm accent, slow deliberate camera move, volumetric haze, no text, no logos, no recognisable faces, 24fps",
+  "needs_video": false
+ },
+ "s072b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s072c": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s072d": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s073a": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ },
+ "s073b": {
+  "verdict": "KEEP",
+  "why": "",
+  "replacement": "",
+  "needs_video": false
+ }
+}

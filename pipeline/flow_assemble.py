@@ -56,6 +56,12 @@ ROOT = Path(__file__).resolve().parents[1]
 SHOTS = ROOT / "manifest/flow_shots.json"
 GEN_STATUS = ROOT / "manifest/flow_gen_status.json"
 VEO = ROOT / "library/veo"
+# A shot generated as a still and animated with a depth push-in (flow_dibr)
+# costs about $0.04 against $0.30 for the same beat as Veo video, so it is the
+# default medium. This directory is checked FIRST: when a still render exists
+# for a shot it wins over any Veo clip, which lets a shot be moved onto the
+# cheap path without deleting the expensive one it replaces.
+STILLVID = ROOT / "library/stillvid"
 SRC = ROOT / "dossier/mrbeast/sources"
 PIECES = ROOT / "work/v12_pieces"
 AUDIO = ROOT / "final_video/mrbeast_audio_v6/MRBEAST_V6_STORY_MASTER.wav"
@@ -121,6 +127,21 @@ def render_piece(shot: dict, gen_status: dict | None = None) -> Path:
 
     shot_id = shot["shot_id"]
     if shot["kind"] == "gen":
+        still = STILLVID / f"{shot_id}.mp4"
+        if still.exists():
+            # Already an eased 1920x1080/24fps render of exactly this shot's
+            # frame count; it needs no seek and no further conform.
+            src, ss = still, 0.0
+            PIECES.mkdir(parents=True, exist_ok=True)
+            tmp = dest.with_suffix(".tmp.mp4")
+            subprocess.run(
+                ["ffmpeg", "-y", "-v", "error", "-i", str(src),
+                 "-frames:v", str(shot["frames"]),
+                 "-an", "-c:v", "libx264", "-crf", "18", "-preset", "medium",
+                 "-pix_fmt", "yuv420p", "-threads", THREADS, str(tmp)],
+                check=True)
+            tmp.replace(dest)
+            return dest
         if gen_status is None:
             gen_status = _load_gen_status()
         state = gen_status.get(shot_id, {}).get("state")
