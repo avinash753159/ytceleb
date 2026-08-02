@@ -62,6 +62,21 @@ VEO = ROOT / "library/veo"
 # for a shot it wins over any Veo clip, which lets a shot be moved onto the
 # cheap path without deleting the expensive one it replaces.
 STILLVID = ROOT / "library/stillvid"
+VIDEO_SHOTS = ROOT / "manifest/video_shots.json"
+
+_VIDEO_IDS: set[str] | None = None
+
+
+def _video_shot_ids() -> set[str]:
+    """Shots deliberately chosen to keep real motion. Cached: read once."""
+    global _VIDEO_IDS
+    if _VIDEO_IDS is None:
+        if VIDEO_SHOTS.exists():
+            _VIDEO_IDS = set(json.loads(
+                VIDEO_SHOTS.read_text(encoding="utf-8"))["video"])
+        else:
+            _VIDEO_IDS = set()
+    return _VIDEO_IDS
 SRC = ROOT / "dossier/mrbeast/sources"
 PIECES = ROOT / "work/v12_pieces"
 AUDIO = ROOT / "final_video/mrbeast_audio_v6/MRBEAST_V6_STORY_MASTER.wav"
@@ -128,7 +143,15 @@ def render_piece(shot: dict, gen_status: dict | None = None) -> Path:
     shot_id = shot["shot_id"]
     if shot["kind"] == "gen":
         still = STILLVID / f"{shot_id}.mp4"
-        if still.exists():
+        # A shot chosen for real motion prefers its Veo clip when one exists.
+        # Everything else prefers the still. Veo's quota is periodic and ran
+        # out mid-run, so stills are generated for the video shots too as a
+        # floor: the film is always complete, and a video clip upgrades over
+        # its still the moment quota allows, with no manifest edit.
+        wants_video = shot_id in _video_shot_ids()
+        if wants_video and (VEO / f"{shot_id}.mp4").exists():
+            pass
+        elif still.exists():
             # Already an eased 1920x1080/24fps render of exactly this shot's
             # frame count; it needs no seek and no further conform.
             src, ss = still, 0.0

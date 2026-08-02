@@ -101,7 +101,7 @@ def record(shot_id: str, **fields) -> None:
 GEN_STATUS = ROOT / "manifest/flow_gen_status.json"
 
 
-def still_shots() -> list[dict]:
+def still_shots(include_video_without_clip: bool = False) -> list[dict]:
     """Every generated shot not assigned to video and not already made.
 
     Three exclusions, and the third one is load-bearing. A shot already
@@ -119,14 +119,22 @@ def still_shots() -> list[dict]:
         done_as_video = {k for k, v in
                          json.loads(GEN_STATUS.read_text(encoding="utf-8")).items()
                          if v.get("state") == "done"}
+    veo_dir = ROOT / "library/veo"
     out = []
     for s in shots:
         sid = s["shot_id"]
-        if s["kind"] != "gen" or sid in video:
+        if s["kind"] != "gen":
             continue
+        if sid in video:
+            # A video shot is skipped unless we are filling the gap left by
+            # Veo's periodic quota, and then only if it has no clip yet.
+            if not include_video_without_clip:
+                continue
+            if (veo_dir / f"{sid}.mp4").exists():
+                continue
         if (STILLVID / f"{sid}.mp4").exists():
             continue
-        if sid in done_as_video:
+        if sid in done_as_video and sid not in video:
             continue
         out.append(s)
     return out
@@ -167,10 +175,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--only", nargs="*", default=None)
     ap.add_argument("--limit", type=int, default=None,
                     help="process at most N shots this run (for batching)")
+    ap.add_argument("--fallback", action="store_true",
+                    help="also make stills for video shots that have no clip "
+                         "yet, so the film is complete while Veo quota is out")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
 
-    todo = still_shots()
+    todo = still_shots(include_video_without_clip=args.fallback)
     if args.only:
         todo = [s for s in todo if s["shot_id"] in set(args.only)]
     if args.limit:
