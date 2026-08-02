@@ -127,10 +127,14 @@ def still_shots(include_video_without_clip: bool = False) -> list[dict]:
             continue
         if sid in video:
             # A video shot is skipped unless we are filling the gap left by
-            # Veo's periodic quota, and then only if it has no clip yet.
+            # Veo's periodic quota, and then only if it has a GOOD clip.
+            # A file on disk is not proof: a quota-halted attempt leaves a
+            # partial mp4 behind, and s017b was skipped for exactly that
+            # reason - failed in the ledger, file present, no still made.
             if not include_video_without_clip:
                 continue
-            if (veo_dir / f"{sid}.mp4").exists():
+            if (sid in done_as_video
+                    and (veo_dir / f"{sid}.mp4").exists()):
                 continue
         if (STILLVID / f"{sid}.mp4").exists():
             continue

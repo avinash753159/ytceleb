@@ -148,8 +148,15 @@ def render_piece(shot: dict, gen_status: dict | None = None) -> Path:
         # out mid-run, so stills are generated for the video shots too as a
         # floor: the film is always complete, and a video clip upgrades over
         # its still the moment quota allows, with no manifest edit.
-        wants_video = shot_id in _video_shot_ids()
-        if wants_video and (VEO / f"{shot_id}.mp4").exists():
+        if gen_status is None:
+            gen_status = _load_gen_status()
+        # A file at the Veo path is NOT proof of a usable clip: a failed or
+        # quota-halted attempt leaves a partial mp4 behind. Only the ledger
+        # saying "done" counts.
+        wants_video = (shot_id in _video_shot_ids()
+                       and gen_status.get(shot_id, {}).get("state") == "done"
+                       and (VEO / f"{shot_id}.mp4").exists())
+        if wants_video:
             pass
         elif still.exists():
             # Already an eased 1920x1080/24fps render of exactly this shot's
