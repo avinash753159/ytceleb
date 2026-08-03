@@ -115,13 +115,18 @@ def _fit_font(text: str, target_w: int, max_size: int = 900) -> ImageFont.FreeTy
 # --------------------------------------------------------------------------
 
 def text_matte(clip: Path, dest: Path, lines: list[str], frames: int, *,
-               overflow: float = 1.06, drift: float = 0.02,
+               fill: float = 0.88, drift: float = 0.02,
                bloom: float = 0.55) -> Path:
     """Footage plays THROUGH the letters; everything outside is near-black.
 
-    The type is a mask, not an overlay. `overflow` > 1 lets the glyphs run past
-    the frame edge, which is what stops it reading as a lower-third and starts
-    it reading as a title card.
+    The type is a mask, not an overlay.
+
+    `fill` is the fraction of frame width the widest line occupies AT THE END
+    of the push. The first version set the type wider than the frame on
+    purpose and then pushed in further, so the word was clipped at both edges
+    and unreadable - a title has to be legible before it is dramatic. The
+    fitting now accounts for the whole move, so the word is whole in every
+    frame including the last.
     """
     work = Path(tempfile.mkdtemp(prefix="textmatte_"))
     try:
@@ -129,12 +134,15 @@ def text_matte(clip: Path, dest: Path, lines: list[str], frames: int, *,
         fdir = work / "out"
         fdir.mkdir(parents=True, exist_ok=True)
 
-        # One mask for all frames: build at overflow scale, then drift it.
-        pad = int(OUT_W * (overflow - 1.0)) + 2
+        # One mask for all frames, built oversized so the push has somewhere
+        # to travel. Text is fitted to `fill` of the FINAL frame width -
+        # divided by the push - so the widest line is still whole at the end.
+        pad = int(OUT_W * drift) + 4
         mw, mh = OUT_W + pad * 2, OUT_H + pad * 2
+        target = int(OUT_W * fill / (1.0 + drift))
         mask = Image.new("L", (mw, mh), 0)
         md = ImageDraw.Draw(mask)
-        fonts = [_fit_font(t, int(mw * overflow)) for t in lines]
+        fonts = [_fit_font(t, target) for t in lines]
         heights = [f.getbbox(t)[3] - f.getbbox(t)[1] for f, t in zip(fonts, lines)]
         gap = int(mh * 0.02)
         total = sum(heights) + gap * (len(lines) - 1)
