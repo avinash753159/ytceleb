@@ -1,0 +1,690 @@
+﻿{
+    "version":  2,
+    "script":  "dossier/mrbeast/THREE_COLUMN_SCRIPT_V2.md",
+    "cutlist":  "manifest/mrbeast_radio_cutlist_v2.json",
+    "rules":  {
+                  "fitness_picture_min_ratio":  0.6,
+                  "fitness_picture_planned_ratio_by_duration":  0.6508,
+                  "source_cut_limit":  3,
+                  "source_cut_limit_note":  "Limit applies to transformed B-roll cuts. Source-audio bites remain on their native interview picture and are exempt; Airrack is used across distinct scenes but each window must be scene-trimmed before assembly.",
+                  "no_build_or_render":  true,
+                  "fitness_picture_duration_seconds":  440.712,
+                  "total_picture_duration_seconds":  677.184
+              },
+    "segments":  [
+                     {
+                         "id":  "b000_colin_day_310_contract",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  731.96,
+                         "t1":  754.6,
+                         "treatment":  "native source close-up; source/date lower third; DAY 310 OF THE PACT; preserve programmed-rest clarification",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b001_colin_daily_protocol",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  812.92,
+                         "t1":  827.48,
+                         "treatment":  "native source for statement; L-cut only after the 15,000-step and walking-call language lands",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n002",
+                         "graphic_spec":  {
+                                              "type":  "split_motif_montage",
+                                              "left":  "official production-operation footage showing thumbnail/scene/set iteration",
+                                              "right":  "ordinary gym entrance from the acquired official production/BTS source"
+                                          },
+                         "treatment":  "hard cut from giant production system to an ordinary gym entrance; do not substitute a later workout that could be mistaken for the 2023 protocol",
+                         "status":  "ACQUIRE",
+                         "missing":  "MrBeast-owned production/BTS source",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b003_doaceo_weight_collapse",
+                         "source_path":  "dossier/mrbeast/sources/FjrJ2DJN_pA.mp4",
+                         "t0":  825.0,
+                         "t1":  841.0,
+                         "treatment":  "native Jimmy close-up nearly dry; optional L-cut to separately dated teen archive only after claim",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n004",
+                         "graphic_spec":  {
+                                              "type":  "two_systems",
+                                              "production_side":  "control panel / edit iterations / set logistics",
+                                              "body_side":  "NIDDK Crohn\u0027s page and neutral digestive-system illustration",
+                                              "labels":  [
+                                                             "SYSTEM 1: ATTENTION",
+                                                             "SYSTEM 2: BIOLOGY"
+                                                         ]
+                                          },
+                         "treatment":  "visually distinct precise-versus-unstable motifs; no dramatized medical imagery",
+                         "status":  "ACQUIRE",
+                         "missing":  "official production-operation footage and NIDDK page capture",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "s005",
+                         "graphic_spec":  {
+                                              "type":  "two_systems_hold",
+                                              "duration":  3.2,
+                                              "action":  "production side powers down first; medical page remains"
+                                          },
+                         "treatment":  "no new text",
+                         "status":  "BUILD",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n006",
+                         "graphic_spec":  {
+                                              "type":  "dated_archive_montage",
+                                              "assets":  [
+                                                             {
+                                                                 "source_path":  "dossier/mrbeast/archive/2XVcLrB7B3Y.mp4",
+                                                                 "t0":  22.0,
+                                                                 "t1":  34.0,
+                                                                 "label":  "UPLOAD / 2012"
+                                                             },
+                                                             {
+                                                                 "source_path":  "dossier/mrbeast/archive/AKJfakEsgy0.mp4",
+                                                                 "t0":  49.0,
+                                                                 "t1":  61.0,
+                                                                 "label":  "RECORDED OCT. 4, 2015"
+                                                             }
+                                                         ],
+                                              "missing_asset":  "authentic primary baseball image or footage"
+                                          },
+                         "treatment":  "do not infer recording date from upload date; Minecraft proves channel activity, not physique",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "b007_jre_baseball_to_crohns",
+                         "source_path":  "dossier/mrbeast/sources/cLRLEnPaJLM.mp4",
+                         "t0":  5198.0,
+                         "t1":  5207.6,
+                         "treatment":  "native source; omit publication date; L-cut to separately labeled baseball/early-channel evidence only after statement",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "b008_doaceo_symptoms",
+                         "source_path":  "dossier/mrbeast/sources/FjrJ2DJN_pA.mp4",
+                         "t0":  918.0,
+                         "t1":  936.92,
+                         "treatment":  "native Jimmy close-up; hold through symptom count; no medical B-roll before line lands",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n009",
+                         "graphic_spec":  {
+                                              "type":  "primary_document",
+                                              "source":  "NIDDK Crohn\u0027s disease definition page",
+                                              "highlights":  [
+                                                                 "chronic digestive-tract inflammation",
+                                                                 "genes",
+                                                                 "abnormal immune reactions",
+                                                                 "microbiome",
+                                                                 "severity varies"
+                                                             ],
+                                              "label":  "MEDICAL CONTEXT"
+                                          },
+                         "treatment":  "actual page capture with title, URL and retrieval date; OCR-anchored highlights only",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "b010_doaceo_pain",
+                         "source_path":  "dossier/mrbeast/sources/FjrJ2DJN_pA.mp4",
+                         "t0":  936.92,
+                         "t1":  947.86,
+                         "treatment":  "native close-up throughout metaphor; L-cut to archive only after sentence",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "s011",
+                         "source_path":  "dossier/mrbeast/archive/AKJfakEsgy0.mp4",
+                         "t0":  69.0,
+                         "t1":  72.4,
+                         "treatment":  "dated teenage hold; label RECORDED OCT. 4, 2015; no scale/headline",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n012",
+                         "graphic_spec":  {
+                                              "type":  "channel_archive_scroll",
+                                              "assets":  [
+                                                             {
+                                                                 "source_path":  "dossier/mrbeast/archive/2XVcLrB7B3Y.mp4",
+                                                                 "t0":  75.0,
+                                                                 "t1":  87.0
+                                                             },
+                                                             {
+                                                                 "source_path":  "dossier/mrbeast/archive/AKJfakEsgy0.mp4",
+                                                                 "t0":  95.0,
+                                                                 "t1":  108.0
+                                                             }
+                                                         ],
+                                              "required_overlay":  "real upload dates and source IDs"
+                                          },
+                         "treatment":  "computer-screen treatment; intrinsic Bandicam mark is provenance; no claim that footage proves illness",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "b013_jre_decade_of_obsession",
+                         "source_path":  "dossier/mrbeast/sources/cLRLEnPaJLM.mp4",
+                         "t0":  174.0,
+                         "t1":  181.1,
+                         "treatment":  "native source then L-cut to actual early-channel page",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n014",
+                         "graphic_spec":  {
+                                              "type":  "iteration_proof_montage",
+                                              "required_shots":  [
+                                                                     "thumbnail variants",
+                                                                     "set rebuild or retake",
+                                                                     "schedule/edit timeline"
+                                                                 ],
+                                              "source_constraint":  "MrBeast-owned or primary behind-the-scenes"
+                                          },
+                         "treatment":  "one causal image per sentence; no generic spectacle",
+                         "status":  "ACQUIRE",
+                         "missing":  "official production/BTS source",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "b015_jre_social_cost",
+                         "source_path":  "dossier/mrbeast/sources/cLRLEnPaJLM.mp4",
+                         "t0":  538.6,
+                         "t1":  559.72,
+                         "treatment":  "native source; optional complete-sentence trim; L-cut to solitary work archive",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "s016",
+                         "graphic_spec":  {
+                                              "type":  "atmospheric_hold",
+                                              "picture":  "empty editing chair with active monitor",
+                                              "duration":  3.2
+                                          },
+                         "treatment":  "specific production environment, not generic stock office",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n017",
+                         "graphic_spec":  {
+                                              "type":  "match_cut",
+                                              "from":  "production control panel",
+                                              "to":  "NIDDK flare/remission and individualized-treatment page",
+                                              "label":  "MEDICAL CONTEXT"
+                                          },
+                         "treatment":  "actual source page; no claim about Jimmy\u0027s personal disease state",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "b018_colin_three_things",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  708.92,
+                         "t1":  721.0,
+                         "treatment":  "native close-up; brief L-cuts to distinct main-channel/gym/Feastables evidence only after each item",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b019_colin_why_he_started",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  755.96,
+                         "t1":  774.6,
+                         "treatment":  "native source; gym-door L-cut at complete thought",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n020",
+                         "graphic_spec":  {
+                                              "type":  "protocol_card",
+                                              "title":  "1. MAKE IT OBSERVABLE",
+                                              "visuals":  [
+                                                              "two-person pact",
+                                                              "tattoo penalty",
+                                                              "programmed-rest marker"
+                                                          ],
+                                              "disclaimer":  "TERM RECONSTRUCTION / NOT A SIGNED DOCUMENT"
+                                          },
+                         "treatment":  "brand typography; no fabricated contract page",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n021",
+                         "graphic_spec":  {
+                                              "type":  "calendar",
+                                              "title":  "DAY 310 OF FOLLOWING THE PACT",
+                                              "marks":  [
+                                                            "TRAINING",
+                                                            "PROGRAMMED REST"
+                                                        ],
+                                              "prohibited_text":  "310 CONSECUTIVE WORKOUTS"
+                                          },
+                         "treatment":  "single correction emphasized",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n022",
+                         "source_path":  "dossier/mrbeast/sources/WwVs1qVaOb4.mp4",
+                         "t0":  117.0,
+                         "t1":  132.91,
+                         "treatment":  "full-screen 2. RESISTANCE TRAINING card over dated LATER WORKOUT FOOTAGE / SEPT. 2024; select only Jimmy action; explicitly NOT THE 2023 SPLIT",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b023_colin_fat_loss_phase",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  779.08,
+                         "t1":  786.44,
+                         "treatment":  "native source; L-cut to a distinct Jimmy training shot only after claim",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n024",
+                         "graphic_spec":  {
+                                              "type":  "protocol_card",
+                                              "title":  "3. DAILY MOVEMENT",
+                                              "primary_text":  "15,000 STEPS/DAY",
+                                              "label":  "JIMMY\u0027S JUNE 2023 ACCOUNT",
+                                              "picture":  "phone-call walking footage"
+                                          },
+                         "treatment":  "no 12,500 figure; no universal-target framing",
+                         "status":  "ACQUIRE",
+                         "missing":  "authentic Jimmy walking-during-calls picture",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b025_colin_two_hour_cost",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  832.12,
+                         "t1":  846.44,
+                         "treatment":  "native source; use interview image unless authentic walking-call picture is acquired",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n026",
+                         "graphic_spec":  {
+                                              "type":  "protocol_card",
+                                              "title":  "4. PROTECTED TIME",
+                                              "figures":  [
+                                                              "~90 MIN WORKOUT",
+                                                              "AT LEAST 2 HOURS REDIRECTED FROM MAIN CHANNEL"
+                                                          ],
+                                              "rule":  "display separately; never add as a precise equation"
+                                          },
+                         "treatment":  "clock motif; transition to a later official gym threshold",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "s027",
+                         "graphic_spec":  {
+                                              "type":  "atmospheric_hold",
+                                              "picture":  "shoes on pavement plus muted phone waveform",
+                                              "duration":  3.2,
+                                              "no_new_statistic":  true
+                                          },
+                         "treatment":  "clearly illustrative unless authentic Jimmy footage is acquired",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n028",
+                         "graphic_spec":  {
+                                              "type":  "evidence_limit_card",
+                                              "title":  "FOOD: DETAILS NOT PUBLIC",
+                                              "bullets":  [
+                                                              "NO VERIFIED MEAL PLAN",
+                                                              "NO VERIFIED CALORIE TARGET"
+                                                          ]
+                                          },
+                         "treatment":  "no food photography that implies a diet",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "c029",
+                         "graphic_spec":  {
+                                              "type":  "protocol_card_hold",
+                                              "title":  "FOOD: DETAILS NOT PUBLIC",
+                                              "duration":  1.2
+                                          },
+                         "treatment":  "continuation frame; no transition reset",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n030",
+                         "graphic_spec":  {
+                                              "type":  "primary_document",
+                                              "source":  "NIDDK eating, diet, and nutrition for Crohn\u0027s disease page",
+                                              "highlights":  [
+                                                                 "needs may change",
+                                                                 "absorption problems",
+                                                                 "no particular diet cures IBD"
+                                                             ],
+                                              "label":  "MEDICAL CONTEXT"
+                                          },
+                         "treatment":  "actual page capture; biography-not-treatment footer",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n031",
+                         "graphic_spec":  {
+                                              "type":  "four_principles_summary",
+                                              "cards":  [
+                                                            "ACCOUNTABILITY",
+                                                            "TRAINING + RECOVERY",
+                                                            "DAILY MOVEMENT",
+                                                            "PROTECTED TIME"
+                                                        ],
+                                              "footer":  "PRINCIPLES, NOT A PRESCRIPTION"
+                                          },
+                         "treatment":  "one card per clause then unified frame",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b032_airrack_contract_premise",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  0.0,
+                         "t1":  8.36,
+                         "treatment":  "native source/date lower third; identify Eric Decker / Airrack once; quote \u0027legally binding\u0027 as his language",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n033",
+                         "graphic_spec":  {
+                                              "type":  "dated_accounts_compare",
+                                              "left":  "JUNE 2023 / JIMMY DESCRIBES DAY 310",
+                                              "right":  "JUNE 2024 / AIRRACK CALLS IT A 600-DAY CHALLENGE",
+                                              "footer":  "THE AVAILABLE RECORD DOES NOT ESTABLISH AN EXPANSION"
+                                          },
+                         "treatment":  "no arrow connecting dates; neutral investigative design",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n034",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  98.3,
+                         "t1":  109.12,
+                         "treatment":  "Airrack-side trainers/travel/planning only; on-screen AIRRACK\u0027S SIDE; never identify this as Jimmy\u0027s plan",
+                         "status":  "VERIFY_SCENE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b035_airrack_jimmy_harder_than_expected",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  489.48,
+                         "t1":  504.16,
+                         "treatment":  "native Jimmy shot; preserve gym atmosphere; no transformation overlay",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "s036",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  454.0,
+                         "t1":  457.2,
+                         "treatment":  "single-scene fatigued expression or ordinary recovery; scene-boundary and identity check required",
+                         "status":  "VERIFY_SCENE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n037",
+                         "source_path":  "dossier/mrbeast/sources/WwVs1qVaOb4.mp4",
+                         "t0":  132.91,
+                         "t1":  143.23,
+                         "treatment":  "ordinary Jimmy circuit effort; LATER WORKOUT FOOTAGE / SEPT. 2024; no accelerated transformation montage",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b038_colin_three_month_habit",
+                         "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                         "t0":  794.2,
+                         "t1":  807.48,
+                         "treatment":  "native Jimmy close-up; warm handoff",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n039",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1028.0,
+                         "t1":  1039.57,
+                         "treatment":  "apparent reveal setup interrupted before glamour frame; exact scene trim required",
+                         "status":  "VERIFY_SCENE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b040_airrack_jimmy_progress_reality",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1082.02,
+                         "t1":  1098.98,
+                         "treatment":  "use the shared-expectation / \u0027we were so stupid\u0027 complete sentence not used in b006; split boundaries must be approved",
+                         "status":  "VERIFY_TRIM",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "s041",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1098.98,
+                         "t1":  1102.86,
+                         "treatment":  "hold Jimmy reaction then cut to unglamorous gym wide; may require two shot-bounded subcuts",
+                         "status":  "VERIFY_SCENE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n042",
+                         "source_path":  "dossier/mrbeast/sources/WwVs1qVaOb4.mp4",
+                         "t0":  143.23,
+                         "t1":  157.2,
+                         "treatment":  "real ordinary training; LATER WORKOUT FOOTAGE / SEPT. 2024; no before/after enhancement",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b043_airrack_jimmy_both_grinded_youtube",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1069.1,
+                         "t1":  1079.26,
+                         "treatment":  "native late-stage two-shot; source carries transition",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n044",
+                         "graphic_spec":  {
+                                              "type":  "primary_document_to_interview",
+                                              "source":  "NIDDK treatment page",
+                                              "headline":  "EXERCISE IS NOT A CURE",
+                                              "next_picture":  "DOACEO close-up"
+                                          },
+                         "treatment":  "medical context only; never place Jimmy\u0027s \u0027immune system shut down\u0027 wording on authority card",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b045_doaceo_treatment_burden",
+                         "source_path":  "dossier/mrbeast/sources/FjrJ2DJN_pA.mp4",
+                         "t0":  969.02,
+                         "t1":  981.36,
+                         "treatment":  "native close-up; only use of bite in V2; no medical graphic over quote",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "s046",
+                         "source_path":  "dossier/mrbeast/sources/FjrJ2DJN_pA.mp4",
+                         "t0":  981.36,
+                         "t1":  984.56,
+                         "treatment":  "hold interview close-up after finish, then empty-gym handoff; verify clean post-speech frame exists",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n047",
+                         "graphic_spec":  {
+                                              "type":  "empty_gym_sequence",
+                                              "picture":  "ordinary gym after session, lights closing row by row",
+                                              "motif":  "trainer / walk / pact are choices; measurement is not guaranteed"
+                                          },
+                         "treatment":  "no heroic silhouette or transformation pose",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n048",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1048.46,
+                         "t1":  1058.14,
+                         "treatment":  "end-stage two-shot; lower third PROJECT FILMED ACROSS 602 DAYS / PROGRAMMED REST ALLOWED",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b049_airrack_jimmy_changed_life",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1102.86,
+                         "t1":  1111.06,
+                         "treatment":  "native reflection; warm score only after first sentence",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n050",
+                         "graphic_spec":  {
+                                              "type":  "evidence_montage",
+                                              "shots":  [
+                                                            {
+                                                                "source_path":  "dossier/mrbeast/sources/9IQ_ldV9z_A.mp4",
+                                                                "t0":  812.92,
+                                                                "t1":  817.0,
+                                                                "label":  "JUNE 2023 ACCOUNT"
+                                                            },
+                                                            {
+                                                                "type":  "graphic",
+                                                                "label":  "SUSTAINED LIFTING"
+                                                            },
+                                                            {
+                                                                "type":  "graphic",
+                                                                "label":  "TRAINER + ACCOUNTABILITY PACT"
+                                                            }
+                                                        ],
+                                              "footer":  "EXACT MEASUREMENTS AND COMPLETE PROGRAM NOT PUBLIC"
+                                          },
+                         "treatment":  "no before/after social images; no body-fat percentage",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "n051",
+                         "graphic_spec":  {
+                                              "type":  "ordinary_calendar",
+                                              "marks":  [
+                                                            "TRAIN",
+                                                            "REST",
+                                                            "WALK",
+                                                            "CHECK IN"
+                                                        ],
+                                              "transition":  "contract motif softens into routine"
+                                          },
+                         "treatment":  "no streak language that excludes programmed rest",
+                         "status":  "BUILD",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b052_doaceo_younger_self",
+                         "source_path":  "dossier/mrbeast/sources/FjrJ2DJN_pA.mp4",
+                         "t0":  5698.54,
+                         "t1":  5717.64,
+                         "treatment":  "native close-up then L-cut to verified 2015 archive after complete phrase",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n053",
+                         "source_path":  "dossier/mrbeast/archive/AKJfakEsgy0.mp4",
+                         "t0":  109.0,
+                         "t1":  122.94,
+                         "treatment":  "same dated archive motif as opening; label RECORDED OCT. 4, 2015; explicitly not diagnosis-timing evidence",
+                         "status":  "READY",
+                         "fitness_picture":  false
+                     },
+                     {
+                         "id":  "n054",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  430.67,
+                         "t1":  439.36,
+                         "treatment":  "Jimmy entering/working in gym, not flex glamour; scene-boundary check required",
+                         "status":  "VERIFY_SCENE",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "b055_airrack_jimmy_continue",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1114.42,
+                         "t1":  1118.02,
+                         "treatment":  "native source nearly dry; no sting",
+                         "status":  "READY",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "s056",
+                         "source_path":  "dossier/mrbeast/sources/7r3ORKgNUjw.mp4",
+                         "t0":  1118.02,
+                         "t1":  1121.22,
+                         "treatment":  "hold current Jimmy finishing and turning away; verify shot continues cleanly",
+                         "status":  "VERIFY_FRAMES",
+                         "fitness_picture":  true
+                     },
+                     {
+                         "id":  "s057",
+                         "graphic_spec":  {
+                                              "type":  "end_screen_safe_outro",
+                                              "picture":  "Jimmy exits gym or resumes ordinary work",
+                                              "next_subject":  null,
+                                              "cta":  "none until next subject is locked"
+                                          },
+                         "treatment":  "channel logo bug remains; do not fabricate next-video bridge",
+                         "status":  "ACQUIRE",
+                         "fitness_picture":  true
+                     }
+                 ],
+    "remaining_acquire":  [
+                              "MrBeast-owned production/BTS footage proving iterations, retakes, schedules or thumbnail changes",
+                              "Authentic primary baseball image or footage",
+                              "NIDDK Crohn\u0027s definition, flare/remission, treatment, and eating/nutrition page captures",
+                              "Authentic Jimmy walking-during-phone-calls footage",
+                              "Specific empty editing-chair and empty-gym atmosphere shots",
+                              "End-screen-safe Jimmy gym exit or ordinary-work shot"
+                          ]
+}

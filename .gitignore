@@ -37,3 +37,4 @@ elevenlabs_key.txt
 
 # SDD workspace (git-ignored scratch)
 .superpowers/
+.veo_key

@@ -1,0 +1,313 @@
+[
+  {
+    "file": "dossier/mrbeast/primary2/post_regimen_2023-06-11.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "1996x494 PNG. Clean X embed card, MrBeast only - no third party anywhere in frame. Verbatim: 'I've been lifting religiously for 10 months (with trainer, 12k steps a day, good sleep, good diet) and I've gone from obese to just lean...' 2:57 PM Jun 11 2023, 267.2K likes. Primary source for the trainer, the 12k-step figure and 'obese to just lean'; predates the 29 Jun 2023 post the film already uses ",
+    "group": "post"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/post_bodyfat_2023-06-11.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "1996x686 PNG. Two-post thread, BOTH posts by MrBeast - no third-party account in frame. Reply reads 'Was 40%+ body fat and now I'm sub 20% body fat. Give me 6 more months and I should be able to share some sick before and after pics'. 3:04 PM Jun 11 2023, 73.2K likes. This is the capture CLAIM_AUDIT.md line 92 said to hold the 40%->sub-20% claim until, and it contradicts the brief's instruction th",
+    "group": "post"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/post_crohns_2023-09-09.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": [
+      0,
+      0.7817,
+      1,
+      1
+    ],
+    "window": null,
+    "note": "1996x2592 PNG - USABLE ONLY CROPPED. Crop fractions are absolute edge positions (left 0.0, top 0.7817, right 1.0, bottom 1.0), i.e. keep the bottom 566 rows starting at y=2026; cropped output is 1996x566, long edge still well over 1200. UNCROPPED THIS IS A REJECT: the top 78pct is @DeVriesBurner's quoting post, whose avatar shows an identifiable MLB player (handle 'Gavin Lux truther') and which co",
+    "group": "post"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/crohns2015_audio_uploadschedule.m4a",
+    "duration": 10.9,
+    "class": "OBJECT",
+    "crop": null,
+    "window": [
+      2.4,
+      10.9
+    ],
+    "note": "AAC 44.1kHz stereo, real duration 10.90s, mean -19.9dB, peaks -0.1dBFS. Source cut starts at t=16.00s. DEFECT: CREDITS.json credits this with \"I'm literally making like seven, eight videos today...\" - that phrase is NOT in the file; it runs 12.15-14.9s in the source, before the cut begins. Re-cut from source 11.90s to recover it. The file opens mid-sentence on 'what order this is going to go up in",
+    "group": "crohns2015"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/crohns2015_audio_diet_energy.m4a",
+    "duration": 22.3,
+    "class": "OBJECT",
+    "crop": null,
+    "window": [
+      1.4,
+      22.1
+    ],
+    "note": "AAC 44.1kHz stereo, real duration 22.30s, mean -21.7dB, peak -2.1dBFS. Source cut 69.40-91.70s. Window [1.40, 22.10] trims a leading bathroom reference ('And then I go to the bathroom a lot') and a trailing sentence fragment ('And that makes it a little bit'), landing on: 'there are a lot of little problems Crohn's causes you like fatigue and you're just really low on energy a lot of times. But th",
+    "group": "crohns2015"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/crohns2015_audio_remicade.m4a",
+    "duration": 13.85,
+    "class": "OBJECT",
+    "crop": null,
+    "window": [
+      4,
+      13.85
+    ],
+    "note": "AAC 44.1kHz stereo, real duration 13.85s, mean -22.1dB, peaks 0.0dBFS (clipped ceiling). Source cut 175.55-189.40s. Window [4.00, 13.85] skips the leading fragment ('in a nutshell. Another thing that comes...') to start on 'I'm on Remicade, if you have any idea what that is... pretty much every 5 weeks I go to the hospital, they jab me with a needle and I sit there for 4 hours'. DEFECT: the file E",
+    "group": "crohns2015"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/crohns2015_p6bzNpgbX8Y.info.json",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "NON-BROADCAST REFERENCE - do not place on a timeline. Validated as parseable JSON and it is the provenance backbone of the whole crohns2015 group: id p6bzNpgbX8Y, title 'What Is Crohns Disease?????', upload_date 20150810, channel_id UCX6OQ3DkcsbYNE6H8uQQuVA, uploader_id @MrBeast, view_count 329025, like_count 7719, comment_count 653, channel_follower_count 510000000. This is what proves the 2015 v",
+    "group": "crohns2015"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/crohns2015_p6bzNpgbX8Y.en.vtt",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "NON-BROADCAST REFERENCE - do not place on a timeline, and per its own licence do not quote from it. Machine ASR, unverified. Validated as parseable and correctly timed; I used it to locate lines and it is what exposed both audio-cut defects above. Keep it for locating material only.",
+    "group": "crohns2015"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/posts_capture.json",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "NON-BROADCAST REFERENCE. Validated: parseable, 4 records, one per the first four post captures. Independently corroborates the verbatim text, real created_at and like/reply counts of the three surviving post cards straight from X's syndication endpoint (e.g. post_regimen favorite_count 267218, created_utc 2023-06-11T19:57:50Z). This is the audit trail behind the on-screen quotes - keep it with the",
+    "group": "capturelog"
+  },
+  {
+    "file": "dossier/mrbeast/primary2/captures_pass2.json",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "NON-BROADCAST REFERENCE. Validated: parseable, 4 records covering the fifth post and the three channel screenshots, with capture timestamps. Useful as a negative record too - it documents that post_usedtobefat is in_reply_to_screen_name 'Dexerto' with only 790 likes, which is part of why that asset is rejected. Three of the four files it logs are rejects; keep it as the audit trail, not as evidenc",
+    "group": "capturelog"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/anim_crohn_overview.webm",
+    "duration": 397.61,
+    "class": "OBJECT",
+    "crop": [
+      0.29,
+      0.206,
+      0,
+      0.084
+    ],
+    "window": [
+      201.5,
+      223
+    ],
+    "note": "BEST MEDICAL SHOT IN THE HAUL AND THE HARDEST-WON. Animated cross-section of the bowel wall in which inflammation seeds in a villus and spreads down through mucosa, submucosa and muscle \u2014 a literal depiction of transmural inflammation, the thing that defines Crohn's. REQUIRES THE CROP. The uncropped frame carries a burned-in left-hand label column ('intestinal wall', 'mucosa', 'submucosa', 'muscle",
+    "group": "anim"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/anim_crohn_overview.webm",
+    "duration": 397.61,
+    "class": "OBJECT",
+    "crop": null,
+    "window": [
+      260.3,
+      270.3
+    ],
+    "note": "The only fully text-free window in 397 seconds, and it needs no crop. A clean anatomical colon illustration on white, during which stippled inflammation progressively blooms across the bowel \u2014 a ready-made healthy-to-diseased reveal. Boundaries pinned at half-second resolution: the colon finishes drawing by 260.0, and a gross 'cobblestone' specimen photo slides in from the right at 271.0 followed ",
+    "group": "anim"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/endoscopy_ileitis_01.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": [
+      0.052,
+      0.185,
+      0.052,
+      0.184
+    ],
+    "window": null,
+    "note": "Straight down an inflamed, ulcerated ileum: raw red mucosa, lost vascular pattern, yellow fibrin-covered ulcers. CROP IS MANDATORY \u2014 the delivered frame is an endoscope octagon sitting in black, which reads as combined letterbox and pillarbox. The crop lands 1210x681 entirely inside the lit field. I contrast-stretched the cropped result and checked all four corners: every one is tissue, no black m",
+    "group": "endoscopy"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/gross_ileocaecal_01.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": [
+      0,
+      0,
+      0,
+      0.1
+    ],
+    "window": null,
+    "note": "The single clearest cobblestone-mucosa specimen in the haul and the only surviving gross asset \u2014 opened terminal ileum, caecum and ascending colon from a confirmed Crohn's case, sharp, on a clean pale ground. CROP REMOVES A MUSEUM LABEL. At normal exposure a faint beige plaque sits bottom-right; I contrast-normalised that strip and it resolves into reversed printed lettering (seen through the glas",
+    "group": "gross"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_colitis_mid.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Strongest histology image in the haul, usable full-frame with no crop. Crohn's colitis at intermediate magnification: crisp crypts across the left, dense lymphoid infiltrate right, and two clearly resolved pale granulomas. Sharp, fills the frame edge to edge, no scale bar, no stain label, no annotation. 3840x2560. CC BY-SA.",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_colitis_low.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": [
+      0.269,
+      0.225,
+      0.286,
+      0.4
+    ],
+    "window": null,
+    "note": "Same biopsy as histo_colitis_mid at low magnification, so the two cut together as a genuine optical push-in rather than a digital zoom. CROP IS ESSENTIAL: as delivered the tissue occupies well under a quarter of a 4272x2848 frame and the rest is bare white \u2014 it is not informative at a glance untouched. I rendered a first crop, judged it still too loose, and tightened to 1900x1069 (exact 16:9) arou",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_crohncolitis_01.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": [
+      0.094,
+      0.216,
+      0.094,
+      0.174
+    ],
+    "window": null,
+    "note": "A granuloma sitting between colonic crypts, ringed by inflammatory cells \u2014 textbook, and on the cheap attribution-only licence. CROP IS MANDATORY: this is shot down a microscope eyepiece and all four corners of the delivered file are black vignette. I computed an inscribed rectangle, rendered it, found residual black wedges still biting the corners, then tightened again to 1560x878 (exact 16:9) an",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_crohncolitis_02.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Crohn's colitis at lower magnification, dense inflammation undermining the crypts along the mucosal edge. Full-frame, no vignette, no text, no scale bar; the bright red patch at the left edge is blood/slide artefact, not a marking. 1696x1129. Attribution-only licence.",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_crohncolitis_03.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Dense sheet of inflammatory cells with epithelioid granulomas and giant cells. Clean, sharp, full-frame, no annotation, 1580x1054. Honest caveat: this is the most visually homogeneous of the Uthman three \u2014 it reads as uniform pink texture at a glance rather than showing an obvious single lesion, so use it as texture or a brief cutaway rather than a hero card. Attribution-only licence.",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_granuloma_01.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Granulomas with giant cells in an intestinal lymph node \u2014 non-caseating granulomas are the diagnostic hallmark of Crohn's, so this earns its place. Clean composition with pale adipose down the left third giving the frame some structure. Full-frame, sharp, no text or scale bar. 1920x1280. CC BY-SA.",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_granuloma_02.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "High-magnification companion to granuloma_01 \u2014 giant cells and epithelioid histiocytes clearly resolved, the best close-detail histology here. Cuts with granuloma_01 as a magnification step. Full-frame, sharp, no annotation. 1920x1280. CC BY-SA.",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_ileitis_low.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": [
+      0.3,
+      0.173,
+      0.24,
+      0.182
+    ],
+    "window": null,
+    "note": "Crohn's ileitis: villous blunting above, and a lower fragment carrying clearly visible pale round granulomas. CROP REQUIRED \u2014 as delivered roughly three quarters of the 3840x2560 frame is empty white with scattered fragments. I rendered the crop before judging it, and the cropped 1766x1651 result holds the two substantive fragments and is genuinely readable. Weakest of the kept histology because t",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/histo_rosary_low.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "The 'Crohn's rosary' \u2014 lymphoid aggregates with granulomas strung along the junction of muscularis propria and subserosal fat. This is the strongest histological proof in the haul that the inflammation is TRANSMURAL, reaching the outer bowel wall, which is precisely what separates Crohn's from ulcerative colitis. Pairs conceptually with the 201.5-223.0 animation window. Full-frame, sharp, no text ",
+    "group": "histo"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/imaging_ct_mri_01.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Terminal ileitis in long-standing Crohn's: contrast-enhanced T1 fat-sat MRI above, CT below, thickened enhancing bowel wall. VERIFIED CLEAN THE HARD WAY \u2014 DICOM exports usually carry dim grey overlay text in the black surround, so I contrast-normalised and lifted the whole frame: there is NO patient name, no date, no institution, no scanner manufacturer, no laterality marker, no burned-in annotati",
+    "group": "imaging"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/imaging_mri_enteroclysis_01.jpg",
+    "duration": 0.04,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Four-panel MR enteroclysis of Crohn's in the terminal ileum \u2014 axial DWI, coronal T2 fat-sat and two coronal contrast-enhanced T1 fat-sat. The most striking 'this is a real patient's scan' image available. Put through the same contrast-lift as the CT plate: no burned-in identifiers, dates, institution or scanner branding, no identifiable facial anatomy. Note it is 1920x1905, nearly square, so it ne",
+    "group": "imaging"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/servier_colon_crohn.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Cut-away colon in Crohn's \u2014 deep red inflamed mucosa, segmental narrowing, skip lesions with normal bowel between. Composited over mid-grey to defeat the transparent background and inspected: no Servier watermark, no logo, no signature, no text of any kind. Confirmed pixel-matched to servier_colon_crosssection2.png (identical outline, only the mucosa differs), so the two cross-dissolve as a true h",
+    "group": "servier"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/servier_colon_crosssection2.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "The healthy half of the matched pair \u2014 identical artwork with smooth pale pink lining and even calibre. Checked over grey: no watermark, logo or text. Hold this first, then dissolve to servier_colon_crohn.png; because they are pixel-registered the transformation happens without any drift. 1199x1750 portrait, transparent. CC BY 4.0.",
+    "group": "servier"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/servier_intestine_crosssection.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Cut-away showing the full bowel wall thickness \u2014 mucosal folds, submucosa, muscle layers, serosa. The cleanest single graphic for explaining what 'transmural' means, and the natural diagram to cut against the 201.5-223.0 animation window and histo_rosary_low. Checked over grey: no watermark or text. 1545x1156, transparent. CC BY 4.0.",
+    "group": "servier"
+  },
+  {
+    "file": "dossier/mrbeast/medical2/servier_digestive_full.png",
+    "duration": 0.0,
+    "class": "OBJECT",
+    "crop": null,
+    "window": null,
+    "note": "Full digestive tract mouth to anus, useful as an establishing graphic to place the disease before going close. Checked over grey: no watermark or text; the head at the top is a generic line-drawn anatomical outline, not an identifiable person. RESOLUTION CAVEAT \u2014 670x2499, so it passes the 1200px rule on its long edge ONLY. At 670px wide it must be used as a tall vertical element or wipe at native",
+    "group": "servier"
+  }
+]

@@ -1,0 +1,527 @@
+{
+  "protocol_chapter": "protocol",
+  "subject_speaker": "subject",
+  "segments": [
+    {
+      "id": "b000_colin_day_310_contract",
+      "kind": "bite",
+      "dur": 22.64,
+      "chapter": "open",
+      "source": "9IQ_ldV9z_A",
+      "t0": 731.96,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false,
+      "promise": "what_the_transformation_reclaimed"
+    },
+    {
+      "id": "b001_colin_daily_protocol",
+      "kind": "bite",
+      "dur": 14.56,
+      "chapter": "open",
+      "source": "9IQ_ldV9z_A",
+      "t0": 812.92,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "n002",
+      "kind": "narr",
+      "dur": 14.535708,
+      "chapter": "open",
+      "text": "Jimmy could redesign a thumbnail, reshoot a scene, or move hundreds of people around a set. But to protect time for his own body, he chose to make another person part of the system\u2014and attached a punishment to quitting. Why?",
+      "fitness": false
+    },
+    {
+      "id": "b003_doaceo_weight_collapse",
+      "kind": "bite",
+      "dur": 16.0,
+      "chapter": "open",
+      "source": "FjrJ2DJN_pA",
+      "t0": 825.0,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "n004",
+      "kind": "narr",
+      "dur": 16.253979,
+      "chapter": "open",
+      "text": "This is not a secret-routine story. It is the story of an optimizer confronting two systems: one that rewarded more attention, and one that never became fully predictable. The contract could govern whether he showed up. It could not guarantee what showing up would produce.",
+      "fitness": false
+    },
+    {
+      "id": "s005",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "open",
+      "fitness": false
+    },
+    {
+      "id": "n006",
+      "kind": "narr",
+      "dur": 13.839104,
+      "chapter": "machine",
+      "text": "Before the giant sets, Jimmy played baseball and uploaded videos online. He later said the diagnosis came at fifteen. Crohn's did not create MrBeast. But, in Jimmy's account, it closed one path just as he committed himself to another.",
+      "fitness": false
+    },
+    {
+      "id": "b007_jre_baseball_to_crohns",
+      "kind": "bite",
+      "dur": 9.6,
+      "chapter": "machine",
+      "source": "cLRLEnPaJLM",
+      "t0": 5198.0,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "b008_doaceo_symptoms",
+      "kind": "bite",
+      "dur": 18.92,
+      "chapter": "machine",
+      "source": "FjrJ2DJN_pA",
+      "t0": 918.0,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "n009",
+      "kind": "narr",
+      "dur": 15.696708,
+      "chapter": "machine",
+      "text": "That is Jimmy's shorthand for what he experienced. NIDDK describes Crohn's as chronic digestive-tract inflammation in which genes, abnormal immune reactions, and the microbiome may all play a role. Symptoms and severity vary from person to person.",
+      "fitness": false
+    },
+    {
+      "id": "b010_doaceo_pain",
+      "kind": "bite",
+      "dur": 10.94,
+      "chapter": "machine",
+      "source": "FjrJ2DJN_pA",
+      "t0": 936.92,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "s011",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "machine",
+      "fitness": false
+    },
+    {
+      "id": "n012",
+      "kind": "narr",
+      "dur": 12.445896,
+      "chapter": "machine",
+      "text": "The uploads kept arriving. Illness did not make the videos successful, but Jimmy says it helped redirect his time and identity. Baseball disappeared from the plan. The camera stayed.",
+      "fitness": false
+    },
+    {
+      "id": "b013_jre_decade_of_obsession",
+      "kind": "bite",
+      "dur": 7.1,
+      "chapter": "machine",
+      "source": "cLRLEnPaJLM",
+      "t0": 174.0,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "n014",
+      "kind": "narr",
+      "dur": 11.935063,
+      "chapter": "machine",
+      "text": "YouTube gave that obsession measurable feedback\u2014and, by Jimmy's account, rewarded more of it. A scene could be rebuilt. A thumbnail could be replaced. Attention could solve a production problem.",
+      "fitness": false
+    },
+    {
+      "id": "b015_jre_social_cost",
+      "kind": "bite",
+      "dur": 21.12,
+      "chapter": "machine",
+      "source": "cLRLEnPaJLM",
+      "t0": 538.6,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": false
+    },
+    {
+      "id": "s016",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "machine",
+      "fitness": false
+    },
+    {
+      "id": "n017",
+      "kind": "narr",
+      "dur": 12.817417,
+      "chapter": "machine",
+      "text": "But the second system followed different rules. Crohn's can move between flares and remission, and treatment varies by person. Work could be optimized. Biology could be managed, but not commanded.",
+      "fitness": false
+    },
+    {
+      "id": "b018_colin_three_things",
+      "kind": "bite",
+      "dur": 12.08,
+      "chapter": "protocol",
+      "source": "9IQ_ldV9z_A",
+      "t0": 708.92,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "b019_colin_why_he_started",
+      "kind": "bite",
+      "dur": 18.64,
+      "chapter": "protocol",
+      "source": "9IQ_ldV9z_A",
+      "t0": 755.96,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n020",
+      "kind": "narr",
+      "dur": 15.578305,
+      "chapter": "protocol",
+      "text": "First: accountability. Jimmy did not say motivation became permanent. He and Eric made adherence observable. A partner would notice, a penalty made quitting vivid, and programmed rest still counted when it was part of the plan.",
+      "fitness": true
+    },
+    {
+      "id": "n021",
+      "kind": "narr",
+      "dur": 5.421525,
+      "chapter": "protocol",
+      "text": "Day 310 meant day 310 of following the pact\u2014not 310 unbroken training sessions.",
+      "fitness": true
+    },
+    {
+      "id": "n022",
+      "kind": "narr",
+      "dur": 14.480274,
+      "chapter": "protocol",
+      "text": "Second: consistent resistance training with a trainer. In the sources we could verify, Jimmy never gives a complete split, exercise list, set count, or rep scheme. A video that supplies one is filling in blanks.",
+      "fitness": true
+    },
+    {
+      "id": "b023_colin_fat_loss_phase",
+      "kind": "bite",
+      "dur": 7.36,
+      "chapter": "protocol",
+      "source": "9IQ_ldV9z_A",
+      "t0": 779.08,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n024",
+      "kind": "narr",
+      "dur": 12.95675,
+      "chapter": "protocol",
+      "text": "Third: movement outside the gym. In June 2023, Jimmy said he was doing fifteen thousand steps a day and taking phone calls while he walked. That is a dated self-report, not a universal target.",
+      "fitness": true
+    },
+    {
+      "id": "b025_colin_two_hour_cost",
+      "kind": "bite",
+      "dur": 14.32,
+      "chapter": "protocol",
+      "source": "9IQ_ldV9z_A",
+      "t0": 832.12,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n026",
+      "kind": "narr",
+      "dur": 10.495438,
+      "chapter": "protocol",
+      "text": "Jimmy estimated the workout at about ninety minutes and said the routine redirected at least two hours of his day from the main channel. The hidden lever was not a secret exercise. It was a protected budget.",
+      "fitness": true
+    },
+    {
+      "id": "s027",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "protocol",
+      "fitness": true
+    },
+    {
+      "id": "n028",
+      "kind": "narr",
+      "dur": 10.449,
+      "chapter": "protocol",
+      "text": "And the diet? Jimmy counted food among the time costs. But the acquired interviews do not reveal a reproducible Jimmy meal plan or calorie target. That is where the evidence stops.",
+      "fitness": true
+    },
+    {
+      "id": "c029",
+      "kind": "card",
+      "dur": 1.2,
+      "chapter": "protocol",
+      "source": "MrBeastProtocolCard",
+      "fitness": true
+    },
+    {
+      "id": "n030",
+      "kind": "narr",
+      "dur": 15.939891,
+      "chapter": "protocol",
+      "text": "With Crohn's, inventing one would be especially irresponsible. Dietary needs can change with symptoms, medicines, and problems absorbing nutrients. No particular diet is known to cure IBD. This is biography, not treatment advice.",
+      "fitness": true
+    },
+    {
+      "id": "n031",
+      "kind": "narr",
+      "dur": 14.338942,
+      "chapter": "protocol",
+      "text": "The useful pattern is simpler: make the behavior observable, protect the time before motivation disappears, follow a programmed plan that includes recovery, and measure adherence before judging the outcome.",
+      "fitness": true
+    },
+    {
+      "id": "b032_airrack_contract_premise",
+      "kind": "bite",
+      "dur": 8.36,
+      "chapter": "contract",
+      "source": "7r3ORKgNUjw",
+      "t0": 0.0,
+      "speaker": "support",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n033",
+      "kind": "narr",
+      "dur": 18.428026,
+      "chapter": "contract",
+      "text": "In the 2023 interview, Jimmy described day 310 without naming the endpoint. In Airrack's later film, Eric described it as a six-hundred-day bodybuilding challenge. The available record does not establish that the pact later expanded, so these are presented as two dated accounts.",
+      "fitness": true
+    },
+    {
+      "id": "n034",
+      "kind": "narr",
+      "dur": 10.039641,
+      "chapter": "contract",
+      "text": "Airrack's film documents his side in detail: travel, trainers, changing plans, and missed expectations. Jimmy's complete plan remains mostly off camera.",
+      "fitness": true
+    },
+    {
+      "id": "b035_airrack_jimmy_harder_than_expected",
+      "kind": "bite",
+      "dur": 14.68,
+      "chapter": "contract",
+      "source": "7r3ORKgNUjw",
+      "t0": 489.48,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "s036",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "contract",
+      "fitness": true
+    },
+    {
+      "id": "n037",
+      "kind": "narr",
+      "dur": 8.591396,
+      "chapter": "contract",
+      "text": "The body moved on a slower schedule than the video concept. The pact could create repetition. It could not compress adaptation into a deadline.",
+      "fitness": true
+    },
+    {
+      "id": "b038_colin_three_month_habit",
+      "kind": "bite",
+      "dur": 13.28,
+      "chapter": "contract",
+      "source": "9IQ_ldV9z_A",
+      "t0": 794.2,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n039",
+      "kind": "narr",
+      "dur": 13.003188,
+      "chapter": "limit",
+      "text": "The expected ending is obvious: two creators sign a contract, transform on schedule, and prove discipline can force the result. Jimmy's own assessment breaks that ending.",
+      "fitness": true
+    },
+    {
+      "id": "b040_airrack_jimmy_progress_reality",
+      "kind": "bite",
+      "dur": 16.96,
+      "chapter": "limit",
+      "source": "7r3ORKgNUjw",
+      "t0": 1082.02,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "s041",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "limit",
+      "fitness": true
+    },
+    {
+      "id": "n042",
+      "kind": "narr",
+      "dur": 11.842188,
+      "chapter": "limit",
+      "text": "Jimmy says the progress was far smaller than he expected. That did not make the repetitions imaginary. It changed what counted as success. The system survived the moment the fantasy did not.",
+      "fitness": true
+    },
+    {
+      "id": "b043_airrack_jimmy_both_grinded_youtube",
+      "kind": "bite",
+      "dur": 10.16,
+      "chapter": "limit",
+      "source": "7r3ORKgNUjw",
+      "t0": 1069.1,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n044",
+      "kind": "narr",
+      "dur": 6.733792,
+      "chapter": "limit",
+      "text": "Fitness did not erase Crohn's, and exercise is not a cure. Jimmy describes the burden of his treatment this way.",
+      "fitness": true
+    },
+    {
+      "id": "b045_doaceo_treatment_burden",
+      "kind": "bite",
+      "dur": 12.34,
+      "chapter": "limit",
+      "source": "FjrJ2DJN_pA",
+      "t0": 969.02,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "s046",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "limit",
+      "fitness": true
+    },
+    {
+      "id": "n047",
+      "kind": "narr",
+      "dur": 11.438916,
+      "chapter": "limit",
+      "text": "A tightly controlled production can promise a deadline. A body cannot. Jimmy could choose the trainer, the walk, the pact, and whether he returned. He could not promise the measurement at the end.",
+      "fitness": true
+    },
+    {
+      "id": "n048",
+      "kind": "narr",
+      "dur": 8.112292,
+      "chapter": "resolution",
+      "text": "Airrack says the project took six hundred and two days to film. The pact ran across roughly six hundred days, with programmed rest allowed.",
+      "fitness": true
+    },
+    {
+      "id": "b049_airrack_jimmy_changed_life",
+      "kind": "bite",
+      "dur": 8.2,
+      "chapter": "resolution",
+      "source": "7r3ORKgNUjw",
+      "t0": 1102.86,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n050",
+      "kind": "narr",
+      "dur": 15.070938,
+      "chapter": "resolution",
+      "text": "The public record shows sustained lifting, high daily step counts, a trainer, and an accountability pact. Jimmy says he lost fat, but the exact measurements and complete program are not public. The film stops where the evidence stops.",
+      "fitness": true
+    },
+    {
+      "id": "n051",
+      "kind": "narr",
+      "dur": 11.399812,
+      "chapter": "resolution",
+      "text": "He approached fitness with familiar tools: define the behavior, raise the cost of quitting, let someone else observe it, and repeat long enough for consistency to feel ordinary.",
+      "fitness": true
+    },
+    {
+      "id": "b052_doaceo_younger_self",
+      "kind": "bite",
+      "dur": 19.1,
+      "chapter": "resolution",
+      "source": "FjrJ2DJN_pA",
+      "t0": 5698.54,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "n053",
+      "kind": "narr",
+      "dur": 12.016871,
+      "chapter": "resolution",
+      "text": "The boy in this archive was not weak or waiting for a better routine. Jimmy says he was sick. Crohn's did not create MrBeast. But in his telling, losing one future helped redirect him toward another.",
+      "fitness": true
+    },
+    {
+      "id": "n054",
+      "kind": "narr",
+      "dur": 7.4879,
+      "chapter": "resolution",
+      "text": "The contract could not make his body predictable. It gave him something smaller and more durable: a way to keep choosing it.",
+      "fitness": true
+    },
+    {
+      "id": "b055_airrack_jimmy_continue",
+      "kind": "bite",
+      "dur": 3.6,
+      "chapter": "resolution",
+      "source": "7r3ORKgNUjw",
+      "t0": 1114.42,
+      "speaker": "subject",
+      "jcut": 0.4,
+      "fitness": true
+    },
+    {
+      "id": "s056",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "resolution",
+      "fitness": true
+    },
+    {
+      "id": "s057",
+      "kind": "beat",
+      "dur": 3.2,
+      "chapter": "resolution",
+      "fitness": true,
+      "resolves": "what_the_transformation_reclaimed"
+    }
+  ],
+  "fitted": true
+}

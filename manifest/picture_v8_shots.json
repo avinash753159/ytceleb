@@ -1,0 +1,2765 @@
+[
+  {
+    "span": "-1",
+    "slot": 0,
+    "why": "OWNER slide 1: do not lead on a talking head - open on the photograph",
+    "prog_start": 0.0,
+    "frames": 60,
+    "dur": 2.0,
+    "spec": [
+      "doc",
+      "nypost_before"
+    ],
+    "name": "000_m1_0",
+    "_idx": 0,
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "0",
+    "slot": 0,
+    "why": "'three hundred million subscribers ... a pace nobody has matched' - the 8,726-to-300-million card, then him. His live channel page was cut here: it reads 510M subscribers, which contradicts the locked narration on screen, it is bright white against a dark film, and its thumbnails are full of other people",
+    "prog_start": 2.0,
+    "frames": 148,
+    "dur": 4.933333333333334,
+    "spec": [
+      "card",
+      "card_scale"
+    ],
+    "name": "001_0_0",
+    "_idx": 1,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "0",
+    "slot": 1,
+    "why": "'three hundred million subscribers ... a pace nobody has matched' - the 8,726-to-300-million card, then him. His live channel page was cut here: it reads 510M subscribers, which contradicts the locked narration on screen, it is bright white against a dark film, and its thumbnails are full of other people",
+    "prog_start": 6.933333333333334,
+    "frames": 149,
+    "dur": 4.966666666666667,
+    "spec": [
+      "clip",
+      "tenor_100m"
+    ],
+    "name": "002_0_1",
+    "_idx": 2,
+    "kind": "clip",
+    "asset": ""
+  },
+  {
+    "span": "1",
+    "slot": 0,
+    "why": "'one of the least energetic people you'll ever meet' - him saying it",
+    "prog_start": 11.9,
+    "frames": 63,
+    "dur": 2.1,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "003_1_0",
+    "_idx": 3,
+    "kind": "broll",
+    "asset": "library/broll5/tired_9902183.mp4"
+  },
+  {
+    "span": "2",
+    "slot": 0,
+    "why": "'since he was fifteen his immune system has been attacking him ... there are days it wins' - hold on him, then an empty bed for the days it wins. No stand-in lying in it",
+    "prog_start": 14.0,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "004_2_0",
+    "_idx": 4,
+    "kind": "broll",
+    "asset": "library/broll5/tired_6614770.mp4"
+  },
+  {
+    "span": "2",
+    "slot": 1,
+    "why": "'since he was fifteen his immune system has been attacking him ... there are days it wins' - hold on him, then an empty bed for the days it wins. No stand-in lying in it",
+    "prog_start": 18.0,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "broll",
+      "bed"
+    ],
+    "name": "005_2_1",
+    "_idx": 5,
+    "kind": "broll",
+    "asset": "library/broll4/bed_5644684.mp4"
+  },
+  {
+    "span": "3",
+    "slot": 0,
+    "why": "'not a story about a workout ... what he did to take some of it back' - an empty gym, then his own June 2023 post in his own words",
+    "prog_start": 22.0,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "broll",
+      "gym_room"
+    ],
+    "name": "006_3_0",
+    "_idx": 6,
+    "kind": "broll",
+    "asset": "library/broll3/gym_room_5974316.mp4"
+  },
+  {
+    "span": "3",
+    "slot": 1,
+    "why": "'not a story about a workout ... what he did to take some of it back' - an empty gym, then his own June 2023 post in his own words",
+    "prog_start": 26.4,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "doc",
+      "post_obese"
+    ],
+    "name": "007_3_1",
+    "_idx": 7,
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "4",
+    "slot": 0,
+    "why": "OWNER slide 9: stock. Beat into the origin chapter",
+    "prog_start": 30.8,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "008_4_0",
+    "_idx": 8,
+    "kind": "broll",
+    "asset": "library/broll5/athlete_8533152.mp4"
+  },
+  {
+    "span": "5",
+    "slot": 0,
+    "why": "'he was an athlete, a kid who played constantly' - equipment and an empty field. Rule 9: no stock child cast as young Jimmy",
+    "prog_start": 34.0,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "009_5_0",
+    "_idx": 9,
+    "kind": "broll",
+    "asset": "library/broll5/athlete_7179290.mp4"
+  },
+  {
+    "span": "5",
+    "slot": 1,
+    "why": "'he was an athlete, a kid who played constantly' - equipment and an empty field. Rule 9: no stock child cast as young Jimmy",
+    "prog_start": 37.5,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "010_5_1",
+    "_idx": 10,
+    "kind": "broll",
+    "asset": "library/broll5/training_4745812.mp4"
+  },
+  {
+    "span": "5",
+    "slot": 2,
+    "why": "'he was an athlete, a kid who played constantly' - equipment and an empty field. Rule 9: no stock child cast as young Jimmy",
+    "prog_start": 41.0,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "011_5_2",
+    "_idx": 11,
+    "kind": "broll",
+    "asset": "library/broll5/athlete_8533111.mp4"
+  },
+  {
+    "span": "6",
+    "slot": 0,
+    "why": "'I played baseball nonstop, then when I got Crohn's I lost like 50 pounds' - him saying it, then his own 2015 footage, already thin",
+    "prog_start": 44.5,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "012_6_0",
+    "_idx": 12,
+    "kind": "footage",
+    "archive": false,
+    "variant": 0,
+    "asset": "cLRLEnPaJLM@5199.51"
+  },
+  {
+    "span": "6",
+    "slot": 1,
+    "why": "'I played baseball nonstop, then when I got Crohn's I lost like 50 pounds' - him saying it, then his own 2015 footage, already thin",
+    "prog_start": 50.5,
+    "frames": 108,
+    "dur": 3.6,
+    "spec": [
+      "broll",
+      "bb_gear"
+    ],
+    "name": "013_6_1",
+    "_idx": 13,
+    "kind": "broll",
+    "asset": "library/broll3/bb_gear_5182638.mp4"
+  },
+  {
+    "span": "6.5",
+    "slot": 0,
+    "why": "TITLE BREAK 54.10-58.10, music only. Held on the 2015 archive. The previous build put the 2023 post here, eight years out of place",
+    "prog_start": 54.1,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "broll",
+      "bb_field"
+    ],
+    "name": "014_6p5_0",
+    "_idx": 14,
+    "kind": "broll",
+    "asset": "library/broll3/bb_field_37052402.mp4"
+  },
+  {
+    "span": "7",
+    "slot": 0,
+    "why": "'the diagnosis had a name' - the NIDDK definition page, him, the tract",
+    "prog_start": 58.1,
+    "frames": 113,
+    "dur": 3.7666666666666666,
+    "spec": [
+      "doc",
+      "drvaidji_3d"
+    ],
+    "name": "015_7_0",
+    "_idx": 15,
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "7",
+    "slot": 1,
+    "why": "'the diagnosis had a name' - the NIDDK definition page, him, the tract",
+    "prog_start": 61.86666666666667,
+    "frames": 113,
+    "dur": 3.7666666666666666,
+    "spec": [
+      "still",
+      "tract"
+    ],
+    "name": "016_7_1",
+    "_idx": 16,
+    "kind": "still",
+    "asset": ""
+  },
+  {
+    "span": "7",
+    "slot": 2,
+    "why": "'the diagnosis had a name' - the NIDDK definition page, him, the tract",
+    "prog_start": 65.63333333333334,
+    "frames": 114,
+    "dur": 3.8,
+    "spec": [
+      "still",
+      "intestine"
+    ],
+    "name": "017_7_2",
+    "_idx": 17,
+    "kind": "still",
+    "asset": ""
+  },
+  {
+    "span": "8",
+    "slot": 0,
+    "why": "'190 pounds down to 139 ... not playing baseball in college anymore' - him, the two numbers, the field he left",
+    "prog_start": 69.43333333333334,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "018_8_0",
+    "_idx": 18,
+    "kind": "footage",
+    "archive": false,
+    "variant": 0,
+    "asset": "FjrJ2DJN_pA@823.75"
+  },
+  {
+    "span": "8",
+    "slot": 1,
+    "why": "'190 pounds down to 139 ... not playing baseball in college anymore' - him, the two numbers, the field he left",
+    "prog_start": 75.43333333333334,
+    "frames": 150,
+    "dur": 5.0,
+    "spec": [
+      "doc",
+      "menshealth_ba"
+    ],
+    "name": "019_8_1",
+    "_idx": 19,
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "8",
+    "slot": 2,
+    "why": "'190 pounds down to 139 ... not playing baseball in college anymore' - him, the two numbers, the field he left",
+    "prog_start": 80.43333333333334,
+    "frames": 150,
+    "dur": 5.0,
+    "spec": [
+      "broll",
+      "bb_field"
+    ],
+    "name": "020_8_2",
+    "_idx": 20,
+    "kind": "broll",
+    "asset": "library/broll3/bb_field_35557006.mp4"
+  },
+  {
+    "span": "9",
+    "slot": 0,
+    "why": "'the illness closed one door and he ran at the other one' - the bedroom, his own 2015 dashboard at 8,726 subscribers, the bedroom again",
+    "prog_start": 85.43333333333334,
+    "frames": 129,
+    "dur": 4.3,
+    "spec": [
+      "broll",
+      "editing"
+    ],
+    "name": "021_9_0",
+    "_idx": 21,
+    "kind": "broll",
+    "asset": "library/broll5/editing_33414463.mp4"
+  },
+  {
+    "span": "9",
+    "slot": 1,
+    "why": "'the illness closed one door and he ran at the other one' - the bedroom, his own 2015 dashboard at 8,726 subscribers, the bedroom again",
+    "prog_start": 89.73333333333333,
+    "frames": 129,
+    "dur": 4.3,
+    "spec": [
+      "doc",
+      "dash_2015"
+    ],
+    "name": "022_9_1",
+    "_idx": 22,
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "9",
+    "slot": 2,
+    "why": "'the illness closed one door and he ran at the other one' - the bedroom, his own 2015 dashboard at 8,726 subscribers, the bedroom again",
+    "prog_start": 94.03333333333333,
+    "frames": 128,
+    "dur": 4.266666666666667,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "023_9_2",
+    "_idx": 23,
+    "kind": "broll",
+    "asset": "library/broll5/athlete_8533204.mp4"
+  },
+  {
+    "span": "10",
+    "slot": 0,
+    "why": "beat: a desk at night, where the other door led",
+    "prog_start": 98.3,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "desk"
+    ],
+    "name": "024_10_0",
+    "_idx": 24,
+    "kind": "broll",
+    "asset": "library/broll3/desk_5299882.mp4"
+  },
+  {
+    "span": "11",
+    "slot": 0,
+    "why": "'most videos skip this part' - him, then a corridor",
+    "prog_start": 101.5,
+    "frames": 119,
+    "dur": 3.966666666666667,
+    "spec": [
+      "broll",
+      "gut_pain"
+    ],
+    "name": "025_11_0",
+    "_idx": 25,
+    "kind": "broll",
+    "asset": "library/broll5/gut_pain_7297871.mp4"
+  },
+  {
+    "span": "11",
+    "slot": 1,
+    "why": "'most videos skip this part' - him, then a corridor",
+    "prog_start": 105.46666666666667,
+    "frames": 119,
+    "dur": 3.966666666666667,
+    "spec": [
+      "broll",
+      "clinic"
+    ],
+    "name": "026_11_1",
+    "_idx": 26,
+    "kind": "broll",
+    "asset": "library/broll3/clinic_3192916.mp4"
+  },
+  {
+    "span": "12",
+    "slot": 0,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 109.43333333333334,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "parallax",
+      "jimmy_symptoms"
+    ],
+    "name": "027_12_0",
+    "_idx": 27,
+    "kind": "parallax",
+    "asset": ""
+  },
+  {
+    "span": "12",
+    "slot": 1,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 115.43333333333334,
+    "frames": 119,
+    "dur": 3.966666666666667,
+    "spec": [
+      "broll",
+      "gut_pain"
+    ],
+    "name": "028_12_1",
+    "_idx": 28,
+    "kind": "broll",
+    "asset": "library/broll5/gut_pain_7297851.mp4"
+  },
+  {
+    "span": "12",
+    "slot": 2,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 119.4,
+    "frames": 150,
+    "dur": 5.0,
+    "spec": [
+      "flash",
+      "crohns_real"
+    ],
+    "name": "029_12_2",
+    "_idx": 29,
+    "kind": "flash",
+    "asset": ""
+  },
+  {
+    "span": "12",
+    "slot": 3,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 124.4,
+    "frames": 119,
+    "dur": 3.966666666666667,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "030_12_3",
+    "_idx": 30,
+    "kind": "broll",
+    "asset": "library/broll5/eating_6496178.mp4"
+  },
+  {
+    "span": "13",
+    "slot": 0,
+    "why": "'a body that will not keep what you feed it. You can eat and still starve' - food, the villi that should absorb it, food",
+    "prog_start": 128.36666666666667,
+    "frames": 116,
+    "dur": 3.8666666666666667,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "031_13_0",
+    "_idx": 31,
+    "kind": "broll",
+    "asset": "library/broll5/eating_8107662.mp4"
+  },
+  {
+    "span": "13",
+    "slot": 1,
+    "why": "'a body that will not keep what you feed it. You can eat and still starve' - food, the villi that should absorb it, food",
+    "prog_start": 132.23333333333332,
+    "frames": 66,
+    "dur": 2.2,
+    "spec": [
+      "still",
+      "villi"
+    ],
+    "name": "032_13_1",
+    "_idx": 32,
+    "kind": "still",
+    "asset": ""
+  },
+  {
+    "span": "13",
+    "slot": 2,
+    "why": "'a body that will not keep what you feed it. You can eat and still starve' - food, the villi that should absorb it, food",
+    "prog_start": 134.43333333333334,
+    "frames": 116,
+    "dur": 3.8666666666666667,
+    "spec": [
+      "broll",
+      "gut_pain"
+    ],
+    "name": "033_13_2",
+    "_idx": 33,
+    "kind": "broll",
+    "asset": "library/broll5/gut_pain_7297875.mp4"
+  },
+  {
+    "span": "14",
+    "slot": 0,
+    "why": "the explainer: what Crohn's is, from the primary source and the diagrams",
+    "prog_start": 138.3,
+    "frames": 144,
+    "dur": 4.8,
+    "spec": [
+      "still",
+      "mech_left"
+    ],
+    "name": "034_14_0",
+    "_idx": 34,
+    "kind": "still",
+    "asset": ""
+  },
+  {
+    "span": "14",
+    "slot": 1,
+    "why": "the explainer: what Crohn's is, from the primary source and the diagrams",
+    "prog_start": 143.1,
+    "frames": 144,
+    "dur": 4.8,
+    "spec": [
+      "broll",
+      "gut_pain"
+    ],
+    "name": "035_14_1",
+    "_idx": 35,
+    "kind": "broll",
+    "asset": "library/broll5/gut_pain_11494045.mp4"
+  },
+  {
+    "span": "14",
+    "slot": 2,
+    "why": "the explainer: what Crohn's is, from the primary source and the diagrams",
+    "prog_start": 147.9,
+    "frames": 145,
+    "dur": 4.833333333333333,
+    "spec": [
+      "still",
+      "mech_right"
+    ],
+    "name": "036_14_2",
+    "_idx": 36,
+    "kind": "still",
+    "asset": ""
+  },
+  {
+    "span": "15",
+    "slot": 0,
+    "why": "'the inflammation goes through the entire thickness' - him, then 2.2s of a resected ileum whose wall is visibly thickened, which is better evidence for this sentence than a second diagram. mech_right was cut here: it is another crop of the mech_left figure and read as the same picture fifteen seconds later",
+    "prog_start": 152.73333333333332,
+    "frames": 146,
+    "dur": 4.866666666666666,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "037_15_0",
+    "_idx": 37,
+    "kind": "broll",
+    "asset": "library/broll5/tired_7581346.mp4"
+  },
+  {
+    "span": "15",
+    "slot": 1,
+    "why": "'the inflammation goes through the entire thickness' - him, then 2.2s of a resected ileum whose wall is visibly thickened, which is better evidence for this sentence than a second diagram. mech_right was cut here: it is another crop of the mech_left figure and read as the same picture fifteen seconds later",
+    "prog_start": 157.6,
+    "frames": 66,
+    "dur": 2.2,
+    "spec": [
+      "clin",
+      "resected"
+    ],
+    "name": "038_15_1",
+    "_idx": 38,
+    "kind": "clin",
+    "asset": ""
+  },
+  {
+    "span": "15",
+    "slot": 2,
+    "why": "'the inflammation goes through the entire thickness' - him, then 2.2s of a resected ileum whose wall is visibly thickened, which is better evidence for this sentence than a second diagram. mech_right was cut here: it is another crop of the mech_left figure and read as the same picture fifteen seconds later",
+    "prog_start": 159.8,
+    "frames": 146,
+    "dur": 4.866666666666666,
+    "spec": [
+      "broll",
+      "clinic"
+    ],
+    "name": "039_15_2",
+    "_idx": 39,
+    "kind": "broll",
+    "asset": "library/broll3/clinic_9574129.mp4"
+  },
+  {
+    "span": "15",
+    "slot": 3,
+    "why": "'the inflammation goes through the entire thickness' - him, then 2.2s of a resected ileum whose wall is visibly thickened, which is better evidence for this sentence than a second diagram. mech_right was cut here: it is another crop of the mech_left figure and read as the same picture fifteen seconds later",
+    "prog_start": 164.66666666666666,
+    "frames": 146,
+    "dur": 4.866666666666666,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "040_15_3",
+    "_idx": 40,
+    "kind": "broll",
+    "asset": "library/broll5/eating_5197771.mp4"
+  },
+  {
+    "span": "16",
+    "slot": 0,
+    "why": "'explains a teenager losing fifty pounds. He was eating. The food was not reaching him' - the villi, the actual teenager, the food",
+    "prog_start": 169.53333333333333,
+    "frames": 66,
+    "dur": 2.2,
+    "spec": [
+      "clin",
+      "histology"
+    ],
+    "name": "041_16_0",
+    "_idx": 41,
+    "kind": "clin",
+    "asset": ""
+  },
+  {
+    "span": "16",
+    "slot": 1,
+    "why": "'explains a teenager losing fifty pounds. He was eating. The food was not reaching him' - the villi, the actual teenager, the food",
+    "prog_start": 171.73333333333332,
+    "frames": 166,
+    "dur": 5.533333333333333,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "042_16_1",
+    "_idx": 42,
+    "kind": "broll",
+    "asset": "library/broll5/eating_3760752.mp4"
+  },
+  {
+    "span": "16",
+    "slot": 2,
+    "why": "'explains a teenager losing fifty pounds. He was eating. The food was not reaching him' - the villi, the actual teenager, the food",
+    "prog_start": 177.26666666666668,
+    "frames": 165,
+    "dur": 5.5,
+    "spec": [
+      "broll",
+      "food"
+    ],
+    "name": "043_16_2",
+    "_idx": 43,
+    "kind": "broll",
+    "asset": "library/broll3/food_4098412.mp4"
+  },
+  {
+    "span": "17",
+    "slot": 0,
+    "why": "'it does not run on a schedule. It flares and it quiets' - a calendar, a clock, the treatment page",
+    "prog_start": 182.76666666666668,
+    "frames": 126,
+    "dur": 4.2,
+    "spec": [
+      "broll",
+      "clinic"
+    ],
+    "name": "044_17_0",
+    "_idx": 44,
+    "kind": "broll",
+    "asset": "library/broll4/clinic_5203512.mp4"
+  },
+  {
+    "span": "17",
+    "slot": 1,
+    "why": "'it does not run on a schedule. It flares and it quiets' - a calendar, a clock, the treatment page",
+    "prog_start": 186.96666666666667,
+    "frames": 126,
+    "dur": 4.2,
+    "spec": [
+      "broll",
+      "clock"
+    ],
+    "name": "045_17_1",
+    "_idx": 45,
+    "kind": "broll",
+    "asset": "library/broll3/clock_7033607.mp4"
+  },
+  {
+    "span": "17",
+    "slot": 2,
+    "why": "'it does not run on a schedule. It flares and it quiets' - a calendar, a clock, the treatment page",
+    "prog_start": 191.16666666666666,
+    "frames": 125,
+    "dur": 4.166666666666667,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "046_17_2",
+    "_idx": 46,
+    "kind": "broll",
+    "asset": "library/broll3/meds_11186312.mp4"
+  },
+  {
+    "span": "18",
+    "slot": 0,
+    "why": "'I'm dead. I just lay in bed all day.' NO SYNC - the Rogan monitor has the Crohn's Foundation site up across his face for this whole bite. An empty bed carries it, and nobody is cast as him lying in it",
+    "prog_start": 195.33333333333334,
+    "frames": 171,
+    "dur": 5.7,
+    "spec": [
+      "broll",
+      "bed"
+    ],
+    "name": "047_18_0",
+    "_idx": 47,
+    "kind": "broll",
+    "asset": "library/broll4/bed_5644695.mp4"
+  },
+  {
+    "span": "19",
+    "slot": 0,
+    "why": "'hundreds of thousands live with this. There is no cure' - the page, a clinic, him",
+    "prog_start": 201.03333333333333,
+    "frames": 114,
+    "dur": 3.8,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "048_19_0",
+    "_idx": 48,
+    "kind": "broll",
+    "asset": "library/broll5/tired_7581176.mp4"
+  },
+  {
+    "span": "19",
+    "slot": 1,
+    "why": "'hundreds of thousands live with this. There is no cure' - the page, a clinic, him",
+    "prog_start": 204.83333333333334,
+    "frames": 114,
+    "dur": 3.8,
+    "spec": [
+      "broll",
+      "clinic"
+    ],
+    "name": "049_19_1",
+    "_idx": 49,
+    "kind": "broll",
+    "asset": "library/broll4/clinic_31972363.mp4"
+  },
+  {
+    "span": "19",
+    "slot": 2,
+    "why": "'hundreds of thousands live with this. There is no cure' - the page, a clinic, him",
+    "prog_start": 208.63333333333333,
+    "frames": 113,
+    "dur": 3.7666666666666666,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "050_19_2",
+    "_idx": 50,
+    "kind": "broll",
+    "asset": "library/broll3/meds_4492602.mp4"
+  },
+  {
+    "span": "20",
+    "slot": 0,
+    "why": "'Remicade, every eight weeks they do an IV'. NO SYNC (same panel) - the drip itself, then every eight weeks drawn out to a lifetime",
+    "prog_start": 212.4,
+    "frames": 88,
+    "dur": 2.933333333333333,
+    "spec": [
+      "broll",
+      "iv"
+    ],
+    "name": "051_20_0",
+    "_idx": 51,
+    "kind": "broll",
+    "asset": "library/broll4/iv_6248837.mp4"
+  },
+  {
+    "span": "20",
+    "slot": 1,
+    "why": "'Remicade, every eight weeks they do an IV'. NO SYNC (same panel) - the drip itself, then every eight weeks drawn out to a lifetime",
+    "prog_start": 215.33333333333334,
+    "frames": 87,
+    "dur": 2.9,
+    "spec": [
+      "card",
+      "card_infusion"
+    ],
+    "name": "052_20_1",
+    "_idx": 52,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "21",
+    "slot": 0,
+    "why": "'for the rest of his life ... call off a defence system that has turned on you' - the years, the medication, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 218.23333333333332,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "card",
+      "card_protocol_ig"
+    ],
+    "name": "053_21_0",
+    "_idx": 53,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "21",
+    "slot": 1,
+    "why": "'for the rest of his life ... call off a defence system that has turned on you' - the years, the medication, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 222.36666666666667,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "054_21_1",
+    "_idx": 54,
+    "kind": "broll",
+    "asset": "library/broll3/meds_11075637.mp4"
+  },
+  {
+    "span": "21",
+    "slot": 2,
+    "why": "'for the rest of his life ... call off a defence system that has turned on you' - the years, the medication, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 226.5,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "055_21_2",
+    "_idx": 55,
+    "kind": "broll",
+    "asset": "library/broll5/tired_8371028.mp4"
+  },
+  {
+    "span": "22",
+    "slot": 0,
+    "why": "'Corn. Anything spicy. Anything overly processed.' - him saying it. Panel map confirms the monitor is dark 5306.75-5330.75  [OWNER slide 44: talking head removed]",
+    "prog_start": 230.63333333333333,
+    "frames": 153,
+    "dur": 5.1,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "056_22_0",
+    "_idx": 56,
+    "kind": "broll",
+    "asset": "library/broll6/tired_6943537.mp4"
+  },
+  {
+    "span": "23",
+    "slot": 0,
+    "why": "'not the pain, the permanence. Every meal, every year' - a plate, a calendar",
+    "prog_start": 235.73333333333332,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "broll",
+      "food"
+    ],
+    "name": "057_23_0",
+    "_idx": 57,
+    "kind": "broll",
+    "asset": "library/broll3/food_8107796.mp4"
+  },
+  {
+    "span": "23",
+    "slot": 1,
+    "why": "'not the pain, the permanence. Every meal, every year' - a plate, a calendar",
+    "prog_start": 239.73333333333332,
+    "frames": 121,
+    "dur": 4.033333333333333,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "058_23_1",
+    "_idx": 58,
+    "kind": "broll",
+    "asset": "library/broll3/meds_5697635.mp4"
+  },
+  {
+    "span": "24",
+    "slot": 0,
+    "why": "beat: held on him  [OWNER slide 44: talking head removed]",
+    "prog_start": 243.76666666666668,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "059_24_0",
+    "_idx": 59,
+    "kind": "broll",
+    "asset": "library/broll5/eating_5102314.mp4"
+  },
+  {
+    "span": "25",
+    "slot": 0,
+    "why": "'he did not do it despite the illness' - the bedroom and the numbers he was actually posting to  [OWNER slide 44: talking head removed]",
+    "prog_start": 246.96666666666667,
+    "frames": 121,
+    "dur": 4.033333333333333,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "060_25_0",
+    "_idx": 60,
+    "kind": "broll",
+    "asset": "library/broll6/tired_6943530.mp4"
+  },
+  {
+    "span": "25",
+    "slot": 1,
+    "why": "'he did not do it despite the illness' - the bedroom and the numbers he was actually posting to  [OWNER slide 44: talking head removed]",
+    "prog_start": 251.0,
+    "frames": 121,
+    "dur": 4.033333333333333,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "061_25_1",
+    "_idx": 61,
+    "kind": "broll",
+    "asset": "library/broll6/tired_6944078.mp4"
+  },
+  {
+    "span": "26",
+    "slot": 0,
+    "why": "'no money, no nothing, and I obsessed over YouTube every day' - him, then the room he did it in  [OWNER slide 44: talking head removed]",
+    "prog_start": 255.03333333333333,
+    "frames": 106,
+    "dur": 3.533333333333333,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "062_26_0",
+    "_idx": 62,
+    "kind": "broll",
+    "asset": "library/broll6/eating_4731058.mp4"
+  },
+  {
+    "span": "26",
+    "slot": 1,
+    "why": "'no money, no nothing, and I obsessed over YouTube every day' - him, then the room he did it in  [OWNER slide 44: talking head removed]",
+    "prog_start": 258.56666666666666,
+    "frames": 107,
+    "dur": 3.566666666666667,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "063_26_1",
+    "_idx": 63,
+    "kind": "broll",
+    "asset": "library/broll6/tired_8376628.mp4"
+  },
+  {
+    "span": "27",
+    "slot": 0,
+    "why": "'ten years of testing, failing, rebuilding' - the desk, the hours, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 262.1333333333333,
+    "frames": 170,
+    "dur": 5.666666666666667,
+    "spec": [
+      "broll",
+      "desk"
+    ],
+    "name": "064_27_0",
+    "_idx": 64,
+    "kind": "broll",
+    "asset": "library/broll4/desk_19463241.mp4"
+  },
+  {
+    "span": "27",
+    "slot": 1,
+    "why": "'ten years of testing, failing, rebuilding' - the desk, the hours, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 267.8,
+    "frames": 169,
+    "dur": 5.633333333333334,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "065_27_1",
+    "_idx": 65,
+    "kind": "broll",
+    "asset": "library/broll6/eating_8107929.mp4"
+  },
+  {
+    "span": "28",
+    "slot": 0,
+    "why": "'I didn't talk to anyone. I hardly had any friends' - him, an empty room, the desk, the boy alone in it  [OWNER slide 44: talking head removed]",
+    "prog_start": 273.43333333333334,
+    "frames": 158,
+    "dur": 5.266666666666667,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "066_28_0",
+    "_idx": 66,
+    "kind": "broll",
+    "asset": "library/broll6/tired_5983685.mp4"
+  },
+  {
+    "span": "28",
+    "slot": 1,
+    "why": "'I didn't talk to anyone. I hardly had any friends' - him, an empty room, the desk, the boy alone in it  [OWNER slide 44: talking head removed]",
+    "prog_start": 278.7,
+    "frames": 158,
+    "dur": 5.266666666666667,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "067_28_1",
+    "_idx": 67,
+    "kind": "broll",
+    "asset": "library/broll6/eating_7244293.mp4"
+  },
+  {
+    "span": "28",
+    "slot": 2,
+    "why": "'I didn't talk to anyone. I hardly had any friends' - him, an empty room, the desk, the boy alone in it  [OWNER slide 44: talking head removed]",
+    "prog_start": 283.96666666666664,
+    "frames": 158,
+    "dur": 5.266666666666667,
+    "spec": [
+      "broll",
+      "desk"
+    ],
+    "name": "068_28_2",
+    "_idx": 68,
+    "kind": "broll",
+    "asset": "library/broll4/desk_34279733.mp4"
+  },
+  {
+    "span": "28",
+    "slot": 3,
+    "why": "'I didn't talk to anyone. I hardly had any friends' - him, an empty room, the desk, the boy alone in it  [OWNER slide 44: talking head removed]",
+    "prog_start": 289.23333333333335,
+    "frames": 160,
+    "dur": 5.333333333333333,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "069_28_3",
+    "_idx": 69,
+    "kind": "broll",
+    "asset": "library/broll6/tired_5983702.mp4"
+  },
+  {
+    "span": "29",
+    "slot": 0,
+    "why": "'the machine was hungry and the first thing it ate was him' - him, then the scale of the system, in verified figures only  [OWNER slide 44: talking head removed]",
+    "prog_start": 294.56666666666666,
+    "frames": 127,
+    "dur": 4.233333333333333,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "070_29_0",
+    "_idx": 70,
+    "kind": "broll",
+    "asset": "library/broll6/eating_6496237.mp4"
+  },
+  {
+    "span": "29",
+    "slot": 1,
+    "why": "'the machine was hungry and the first thing it ate was him' - him, then the scale of the system, in verified figures only  [OWNER slide 44: talking head removed]",
+    "prog_start": 298.8,
+    "frames": 127,
+    "dur": 4.233333333333333,
+    "spec": [
+      "card",
+      "card_decade"
+    ],
+    "name": "071_29_1",
+    "_idx": 71,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "30",
+    "slot": 0,
+    "why": "beat: held on him, the hours running  [OWNER slide 44: talking head removed]",
+    "prog_start": 303.03333333333336,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "072_30_0",
+    "_idx": 72,
+    "kind": "broll",
+    "asset": "library/broll6/tired_5983705.mp4"
+  },
+  {
+    "span": "31",
+    "slot": 0,
+    "why": "'a system that consumed every hour, inside a body that was rationing them' - the figures, him, the desk  [OWNER slide 44: talking head removed]",
+    "prog_start": 306.23333333333335,
+    "frames": 116,
+    "dur": 3.8666666666666667,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "073_31_0",
+    "_idx": 73,
+    "kind": "broll",
+    "asset": "library/broll3/meds_7033924.mp4"
+  },
+  {
+    "span": "31",
+    "slot": 1,
+    "why": "'a system that consumed every hour, inside a body that was rationing them' - the figures, him, the desk  [OWNER slide 44: talking head removed]",
+    "prog_start": 310.1,
+    "frames": 116,
+    "dur": 3.8666666666666667,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "074_31_1",
+    "_idx": 74,
+    "kind": "broll",
+    "asset": "library/broll6/eating_6337005.mp4"
+  },
+  {
+    "span": "31",
+    "slot": 2,
+    "why": "'a system that consumed every hour, inside a body that was rationing them' - the figures, him, the desk  [OWNER slide 44: talking head removed]",
+    "prog_start": 313.96666666666664,
+    "frames": 116,
+    "dur": 3.8666666666666667,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "075_31_2",
+    "_idx": 75,
+    "kind": "broll",
+    "asset": "library/broll6/walk2_19329334.mp4"
+  },
+  {
+    "span": "32",
+    "slot": 0,
+    "why": "'I have not been working out or taking care of myself' - him twice, the empty gym, then him elsewhere so the set changes  [OWNER slide 44: talking head removed]",
+    "prog_start": 317.8333333333333,
+    "frames": 140,
+    "dur": 4.666666666666667,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "076_32_0",
+    "_idx": 76,
+    "kind": "broll",
+    "asset": "library/broll5/athlete_4065480.mp4"
+  },
+  {
+    "span": "32",
+    "slot": 1,
+    "why": "'I have not been working out or taking care of myself' - him twice, the empty gym, then him elsewhere so the set changes  [OWNER slide 44: talking head removed]",
+    "prog_start": 322.5,
+    "frames": 140,
+    "dur": 4.666666666666667,
+    "spec": [
+      "broll",
+      "gym_room"
+    ],
+    "name": "077_32_1",
+    "_idx": 77,
+    "kind": "broll",
+    "asset": "library/broll3/gym_room_37536668.mp4"
+  },
+  {
+    "span": "32",
+    "slot": 2,
+    "why": "'I have not been working out or taking care of myself' - him twice, the empty gym, then him elsewhere so the set changes  [OWNER slide 44: talking head removed]",
+    "prog_start": 327.1666666666667,
+    "frames": 140,
+    "dur": 4.666666666666667,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "078_32_2",
+    "_idx": 78,
+    "kind": "broll",
+    "asset": "library/broll5/athlete_7187092.mp4"
+  },
+  {
+    "span": "32",
+    "slot": 3,
+    "why": "'I have not been working out or taking care of myself' - him twice, the empty gym, then him elsewhere so the set changes  [OWNER slide 44: talking head removed]",
+    "prog_start": 331.8333333333333,
+    "frames": 139,
+    "dur": 4.633333333333334,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "079_32_3",
+    "_idx": 79,
+    "kind": "broll",
+    "asset": "library/broll6/athlete_4065468.mp4"
+  },
+  {
+    "span": "33",
+    "slot": 0,
+    "why": "'not motivation, not a new year. A second person and a written penalty'",
+    "prog_start": 336.46666666666664,
+    "frames": 167,
+    "dur": 5.566666666666666,
+    "spec": [
+      "card",
+      "card_nomotivation"
+    ],
+    "name": "080_33_0",
+    "_idx": 80,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "33",
+    "slot": 1,
+    "why": "'not motivation, not a new year. A second person and a written penalty'",
+    "prog_start": 342.03333333333336,
+    "frames": 167,
+    "dur": 5.566666666666666,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "081_33_1",
+    "_idx": 81,
+    "kind": "broll",
+    "asset": "library/broll5/training_3191884.mp4"
+  },
+  {
+    "span": "34",
+    "slot": 0,
+    "why": "Airrack's own voice describing the contract. He is banned from screen and no Jimmy-only window exists in his video, so the terms are stated as a card rather than faked as sync",
+    "prog_start": 347.6,
+    "frames": 179,
+    "dur": 5.966666666666667,
+    "spec": [
+      "card",
+      "card_contract2"
+    ],
+    "name": "082_34_0",
+    "_idx": 82,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "35",
+    "slot": 0,
+    "why": "'signed, with a penalty attached'",
+    "prog_start": 353.56666666666666,
+    "frames": 65,
+    "dur": 2.1666666666666665,
+    "spec": [
+      "broll",
+      "eq_dumbbell"
+    ],
+    "name": "083_35_0",
+    "_idx": 83,
+    "kind": "broll",
+    "asset": "library/broll3/eq_dumbbell_6389051.mp4"
+  },
+  {
+    "span": "36",
+    "slot": 0,
+    "why": "'if I miss a single day I have to get MrBeast's name tattooed' - Airrack again: the stake as a card, then equipment",
+    "prog_start": 355.73333333333335,
+    "frames": 91,
+    "dur": 3.033333333333333,
+    "spec": [
+      "card",
+      "card_contract_ig"
+    ],
+    "name": "084_36_0",
+    "_idx": 84,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "36",
+    "slot": 1,
+    "why": "'if I miss a single day I have to get MrBeast's name tattooed' - Airrack again: the stake as a card, then equipment",
+    "prog_start": 358.76666666666665,
+    "frames": 91,
+    "dur": 3.033333333333333,
+    "spec": [
+      "broll",
+      "eq_machine"
+    ],
+    "name": "085_36_1",
+    "_idx": 85,
+    "kind": "broll",
+    "asset": "library/broll3/eq_machine_37281136.mp4"
+  },
+  {
+    "span": "37",
+    "slot": 0,
+    "why": "'it sounds like a bit. It is good behavioural design.'  [OWNER slide 44: talking head removed]",
+    "prog_start": 361.8,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "086_37_0",
+    "_idx": 86,
+    "kind": "broll",
+    "asset": "library/broll6/athlete_4065472.mp4"
+  },
+  {
+    "span": "37",
+    "slot": 1,
+    "why": "'it sounds like a bit. It is good behavioural design.'  [OWNER slide 44: talking head removed]",
+    "prog_start": 365.93333333333334,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "broll",
+      "eq_barbell"
+    ],
+    "name": "087_37_1",
+    "_idx": 87,
+    "kind": "broll",
+    "asset": "library/broll3/eq_barbell_4367636.mp4"
+  },
+  {
+    "span": "37",
+    "slot": 2,
+    "why": "'it sounds like a bit. It is good behavioural design.'  [OWNER slide 44: talking head removed]",
+    "prog_start": 370.06666666666666,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "088_37_2",
+    "_idx": 88,
+    "kind": "broll",
+    "asset": "library/broll6/athlete_4065471.mp4"
+  },
+  {
+    "span": "38",
+    "slot": 0,
+    "why": "'Today was day 310. Me and Eric signed a contract' - him, the count, him again, the bar  [OWNER slide 44: talking head removed]",
+    "prog_start": 374.2,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "089_38_0",
+    "_idx": 89,
+    "kind": "footage",
+    "archive": false,
+    "variant": 0,
+    "asset": "9IQ_ldV9z_A@730.71"
+  },
+  {
+    "span": "38",
+    "slot": 1,
+    "why": "'Today was day 310. Me and Eric signed a contract' - him, the count, him again, the bar  [OWNER slide 44: talking head removed]",
+    "prog_start": 380.2,
+    "frames": 160,
+    "dur": 5.333333333333333,
+    "spec": [
+      "card",
+      "card_310"
+    ],
+    "name": "090_38_1",
+    "_idx": 90,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "38",
+    "slot": 2,
+    "why": "'Today was day 310. Me and Eric signed a contract' - him, the count, him again, the bar  [OWNER slide 44: talking head removed]",
+    "prog_start": 385.53333333333336,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "091_38_2",
+    "_idx": 91,
+    "kind": "footage",
+    "archive": false,
+    "variant": 1,
+    "asset": "9IQ_ldV9z_A@744.62"
+  },
+  {
+    "span": "38",
+    "slot": 3,
+    "why": "'Today was day 310. Me and Eric signed a contract' - him, the count, him again, the bar  [OWNER slide 44: talking head removed]",
+    "prog_start": 391.53333333333336,
+    "frames": 159,
+    "dur": 5.3,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "092_38_3",
+    "_idx": 92,
+    "kind": "broll",
+    "asset": "library/broll6/training_5319746.mp4"
+  },
+  {
+    "span": "39",
+    "slot": 0,
+    "why": "'that was NOT three hundred and ten unbroken sessions - programmed rest counted'. The correction gets its own card because the internet has it wrong  [OWNER slide 44: talking head removed]",
+    "prog_start": 396.8333333333333,
+    "frames": 149,
+    "dur": 4.966666666666667,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "093_39_0",
+    "_idx": 93,
+    "kind": "broll",
+    "asset": "library/broll6/athlete_7884054.mp4"
+  },
+  {
+    "span": "39",
+    "slot": 1,
+    "why": "'that was NOT three hundred and ten unbroken sessions - programmed rest counted'. The correction gets its own card because the internet has it wrong  [OWNER slide 44: talking head removed]",
+    "prog_start": 401.8,
+    "frames": 149,
+    "dur": 4.966666666666667,
+    "spec": [
+      "broll",
+      "eq_dumbbell"
+    ],
+    "name": "094_39_1",
+    "_idx": 94,
+    "kind": "broll",
+    "asset": "library/broll3/eq_dumbbell_4367547.mp4"
+  },
+  {
+    "span": "39",
+    "slot": 2,
+    "why": "'that was NOT three hundred and ten unbroken sessions - programmed rest counted'. The correction gets its own card because the internet has it wrong  [OWNER slide 44: talking head removed]",
+    "prog_start": 406.76666666666665,
+    "frames": 148,
+    "dur": 4.933333333333334,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "095_39_2",
+    "_idx": 95,
+    "kind": "broll",
+    "asset": "library/src_coverr/training_IkSjzezRhP.mp4"
+  },
+  {
+    "span": "40",
+    "slot": 0,
+    "why": "beat  [OWNER slide 44: talking head removed]",
+    "prog_start": 411.7,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "096_40_0",
+    "_idx": 96,
+    "kind": "broll",
+    "asset": "library/broll6/athlete_9183885.mp4"
+  },
+  {
+    "span": "41",
+    "slot": 0,
+    "why": "'most videos invent this part. Here is only what he has said himself'  [OWNER slide 44: talking head removed]",
+    "prog_start": 414.9,
+    "frames": 178,
+    "dur": 5.933333333333334,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "097_41_0",
+    "_idx": 97,
+    "kind": "broll",
+    "asset": "library/src_coverr/training_KZ4vuMiBwU.mp4"
+  },
+  {
+    "span": "42",
+    "slot": 0,
+    "why": "'three things my entire world revolves around: I work out every day'  [OWNER slide 44: talking head removed]",
+    "prog_start": 420.8333333333333,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "098_42_0",
+    "_idx": 98,
+    "kind": "footage",
+    "archive": false,
+    "variant": 2,
+    "asset": "9IQ_ldV9z_A@707.67"
+  },
+  {
+    "span": "42",
+    "slot": 1,
+    "why": "'three things my entire world revolves around: I work out every day'  [OWNER slide 44: talking head removed]",
+    "prog_start": 426.8333333333333,
+    "frames": 91,
+    "dur": 3.033333333333333,
+    "spec": [
+      "broll",
+      "eq_machine"
+    ],
+    "name": "099_42_1",
+    "_idx": 99,
+    "kind": "broll",
+    "asset": "library/broll3/eq_machine_6053512.mp4"
+  },
+  {
+    "span": "42",
+    "slot": 2,
+    "why": "'three things my entire world revolves around: I work out every day'  [OWNER slide 44: talking head removed]",
+    "prog_start": 429.8666666666667,
+    "frames": 91,
+    "dur": 3.033333333333333,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "100_42_2",
+    "_idx": 100,
+    "kind": "broll",
+    "asset": "library/broll6/walk2_6324859.mp4"
+  },
+  {
+    "span": "43",
+    "slot": 0,
+    "why": "'in a life that had previously had room for exactly one'",
+    "prog_start": 432.9,
+    "frames": 98,
+    "dur": 3.2666666666666666,
+    "spec": [
+      "broll",
+      "desk"
+    ],
+    "name": "101_43_0",
+    "_idx": 101,
+    "kind": "broll",
+    "asset": "library/broll4/desk_34279721.mp4"
+  },
+  {
+    "span": "44",
+    "slot": 0,
+    "why": "'I'd upload more if I didn't work out' - him twice, then the hours",
+    "prog_start": 436.1666666666667,
+    "frames": 165,
+    "dur": 5.5,
+    "spec": [
+      "sync"
+    ],
+    "name": "102_44_0",
+    "_idx": 102,
+    "kind": "footage",
+    "archive": false,
+    "variant": 3,
+    "asset": "9IQ_ldV9z_A@812.19"
+  },
+  {
+    "span": "44",
+    "slot": 1,
+    "why": "'I'd upload more if I didn't work out' - him twice, then the hours",
+    "prog_start": 441.6666666666667,
+    "frames": 137,
+    "dur": 4.566666666666666,
+    "spec": [
+      "broll",
+      "clock"
+    ],
+    "name": "103_44_1",
+    "_idx": 103,
+    "kind": "broll",
+    "asset": "library/broll3/clock_7033786.mp4"
+  },
+  {
+    "span": "44",
+    "slot": 2,
+    "why": "'I'd upload more if I didn't work out' - him twice, then the hours",
+    "prog_start": 446.23333333333335,
+    "frames": 135,
+    "dur": 4.5,
+    "spec": [
+      "sync"
+    ],
+    "name": "104_44_2",
+    "_idx": 104,
+    "kind": "footage",
+    "archive": false,
+    "variant": 4,
+    "asset": "9IQ_ldV9z_A@823.20"
+  },
+  {
+    "span": "45",
+    "slot": 0,
+    "why": "'the number that should stop you is not the step count, it is the admission attached to it' - 12,500, the walking, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 450.73333333333335,
+    "frames": 154,
+    "dur": 5.133333333333334,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "105_45_0",
+    "_idx": 105,
+    "kind": "broll",
+    "asset": "library/broll6/athlete_7876581.mp4"
+  },
+  {
+    "span": "45",
+    "slot": 1,
+    "why": "'the number that should stop you is not the step count, it is the admission attached to it' - 12,500, the walking, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 455.8666666666667,
+    "frames": 154,
+    "dur": 5.133333333333334,
+    "spec": [
+      "broll",
+      "food"
+    ],
+    "name": "106_45_1",
+    "_idx": 106,
+    "kind": "broll",
+    "asset": "library/broll3/food_8107797.mp4"
+  },
+  {
+    "span": "45",
+    "slot": 2,
+    "why": "'the number that should stop you is not the step count, it is the admission attached to it' - 12,500, the walking, him  [OWNER slide 44: talking head removed]",
+    "prog_start": 461.0,
+    "frames": 153,
+    "dur": 5.1,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "107_45_2",
+    "_idx": 107,
+    "kind": "broll",
+    "asset": "library/src_coverr/training_WzDCMh41B1.mp4"
+  },
+  {
+    "span": "46",
+    "slot": 0,
+    "why": "'I've just been losing fat. It's harder to put on muscle when you're losing fat'  [OWNER slide 44: talking head removed]",
+    "prog_start": 466.1,
+    "frames": 110,
+    "dur": 3.6666666666666665,
+    "spec": [
+      "broll",
+      "walk"
+    ],
+    "name": "108_46_0",
+    "_idx": 108,
+    "kind": "broll",
+    "asset": "library/broll3/walk_5321384.mp4"
+  },
+  {
+    "span": "46",
+    "slot": 1,
+    "why": "'I've just been losing fat. It's harder to put on muscle when you're losing fat'  [OWNER slide 44: talking head removed]",
+    "prog_start": 469.76666666666665,
+    "frames": 111,
+    "dur": 3.7,
+    "spec": [
+      "broll",
+      "eq_dumbbell"
+    ],
+    "name": "109_46_1",
+    "_idx": 109,
+    "kind": "broll",
+    "asset": "library/broll3/eq_dumbbell_8612183.mp4"
+  },
+  {
+    "span": "47",
+    "slot": 0,
+    "why": "'he has never published a training split' - the limits of the record, stated as a card. This is where the film says the 40% figure is Airrack's, not his  [OWNER slide 44: talking head removed]",
+    "prog_start": 473.46666666666664,
+    "frames": 137,
+    "dur": 4.566666666666666,
+    "spec": [
+      "card",
+      "card_record"
+    ],
+    "name": "110_47_0",
+    "_idx": 110,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "47",
+    "slot": 1,
+    "why": "'he has never published a training split' - the limits of the record, stated as a card. This is where the film says the 40% figure is Airrack's, not his  [OWNER slide 44: talking head removed]",
+    "prog_start": 478.03333333333336,
+    "frames": 137,
+    "dur": 4.566666666666666,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "111_47_1",
+    "_idx": 111,
+    "kind": "broll",
+    "asset": "library/broll6/walk2_7253202.mp4"
+  },
+  {
+    "span": "47",
+    "slot": 2,
+    "why": "'he has never published a training split' - the limits of the record, stated as a card. This is where the film says the 40% figure is Airrack's, not his  [OWNER slide 44: talking head removed]",
+    "prog_start": 482.6,
+    "frames": 137,
+    "dur": 4.566666666666666,
+    "spec": [
+      "broll",
+      "eq_barbell"
+    ],
+    "name": "112_47_2",
+    "_idx": 112,
+    "kind": "broll",
+    "asset": "library/broll3/eq_barbell_4514295.mp4"
+  },
+  {
+    "span": "47",
+    "slot": 3,
+    "why": "'he has never published a training split' - the limits of the record, stated as a card. This is where the film says the 40% figure is Airrack's, not his  [OWNER slide 44: talking head removed]",
+    "prog_start": 487.1666666666667,
+    "frames": 136,
+    "dur": 4.533333333333333,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "113_47_3",
+    "_idx": 113,
+    "kind": "broll",
+    "asset": "library/src_coverr/athlete_2sjUdMWV94.mp4"
+  },
+  {
+    "span": "48",
+    "slot": 0,
+    "why": "the 1.2s card beat the EDL already carries. card_time was cut: it printed a broken '2-2h' range with sleep copy and no source",
+    "prog_start": 491.7,
+    "frames": 36,
+    "dur": 1.2,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "114_48_0",
+    "_idx": 114,
+    "kind": "broll",
+    "asset": "library/broll3/meds_9902348.mp4"
+  },
+  {
+    "span": "49",
+    "slot": 0,
+    "why": "'work out for three months really consistently and then it's easy'  [OWNER slide 44: talking head removed]",
+    "prog_start": 492.9,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "115_49_0",
+    "_idx": 115,
+    "kind": "footage",
+    "archive": false,
+    "variant": 5,
+    "asset": "9IQ_ldV9z_A@792.95"
+  },
+  {
+    "span": "49",
+    "slot": 1,
+    "why": "'work out for three months really consistently and then it's easy'  [OWNER slide 44: talking head removed]",
+    "prog_start": 498.9,
+    "frames": 110,
+    "dur": 3.6666666666666665,
+    "spec": [
+      "broll",
+      "eq_dumbbell"
+    ],
+    "name": "116_49_1",
+    "_idx": 116,
+    "kind": "broll",
+    "asset": "library/broll3/eq_dumbbell_6053511.mp4"
+  },
+  {
+    "span": "49",
+    "slot": 2,
+    "why": "'work out for three months really consistently and then it's easy'  [OWNER slide 44: talking head removed]",
+    "prog_start": 502.56666666666666,
+    "frames": 109,
+    "dur": 3.6333333333333333,
+    "spec": [
+      "broll",
+      "food"
+    ],
+    "name": "117_49_2",
+    "_idx": 117,
+    "kind": "broll",
+    "asset": "library/broll3/food_28484209.mp4"
+  },
+  {
+    "span": "50",
+    "slot": 0,
+    "why": "'a season. That is all it takes to stop deciding'  [OWNER slide 44: talking head removed]",
+    "prog_start": 506.2,
+    "frames": 123,
+    "dur": 4.1,
+    "spec": [
+      "broll",
+      "calendar"
+    ],
+    "name": "118_50_0",
+    "_idx": 118,
+    "kind": "broll",
+    "asset": "library/broll3/calendar_5546826.mp4"
+  },
+  {
+    "span": "50",
+    "slot": 1,
+    "why": "'a season. That is all it takes to stop deciding'  [OWNER slide 44: talking head removed]",
+    "prog_start": 510.3,
+    "frames": 123,
+    "dur": 4.1,
+    "spec": [
+      "card",
+      "card_rest2"
+    ],
+    "name": "119_50_1",
+    "_idx": 119,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "50",
+    "slot": 2,
+    "why": "'a season. That is all it takes to stop deciding'  [OWNER slide 44: talking head removed]",
+    "prog_start": 514.4,
+    "frames": 124,
+    "dur": 4.133333333333334,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "120_50_2",
+    "_idx": 120,
+    "kind": "broll",
+    "asset": "library/src_coverr/training_c0y3hiYRph.mp4"
+  },
+  {
+    "span": "51",
+    "slot": 0,
+    "why": "beat  [OWNER slide 44: talking head removed]",
+    "prog_start": 518.5333333333333,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "walk"
+    ],
+    "name": "121_51_0",
+    "_idx": 121,
+    "kind": "broll",
+    "asset": "library/broll3/walk_25956625.mp4"
+  },
+  {
+    "span": "52",
+    "slot": 0,
+    "why": "'and then the story does something a transformation video would never allow. It stops working.' - an empty gym, lights on nobody",
+    "prog_start": 521.7333333333333,
+    "frames": 156,
+    "dur": 5.2,
+    "spec": [
+      "broll",
+      "gym_room"
+    ],
+    "name": "122_52_0",
+    "_idx": 122,
+    "kind": "broll",
+    "asset": "library/broll4/gym_room_6389055.mp4"
+  },
+  {
+    "span": "53",
+    "slot": 0,
+    "why": "'way harder - infinitely harder'. Airrack's video is the source, so no sync: the effort as equipment, then the mismatch as a card",
+    "prog_start": 526.9333333333333,
+    "frames": 147,
+    "dur": 4.9,
+    "spec": [
+      "broll",
+      "eq_barbell"
+    ],
+    "name": "123_53_0",
+    "_idx": 123,
+    "kind": "broll",
+    "asset": "library/broll3/eq_barbell_8611521.mp4"
+  },
+  {
+    "span": "53",
+    "slot": 1,
+    "why": "'way harder - infinitely harder'. Airrack's video is the source, so no sync: the effort as equipment, then the mismatch as a card",
+    "prog_start": 531.8333333333334,
+    "frames": 147,
+    "dur": 4.9,
+    "spec": [
+      "broll",
+      "eq_machine"
+    ],
+    "name": "124_53_1",
+    "_idx": 124,
+    "kind": "broll",
+    "asset": "library/broll4/eq_machine_7187429.mp4"
+  },
+  {
+    "span": "53",
+    "slot": 2,
+    "why": "'way harder - infinitely harder'. Airrack's video is the source, so no sync: the effort as equipment, then the mismatch as a card",
+    "prog_start": 536.7333333333333,
+    "frames": 147,
+    "dur": 4.9,
+    "spec": [
+      "broll",
+      "eq_dumbbell"
+    ],
+    "name": "125_53_2",
+    "_idx": 125,
+    "kind": "broll",
+    "asset": "library/broll3/eq_dumbbell_37536690.mp4"
+  },
+  {
+    "span": "54",
+    "slot": 0,
+    "why": "'input, time, output. Bodies do not read the spreadsheet.'  [OWNER slide 44: talking head removed]",
+    "prog_start": 541.6333333333333,
+    "frames": 148,
+    "dur": 4.933333333333334,
+    "spec": [
+      "card",
+      "card_time2"
+    ],
+    "name": "126_54_0",
+    "_idx": 126,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "54",
+    "slot": 1,
+    "why": "'input, time, output. Bodies do not read the spreadsheet.'  [OWNER slide 44: talking head removed]",
+    "prog_start": 546.5666666666667,
+    "frames": 147,
+    "dur": 4.9,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "127_54_1",
+    "_idx": 127,
+    "kind": "broll",
+    "asset": "library/src_mixkit/tired_25579.mp4"
+  },
+  {
+    "span": "55",
+    "slot": 0,
+    "why": "'I can't believe how little progress I've made' - Airrack source again, so the room carries it, empty  [OWNER slide 44: talking head removed]",
+    "prog_start": 551.4666666666667,
+    "frames": 170,
+    "dur": 5.666666666666667,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "128_55_0",
+    "_idx": 128,
+    "kind": "broll",
+    "asset": "library/src_mixkit/tired_31414.mp4"
+  },
+  {
+    "span": "55",
+    "slot": 1,
+    "why": "'I can't believe how little progress I've made' - Airrack source again, so the room carries it, empty  [OWNER slide 44: talking head removed]",
+    "prog_start": 557.1333333333333,
+    "frames": 170,
+    "dur": 5.666666666666667,
+    "spec": [
+      "broll",
+      "eq_dumbbell"
+    ],
+    "name": "129_55_1",
+    "_idx": 129,
+    "kind": "broll",
+    "asset": "library/broll3/eq_dumbbell_4367571.mp4"
+  },
+  {
+    "span": "55",
+    "slot": 2,
+    "why": "'I can't believe how little progress I've made' - Airrack source again, so the room carries it, empty  [OWNER slide 44: talking head removed]",
+    "prog_start": 562.8,
+    "frames": 169,
+    "dur": 5.633333333333334,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "130_55_2",
+    "_idx": 130,
+    "kind": "broll",
+    "asset": "library/src_mixkit/tired_31415.mp4"
+  },
+  {
+    "span": "56",
+    "slot": 0,
+    "why": "'the man whose entire brand is that enough effort beats anything'  [OWNER slide 44: talking head removed]",
+    "prog_start": 568.4333333333333,
+    "frames": 152,
+    "dur": 5.066666666666666,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "131_56_0",
+    "_idx": 131,
+    "kind": "broll",
+    "asset": "library/src_coverr/athlete_DbLzegXCvl.mp4"
+  },
+  {
+    "span": "56",
+    "slot": 1,
+    "why": "'the man whose entire brand is that enough effort beats anything'  [OWNER slide 44: talking head removed]",
+    "prog_start": 573.5,
+    "frames": 152,
+    "dur": 5.066666666666666,
+    "spec": [
+      "card",
+      "card_effort"
+    ],
+    "name": "132_56_1",
+    "_idx": 132,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "56",
+    "slot": 2,
+    "why": "'the man whose entire brand is that enough effort beats anything'  [OWNER slide 44: talking head removed]",
+    "prog_start": 578.5666666666667,
+    "frames": 153,
+    "dur": 5.1,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "133_56_2",
+    "_idx": 133,
+    "kind": "broll",
+    "asset": "library/src_pixabay/walk2_7713.mp4"
+  },
+  {
+    "span": "57",
+    "slot": 0,
+    "why": "beat, turning toward the fall  [OWNER slide 44: talking head removed]",
+    "prog_start": 583.6666666666666,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "134_57_0",
+    "_idx": 134,
+    "kind": "broll",
+    "asset": "library/src_mixkit/tired_31416.mp4"
+  },
+  {
+    "span": "58",
+    "slot": 0,
+    "why": "'and then the machine took it back'",
+    "prog_start": 586.8666666666667,
+    "frames": 54,
+    "dur": 1.8,
+    "spec": [
+      "broll",
+      "desk"
+    ],
+    "name": "135_58_0",
+    "_idx": 135,
+    "kind": "broll",
+    "asset": "library/broll4/desk_8346903.mp4"
+  },
+  {
+    "span": "59",
+    "slot": 0,
+    "why": "'Beast Games is a monster of a project and I have to maintain the same upload schedule'  [OWNER slide 44: talking head removed]",
+    "prog_start": 588.6666666666666,
+    "frames": 152,
+    "dur": 5.066666666666666,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "136_59_0",
+    "_idx": 136,
+    "kind": "broll",
+    "asset": "library/broll6/eating_19905887.mp4"
+  },
+  {
+    "span": "59",
+    "slot": 1,
+    "why": "'Beast Games is a monster of a project and I have to maintain the same upload schedule'  [OWNER slide 44: talking head removed]",
+    "prog_start": 593.7333333333333,
+    "frames": 152,
+    "dur": 5.066666666666666,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "137_59_1",
+    "_idx": 137,
+    "kind": "broll",
+    "asset": "library/src_mixkit/eating_26084.mp4"
+  },
+  {
+    "span": "59",
+    "slot": 2,
+    "why": "'Beast Games is a monster of a project and I have to maintain the same upload schedule'  [OWNER slide 44: talking head removed]",
+    "prog_start": 598.8,
+    "frames": 152,
+    "dur": 5.066666666666666,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "138_59_2",
+    "_idx": 138,
+    "kind": "broll",
+    "asset": "library/src_mixkit/eating_26089.mp4"
+  },
+  {
+    "span": "60",
+    "slot": 0,
+    "why": "'it's really killing me, to be honest' - him with his hands over his face. The single best-matched frame in the film",
+    "prog_start": 603.8666666666667,
+    "frames": 88,
+    "dur": 2.933333333333333,
+    "spec": [
+      "sync"
+    ],
+    "name": "139_60_0",
+    "_idx": 139,
+    "kind": "footage",
+    "archive": false,
+    "variant": 1,
+    "asset": "FjrJ2DJN_pA@2720.62"
+  },
+  {
+    "span": "61",
+    "slot": 0,
+    "why": "'six hundred days of proof, and it still lost to a production schedule'  [OWNER slide 44: talking head removed]",
+    "prog_start": 606.8,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "card",
+      "card_600"
+    ],
+    "name": "140_61_0",
+    "_idx": 140,
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "61",
+    "slot": 1,
+    "why": "'six hundred days of proof, and it still lost to a production schedule'  [OWNER slide 44: talking head removed]",
+    "prog_start": 611.2,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "broll",
+      "night_work"
+    ],
+    "name": "141_61_1",
+    "_idx": 141,
+    "kind": "broll",
+    "asset": "library/broll6/night_work_3140468.mp4"
+  },
+  {
+    "span": "61",
+    "slot": 2,
+    "why": "'six hundred days of proof, and it still lost to a production schedule'  [OWNER slide 44: talking head removed]",
+    "prog_start": 615.6,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "broll",
+      "editing"
+    ],
+    "name": "142_61_2",
+    "_idx": 142,
+    "kind": "broll",
+    "asset": "library/broll6/editing_34845722.mp4"
+  },
+  {
+    "span": "62",
+    "slot": 0,
+    "why": "'45 minutes, 5 days a week ... but the bigger problem is sleep'",
+    "prog_start": 620.0,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "143_62_0",
+    "_idx": 143,
+    "kind": "footage",
+    "archive": false,
+    "variant": 2,
+    "asset": "FjrJ2DJN_pA@2791.47"
+  },
+  {
+    "span": "62",
+    "slot": 1,
+    "why": "'45 minutes, 5 days a week ... but the bigger problem is sleep'",
+    "prog_start": 626.0,
+    "frames": 134,
+    "dur": 4.466666666666667,
+    "spec": [
+      "broll",
+      "bed"
+    ],
+    "name": "144_62_1",
+    "_idx": 144,
+    "kind": "broll",
+    "asset": "library/broll4/bed_7303558.mp4"
+  },
+  {
+    "span": "62",
+    "slot": 2,
+    "why": "'45 minutes, 5 days a week ... but the bigger problem is sleep'",
+    "prog_start": 630.4666666666667,
+    "frames": 135,
+    "dur": 4.5,
+    "spec": [
+      "broll",
+      "clock"
+    ],
+    "name": "145_62_2",
+    "_idx": 145,
+    "kind": "broll",
+    "asset": "library/broll3/clock_855782.mp4"
+  },
+  {
+    "span": "63",
+    "slot": 0,
+    "why": "'the first moment where he sizes a plan to the body he actually has'  [OWNER slide 44: talking head removed]",
+    "prog_start": 634.9666666666667,
+    "frames": 143,
+    "dur": 4.766666666666667,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "146_63_0",
+    "_idx": 146,
+    "kind": "broll",
+    "asset": "library/src_pixabay/walk2_22694.mp4"
+  },
+  {
+    "span": "63",
+    "slot": 1,
+    "why": "'the first moment where he sizes a plan to the body he actually has'  [OWNER slide 44: talking head removed]",
+    "prog_start": 639.7333333333333,
+    "frames": 143,
+    "dur": 4.766666666666667,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "147_63_1",
+    "_idx": 147,
+    "kind": "broll",
+    "asset": "library/src_mixkit/eating_372.mp4"
+  },
+  {
+    "span": "63",
+    "slot": 2,
+    "why": "'the first moment where he sizes a plan to the body he actually has'  [OWNER slide 44: talking head removed]",
+    "prog_start": 644.5,
+    "frames": 142,
+    "dur": 4.733333333333333,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "148_63_2",
+    "_idx": 148,
+    "kind": "broll",
+    "asset": "library/src_mixkit/tired_4701.mp4"
+  },
+  {
+    "span": "64",
+    "slot": 0,
+    "why": "beat  [OWNER slide 44: talking head removed]",
+    "prog_start": 649.2333333333333,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "night_work"
+    ],
+    "name": "149_64_0",
+    "_idx": 149,
+    "kind": "broll",
+    "asset": "library/broll6/night_work_35331905.mp4"
+  },
+  {
+    "span": "65",
+    "slot": 0,
+    "why": "'so - did the disease build MrBeast?'  [OWNER slide 44: talking head removed]",
+    "prog_start": 652.4333333333333,
+    "frames": 68,
+    "dur": 2.2666666666666666,
+    "spec": [
+      "broll",
+      "walk"
+    ],
+    "name": "150_65_0",
+    "_idx": 150,
+    "kind": "broll",
+    "asset": "library/broll3/walk_9150767.mp4"
+  },
+  {
+    "span": "66",
+    "slot": 0,
+    "why": "'it took a future from a teenager and handed him nothing back' - the teenager, the field he lost, the man now  [OWNER slide 44: talking head removed]",
+    "prog_start": 654.7,
+    "frames": 148,
+    "dur": 4.933333333333334,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "151_66_0",
+    "_idx": 151,
+    "kind": "broll",
+    "asset": "library/src_coverr/athlete_GYZShwp9Tc.mp4"
+  },
+  {
+    "span": "66",
+    "slot": 1,
+    "why": "'it took a future from a teenager and handed him nothing back' - the teenager, the field he lost, the man now  [OWNER slide 44: talking head removed]",
+    "prog_start": 659.6333333333333,
+    "frames": 148,
+    "dur": 4.933333333333334,
+    "spec": [
+      "broll",
+      "bb_field"
+    ],
+    "name": "152_66_1",
+    "_idx": 152,
+    "kind": "broll",
+    "asset": "library/broll3/bb_field_6982417.mp4"
+  },
+  {
+    "span": "66",
+    "slot": 2,
+    "why": "'it took a future from a teenager and handed him nothing back' - the teenager, the field he lost, the man now  [OWNER slide 44: talking head removed]",
+    "prog_start": 664.5666666666667,
+    "frames": 147,
+    "dur": 4.9,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "153_66_2",
+    "_idx": 153,
+    "kind": "broll",
+    "asset": "library/src_coverr/training_mfiySQ2zfw.mp4"
+  },
+  {
+    "span": "67",
+    "slot": 0,
+    "why": "'you look like a different human being' - his own April 2025 post. Airrack source, so no sync; the document says it better anyway  [OWNER slide 44: talking head removed]",
+    "prog_start": 669.4666666666667,
+    "frames": 123,
+    "dur": 4.1,
+    "spec": [
+      "doc",
+      "post_gains"
+    ],
+    "name": "154_67_0",
+    "_idx": 154,
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "67",
+    "slot": 1,
+    "why": "'you look like a different human being' - his own April 2025 post. Airrack source, so no sync; the document says it better anyway  [OWNER slide 44: talking head removed]",
+    "prog_start": 673.5666666666667,
+    "frames": 123,
+    "dur": 4.1,
+    "spec": [
+      "broll",
+      "walk"
+    ],
+    "name": "155_67_1",
+    "_idx": 155,
+    "kind": "broll",
+    "asset": "library/broll3/walk_5029705.mp4"
+  },
+  {
+    "span": "68",
+    "slot": 0,
+    "why": "'not a physique. A pattern. Reserve the time before the day takes it'  [OWNER slide 44: talking head removed]",
+    "prog_start": 677.6666666666666,
+    "frames": 129,
+    "dur": 4.3,
+    "spec": [
+      "broll",
+      "clock"
+    ],
+    "name": "156_68_0",
+    "_idx": 156,
+    "kind": "broll",
+    "asset": "library/broll3/clock_8543863.mp4"
+  },
+  {
+    "span": "68",
+    "slot": 1,
+    "why": "'not a physique. A pattern. Reserve the time before the day takes it'  [OWNER slide 44: talking head removed]",
+    "prog_start": 681.9666666666667,
+    "frames": 129,
+    "dur": 4.3,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "157_68_1",
+    "_idx": 157,
+    "kind": "broll",
+    "asset": "library/src_pixabay/walk2_86741.mp4"
+  },
+  {
+    "span": "68",
+    "slot": 2,
+    "why": "'not a physique. A pattern. Reserve the time before the day takes it'  [OWNER slide 44: talking head removed]",
+    "prog_start": 686.2666666666667,
+    "frames": 128,
+    "dur": 4.266666666666667,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "158_68_2",
+    "_idx": 158,
+    "kind": "broll",
+    "asset": "library/src_coverr/athlete_bQllXzfSXz.mp4"
+  },
+  {
+    "span": "69",
+    "slot": 0,
+    "why": "'mostly because I just don't want to die.' Airrack source. The medication, not a hospital - the film must not imply he is dying",
+    "prog_start": 690.5333333333333,
+    "frames": 69,
+    "dur": 2.3,
+    "spec": [
+      "broll",
+      "meds"
+    ],
+    "name": "159_69_0",
+    "_idx": 159,
+    "kind": "broll",
+    "asset": "library/broll3/meds_6344516.mp4"
+  },
+  {
+    "span": "70",
+    "slot": 0,
+    "why": "'his body has spent a decade trying to shut him down' - 2.2s clinical, then him, then the ordinary work  [OWNER slide 44: talking head removed]",
+    "prog_start": 692.8333333333334,
+    "frames": 66,
+    "dur": 2.2,
+    "spec": [
+      "broll",
+      "iv"
+    ],
+    "name": "160_70_0",
+    "_idx": 160,
+    "kind": "broll",
+    "asset": "library/broll3/iv_6130121.mp4"
+  },
+  {
+    "span": "70",
+    "slot": 1,
+    "why": "'his body has spent a decade trying to shut him down' - 2.2s clinical, then him, then the ordinary work  [OWNER slide 44: talking head removed]",
+    "prog_start": 695.0333333333333,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "161_70_1",
+    "_idx": 161,
+    "kind": "broll",
+    "asset": "library/src_coverr/training_ytXsRJrICv.mp4"
+  },
+  {
+    "span": "70",
+    "slot": 2,
+    "why": "'his body has spent a decade trying to shut him down' - 2.2s clinical, then him, then the ordinary work  [OWNER slide 44: talking head removed]",
+    "prog_start": 698.5333333333333,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "editing"
+    ],
+    "name": "162_70_2",
+    "_idx": 162,
+    "kind": "broll",
+    "asset": "library/broll6/editing_12358562.mp4"
+  },
+  {
+    "span": "71",
+    "slot": 0,
+    "why": "'it's just life' - the hand-trimmed clean window that ends before the monitor panel enters at 5418.2, then him held  [OWNER slide 44: talking head removed]",
+    "prog_start": 702.0333333333333,
+    "frames": 66,
+    "dur": 2.2,
+    "spec": [
+      "sync"
+    ],
+    "name": "163_71_0",
+    "_idx": 163,
+    "kind": "footage",
+    "archive": false,
+    "variant": 1,
+    "asset": "cLRLEnPaJLM@5415.70"
+  },
+  {
+    "span": "71",
+    "slot": 1,
+    "why": "'it's just life' - the hand-trimmed clean window that ends before the monitor panel enters at 5418.2, then him held  [OWNER slide 44: talking head removed]",
+    "prog_start": 704.2333333333333,
+    "frames": 48,
+    "dur": 1.6,
+    "spec": [
+      "broll",
+      "eating"
+    ],
+    "name": "164_71_1",
+    "_idx": 164,
+    "kind": "broll",
+    "asset": "library/src_mixkit/eating_40521.mp4"
+  },
+  {
+    "span": "72",
+    "slot": 0,
+    "why": "'said by a man who lost fifty pounds at fifteen and built the biggest channel on earth' - the two of him, then walking on  [OWNER slide 44: talking head removed]",
+    "prog_start": 705.8333333333334,
+    "frames": 138,
+    "dur": 4.6,
+    "spec": [
+      "broll",
+      "walk"
+    ],
+    "name": "165_72_0",
+    "_idx": 165,
+    "kind": "broll",
+    "asset": "library/broll3/walk_2881960.mp4"
+  },
+  {
+    "span": "72",
+    "slot": 1,
+    "why": "'said by a man who lost fifty pounds at fifteen and built the biggest channel on earth' - the two of him, then walking on  [OWNER slide 44: talking head removed]",
+    "prog_start": 710.4333333333333,
+    "frames": 138,
+    "dur": 4.6,
+    "spec": [
+      "broll",
+      "walk2"
+    ],
+    "name": "166_72_1",
+    "_idx": 166,
+    "kind": "broll",
+    "asset": "library/src_pixabay/walk2_107337.mp4"
+  },
+  {
+    "span": "72",
+    "slot": 2,
+    "why": "'said by a man who lost fifty pounds at fifteen and built the biggest channel on earth' - the two of him, then walking on  [OWNER slide 44: talking head removed]",
+    "prog_start": 715.0333333333333,
+    "frames": 138,
+    "dur": 4.6,
+    "spec": [
+      "broll",
+      "athlete"
+    ],
+    "name": "167_72_2",
+    "_idx": 167,
+    "kind": "broll",
+    "asset": "library/src_coverr/athlete_i4qWv380NE.mp4"
+  },
+  {
+    "span": "72",
+    "slot": 3,
+    "why": "'said by a man who lost fifty pounds at fifteen and built the biggest channel on earth' - the two of him, then walking on  [OWNER slide 44: talking head removed]",
+    "prog_start": 719.6333333333333,
+    "frames": 136,
+    "dur": 4.533333333333333,
+    "spec": [
+      "broll",
+      "bb_field"
+    ],
+    "name": "168_72_3",
+    "_idx": 168,
+    "kind": "broll",
+    "asset": "library/broll4/bb_field_35557004.mp4"
+  },
+  {
+    "span": "73",
+    "slot": 0,
+    "why": "the sign-off, and an end frame with no logo on it  [OWNER slide 44: talking head removed]",
+    "prog_start": 724.1666666666666,
+    "frames": 179,
+    "dur": 5.966666666666667,
+    "spec": [
+      "broll",
+      "training"
+    ],
+    "name": "169_73_0",
+    "_idx": 169,
+    "kind": "broll",
+    "asset": "library/src_pixabay/training_148204.mp4"
+  },
+  {
+    "span": "73",
+    "slot": 1,
+    "why": "the sign-off, and an end frame with no logo on it  [OWNER slide 44: talking head removed]",
+    "prog_start": 730.1333333333333,
+    "frames": 179,
+    "dur": 5.966666666666667,
+    "spec": [
+      "broll",
+      "tired"
+    ],
+    "name": "170_73_1",
+    "_idx": 170,
+    "kind": "broll",
+    "asset": "library/src_mixkit/tired_51385.mp4"
+  },
+  {
+    "span": "TAIL",
+    "slot": 0,
+    "why": "music tail, no narration",
+    "prog_start": 736.1,
+    "frames": 75,
+    "dur": 2.5,
+    "spec": [
+      "card",
+      "card_end"
+    ],
+    "name": "171_TAIL_0",
+    "_idx": 171,
+    "kind": "card",
+    "asset": ""
+  }
+]

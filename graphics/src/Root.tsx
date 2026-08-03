@@ -17,6 +17,10 @@ import {CommentPrompt, LikeSubBug, SubscribeCard} from './v8cards';
 import {ChapterChip, Checklist2, PhotoBurst, PhotoTiles2,
         StepCards2} from './v9cards';
 import {BrandIntro, DocumentCard, ExerciseCard, LogoBug} from './v10cards';
+import {
+  FilmGrain, FreezePunch, KenBurns2, KineticCaptions, ParallaxPhoto,
+  ParallaxStage, SplitSqueeze, Vignette,
+} from './fxcards';
 
 // One composition per treatment graphic. Duration/fps come from input props
 // (--props=./props.json; inline JSON is broken on Windows shells).
@@ -154,6 +158,32 @@ export const Root: React.FC = () => (
       durationInFrames={DUR} fps={FPS} width={W} height={H}
       defaultProps={{}} />
     <Composition id="LogoBug" component={LogoBug as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{}} />
+
+    {/* ---- V12 effect layer ---- */}
+    <Composition id="KenBurns2" component={KenBurns2 as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{src: ''}} />
+    <Composition id="ParallaxPhoto" component={ParallaxPhoto as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{layers: []}} />
+    <Composition id="ParallaxStage" component={ParallaxStage as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{}} />
+    <Composition id="FreezePunch" component={FreezePunch as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{src: ''}} />
+    <Composition id="SplitSqueeze" component={SplitSqueeze as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{leftSrc: '', rightSrc: ''}} />
+    <Composition id="KineticCaptions" component={KineticCaptions as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{words: []}} />
+    <Composition id="FilmGrain" component={FilmGrain as React.FC}
+      durationInFrames={DUR} fps={FPS} width={W} height={H}
+      defaultProps={{}} />
+    <Composition id="Vignette" component={Vignette as React.FC}
       durationInFrames={DUR} fps={FPS} width={W} height={H}
       defaultProps={{}} />
   </>

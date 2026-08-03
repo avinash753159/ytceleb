@@ -1,0 +1,481 @@
+[
+  {
+    "span": "-1",
+    "slot": 0,
+    "why": "lead-in: his face, held, before a word is spoken",
+    "prog_start": 0.0,
+    "frames": 60,
+    "dur": 2.0,
+    "spec": [
+      "jimmy",
+      {
+        "prefer": "FjrJ2DJN_pA"
+      }
+    ],
+    "name": "000_m1_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "FjrJ2DJN_pA@2250.27"
+  },
+  {
+    "span": "0",
+    "slot": 0,
+    "why": "'three hundred million subscribers ... a pace nobody has matched' - the 8,726-to-300-million card, then him. His live channel page was cut here: it reads 510M subscribers, which contradicts the locked narration on screen, it is bright white against a dark film, and its thumbnails are full of other people",
+    "prog_start": 2.0,
+    "frames": 148,
+    "dur": 4.933333333333334,
+    "spec": [
+      "card",
+      "card_machine"
+    ],
+    "name": "001_0_0",
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "0",
+    "slot": 1,
+    "why": "'three hundred million subscribers ... a pace nobody has matched' - the 8,726-to-300-million card, then him. His live channel page was cut here: it reads 510M subscribers, which contradicts the locked narration on screen, it is bright white against a dark film, and its thumbnails are full of other people",
+    "prog_start": 6.933333333333334,
+    "frames": 149,
+    "dur": 4.966666666666667,
+    "spec": [
+      "jimmy",
+      {
+        "prefer": "c8VcUnz3nVc"
+      }
+    ],
+    "name": "002_0_1",
+    "kind": "footage",
+    "archive": false,
+    "asset": "c8VcUnz3nVc@1626.81"
+  },
+  {
+    "span": "1",
+    "slot": 0,
+    "why": "'one of the least energetic people you'll ever meet' - him saying it",
+    "prog_start": 11.9,
+    "frames": 63,
+    "dur": 2.1,
+    "spec": [
+      "sync"
+    ],
+    "name": "003_1_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "cLRLEnPaJLM@5264.91"
+  },
+  {
+    "span": "2",
+    "slot": 0,
+    "why": "'since he was fifteen his immune system has been attacking him ... there are days it wins' - hold on him, then an empty bed for the days it wins. No stand-in lying in it",
+    "prog_start": 14.0,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "jimmy",
+      {
+        "prefer": "cLRLEnPaJLM"
+      }
+    ],
+    "name": "004_2_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "cLRLEnPaJLM@288.20"
+  },
+  {
+    "span": "2",
+    "slot": 1,
+    "why": "'since he was fifteen his immune system has been attacking him ... there are days it wins' - hold on him, then an empty bed for the days it wins. No stand-in lying in it",
+    "prog_start": 18.0,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "broll",
+      "bed"
+    ],
+    "name": "005_2_1",
+    "kind": "broll",
+    "asset": "library/broll3/bed_7131833.mp4"
+  },
+  {
+    "span": "3",
+    "slot": 0,
+    "why": "'not a story about a workout ... what he did to take some of it back' - an empty gym, then his own June 2023 post in his own words",
+    "prog_start": 22.0,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "broll",
+      "gym_room"
+    ],
+    "name": "006_3_0",
+    "kind": "broll",
+    "asset": "library/broll3/gym_room_37317187.mp4"
+  },
+  {
+    "span": "3",
+    "slot": 1,
+    "why": "'not a story about a workout ... what he did to take some of it back' - an empty gym, then his own June 2023 post in his own words",
+    "prog_start": 26.4,
+    "frames": 132,
+    "dur": 4.4,
+    "spec": [
+      "doc",
+      "post_obese"
+    ],
+    "name": "007_3_1",
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "4",
+    "slot": 0,
+    "why": "beat before the origin chapter: held on him",
+    "prog_start": 30.8,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "jimmy",
+      {}
+    ],
+    "name": "008_4_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "FjrJ2DJN_pA@820.51"
+  },
+  {
+    "span": "5",
+    "slot": 0,
+    "why": "'he was an athlete, a kid who played constantly' - equipment and an empty field. Rule 9: no stock child cast as young Jimmy",
+    "prog_start": 34.0,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "bb_gear"
+    ],
+    "name": "009_5_0",
+    "kind": "broll",
+    "asset": "library/broll3/bb_gear_5182638.mp4"
+  },
+  {
+    "span": "5",
+    "slot": 1,
+    "why": "'he was an athlete, a kid who played constantly' - equipment and an empty field. Rule 9: no stock child cast as young Jimmy",
+    "prog_start": 37.5,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "bb_field"
+    ],
+    "name": "010_5_1",
+    "kind": "broll",
+    "asset": "library/broll3/bb_field_37052402.mp4"
+  },
+  {
+    "span": "5",
+    "slot": 2,
+    "why": "'he was an athlete, a kid who played constantly' - equipment and an empty field. Rule 9: no stock child cast as young Jimmy",
+    "prog_start": 41.0,
+    "frames": 105,
+    "dur": 3.5,
+    "spec": [
+      "broll",
+      "bb_gear"
+    ],
+    "name": "011_5_2",
+    "kind": "broll",
+    "asset": "library/broll3/bb_gear_5182643.mp4"
+  },
+  {
+    "span": "6",
+    "slot": 0,
+    "why": "'I played baseball nonstop, then when I got Crohn's I lost like 50 pounds' - him saying it, then his own 2015 footage, already thin",
+    "prog_start": 44.5,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "012_6_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "cLRLEnPaJLM@5199.51"
+  },
+  {
+    "span": "6",
+    "slot": 1,
+    "why": "'I played baseball nonstop, then when I got Crohn's I lost like 50 pounds' - him saying it, then his own 2015 footage, already thin",
+    "prog_start": 50.5,
+    "frames": 108,
+    "dur": 3.6,
+    "spec": [
+      "teen"
+    ],
+    "name": "013_6_1",
+    "kind": "footage",
+    "archive": true,
+    "asset": "AKJfakEsgy0@40.52"
+  },
+  {
+    "span": "6.5",
+    "slot": 0,
+    "why": "TITLE BREAK 54.10-58.10, music only. Held on the 2015 archive. The previous build put the 2023 post here, eight years out of place",
+    "prog_start": 54.1,
+    "frames": 120,
+    "dur": 4.0,
+    "spec": [
+      "doc",
+      "his2015card"
+    ],
+    "name": "014_6p5_0",
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "7",
+    "slot": 0,
+    "why": "'the diagnosis had a name' - the NIDDK definition page, him, the tract",
+    "prog_start": 58.1,
+    "frames": 113,
+    "dur": 3.7666666666666666,
+    "spec": [
+      "doc",
+      "niddk_def"
+    ],
+    "name": "015_7_0",
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "7",
+    "slot": 1,
+    "why": "'the diagnosis had a name' - the NIDDK definition page, him, the tract",
+    "prog_start": 61.86666666666667,
+    "frames": 113,
+    "dur": 3.7666666666666666,
+    "spec": [
+      "jimmy",
+      {}
+    ],
+    "name": "016_7_1",
+    "kind": "footage",
+    "archive": false,
+    "asset": "FjrJ2DJN_pA@162.03"
+  },
+  {
+    "span": "7",
+    "slot": 2,
+    "why": "'the diagnosis had a name' - the NIDDK definition page, him, the tract",
+    "prog_start": 65.63333333333334,
+    "frames": 114,
+    "dur": 3.8,
+    "spec": [
+      "still",
+      "tract"
+    ],
+    "name": "017_7_2",
+    "kind": "still",
+    "asset": ""
+  },
+  {
+    "span": "8",
+    "slot": 0,
+    "why": "'190 pounds down to 139 ... not playing baseball in college anymore' - him, the two numbers, the field he left",
+    "prog_start": 69.43333333333334,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "018_8_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "FjrJ2DJN_pA@823.75"
+  },
+  {
+    "span": "8",
+    "slot": 1,
+    "why": "'190 pounds down to 139 ... not playing baseball in college anymore' - him, the two numbers, the field he left",
+    "prog_start": 75.43333333333334,
+    "frames": 150,
+    "dur": 5.0,
+    "spec": [
+      "card",
+      "card_weight"
+    ],
+    "name": "019_8_1",
+    "kind": "card",
+    "asset": ""
+  },
+  {
+    "span": "8",
+    "slot": 2,
+    "why": "'190 pounds down to 139 ... not playing baseball in college anymore' - him, the two numbers, the field he left",
+    "prog_start": 80.43333333333334,
+    "frames": 150,
+    "dur": 5.0,
+    "spec": [
+      "broll",
+      "bb_field"
+    ],
+    "name": "020_8_2",
+    "kind": "broll",
+    "asset": "library/broll3/bb_field_35557006.mp4"
+  },
+  {
+    "span": "9",
+    "slot": 0,
+    "why": "'the illness closed one door and he ran at the other one' - the bedroom, his own 2015 dashboard at 8,726 subscribers, the bedroom again",
+    "prog_start": 85.43333333333334,
+    "frames": 129,
+    "dur": 4.3,
+    "spec": [
+      "teen"
+    ],
+    "name": "021_9_0",
+    "kind": "footage",
+    "archive": true,
+    "asset": "F0OkwXKcPSE@0.35"
+  },
+  {
+    "span": "9",
+    "slot": 1,
+    "why": "'the illness closed one door and he ran at the other one' - the bedroom, his own 2015 dashboard at 8,726 subscribers, the bedroom again",
+    "prog_start": 89.73333333333333,
+    "frames": 129,
+    "dur": 4.3,
+    "spec": [
+      "doc",
+      "dash_2015"
+    ],
+    "name": "022_9_1",
+    "kind": "doc",
+    "asset": ""
+  },
+  {
+    "span": "9",
+    "slot": 2,
+    "why": "'the illness closed one door and he ran at the other one' - the bedroom, his own 2015 dashboard at 8,726 subscribers, the bedroom again",
+    "prog_start": 94.03333333333333,
+    "frames": 128,
+    "dur": 4.266666666666667,
+    "spec": [
+      "jimmy",
+      {}
+    ],
+    "name": "023_9_2",
+    "kind": "footage",
+    "archive": false,
+    "asset": "cLRLEnPaJLM@4788.53"
+  },
+  {
+    "span": "10",
+    "slot": 0,
+    "why": "beat: a desk at night, where the other door led",
+    "prog_start": 98.3,
+    "frames": 96,
+    "dur": 3.2,
+    "spec": [
+      "broll",
+      "desk"
+    ],
+    "name": "024_10_0",
+    "kind": "broll",
+    "asset": "library/broll3/desk_5299882.mp4"
+  },
+  {
+    "span": "11",
+    "slot": 0,
+    "why": "'most videos skip this part' - him, then a corridor",
+    "prog_start": 101.5,
+    "frames": 119,
+    "dur": 3.966666666666667,
+    "spec": [
+      "jimmy",
+      {}
+    ],
+    "name": "025_11_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "9IQ_ldV9z_A@1063.16"
+  },
+  {
+    "span": "11",
+    "slot": 1,
+    "why": "'most videos skip this part' - him, then a corridor",
+    "prog_start": 105.46666666666667,
+    "frames": 119,
+    "dur": 3.966666666666667,
+    "spec": [
+      "broll",
+      "clinic"
+    ],
+    "name": "026_11_1",
+    "kind": "broll",
+    "asset": "library/broll3/clinic_3192916.mp4"
+  },
+  {
+    "span": "12",
+    "slot": 0,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 109.43333333333334,
+    "frames": 180,
+    "dur": 6.0,
+    "spec": [
+      "sync"
+    ],
+    "name": "027_12_0",
+    "kind": "footage",
+    "archive": false,
+    "asset": "FjrJ2DJN_pA@916.75"
+  },
+  {
+    "span": "12",
+    "slot": 1,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 115.43333333333334,
+    "frames": 161,
+    "dur": 5.366666666666666,
+    "spec": [
+      "broll",
+      "food"
+    ],
+    "name": "028_12_1",
+    "kind": "broll",
+    "asset": "library/broll3/food_4098412.mp4"
+  },
+  {
+    "span": "12",
+    "slot": 2,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 120.8,
+    "frames": 66,
+    "dur": 2.2,
+    "spec": [
+      "clin",
+      "colitis"
+    ],
+    "name": "029_12_2",
+    "kind": "clin",
+    "asset": ""
+  },
+  {
+    "span": "12",
+    "slot": 3,
+    "why": "'bathroom eight, nine, ten times a day, not digesting food' - him, an untouched plate, 2.2s of real inflamed bowel, back to him",
+    "prog_start": 123.0,
+    "frames": 161,
+    "dur": 5.366666666666666,
+    "spec": [
+      "jimmy",
+      {}
+    ],
+    "name": "030_12_3",
+    "kind": "footage",
+    "archive": false,
+    "asset": "cLRLEnPaJLM@1833.61"
+  }
+]

@@ -1,0 +1,227 @@
+{
+  "notes": [
+    {
+      "slide": 1,
+      "shot": "000_m1_0",
+      "prog_start": 0.0,
+      "added_note": "don\u2019t lead with this - use relevant footage that syncs with the background music. start with this pic - https://nypost.com/wp-content/uploads/sites/2/2023/06/NYPICHPDPICT000013429726.jpg?resize=1472,2048&quality=75&strip=all"
+    },
+    {
+      "slide": 2,
+      "shot": "001_0_0",
+      "prog_start": 2.0,
+      "added_note": "don\u2019t use this - use this instead - https://tenor.com/view/mrbeast100mil-100million-subscribers-mrbeast100million-100million-mrbeast-mr-beast-gif-26329206"
+    },
+    {
+      "slide": 3,
+      "shot": "002_0_1",
+      "prog_start": 6.933333333333334,
+      "added_note": "use stock footage again"
+    },
+    {
+      "slide": 4,
+      "shot": "003_1_0",
+      "prog_start": 11.9,
+      "added_note": "use stock footage again"
+    },
+    {
+      "slide": 5,
+      "shot": "004_2_0",
+      "prog_start": 14.0,
+      "added_note": "use stock footage again use stock footage again"
+    },
+    {
+      "slide": 9,
+      "shot": "008_4_0",
+      "prog_start": 30.8,
+      "added_note": "use stock footage again"
+    },
+    {
+      "slide": 10,
+      "shot": "009_5_0",
+      "prog_start": 34.0,
+      "added_note": "isnt this too early to show? after baseball audio then this should show up"
+    },
+    {
+      "slide": 11,
+      "shot": "010_5_1",
+      "prog_start": 37.5,
+      "added_note": "same with this"
+    },
+    {
+      "slide": 12,
+      "shot": "011_5_2",
+      "prog_start": 41.0,
+      "added_note": "same with this"
+    },
+    {
+      "slide": 13,
+      "shot": "012_6_0",
+      "prog_start": 44.5,
+      "added_note": "only use if there\u2019s real clip other wise use stock footage."
+    },
+    {
+      "slide": 14,
+      "shot": "013_6_1",
+      "prog_start": 50.5,
+      "added_note": "use stock footage."
+    },
+    {
+      "slide": 15,
+      "shot": "014_6p5_0",
+      "prog_start": 54.1,
+      "added_note": "remove"
+    },
+    {
+      "slide": 16,
+      "shot": "015_7_0",
+      "prog_start": 58.1,
+      "added_note": "use semting elese - this isnt good - use this - vhttps://en.wikipedia.org/wiki/Crohn%27s_disease#/media/File:Macro_Il%C3%A9on_terminal,_caecum_et_c%C3%B4lon_ascendant_-_Maladie_de_Crohn_55-o.apatho-1691p-ilcaco.jpg"
+    },
+    {
+      "slide": 17,
+      "shot": "016_7_1",
+      "prog_start": 61.86666666666667,
+      "added_note": "don\u2019t show his face if not needed"
+    },
+    {
+      "slide": 18,
+      "shot": "017_7_2",
+      "prog_start": 65.63333333333334,
+      "added_note": "use this - https://drvaidji.com/blogs/knowledge-base/what-is-crohns-disease?srsltid=AfmBOopyDpPeo9cfBUHXcX4GFVPUZFmSiFBHC7ttRTnpy9m_xXAAOm02"
+    },
+    {
+      "slide": 20,
+      "shot": "019_8_1",
+      "prog_start": 75.43333333333334,
+      "added_note": "make these visuals better like animation from 190 to 139 over this - https://www.menshealth.com/uk/weight-loss/a44397610/mr-beast-weight-loss-transformation-before-after/"
+    },
+    {
+      "slide": 21,
+      "shot": "020_8_2",
+      "prog_start": 80.43333333333334,
+      "added_note": "if relevant at all"
+    },
+    {
+      "slide": 22,
+      "shot": "021_9_0",
+      "prog_start": 85.43333333333334,
+      "added_note": "dont use this clip"
+    },
+    {
+      "slide": 23,
+      "shot": "022_9_1",
+      "prog_start": 89.73333333333333,
+      "added_note": "dont use this clip try stock footage"
+    },
+    {
+      "slide": 24,
+      "shot": "023_9_2",
+      "prog_start": 94.03333333333333,
+      "added_note": "use stock footage if neeeded"
+    },
+    {
+      "slide": 25,
+      "shot": "024_10_0",
+      "prog_start": 98.3,
+      "added_note": "use stock footage if neeeded"
+    },
+    {
+      "slide": 26,
+      "shot": "025_11_0",
+      "prog_start": 101.5,
+      "added_note": "use stock footage if neeeded"
+    },
+    {
+      "slide": 28,
+      "shot": "027_12_0",
+      "prog_start": 109.43333333333334,
+      "added_note": "it needs to be a parallax image of jimmy - use this feature - https://helpx.adobe.com/ph_fil/after-effects/how-to/animate-picture.html"
+    },
+    {
+      "slide": 31,
+      "shot": "030_12_3",
+      "prog_start": 123.0,
+      "added_note": "dont have to use this video - talk more about the disease - iclude pics of the dinesset - lamybe flahes of in and out What I'm looking for is something like five little images of real images of people with Crohn's disease and it just flashes in and out for like five seconds. That's what I'm looking for here."
+    },
+    {
+      "slide": 32,
+      "shot": "031_13_0",
+      "prog_start": 128.36666666666667,
+      "added_note": "Don't look for the page. Don't put this stuff but in real images of crumb's disease so that it's more clear or like a visual or like a 3D rendering, not just websites. asset: (rendered graphic) spec: ['doc', 'niddk_diet'] why this picture:"
+    },
+    {
+      "slide": 33,
+      "shot": "032_13_1",
+      "prog_start": 132.23333333333332,
+      "added_note": "remove reuse different look at input from previous slide"
+    },
+    {
+      "slide": 34,
+      "shot": "033_13_2",
+      "prog_start": 134.43333333333334,
+      "added_note": "keep only if relevant - a guy eating and having issues would be good.."
+    },
+    {
+      "slide": 35,
+      "shot": "034_14_0",
+      "prog_start": 138.3,
+      "added_note": "remove if not needed"
+    },
+    {
+      "slide": 37,
+      "shot": "036_14_2",
+      "prog_start": 147.9,
+      "added_note": "use something else - again - this is not good - this is good - https://drvaidji.com/cdn/shop/articles/crohns-disease.jpg?v=1712557435"
+    },
+    {
+      "slide": 38,
+      "shot": "037_15_0",
+      "prog_start": 152.73333333333332,
+      "added_note": "not this"
+    },
+    {
+      "slide": 41,
+      "shot": "040_15_3",
+      "prog_start": 164.66666666666666,
+      "added_note": "not this"
+    },
+    {
+      "slide": 42,
+      "shot": "041_16_0",
+      "prog_start": 169.53333333333333,
+      "added_note": "not this"
+    },
+    {
+      "slide": 43,
+      "shot": "042_16_1",
+      "prog_start": 171.73333333333332,
+      "added_note": "def not this"
+    },
+    {
+      "slide": 44,
+      "shot": "043_16_2",
+      "prog_start": 177.26666666666668,
+      "added_note": "All notes - But for the rest of the slide, it's just going through: Slide 44: It's OK but it has to be very relevant. Slide 45: Again it has to be relevant. If needed you can keep that. Slide 46: Again the same thing with this. Only keep it if it's relevant to slide 47 and slide 48. It's OK if you want to keep it but again make sure it makes sense. Slide 49: Again it's a website. I did not want this. I actually want real images of the disease or something that's more informatory. Slide 50: That's OK if it makes sense to keep it. Slide 51: Does not make sense to keep it. It does not need to be there in the image. Slide 42: Just remember if it does need to be there then that's fine. Slide 53: This is not very good. I want real infographics to be here. Let me look up some infographic examples, maybe something along the lines of what I'm showing here. That's for slide 53. Slide 54: I guess you can keep that. Slide 55: Again no need to, in the sources, put in the file name. Just put in the website name of where you got it. Slide 56: Do not need him there. Slide 57: Again do not need him there. Slide 58: Keep it if it makes sense. Slide 59: Keep it if it makes sense. Slide 60: Do not keep it if it doesn't make sense. I suggest actually removing it or replacing it with something else, maybe stock footage. Slide 61: Same thing. Definitely do not use this. It makes no sense to use this. Slide 62: Again do not use it. Slide 63: Again do not use it. Slide 64: Do not use it. Slide 65: Make it something where you can use this footage, which is good, but also use something where it would be someone editing on YouTube or something like that, or just YouTube as the platform. Slide 66: Same thing. Do not use it. Slide 67: Do not use it. Slide 68: Do not use it. Slide 69: Again this is someone coding but you would rather want someone like video editing. I'm not sure that's included. Slide 70: Do not use it. Slide 71: Do not use it. Slide 72: Use real infographics. Let's see what's a good example with this. Maybe use something like what I gave you. You do need to have one problem: ten years, give me enough time that anyone can solve it. That type of thing you can use this kind of clock in order to do it but again I want to attribute something that you recommend. I don't think we need his face. Slide 73: Keep if it makes sense. Slide 74: Keep if it makes sense. Slide 75: Don't need his face. Slide 76: Don't need his face. Slide 77: Don't need his face. Slide 79: Don't need his face. Slide 80: Use whatever's there. Slide 81: Again make it like an infographic, no excuses type. It's just someone, maybe something like this, but it should have no text so just say no motivation, no second person, and a written penalty, something like that. I don't know, make it as good as possible. Slide 82: Don't need his face. Slide 83: Again change up. Maybe it comes up when the voiceover comes where it says a legend, a legally binding contract, work out every single day. Again if you do have Instagram images or maybe an X post or something then you can put that in. Slide 84: That's fine. Slide 85: Again put in images instead of just this text. Slide 86: Not sure if that's good but you can keep it. Slide 87: Don't need it. Slide 88: That's fine. Slide 89: Only keep it if it makes sense. Slide 90: Also keep it if it makes sense. Again change it up for 91 and all the images where you have his face, which is pretty much all of them up until 172, you need to change it up to something that does make more sense. That's what I'm gonna get you. I'm gonna leave all my notes and slide 44 so that you have the rest of them."
+    },
+    {
+      "slide": 53,
+      "shot": "052_20_1",
+      "prog_start": 215.33333333333334,
+      "added_note": "https://www.google.com/search?q=+example+workjout+simple&sca_esv=f27d8505aff6f8c7&udm=2&biw=1440&bih=731&sxsrf=APpeQnsMeDNmLoQLVCVkSB9uPW8A3X0jNw%3A1785434209388&ei=YZBraqeiF8W4mtkPktDeoAw&ved=0ahUKEwjn1sfe_PqVAxVFnCYFHRKoF8QQ4dUDCBE&uact=5&oq=+example+workjout+simple&gs_lp=Egtnd3Mtd2l6LWltZyIYIGV4YW1wbGUgd29ya2pvdXQgc2ltcGxlSM4BUABYAHAAeACQAQCYATagATaqAQExuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcMsgcAuAcAwgcAyAcAgAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLXVRVkZsQXJnUHhuSWFNMg51UVZGbEFyZ1B4bklhTToOLUU4V0p2aGFhQ2RfRk0gBCoXCgFzEhBlLXVRVkZsQXJnUHhuSWFNGAEwARgHIPDVvPoPSggQARgBIAEoAQ asset: (rendered graphic) spec: ['card', 'card_infusion'] why this picture:"
+    },
+    {
+      "slide": 72,
+      "shot": "071_29_1",
+      "prog_start": 298.8,
+      "added_note": "https://dribbble.com/shots/1257248-Clock-gif"
+    },
+    {
+      "slide": 81,
+      "shot": "080_33_0",
+      "prog_start": 336.46666666666664,
+      "added_note": "https://www.google.com/search?q=motivation+graphic+vid&sca_esv=f27d8505aff6f8c7&udm=2&biw=1440&bih=731&sxsrf=APpeQnt1NVHiRxhi4Yh3juUBPfnWpB73Nw%3A1785434417216&ei=MZFrap_iDJ2mmtkPsNyoOQ&ved=0ahUKEwjfvtTB_fqVAxUdkyYFHTAuKgcQ4dUDCBE&uact=5&oq=motivation+graphic+vid&gs_lp=Egtnd3Mtd2l6LWltZyIWbW90aXZhdGlvbiBncmFwaGljIHZpZEiqBFARWMkDcAF4AJABAJgBNqABxgGqAQE0uAEDyAEA-AEBmAIDoAJwwgIKEAAYgAQYigUYQ8ICBhAAGAcYHsICCBAAGAcYHhgKwgIFEAAYgATCAgQQABgewgIGEAAYBRgewgIIEAAYBRgeGArCAggQABgIGB4YCpgDAIgGAZIHATOgB68GsgcBMrgHa8IHBTAuMS4yyAcIgAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLUZlUFI4RDdNUU5DN0RNMg5GZVBSOEQ3TVFOQzdETToOMmY5S2ZCeXFKbFNvZk0gBCoXCgFzEhBlLUZlUFI4RDdNUU5DN0RNGAEwARgHILGxxuwMSggQARgBIAEoAQ"
+    }
+  ],
+  "comments": []
+}

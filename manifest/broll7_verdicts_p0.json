@@ -1,0 +1,16 @@
+{
+"s0_14367163": {"ok": true, "note": "dark stage, crew silhouettes, rigged lighting"},
+"s0_36604691": {"ok": true, "note": "film crew around a large softbox on set"},
+"s0_9808517": {"ok": false, "why": "small fashion shoot, faces, not production scale"},
+"s0_9808520": {"ok": false, "why": "same fashion shoot series"},
+"s0_9808528": {"ok": false, "why": "same fashion shoot series"},
+"s10_31050552": {"ok": false, "why": "control room with operators, not a bedroom"},
+"s10_32336447": {"ok": true, "note": "hooded figure at laptop, no face"},
+"s10_36036810": {"ok": true, "note": "laptop glowing in a dark room"},
+"s10_38656968": {"ok": false, "why": "COIN360 branding burned into screens"},
+"s10_7098126": {"ok": true, "note": "dim room, desk and monitors"},
+"s11_10577776": {"ok": false, "why": "bright office corridor with EXIT signage"},
+"s11_13352754": {"ok": false, "why": "red and green laser corridor, club-like"},
+"s11_19217895": {"ok": true, "note": "dark corridor, doors, moody"},
+"s11_19217899": {"ok": true, "note": "same corridor, second angle"}
+}

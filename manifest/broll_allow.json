@@ -1,0 +1,2852 @@
+{
+ "eq_barbell": [
+  {
+   "file": "library/broll3/eq_barbell_4367636.mp4",
+   "duration": 7.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "loaded barbell resting in a rack on J-hooks; no people, no legible branding, no text in any of 4 frames; 7.24s so one short shot only"
+  },
+  {
+   "file": "library/broll3/eq_barbell_4514295.mp4",
+   "duration": 12.52,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "long-lens shot down a loaded bar in a rack against a plain wall; verified at full res at 90% - no people, no Chicago Bulls plaque in this angle, no legible text"
+  },
+  {
+   "file": "library/broll3/eq_barbell_8611521.mp4",
+   "duration": 9.88,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "rack of kettlebells against a blue frame; no people in any of 4 frames. Two caveats: 1280x720 is the lowest resolution in the group, and these are kettlebells not a barbell, so it only serves the generic training-equipment beat"
+  },
+  {
+   "file": "library/broll3/eq_barbell_7674510.mp4",
+   "duration": 29.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: hands and a thigh loading a bar - anonymous, no face"
+  },
+  {
+   "file": "library/broll3/eq_barbell_4859451.mp4",
+   "duration": 9.76,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: hands and forearms loading a plate"
+  }
+ ],
+ "eq_dumbbell": [
+  {
+   "file": "library/broll3/eq_dumbbell_6389051.mp4",
+   "duration": 18.52,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "dumbbell rack against a brick wall with window light; no people in any of 4 frames; 2560x1440; cleanest and best-lit of the group"
+  },
+  {
+   "file": "library/broll3/eq_dumbbell_4367547.mp4",
+   "duration": 8.94,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "straightforward rack of dumbbells; no people, no legible text in any of 4 frames"
+  },
+  {
+   "file": "library/broll3/eq_dumbbell_8612183.mp4",
+   "duration": 11.18,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "long row of chrome dumbbells, shallow focus down the rack; no people in any of 4 frames"
+  },
+  {
+   "file": "library/broll3/eq_dumbbell_6053511.mp4",
+   "duration": 12.14,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "dark rack of old iron dumbbells and plates; no people in any of 4 frames; 1280x720 and heavily underexposed, so it only works as a dark cutaway"
+  },
+  {
+   "file": "library/broll3/eq_dumbbell_37536690.mp4",
+   "duration": 12.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty gym floor with an adjustable bench and barbell racks under purple lighting; no people in any of 4 frames. Content is a bench and racks, not dumbbells - it doubles as a gym_room shot"
+  },
+  {
+   "file": "library/broll3/eq_dumbbell_4367571.mp4",
+   "duration": 7.91,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "dumbbell rack with very heavy bokeh; checked at full res - one dumbbell is sharp, the rest is intentional out-of-focus. No people, no text. 1280x720. Weakest of the group, use only as texture"
+  }
+ ],
+ "eq_machine": [
+  {
+   "file": "library/broll3/eq_machine_37281136.mp4",
+   "duration": 11.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "weight stack with kg plate numbering and the selector pin; no people in any of 4 frames; exactly the brief - equipment, not a person training"
+  },
+  {
+   "file": "library/broll3/eq_machine_6053512.mp4",
+   "duration": 8.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "white cable machine base and weight stack; no people, no legible branding in any of 4 frames"
+  },
+  {
+   "file": "library/broll4/eq_machine_7187429.mp4",
+   "duration": 7.64,
+   "class": "OBJECT",
+   "crop": [
+    0.0,
+    0.18,
+    0.0,
+    0.0
+   ],
+   "note": "was REJECT - a shelf of cast-iron kettlebells against a white brick wall with pink chalk graffiti reading VINCERO fully legible on the dark diagonal band above. Crop rendered and viewed at all 4 timestamps: the lettering is gone in every one, leaving only the kettlebells, the shelf and the plain wall. No people at any point. CAVEATS: 1920x1080 source and the crop leaves 1920x886, about a 1.22x upscale to 1080p; and this is free weights rather than a machine, so it reads closer to eq_dumbbell than to a weight stack | KEPT: the VINCERO graffiti is removed by the crop already recorded on this entry, verified at all four timestamps."
+  },
+  {
+   "file": "library/broll3/eq_machine_27861371.mp4",
+   "duration": 15.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs and shoes on a treadmill; rank last, it is soft"
+  }
+ ],
+ "gym_room": [
+  {
+   "file": "library/broll3/gym_room_5974316.mp4",
+   "duration": 15.1,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty industrial box gym - pull-up rigs, gymnastic rings, climbing rope, vertical bar rack, plyo boxes, hazy backlight. Checked at full res: unmistakably a training gym, completely empty, zero legible branding. 3840x2160"
+  },
+  {
+   "file": "library/broll3/gym_room_37536668.mp4",
+   "duration": 16.84,
+   "class": "OBJECT",
+   "crop": [
+    0.27,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "was REJECT - a fully legible EAT / SLEEP / GYM / REPEAT wall slogan in the upper left that would read as a caption. Crop rendered and viewed at all 4 timestamps: the slogan is gone in every one. No people at any point. Only a tiny 3D FITNESS machine badge remains. 1920x1080 source, so the crop implies roughly a 1.37x upscale to 1080p"
+  },
+  {
+   "file": "library/broll4/gym_room_6389055.mp4",
+   "duration": 14.76,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "a long rack of stacked weight plates in a dim, hazy gym, breeze-block wall and green turf floor. Verified at full res: genuinely no people in any of 4 frames and zero brand names - the only text is the rack's own 15 and 20 kg tier numbers. Clean, moody and unmistakably a training room"
+  }
+ ],
+ "iv": [
+  {
+   "file": "library/broll4/iv_6248837.mp4",
+   "duration": 27.31,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "an IV drip chamber with clear fluid running, backlit by a hospital-room window with a city view; bedding and a bowl on the sill behind. Verified at full res: nobody in frame at any of 4 frames, no legible text. Right drug semantics - clear fluid, not a blood bag - and it identifies nobody. CAVEAT: handheld and soft, phone-grade rather than cinema-grade, and a brown window mullion cuts the right of frame"
+  },
+  {
+   "file": "library/broll3/iv_6130121.mp4",
+   "duration": 7.08,
+   "class": "OBJECT",
+   "crop": [
+    0.0,
+    0.0,
+    0.48,
+    0.0
+   ],
+   "note": "was FIGURE - a nurse in blue scrubs with a readable face in the right half. Crop rendered and viewed at all 4 timestamps: she is gone in every one, leaving a backlit clear IV bag and drip chamber with the B|BRAUN mark reduced to an illegible smudge. Correct semantics for a clear-fluid infusion. WARNING: 1280x720 source and the crop leaves only ~666px of width, so a 1080p timeline needs a ~2.9x upscale. Use small, or not at all"
+  },
+  {
+   "file": "library/broll3/iv_6207662.mp4",
+   "duration": 12.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: an anonymous forearm with a cannula and line - now the RIGHT picture for the Remicade beat"
+  }
+ ],
+ "meds": [
+  {
+   "file": "library/broll3/meds_11186312.mp4",
+   "duration": 19.09,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "orange prescription bottle tipped over with white pills spilling on dark grey; no people in any of 4 frames; plain, unglamorous, 3840x2160"
+  },
+  {
+   "file": "library/broll3/meds_4492602.mp4",
+   "duration": 14.62,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "white pill bottle and scattered capsules on a warm beige table; no people in any of 4 frames"
+  },
+  {
+   "file": "library/broll3/meds_11075637.mp4",
+   "duration": 9.51,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "maroon tablets spilling out of a clear bottle; no people in any of 4 frames; the I-2 marking is a pill imprint, not a logo"
+  },
+  {
+   "file": "library/broll3/meds_5697635.mp4",
+   "duration": 8.15,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "pills spilling onto a green surface beside a white cap; no people in any of 4 frames"
+  },
+  {
+   "file": "library/broll3/meds_7033924.mp4",
+   "duration": 12.16,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "macro of pastel tablets in shallow focus; no people in any of 4 frames; prettier and more stylised than the rest of the group"
+  },
+  {
+   "file": "library/broll3/meds_9902348.mp4",
+   "duration": 10.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: a hand at medication"
+  },
+  {
+   "file": "library/broll3/meds_6344516.mp4",
+   "duration": 9.12,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: a hand at medication"
+  }
+ ],
+ "clinic": [
+  {
+   "file": "library/broll3/clinic_3192916.mp4",
+   "duration": 21.03,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty hospital corridor with a gurney and a wheelchair parked at the far end, exit sign above. Verified at full res: genuinely nobody in frame, reads unmistakably as a hospital. The only strong clinic clip in the batch"
+  },
+  {
+   "file": "library/broll3/clinic_9574129.mp4",
+   "duration": 12.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty white-tiled sterile corridor with a blue door at the end. Verified at full res: no people, no text. Reads clinical but is slightly generic - it could also be read as a lab or service corridor. 4096x2160"
+  },
+  {
+   "file": "library/broll4/clinic_5203512.mp4",
+   "duration": 6.59,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "an EMPTY hospital bed with a ventilator beside it, blue medical gas panel and wall outlets. Verified at full res: nobody in frame at any of 4 frames and it reads unmistakably as a treatment room. The only genuine empty treatment setting in the round-2 batch. CAVEAT: small Spanish-language equipment wordmarks are legible on the bed end during roughly the first third (SISTEMA DE PESAJE INTEGRADO and a maker badge reading iPardo); the camera moves off them and the later two thirds are clean. 6.59s so one short shot only"
+  },
+  {
+   "file": "library/broll4/clinic_31972363.mp4",
+   "duration": 23.92,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "a glass IV bottle and drip chamber hanging against a cream hospital wall with a medical gas outlet panel and a cylinder below. Verified at full res: no people in any of 4 frames; the only text is a mirrored batch code on the metal cap that reads as gibberish, not a brand. Correct clear-fluid semantics for an infusion. NOTE: it doubles as an iv shot - do not also cut it as iv or the film reuses one image"
+  },
+  {
+   "file": "library/src_coverr/clinic_JJpk1jFe8u.mp4",
+   "duration": 20.58,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Empty institutional corridor lined with doors, slow push-in, no people. 1920x1080, 60fps - the highest frame rate in the haul, so it will retime smoothly. Highest measured detail of any non-aerial clip. Escalated the mid-corridor doors and the one suspicious yellowish mark at full res: it is a smudge, not a nameplate or room number. No text anywhere. CONTENT NOTE: this reads as a basement/utility "
+  },
+  {
+   "file": "library/src_coverr/clinic_MeqfWNghcL.mp4",
+   "duration": 19.72,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Close-up of sterile examination gloves being pulled on, hands and forearms only, plain white background. 1920x1080, 50fps. The strongest genuinely medical asset here: informative at a glance, no identifiable face, no patient, no product label, no wall signage, nothing to crop. Anonymous by construction. Usable end to end."
+  },
+  {
+   "file": "library/src_coverr/clinic_rmWTPp3UZj.mp4",
+   "duration": 35.22,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    0,
+    24
+   ],
+   "note": "Aerial descent over a large hospital complex at golden hour, no people. 1920x1080, 50fps, by far the sharpest asset in the haul. WINDOW REQUIRED: a yellow rooftop advertising billboard on a neighbouring building enters the top-right corner at roughly t=25.5s and is plainly visible from t=26s to the end. I bracketed it at 18/20/22/24/25.4/26/27/28/29s - clean through 24s, a yellow sliver at the ext"
+  }
+ ],
+ "calendar": [
+  {
+   "file": "library/broll3/calendar_5546826.mp4",
+   "duration": 15.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "a real spiral planner open on a lap to a BLANK monthly calendar grid with Thursday/Friday/Saturday/Sunday headers and a TO DO LIST tab; an anonymous hand turns pages, black trousers/knees visible, no face at any point. Verified at full res. This is the only genuine calendar among the eight and it serves the eight-week-cycle beat directly | KEPT: a hand turning a planner page is a hand operating a prop, not a body performing the activity the narration attributes to Jimmy. Rule 9's examples are a child playing baseball and a video editor - a performer standing in for him."
+  }
+ ],
+ "clock": [
+  {
+   "file": "library/broll3/clock_7033607.mp4",
+   "duration": 32.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "macro of the black alarm clock face; no people in any of 4 frames; longest clock clip"
+  },
+  {
+   "file": "library/broll3/clock_7033786.mp4",
+   "duration": 17.48,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "extreme macro of the 11-12-1-2 arc of the same clock face; no people in any of 4 frames. NEAR-DUPLICATE of clock_7033607 and clock_7033779 - same clock, same shoot, consecutive Pexels ids. Do not cut two of these three together"
+  },
+  {
+   "file": "library/broll3/clock_855782.mp4",
+   "duration": 24.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "small square alarm clock on a grey surface, static wide; no people in any of 4 frames; visually inert, a faint brand word on the dial"
+  },
+  {
+   "file": "library/broll3/clock_8543863.mp4",
+   "duration": 14.4,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "lower half of a white clock face framed by green plant leaves; no people in any of 4 frames; tonally bright and garden-like, which fights the hours-it-cost beat - ranked last"
+  },
+  {
+   "file": "library/broll3/clock_7033779.mp4",
+   "duration": 16.36,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: hands near a clock"
+  },
+  {
+   "file": "library/broll3/clock_4601287.mp4",
+   "duration": 11.58,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: hands near a clock"
+  }
+ ],
+ "bb_gear": [
+  {
+   "file": "library/broll3/bb_gear_5182638.mp4",
+   "duration": 19.77,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "bats, a red batting helmet, a glove and a pile of baseballs in the grass against a chain-link fence with empty bleachers behind, low warm sun. Verified at full res: no people, no legible text. This is the single best rule-9 clip in the whole batch - equipment standing in for the child"
+  },
+  {
+   "file": "library/broll3/bb_gear_5182643.mp4",
+   "duration": 23.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "close-up of the same pile of baseballs, glove and bats; no people in any of 4 frames. Same shoot as bb_gear_5182638 but a genuinely different framing (tight vs wide), so the two are usable as separate shots"
+  },
+  {
+   "file": "library/broll3/bb_gear_8311217.mp4",
+   "duration": 12.59,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty outfield behind a green fence with a 355 distance marker, wall of conifers and a parking lot beyond. Verified at full res: no people anywhere, fence panels are blank. Content is a field rather than gear, but it is on-tone for a small local ballpark"
+  }
+ ],
+ "bb_field": [
+  {
+   "file": "library/broll3/bb_field_37052402.mp4",
+   "duration": 17.37,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "ground-level view across an empty dirt diamond with suburban houses and big cumulus behind. Verified at full res: nobody in frame. A generic VISITOR/INNING/HOME scoreboard and a row of small sponsor banners on the outfield fence, all far too small to read. Exactly the unglamorous empty kid's field the brief asks for"
+  },
+  {
+   "file": "library/broll3/bb_field_35557006.mp4",
+   "duration": 8.42,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "dusk aerial over an empty local ballpark - red dirt infield, floodlights, sunset sky. Verified at full res: no people; outfield wall signage is illegible. 8.42s so one short shot"
+  },
+  {
+   "file": "library/broll3/bb_field_6982417.mp4",
+   "duration": 10.03,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty small-town field with a US flag on a centre pole, houses and hills behind, drone pull-back. Verified at full res: no people. CAUTION: a semi-legible 'Home of the LUMBERJACKS' sign on the outfield fence and a few small sponsor boards; the flag also makes it a loud image tonally"
+  },
+  {
+   "file": "library/broll4/bb_field_35557004.mp4",
+   "duration": 17.5,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "dusk aerial over a real, completely EMPTY baseball diamond - red dirt infield, floodlights lit, suburb and a school football field behind. Verified at full res: no people anywhere in any of 4 frames. REAL CAVEAT, read before using: the school name GRANT is legible in white letters on the dugout roof in three of the four frames and a G athletics logo sits on a building top right; the drone moves so no crop clears it. Round 1 kept bb_field_6982417 on the same terms - veto this if the mark rule is being read strictly"
+  }
+ ],
+ "food": [
+  {
+   "file": "library/broll3/food_4098412.mp4",
+   "duration": 20.01,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "extreme macro of dry breakfast cereal loops in a white bowl; no people in any of 4 frames. Plain, unglamorous and thematically the best fit for a body that will not keep what you feed it"
+  },
+  {
+   "file": "library/broll3/food_8107796.mp4",
+   "duration": 22.12,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "top-down bowls of dry beans, soybeans and rice on white; no people in any of 4 frames; raw staples, no garnish, no styling"
+  },
+  {
+   "file": "library/broll3/food_8107797.mp4",
+   "duration": 20.88,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "bowls of red rice and grains being poured; no people in any of 4 frames. Same shoot as food_8107796, different composition and action"
+  },
+  {
+   "file": "library/broll3/food_28484209.mp4",
+   "duration": 14.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "steel mixing bowl of raw ground meat with oats, seasoning and carrot chunks; no people in any of 4 frames. Genuinely unappetising, which is the point; verified at full res"
+  },
+  {
+   "file": "library/broll4/food_8107722.mp4",
+   "duration": 9.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "overhead of white bowls of red kidney beans, black lentils, wild rice and white rice on a white surface with beans scattered around. Verified at full res: no people in any of 4 frames, no text. Raw staples, no garnish, no styling. CAVEAT: same photographer and shoot as the round-1 keepers food_8107796 and food_8107797 - with food_8107804 that is four clips from one session in this group"
+  },
+  {
+   "file": "library/broll4/food_7234913.mp4",
+   "duration": 9.77,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "full-frame macro of dry white rice grains filling the whole frame. Verified at full res: no people in any of 4 frames, no text. As plain and unglamorous as the group gets. CAVEAT: near-white and almost abstract - it reads as texture rather than as a meal"
+  },
+  {
+   "file": "library/broll4/food_9011538.mp4",
+   "duration": 7.08,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "bran flakes and freeze-dried strawberry pieces falling into a red bowl on white, high speed. Verified at full res: no people in any of 4 frames, no packaging and no text. CAVEATS: the 15% frame is a still-empty bowl, and round 1 already holds a cereal macro (food_4098412), so the two overlap"
+  },
+  {
+   "file": "library/broll4/food_1841002.mp4",
+   "duration": 13.33,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "stop-motion of plain white rice filling a yellow bowl on a saturated cyan backdrop. Verified at full res: no people in any of 4 frames, no text, no branding, and the food itself is literally plain rice. Ranked last for tone, not technique: the pop-art cyan and yellow set is cheerful commercial styling and will fight a chapter about a body that will not keep what you feed it"
+  },
+  {
+   "file": "library/broll4/food_8107804.mp4",
+   "duration": 17.92,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: a hand at a plate"
+  }
+ ],
+ "desk": [
+  {
+   "file": "library/broll3/desk_5299882.mp4",
+   "duration": 15.98,
+   "class": "OBJECT",
+   "crop": [
+    0.42,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "note": "was FIGURE - the left monitor showed a stranger's face filling the screen. Crop rendered and viewed at all 4 timestamps: the face-monitor is gone in every one, leaving an Adobe Premiere timeline on the right monitor with a keyboard in a dark room. Nobody is in the room at any point. Small ASUS bezel logo remains. The best desk clip - the machine without the editor"
+  },
+  {
+   "file": "library/broll4/desk_19463241.mp4",
+   "duration": 11.78,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "dark studio desk at night - a two-window editor with a playlist and an audio waveform on the monitor, MIDI keyboard, studio monitors, red under-lighting. Verified at full res: nobody in the room at any of 4 frames, and no legible brand name anywhere (the on-screen UI text is far too small to read). The best of the round-2 desk clips - the machine glowing with nobody at it. CAVEAT: the MIDI keyboard makes it a music/DAW setup rather than a video edit bay"
+  },
+  {
+   "file": "library/broll4/desk_34279733.mp4",
+   "duration": 12.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "night desk, two monitors of code behind an orange LED strip and a blue lamp. Verified at full res: no people in any of 4 frames, no branding; the on-screen text is generic React/Tailwind markup. CAVEATS: the 15% frame is a very dark, soft, almost empty screen; and this is the same room and shoot as desk_34279721 and desk_34268782, so treat the three as one look"
+  },
+  {
+   "file": "library/broll4/desk_34279721.mp4",
+   "duration": 8.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "tight angle across a monitor of code at night, second screen and keyboard behind, orange and blue LEDs. Verified at full res: no people in any of 4 frames, no branding. CAVEATS: legible code fills most of the frame, which reads as screen text on the cut; same room and shoot as desk_34279733 and desk_34268782"
+  },
+  {
+   "file": "library/broll4/desk_8346903.mp4",
+   "duration": 11.69,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty open-plan office desks, monitors showing a chart dashboard, chairs, paper lantern, blown-out windows. Verified at full res: no people in any of 4 frames, no legible branding. Ranked last for a tonal reason, not a technical one: this is bright, cold, corporate daylight and the beat is editing ALONE AT NIGHT - veto it if the chapter cannot carry a daylight office"
+  },
+  {
+   "file": "library/broll4/desk_34268782.mp4",
+   "duration": 13.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: an arm at a monitor and a hand typing - close to the editing-desk look asked for"
+  }
+ ],
+ "bed": [
+  {
+   "file": "library/broll4/bed_5644684.mp4",
+   "duration": 19.88,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "empty unmade bed with a white duvet, open balcony door with snow and a bistro table beyond, radiator. Verified at full res: no people in any of 4 frames, no text. CAVEAT: the source is fully MONOCHROME - it will not intercut with a colour timeline without a deliberate grade decision, which is why it is ranked last"
+  },
+  {
+   "file": "library/broll4/bed_5644695.mp4",
+   "duration": 29.56,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "an EMPTY mattress and rumpled duvet on a herringbone parquet floor, tall window, gilt mirror, dried flowers. Verified at full res: no people at any of 4 frames, no text. The genuinely empty bed the beat asks for. CAVEAT: the camera is tilted down for roughly the first 40% (the 15% and 40% frames are almost entirely bare floor) - the bed only reads from about halfway, so cut from the second half | WINDOW [12.0,29.4]: the first ~12s is a floor-level dolly across bare parquet with no bed in frame, which read as a shot of a floor over \"there are days it wins\".",
+   "window": [
+    12.0,
+    29.4
+   ]
+  },
+  {
+   "file": "library/broll4/bed_7303558.mp4",
+   "duration": 9.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "a white cup of tea on a saucer sitting on an empty white bed against a warm wooden headboard. Verified at full res: no people in any of 4 frames, no text, no branding. Usable end to end. CAVEAT: the cup gives it a mild room-service / breakfast-in-bed reading rather than desolation, and it is soft and shallow-focus throughout"
+  },
+  {
+   "file": "library/broll3/bed_9057572.mp4",
+   "duration": 12.73,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "low angle across pillows. Checked at six timestamps: legs and a bare foot in yellow pyjamas are on the bed for roughly the first 9s, then the bed is genuinely empty for the last ~3.5s. No face at any point. BUILDER MUST USE THE TAIL (about 10.5-12.7s) to satisfy 'nobody in it' - that window is under 6s, so it is a short shot | WINDOW [9.20,12.66] recorded as data: the builder picked 3.0s and put the sleeper's legs and bare foot on screen at 18s of the film.",
+   "window": [
+    9.2,
+    12.66
+   ]
+  }
+ ],
+ "walk": [
+  {
+   "file": "library/broll3/walk_5321384.mp4",
+   "duration": 11.76,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs walking a wet plaza"
+  },
+  {
+   "file": "library/broll3/walk_25956625.mp4",
+   "duration": 10.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs and sneakers, POV at own feet"
+  },
+  {
+   "file": "library/broll3/walk_9150767.mp4",
+   "duration": 7.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs on a curb"
+  },
+  {
+   "file": "library/broll3/walk_5029705.mp4",
+   "duration": 9.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs walking away"
+  },
+  {
+   "file": "library/broll3/walk_2881960.mp4",
+   "duration": 10.71,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs in trainers"
+  },
+  {
+   "file": "library/broll3/walk_8519682.mp4",
+   "duration": 21.76,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "RESTORED after rule 9 was relaxed: legs crossing a court; native 2.44:1, sides get cropped"
+  }
+ ],
+ "editing": [
+  {
+   "file": "library/broll5/editing_33414463.mp4",
+   "duration": 34.75,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    1.0,
+    8.5
+   ],
+   "note": "long-lens macro across an After Effects timeline, shallow focus, cool grey UI. Verified at full res at four timestamps plus a 1/3/5/7/9/11s scan: NOBODY in frame, no OS chrome, no brand wordmark anywhere - the only readable strings are AE panel values (150.0%, 100.0%, 0;00;00;07). The one item that looked like a Windows 11 taskbar weather widget at the lower right is completely defocused and unreadable at full resolution. WINDOW [1.0,8.5] recorded as data: the program viewer is blank white for the first ~8s, then a COMPANY / TAGLINE placeholder title and a green graphic come up on it and would read as a caption on the cut. CAVEAT: about two thirds of every frame is intentional bokeh - this is texture for the edit-bay beat, not a legible screen"
+  },
+  {
+   "file": "library/broll6/editing_34845722.mp4",
+   "duration": 10.15,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "extreme macro of a bloomed NLE timeline; read at native 1:1 at all four marks - the only legible words are 'Adjustment Layer' (a generic term, not a brand) and timecodes 00;00;04;00 / 00;00;08;00; top-left glyphs verified illegible at full res; no maker name, no logo, no watermark, no faces"
+  },
+  {
+   "file": "library/broll6/editing_12358562.mp4",
+   "duration": 15.41,
+   "class": "OBJECT",
+   "crop": [
+    0.0,
+    0.0,
+    0.0,
+    0.24
+   ],
+   "window": null,
+   "note": "crop removes the SAMSUNG monitor chin, the Windows taskbar (Start/Edge/Chrome/Pr) and the 'para pesquisar' search box; cropped frame verified clean at 14 timestamps across the clip; remaining text is generic Premiere panel labels and camera filenames MVI_34xx.MOV; anonymous faces in media-pool thumbnails; 1920x820 upscaled 1.32x to 1080p - the softest clip in the set"
+  },
+  {
+   "file": "library/broll6/editing_32150707.mp4",
+   "duration": 9.04,
+   "class": "OBJECT",
+   "crop": [
+    0.0,
+    0.0,
+    0.0,
+    0.3
+   ],
+   "window": [
+    0.3,
+    4.6
+   ],
+   "note": "crop removes the PANDA monitor chin and the macOS dock (Ps/Lr/Gmail/Chrome); window ends before 'DaVinci Resolve Studio 19' enters bottom-left at t=5.0 - verified clean at 0.3/1.1/1.9/2.7/3.5/4.3 and the wordmark present at 5.1/5.7/6.4/7.2/8.0/8.7; 4K so the crop costs no resolution; only about 4.3s usable"
+  },
+  {
+   "file": "library/src_pixabay/editing_3160.mp4",
+   "duration": 12.72,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Side-profile close-up of hands typing on a silver laptop, dark bokeh background. The machine is a MacBook Pro by shape but no Apple logo, wordmark or screen is ever in frame - I checked a full-resolution band across four timestamps plus the first and last frames. Keycaps are defocused past readability. This is the only editing-group survivor; see thin_groups."
+  }
+ ],
+ "gut_pain": [
+  {
+   "file": "library/broll5/gut_pain_7297871.mp4",
+   "duration": 11.07,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "the only genuine GUT in the batch: a mid-shot of a bare male torso outdoors, both hands pressed flat into the abdomen, no head in frame at any of 4 frames, no text, no branding, 2560x1440. Anonymous - a body, not a character. CAVEAT: bright sun and red azaleas behind give it a health-advert look rather than an illness look; grade it down"
+  },
+  {
+   "file": "library/broll5/gut_pain_7297851.mp4",
+   "duration": 14.72,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "tight close-up of a man's face contorted in pain against blue sky, hand at his temple. Verified at full res: no text, no branding, sharp, 2560x1440. HONEST CAVEATS, read before cutting: he is clearly 65+, and the illness chapter is about a man in his twenties - a big face close-up casts him as a character. And it shows no stomach. Use only if the chapter can carry an anonymous older face"
+  },
+  {
+   "file": "library/broll5/gut_pain_7297875.mp4",
+   "duration": 10.28,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "bare male back from behind, both hands kneading the lower back, park background. No face at any of 4 frames, no text, no branding, 3840x2160. Same photographer, same model and same afternoon as gut_pain_7297871 and gut_pain_7297851 - do not cut two of the three together. CAVEAT: this is LOWER-BACK pain, not gut pain - it reads as a lifting injury. Ranked here only because the group is thin"
+  },
+  {
+   "file": "library/broll5/gut_pain_11494045.mp4",
+   "duration": 10.28,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "close-up of two hands squeezing a roll of belly fat through a teal t-shirt against a flat orange studio backdrop. No face, no text, no branding at any of 4 frames, 3840x2160. RANKED LAST FOR A REASON: this is the visual grammar of a weight-loss advert, not of illness - and the pop-orange seamless will fight every other shot in the chapter"
+  },
+  {
+   "file": "library/broll6/gut_pain_6799573.mp4",
+   "duration": 26.52,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "extreme close-up of a lean bare torso and hollow flank against white - reads directly as a body that will not keep what you feed it; plain black waistband verified logo-free at native res"
+  },
+  {
+   "file": "library/broll6/gut_pain_7297872.mp4",
+   "duration": 12.76,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "hands pressed flat on the lower abdomen; the purple shorts carry only a plain black snap, no lettering; blurred garden behind"
+  },
+  {
+   "file": "library/src_mixkit/gut_pain_25596.mp4",
+   "duration": 12.0,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Young man doubled over clutching his abdomen, moving from a doorway to collapsing on a bed. Escalated the wall switch plate to 6x - plain black rocker, no maker's mark. No text, screens or logos anywhere. Strong, on-topic Crohn's imagery. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/gut_pain_43839.mp4",
+   "duration": 26.9,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Tight close-up of a man's face contorted in pain against a plain backdrop. No branding, no text, no props. Note for the edit: this asset is MONOCHROME (not stated in CREDITS.json) - it will need a grade decision or a deliberate B&W beat. Longest clip in the haul at 26.90s. Clean full length."
+  }
+ ],
+ "eating": [
+  {
+   "file": "library/broll5/eating_6496178.mp4",
+   "duration": 13.61,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "man on a sofa eating noodles from a plain white unprinted takeout carton, chopsticks, neutral expression, soft white room. Verified at full res: the carton is blank on every side shown, and the small rectangular patch on his black tee is a plain reflective panel with no letters or mark. No branding anywhere, 3840x2160. The cleanest and most on-tone eating shot in the batch"
+  },
+  {
+   "file": "library/broll5/eating_8107662.mp4",
+   "duration": 22.04,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "young man alone at a table eating noodles with chopsticks, warm styled set. Verified at full res at 4 timestamps: no second person, no text, no branding. 2732x1440 (1.90:1) so a 16:9 timeline crops the sides slightly - there are no bars in the source. CAVEAT: heavily art-directed and he looks contented, which cuts against 'you can eat and still starve'"
+  },
+  {
+   "file": "library/broll5/eating_5197771.mp4",
+   "duration": 25.84,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "man eating a bowl of cereal at a kitchen counter while scrolling a phone. Verified at full res: no legible branding - the watch face is dark and the phone screen is blank white in every frame; the cereal is loose loops with no packaging in shot. 2560x1440, 25.84s so several distinct moments are available. CAVEAT: the phone adds a scrolling/distraction reading on top of the eating"
+  },
+  {
+   "file": "library/broll5/eating_3760752.mp4",
+   "duration": 27.32,
+   "class": "FIGURE",
+   "crop": null,
+   "window": [
+    11.0,
+    17.0
+   ],
+   "note": "man alone at a bright breakfast table eating vegetables, neutral to pensive. No text, no branding at any point, 3840x2160. WINDOW [11.0,17.0] recorded as data: this is a two-hander. A woman's arm and shoulder enter at the right edge around 8s and at 18s her hand feeds him grapes and the back of her head fills a third of the frame. Verified by a 1/3/6/8/12/14/16/18s scan - he is alone and eating at 12, 14 and 16s. Do not cut outside the window"
+  },
+  {
+   "file": "library/broll5/eating_5102314.mp4",
+   "duration": 12.2,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "restaurant table, neck-down framing of a man with a glass of red wine, a salad and a phone. No face, no text, no legible branding at any of 4 frames, 3840x2160. RANKED LAST ON MEANING, not technique: he never actually eats, and a glass of red in a nice restaurant is the opposite image of a body that will not keep what you feed it. Veto it if the chapter is about starvation"
+  },
+  {
+   "file": "library/broll6/eating_4731058.mp4",
+   "duration": 10.16,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "overhead burger, fries and squeeze bottles on a wood table; the bottles were verified completely label-free at native res; man's forearms only, no face"
+  },
+  {
+   "file": "library/broll6/eating_8107929.mp4",
+   "duration": 15.28,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "instant noodles being made - chopsticks, plain white bowl, broth poured from an unmarked yellow jug; the gold pendant is abstract with no text; thematically the strongest of the group"
+  },
+  {
+   "file": "library/broll6/eating_7244293.mp4",
+   "duration": 23.0,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "fine-dining plate being cut with knife and fork, white cloth; nothing legible anywhere"
+  },
+  {
+   "file": "library/broll6/eating_6496237.mp4",
+   "duration": 15.14,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "man plating food in a white-tiled kitchen; kettle, paper-towel roll, dish rack, sink and glassware all verified brand-free at native res"
+  },
+  {
+   "file": "library/broll6/eating_6337005.mp4",
+   "duration": 29.76,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "coffee cup, saucer and toast in shallow focus; plain white china, no branding"
+  },
+  {
+   "file": "library/broll6/eating_19905887.mp4",
+   "duration": 17.6,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "chef plating steak tartare; watch dial turned away with no visible branding, plates plain white; note this is food prep rather than eating"
+  },
+  {
+   "file": "library/src_mixkit/eating_26084.mp4",
+   "duration": 10.09,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Top-down of hands eating a panini and salad; no face in any of the 4 frames. Escalated the wrist jewellery at 40% to full res - plain hammered metal bangle, no wordmark. Plates, glass and placemats all unbranded. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/eating_26089.mp4",
+   "duration": 11.01,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Man alone eating fast food on a sofa with a remote. Checked the takeout clamshells, the paper wrap at bottom-left and the remote at full res - all blank, no print. Plain wall behind, no signage (unlike its sibling 26091). Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/eating_372.mp4",
+   "duration": 8.43,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Burger and fries close-up, subject is torso/hands only - no face. Escalated the wristwatch at 65% and 90% to full res: numerals and lume markers only, the centre marking is not a legible wordmark. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/eating_40521.mp4",
+   "duration": 9.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Macro of a fork moving salad on a plain white plate. No face, no text, no logo, no device anywhere in the frame at any of the 4 timestamps. Cleanest asset in the haul."
+  },
+  {
+   "file": "library/src_mixkit/eating_41851.mp4",
+   "duration": 20.02,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    1,
+    7
+   ],
+   "note": "WINDOWED. The camera pulls back across the clip. A cosmetic tube with a legible cursive brand wordmark and shade number '02' sits on the table and is clearly readable at 90% (confirmed at 8x full res); it first appears around 8-9s. Sampled 1.0/5.0/7.0/9.0/10.5/12.0s: 1.0, 5.0 and 7.0 are tight, clean plate shots with no tube; the tube is present by 9.0s. Use 1.0-7.0s only. Both window endpoints pe"
+  },
+  {
+   "file": "library/src_mixkit/eating_50771.mp4",
+   "duration": 10.43,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Man eating breakfast alone while scrolling a phone. Two items escalated to full res and both come back NOT legible: (a) the phone is an iPhone-style body in a clear case - the back panel shows no readable Apple logo or wordmark, only the camera bump; (b) there is a small woven maker's tag on the near edge of the grey placemat whose lettering is unreadable even at 7x. No legible branding by the sta"
+  }
+ ],
+ "athlete": [
+  {
+   "file": "library/broll5/athlete_8533152.mp4",
+   "duration": 16.72,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    9.0,
+    16.5
+   ],
+   "note": "handheld follow behind an adult man running a red track in a grey vest - back of the head only, no face at any point, no text, no branding, 3840x2160. The most kinetic shot in the batch and the best single image for 'before any of it, he was an athlete'. WINDOW [9.0,16.5] recorded as data: around the 40% mark the camera loses him and the frame becomes a defocused arm filling the screen; from ~9s it settles into the clean follow (verified at 10.87s and 15.05s)"
+  },
+  {
+   "file": "library/broll5/athlete_7179290.mp4",
+   "duration": 15.16,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "static drone wide of a single adult runner working a red 400m track, industrial skyline behind. Verified at full res at 4 timestamps: nobody else on the track, no legible signage anywhere. 1920x1080 native - the lowest resolution of the group but clean. Anonymous by distance, which is its strength"
+  },
+  {
+   "file": "library/broll5/athlete_8533111.mp4",
+   "duration": 18.6,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "adult man jogging a red track toward and then away from camera; ends on a wide from behind. Verified at full res: the orange object on the left of the 15% frame is a wooden park bench, completely out of focus and illegible - no signage, no branding anywhere. 2560x1440. CAVEAT: he is head-on and identifiable at 15/40/65%; the tail (from ~15.5s, walking away, wide) is the more anonymous choice"
+  },
+  {
+   "file": "library/broll5/athlete_8533204.mp4",
+   "duration": 16.92,
+   "class": "FIGURE",
+   "crop": null,
+   "window": [
+    9.5,
+    16.5
+   ],
+   "note": "slow tilt up from the red track surface to an adult runner's torso and then his face, park behind. No text, no branding, 3840x2160. WINDOW [9.5,16.5] recorded as data: the first ~8s is nothing but tarmac texture and a shadow (verified at 2.54s and 6.77s) - the person only exists in the last third. Same track, same model and same shoot as athlete_8533111 and athlete_8533152, so do not cut two of the three together"
+  },
+  {
+   "file": "library/broll5/athlete_4065480.mp4",
+   "duration": 15.08,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "adult man in a grey hoodie moving along a lakeside path at dawn, ending on a wide of him from behind, hands on head, facing flat water and a hazy city. Verified at full res: no legible text, the distant stadium banners are unreadable, 3840x2160. Tonally the best of the group - cold, empty, unglamorous. CAVEAT: hoodie plus sunglasses reads as a cool-down walk rather than as training"
+  },
+  {
+   "file": "library/broll5/athlete_7187092.mp4",
+   "duration": 7.93,
+   "class": "OBJECT",
+   "crop": [
+    0.16,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "window": null,
+   "note": "low static angle down a track lane past a chain-link fence, an adult runner sprinting away from camera. WAS A REJECT: a black kit bag at the lower left carries a fully legible FILA wordmark, confirmed at full resolution. CROP [0.16,0,0,0] rendered and viewed at all four timestamps - the bag and the wordmark are gone in every one; what remains at the left edge is an orange cone and two unbranded patterned bags with no readable lettering, checked at full res. Bystanders on the field are anonymous and distant. CAVEATS: 1920x1080 source, so the crop leaves 1613x1080 and needs about a 1.19x upscale to a 1080p timeline; and 7.93s means one short shot only"
+  },
+  {
+   "file": "library/broll6/athlete_4065468.mp4",
+   "duration": 14.14,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "man jogging toward camera on a causeway; plain grey hoodie with no lettering; hazy skyline verified free of legible signage at native res"
+  },
+  {
+   "file": "library/broll6/athlete_4065472.mp4",
+   "duration": 12.74,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "same runner, side-tracking along the river with apartment blocks behind; background verified clean at native res"
+  },
+  {
+   "file": "library/broll6/athlete_4065471.mp4",
+   "duration": 7.07,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "same setup as 4065472 and near-identical coverage - treat the two as one shot editorially; only 7.07s and 2560x1440"
+  },
+  {
+   "file": "library/broll6/athlete_7884054.mp4",
+   "duration": 13.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "two runners in plain unbranded sportswear on a Warsaw street; the blue object at frame left is a plain bollard with no sign face; no legible signage, car plates not readable"
+  },
+  {
+   "file": "library/broll6/athlete_9183885.mp4",
+   "duration": 23.76,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    0.0,
+    17.5
+   ],
+   "note": "man running toward camera on black sand; nothing legible anywhere in shot; subject verified ADULT (adult build and proportions at 14.9s and 16.9s magnified); window ends before he is clipped by the frame edge at about 18.8s and blurs past camera by 20.8s"
+  },
+  {
+   "file": "library/broll6/athlete_7876581.mp4",
+   "duration": 13.12,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    0.0,
+    10.0
+   ],
+   "note": "man stretching and warming down in a park; the blue sign is a standard public parking sign, cars distant with unreadable plates; window ends before he leaves frame entirely at about 11.8s, which would otherwise hand the builder an empty bench"
+  },
+  {
+   "file": "library/src_coverr/athlete_2sjUdMWV94.mp4",
+   "duration": 15.85,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Lone adult runner in silhouette on a salt flat at sunset, running away from camera. 1920x1080, 23.976fps. Cleanest asset in the haul: subject is a pure silhouette so no garment or shoe branding is resolvable at any point; horizon carries only tiny unidentifiable distant figures. Checked all four frames at full res - no text, no signage, no logo, no bars. Usable end to end."
+  },
+  {
+   "file": "library/src_coverr/athlete_DbLzegXCvl.mp4",
+   "duration": 17.36,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult woman jogging a city path in evening light, side tracking. 1920x1080, 25fps. CAUTION FLAG: a red storefront fascia sits in the left third of frame throughout. I escalated it to full resolution at both 15% and 65% - it is heavy bokeh, resolving as red blobs with no readable letterforms, so it passes the 'legible' test, but it is the one judgement call in this list. No crop is offered because "
+  },
+  {
+   "file": "library/src_coverr/athlete_GYZShwp9Tc.mp4",
+   "duration": 12.46,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult man jogging toward camera down a tree-lined street, front tracking. 1920x1080, 24fps. Plain unmarked white tee, no visible shoes, no signage anywhere in the four frames at full res. Sharp at native 1:1. Face is identifiable but the subject is anonymous, which the relaxed rule permits. Usable end to end."
+  },
+  {
+   "file": "library/src_coverr/athlete_bQllXzfSXz.mp4",
+   "duration": 6.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Shirtless adult man running a sand path by the sea. 24fps. TWO NOTES: (1) frame is 1920x1012, not 16:9 - there are no baked-in bars, the encoded frame is simply 1.897:1, so a 1080-line timeline needs a ~6.7% vertical upscale or a slight side crop; (2) shortest clip in the haul at 6.88s. Escalated the white board on the pole to full res - it is blank, no text. Holds real detail at native 1:1. No br"
+  },
+  {
+   "file": "library/src_coverr/athlete_i4qWv380NE.mp4",
+   "duration": 14.6,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult man in a blue jacket jogging away down a gravel path. 1920x1080, 23.976fps. I initially suspected an upscale, but that was an artefact of my own 4x nearest-neighbour blowup - a true 1:1 comparison against the known-sharp GYZShwp9Tc shows real gravel and grass detail, so it is a genuine capture. There is a small chevron emblem at the jacket collar and vertical reflective marks on the back; bo"
+  },
+  {
+   "file": "library/src_coverr/athlete_mxg5BDpnhb.mp4",
+   "duration": 19.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult woman jogging toward camera through a modern city plaza. 1920x1080, 25fps. Background (parked cars, street signs, bollards) is thoroughly defocused - I pulled the car row at full res and no licence plate, badge or sign is readable. Best of the athlete group for a hero running shot. Usable end to end."
+  }
+ ],
+ "tired": [
+  {
+   "file": "library/broll5/tired_9902183.mp4",
+   "duration": 32.2,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "extreme macro of a man's eye and brow as he rubs it, then blinks slowly. Only an eye and a hand are ever in frame - unidentifiable - no text, no branding, 4096x2160 and 32.2s. The strongest exhaustion image in the whole batch. CAVEAT: around the 40% mark (~12.9s) the focus is off during the rub; 15/65/90% are all sharp"
+  },
+  {
+   "file": "library/broll5/tired_6614770.mp4",
+   "duration": 27.64,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "man at a desk at night under a warm lamp, pressing the bridge of his nose, then his temple, eyes closed. Verified at full res: the papers, photos and yellow sticky notes pinned to the wall behind are entirely out of focus and nothing on them is readable; no branding anywhere. 3840x2160, 27.64s. Exactly 'one of the least energetic people you will ever meet' - alone, at night, at the machine"
+  },
+  {
+   "file": "library/broll5/tired_7581346.mp4",
+   "duration": 7.8,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "tight side-on close-up of a man face-down asleep on his forearms on a desk. Verified at full res at 4 timestamps: the monitor and its sticky notes are entirely out of frame in this angle - nothing readable anywhere. 1920x1080, usable end to end. Same shoot as tired_7581176 and the rejected tired_7581344; this is the clean angle of it"
+  },
+  {
+   "file": "library/broll5/tired_7581176.mp4",
+   "duration": 9.87,
+   "class": "FIGURE",
+   "crop": null,
+   "window": [
+    0.0,
+    4.5
+   ],
+   "note": "wider version of the same office desk - man collapsed asleep across it, desk phone in the foreground. WINDOW [0.0,4.5] recorded as data and it is NOT optional: from roughly the midpoint the camera has pulled back far enough that a green sticky note on the monitor is in frame, and at full resolution it reads 'Call back / 510-56-2?4? / Elena!' - a stranger's name and phone number. Verified: at 1.48s and 3.95s the monitor front and both notes are out of frame. Cut only inside the window"
+  },
+  {
+   "file": "library/broll5/tired_8371028.mp4",
+   "duration": 34.32,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "man in a grey suit alone in a dark open-plan office, loosens his tie, then puts his head down on the desk. Verified at full res: no brand names; the only legible text is handwritten spine numbers (34741, 52867) on two lever-arch files. 4096x2160, 34.32s. RANKED LAST ON WARDROBE AND SET: a suit and tie plus a pinboard of maps and pinned photographs reads as a corporate or detective drama, not a YouTuber who lay in bed all day"
+  },
+  {
+   "file": "library/broll6/tired_6943537.mp4",
+   "duration": 23.84,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "man face-down on a bed at night in warm lamplight; nothing legible"
+  },
+  {
+   "file": "library/broll6/tired_6943530.mp4",
+   "duration": 15.12,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "in bed at night holding a phone; the phone screen was verified dark and blank with no app UI at native res; beaded bracelet and chain carry no text"
+  },
+  {
+   "file": "library/broll6/tired_6944078.mp4",
+   "duration": 14.6,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "same night bedroom setup, lying awake; clean"
+  },
+  {
+   "file": "library/broll6/tired_8376628.mp4",
+   "duration": 21.24,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "overhead of a person in bed who disappears under the duvet at about 8.5s; extra sample points confirm no second person enters and no text anywhere"
+  },
+  {
+   "file": "library/broll6/tired_5983685.mp4",
+   "duration": 27.04,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "man waking and stretching in a bright white bed; nothing legible"
+  },
+  {
+   "file": "library/broll6/tired_5983702.mp4",
+   "duration": 14.32,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "tight on his face in bed, groggy; the arm tattoo is personal art, not branding"
+  },
+  {
+   "file": "library/broll6/tired_5983705.mp4",
+   "duration": 23.04,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "wide of the same bed and room; clean"
+  },
+  {
+   "file": "library/src_mixkit/tired_25579.mp4",
+   "duration": 14.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Drained man lying collapsed on a sofa, forearm over his eyes. Plain sofa, plain wall, no props with text. Jewellery is a plain hoop and ring. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/tired_31414.mp4",
+   "duration": 13.18,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Man restless in bed, twin-bell alarm clock sharp in the foreground. This is exactly the 'MADE IN CHINA on a clock dial' failure mode, so I escalated the dial to 3x full res: it carries only the generic word QUARTZ near 5 o'clock - no brand name, no country-of-origin text. Phone on the nightstand is screen-dark. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/tired_31415.mp4",
+   "duration": 15.14,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Man awake in bed, same set as 31414. Escalated the foreground clock dial at 90% (where it is largest and sharpest) to 2.5x full res - numerals only, no maker's mark and no country text. The phone in his hand at 90% is heavily out of focus and edge-on, no legible UI. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/tired_31416.mp4",
+   "duration": 11.14,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Man pulling on a sleep mask and settling down, lights going out. Sleep mask is plain striped fabric with no logo. No screens, no text, no props. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/tired_4701.mp4",
+   "duration": 16.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Worried, exhausted man sitting with his head in his hands against a bright window. Plain grey tee with no chest print (checked all 4 frames - contrast this with tired_40251 which I rejected). Blown-out curtain background carries no signage. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/tired_51385.mp4",
+   "duration": 21.77,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Woman tossing, turning and yawning in bed. Warm low-key grade, natively 1920x1080 and not upscaled. No text, screens, logos or printed garments in any of the 4 frames. Second-longest asset at 21.77s. Clean full length."
+  },
+  {
+   "file": "library/src_mixkit/tired_51399.mp4",
+   "duration": 16.77,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Overhead of a woman with insomnia turning over. Escalated the patterned wallpaper on the right to 3x because the squiggles read like letterforms at tile size - at full res it is purely abstract doodle line-work with no words. Printed pillowcase is abstract shapes. Clean full length."
+  }
+ ],
+ "training": [
+  {
+   "file": "library/broll5/training_4745812.mp4",
+   "duration": 8.36,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "close-up of a hand lifting a hex dumbbell off a rack in a dim gym, yellow wall behind, no face at any of 4 frames. Verified at full res: the only lettering anywhere is a cast weight marking ending '0 LB' on the dumbbell head - a number, not a maker's mark - and the yellow wall carries shapes, not words. 3840x2160, sharp. The only fully clean training clip in this batch"
+  },
+  {
+   "file": "library/broll5/training_3191884.mp4",
+   "duration": 10.92,
+   "class": "FIGURE",
+   "crop": null,
+   "window": null,
+   "note": "bench press seen from the head end, bar racked and pressed, daylight gym. No legible branding: the curved white lettering on the green plate is out of focus and unreadable at full res, the rest is weight numbering. Other gym users are distant and anonymous. 3840x2160. BLUNT CAVEAT: the lifter is visibly about 70 years old with white hair and his face is central in three of the four frames. That is a different film from a man in his twenties - use tight on the bar and the hands, or not at all"
+  },
+  {
+   "file": "library/broll6/training_5319746.mp4",
+   "duration": 13.84,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "close-up of hands gripping a barbell at hip height, camo tights, dark gym; read at native 1:1 at four marks - no maker's mark on the bar or collars, no text, no faces, background is defocused dark equipment"
+  },
+  {
+   "file": "library/src_coverr/training_IkSjzezRhP.mp4",
+   "duration": 26.89,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Close-up of an adult man's arm curling a dumbbell on a bench. 1920x1080, 29.97fps. Escalated the plate face at 65% - it is featureless black, no embossing, no brand. The shorts carry a small abstract blue/green/pink colour graphic clipped at the bottom-left corner; at full res it reads as geometric colour shapes, not a wordmark or recognisable logo. If the owner wants it gone, crop [0.09, 0.0, 0.0"
+  },
+  {
+   "file": "library/src_coverr/training_KZ4vuMiBwU.mp4",
+   "duration": 28.46,
+   "class": "OBJECT",
+   "crop": [
+    0.03,
+    0.06,
+    0.03,
+    0
+   ],
+   "window": null,
+   "note": "Adult woman on a cable/pec-deck machine, rear view. 1920x1080, 29.97fps. A teal banner with white lettering runs along the very top edge of frame in all four samples. It is cut off and defocused, but it is signage, so I removed it. The crop is verified: I rendered [0.03, 0.06, 0.03, 0.0] at all four timestamps and the banner is gone from every one, with the subject still comfortably framed. Result"
+  },
+  {
+   "file": "library/src_coverr/training_WzDCMh41B1.mp4",
+   "duration": 11.41,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult man performing a lat pulldown, side view. 1920x1080, 29.97fps. Sharpest of the training group. Escalated two suspects: the lat bar has engraved-looking marks at 40%/65% which resolve at full res as plain knurling, not text; the wall poster behind him is completely out of focus with no legible copy or mark. Background figures are anonymous, unmasked and not performing. Usable end to end."
+  },
+  {
+   "file": "library/src_coverr/training_c0y3hiYRph.mp4",
+   "duration": 26.39,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult man bench pressing a loaded barbell, close low angle. 1920x1080, 29.97fps. Escalated the red bumper plate face at 15% - plain painted rubber, no manufacturer name, no weight stamp visible. Bar knurling only. No wall signage in frame. Usable end to end."
+  },
+  {
+   "file": "library/src_coverr/training_mfiySQ2zfw.mp4",
+   "duration": 17.58,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult woman performing bent-over dumbbell rows past a rack. 1920x1080, 29.97fps. Escalated the printed leggings at 15% and 90% - the print is a panelled geometric pattern with no readable wordmark. Dumbbell face shows only a weight numeral. Background gym-goers are anonymous, unmasked, not performing. Usable end to end."
+  },
+  {
+   "file": "library/src_coverr/training_ytXsRJrICv.mp4",
+   "duration": 12.29,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Adult man working heavy battle ropes, near-total silhouette in a dark gym. 1920x1080, 24fps. Very underexposed - useful as a texture/mood beat rather than a clear demonstration. I brightened it +25% and ran a nine-point time scan to hunt for text: there is a whiteboard with faint handwritten workout notes and a small dark-red placard, and neither is legible even after the lift (the placard reads a"
+  },
+  {
+   "file": "library/src_pixabay/training_148204.mp4",
+   "duration": 8.62,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "4K. Anonymous woman doing a barbell squat in a Smith machine, seen from behind; other gym-goers appear in the mirror (anonymous people are permitted). Only text anywhere is '10KG' cast into the plates, which is a weight marking, not branding. There IS a faint script wordmark cast into the plate hubs - I brightened and contrast-boosted that region across six timestamps and it never resolves into re"
+  },
+  {
+   "file": "library/src_pixabay/training_200657.mp4",
+   "duration": 10.0,
+   "class": "OBJECT",
+   "crop": [
+    0.228,
+    0,
+    0.991,
+    0.763
+   ],
+   "window": null,
+   "note": "CROP REQUIRED - do not use uncropped. The delivered 3840x2160 file has a burned-in dark-grey pillar over the left ~22%, a thin right edge bar and a thin bottom bar. cropdetect misses these at default threshold because they are dark grey rather than black. The crop yields 2930x1648, still well above 1080p and true 16:9. I rendered the cropped frame at 1.5/4.0/6.5/9.0s and looked at all four: no bar"
+  }
+ ],
+ "night_work": [
+  {
+   "file": "library/broll6/night_work_3140468.mp4",
+   "duration": 18.6,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "man in shirt and tie typing on a laptop in a dim office with a desk lamp; checked at 1.5x brightness boost - takeaway cup lid plain, the chart printout under it has no legible words, laptop lid shows no logo at this angle; framing static across the clip"
+  },
+  {
+   "file": "library/broll6/night_work_35331905.mp4",
+   "duration": 7.12,
+   "class": "OBJECT",
+   "crop": [
+    0.0,
+    0.0,
+    0.26,
+    0.0
+   ],
+   "window": null,
+   "note": "wide of a dark bedroom, desk lamp and laptop glow, bed in foreground - the closest thing in this batch to screen glow in a dark room; crop removes an American Psycho film poster and a second framed poster at the right edge, verified removed at t=0.5/2.1/3.6/5.2/6.8; the remaining red poster and the cardboard-box print were verified illegible at 2.4x and 3.4x brightness boost; REAL LENGTH IS ONLY 7.12s"
+  },
+  {
+   "file": "library/broll6/night_work_32788087.mp4",
+   "duration": 16.26,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "silhouette working alone by a single lamp in a dark room; no branding, no logos, no screen UI. CAVEAT: the subject is an Islamic calligrapher painting - framed Arabic calligraphy on every wall, an open Arabic manuscript and a paint palette, and there is NO screen in the shot; clean under the rules but editorially off-brief"
+  },
+  {
+   "file": "library/src_pixabay/night_work_52823.mp4",
+   "duration": 17.98,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "4K. Hands typing on a laptop keyboard deck against a warm orange bokeh background with a coffee cup. The display is never in frame, so there is no on-screen UI at all - the defect that killed most of this group. Full-resolution check across four timestamps plus first and last frames found no wordmark on the hinge, bezel or palm rest, and the keycap legends are blown out past readability. This is t"
+  }
+ ],
+ "walk2": [
+  {
+   "file": "library/broll6/walk2_19329334.mp4",
+   "duration": 14.75,
+   "class": "OBJECT",
+   "crop": [
+    0.0,
+    0.22,
+    0.0,
+    0.0
+   ],
+   "window": null,
+   "note": "legs and long raking shadows on cobbles - exactly the feet/legs walking shot the group wants; the crop removes the top strip containing shopfronts, awnings and a printed shopping bag; cropped frame verified clean at 4 timestamps; 2560x1123, no upscale"
+  },
+  {
+   "file": "library/broll6/walk2_6324859.mp4",
+   "duration": 9.96,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "man in an overcoat tracking past a plain brick wall in profile; verified nothing legible anywhere in the frame"
+  },
+  {
+   "file": "library/broll6/walk2_7253202.mp4",
+   "duration": 17.84,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    0.0,
+    13.5
+   ],
+   "note": "man in a camel overcoat crossing an empty plaza at dusk; the window stops before the camera reaches a lit retail display in the right third from about 16s (its caption text is illegible at native res, but the window keeps it out of the film entirely)"
+  },
+  {
+   "file": "library/src_pixabay/walk2_7713.mp4",
+   "duration": 19.88,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    4,
+    19.88
+   ],
+   "note": "WINDOW REQUIRED. Pedestrian legs and feet crossing a street, shallow depth of field. The first ~3.5s contains sneakers with a clearly legible Nike swoosh - my 15/40/65/90% samples all missed this and only the start-frame check found it. I swept 16 points across the clip; from 4.0s onward the footwear is boots, tan flats, brown shoes and unbranded sneakers with nothing legible. No faces, no text, n"
+  },
+  {
+   "file": "library/src_pixabay/walk2_22694.mp4",
+   "duration": 10.49,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Low-angle tracking shot of a man's feet walking past a parked blue car. I specifically swept the full-resolution top strip at six timestamps looking for a car badge or licence plate: the grille and bumper are defocused and carry no emblem, wordmark or plate anywhere in the clip. Plain suede boots with no logo. No faces. Clean full length."
+  },
+  {
+   "file": "library/src_pixabay/walk2_35586.mp4",
+   "duration": 15.08,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    0,
+    3.6
+   ],
+   "note": "WINDOW REQUIRED for the walking beat. A person crosses right-to-left through a hazy morning orchard and has fully exited by ~3.6s; the remaining 11.5s is an empty landscape with no subject. Only legs and torso are ever visible, so no face at all; adult proportions, and walking in an orchard is not a sports/athletic context. Dark sneakers carry no legible mark. The tail (3.6-15.08s) is still usable"
+  },
+  {
+   "file": "library/src_pixabay/walk2_86741.mp4",
+   "duration": 8.53,
+   "class": "OBJECT",
+   "crop": null,
+   "window": null,
+   "note": "Top-down POV of a couple's feet walking a cobbled lane. The dark mark I flagged on the man's white shorts turned out on full-resolution zoom across five timestamps to be a shadow and a drawstring, not a logo. White sneaker and orange sandals carry no readable branding; the green wall mark is paint, not text. Action-cam look, so I checked sharpness at true 1:1 rather than from an upscaled crop - st"
+  },
+  {
+   "file": "library/src_pixabay/walk2_107337.mp4",
+   "duration": 8.12,
+   "class": "OBJECT",
+   "crop": null,
+   "window": [
+    0,
+    7.15
+   ],
+   "note": "WINDOW REQUIRED. Man walking away across a bright rooftop terrace, crisp and well composed. At ~7.2s the camera tilts up and by 7.4s a woven brand label on the shirt hem is in frame - a dark patch with a symbol and wordmark, small but plainly a garment brand tag. I stepped 6.0/6.6/7.0/7.4/7.7/7.9s to fix the boundary; cut at 7.15s and it never appears. Before the tilt only legs and shoes are visib"
+  }
+ ],
+ "s0": [
+  {
+   "file": "library/broll7/s0_14367163.mp4",
+   "duration": 9.73,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - dark stage, crew silhouettes, rigged lighting"
+  },
+  {
+   "file": "library/broll7/s0_36604691.mp4",
+   "duration": 9.12,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - film crew around a large softbox on set"
+  },
+  {
+   "file": "library/broll7/s0_36604687.mp4",
+   "duration": 7.76,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - dark studio, rigs, crew silhouettes"
+  },
+  {
+   "file": "library/broll7/s0_36604686.mp4",
+   "duration": 5.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - large set, lighting rigs, crew, faces visible"
+  },
+  {
+   "file": "library/broll7/s0_36604692.mp4",
+   "duration": 5.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - crew with camera gear, studio scale"
+  }
+ ],
+ "s10": [
+  {
+   "file": "library/broll7/s10_32336447.mp4",
+   "duration": 33.33,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hooded figure at laptop, no face"
+  },
+  {
+   "file": "library/broll7/s10_7098126.mp4",
+   "duration": 24.48,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - dim room, desk and monitors"
+  },
+  {
+   "file": "library/broll7/s10_36036810.mp4",
+   "duration": 12.48,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - laptop glowing in a dark room"
+  }
+ ],
+ "s11": [
+  {
+   "file": "library/broll7/s11_19217895.mp4",
+   "duration": 10.01,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - dark corridor, doors, moody"
+  },
+  {
+   "file": "library/broll7/s11_34038923.mp4",
+   "duration": 8.57,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - silhouette adult in room"
+  },
+  {
+   "file": "library/broll7/s11_19217899.mp4",
+   "duration": 5.94,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - same corridor, second angle"
+  }
+ ],
+ "s13": [
+  {
+   "file": "library/broll7/s13_5677042.mp4",
+   "duration": 39.08,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hand cutting pancake, borderline"
+  },
+  {
+   "file": "library/broll7/s13_6398605.mp4",
+   "duration": 30.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s13_4731061.mp4",
+   "duration": 10.9,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hand picking fries"
+  }
+ ],
+ "s17": [
+  {
+   "file": "library/broll7/s17_9057574.mp4",
+   "duration": 12.88,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s17_9057559.mp4",
+   "duration": 11.46,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s17_4378032.mp4",
+   "duration": 8.88,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s18": [
+  {
+   "file": "library/broll7/s18_10387417.mp4",
+   "duration": 44.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s18_30285726.mp4",
+   "duration": 22.03,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s18_10387416.mp4",
+   "duration": 21.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s18_10387631.mp4",
+   "duration": 13.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s19": [
+  {
+   "file": "library/broll7/s19_34474542.mp4",
+   "duration": 20.85,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - lit city and bridges from above"
+  },
+  {
+   "file": "library/broll7/s19_33637800.mp4",
+   "duration": 15.64,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - aerial city at night, dense lit windows"
+  }
+ ],
+ "s20": [
+  {
+   "file": "library/broll7/s20_10554068.mp4",
+   "duration": 21.89,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - faces visible, anonymous adult"
+  },
+  {
+   "file": "library/broll7/s20_6687705.mp4",
+   "duration": 17.12,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s20_34599598.mp4",
+   "duration": 13.81,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - non-hospital room, face visible"
+  },
+  {
+   "file": "library/broll7/s20_6010947.mp4",
+   "duration": 13.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - face visible, anonymous adult"
+  },
+  {
+   "file": "library/broll7/s20_11266357.mp4",
+   "duration": 11.46,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s20_6130032.mp4",
+   "duration": 9.15,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - close-up face, anonymous adult"
+  }
+ ],
+ "s21": [
+  {
+   "file": "library/broll7/s21_31972362.mp4",
+   "duration": 8.61,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s21_8311305.mp4",
+   "duration": 4.65,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s23": [
+  {
+   "file": "library/broll7/s23_6327995.mp4",
+   "duration": 35.92,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s23_7351721.mp4",
+   "duration": 21.82,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s23_5101340.mp4",
+   "duration": 10.64,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s23_6398613.mp4",
+   "duration": 7.06,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s24": [
+  {
+   "file": "library/broll7/s24_6944083.mp4",
+   "duration": 32.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s24_7144293.mp4",
+   "duration": 29.93,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s25": [
+  {
+   "file": "library/broll7/s25_33685270.mp4",
+   "duration": 17.44,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - possible menu boards in background"
+  },
+  {
+   "file": "library/broll7/s25_15509475.mp4",
+   "duration": 15.35,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s25_31916293.mp4",
+   "duration": 6.83,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s25_3134534.mp4",
+   "duration": 6.01,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - crew backs, no faces"
+  }
+ ],
+ "s27": [
+  {
+   "file": "library/broll7/s27_35820856.mp4",
+   "duration": 30.4,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - editor from behind"
+  },
+  {
+   "file": "library/broll7/s27_36036743.mp4",
+   "duration": 18.62,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s27_5092425.mp4",
+   "duration": 14.91,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - small figures in preview thumbnails"
+  },
+  {
+   "file": "library/broll7/s27_34386509.mp4",
+   "duration": 12.15,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s27_27660115.mp4",
+   "duration": 9.58,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s29": [
+  {
+   "file": "library/broll7/s29_31802320.mp4",
+   "duration": 28.68,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s29_1183118.mp4",
+   "duration": 14.48,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s29_10040029.mp4",
+   "duration": 8.68,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s29_32243771.mp4",
+   "duration": 5.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s30": [
+  {
+   "file": "library/broll7/s30_7482752.mp4",
+   "duration": 21.25,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s30_4952881.mp4",
+   "duration": 19.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s30_856199.mp4",
+   "duration": 15.02,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s30_31592458.mp4",
+   "duration": 11.31,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s30_4824781.mp4",
+   "duration": 9.79,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s31": [
+  {
+   "file": "library/broll7/s31_3826844.mp4",
+   "duration": 41.09,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - very dark"
+  },
+  {
+   "file": "library/broll7/s31_5846625.mp4",
+   "duration": 22.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous person, face unclear"
+  },
+  {
+   "file": "library/broll7/s31_4824784.mp4",
+   "duration": 13.23,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s31_32063156.mp4",
+   "duration": 12.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - green screen visible in background"
+  }
+ ],
+ "s33": [
+  {
+   "file": "library/broll7/s33_7467654.mp4",
+   "duration": 25.07,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - two people seated facing each other"
+  },
+  {
+   "file": "library/broll7/s33_6791695.mp4",
+   "duration": 14.25,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous silhouettes"
+  },
+  {
+   "file": "library/broll7/s33_7394071.mp4",
+   "duration": 14.16,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s33_8428349.mp4",
+   "duration": 10.16,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - two people seated in conversation"
+  }
+ ],
+ "s34": [
+  {
+   "file": "library/broll7/s34_8471105.mp4",
+   "duration": 24.72,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - faces not shown"
+  },
+  {
+   "file": "library/broll7/s34_5519941.mp4",
+   "duration": 10.44,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hand"
+  },
+  {
+   "file": "library/broll7/s34_7841584.mp4",
+   "duration": 9.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s34_8439245.mp4",
+   "duration": 7.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hands"
+  },
+  {
+   "file": "library/broll7/s34_5778854.mp4",
+   "duration": 7.01,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hand"
+  }
+ ],
+ "s35": [
+  {
+   "file": "library/broll7/s35_8478946.mp4",
+   "duration": 22.57,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hand"
+  },
+  {
+   "file": "library/broll7/s35_8731324.mp4",
+   "duration": 14.36,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - face not shown"
+  },
+  {
+   "file": "library/broll7/s35_8135578.mp4",
+   "duration": 12.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hand"
+  },
+  {
+   "file": "library/broll7/s35_7841593.mp4",
+   "duration": 10.33,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s35_7841860.mp4",
+   "duration": 7.17,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s36": [
+  {
+   "file": "library/broll7/s36_4343477.mp4",
+   "duration": 43.48,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s36_4125737.mp4",
+   "duration": 26.72,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s36_4343481.mp4",
+   "duration": 23.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - partial face, not identifiable"
+  },
+  {
+   "file": "library/broll7/s36_6593932.mp4",
+   "duration": 12.75,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s36_11866136.mp4",
+   "duration": 8.17,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s37": [
+  {
+   "file": "library/broll7/s37_9364298.mp4",
+   "duration": 30.64,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous woman face visible"
+  },
+  {
+   "file": "library/broll7/s37_6100411.mp4",
+   "duration": 19.61,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - evidence board, anonymous hands"
+  },
+  {
+   "file": "library/broll7/s37_9306134.mp4",
+   "duration": 18.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hand"
+  },
+  {
+   "file": "library/broll7/s37_4068365.mp4",
+   "duration": 12.41,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s37_4068356.mp4",
+   "duration": 11.69,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous hand"
+  }
+ ],
+ "s39": [
+  {
+   "file": "library/broll7/s39_9057678.mp4",
+   "duration": 8.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - calendar page with dates circled red"
+  },
+  {
+   "file": "library/broll7/s39_9057561.mp4",
+   "duration": 7.4,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - close-up marking a dated grid"
+  }
+ ],
+ "s40": [
+  {
+   "file": "library/broll7/s40_34708308.mp4",
+   "duration": 13.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - empty gym, teal tone"
+  },
+  {
+   "file": "library/broll7/s40_4514294.mp4",
+   "duration": 11.99,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - empty gym, squat rack"
+  }
+ ],
+ "s41": [
+  {
+   "file": "library/broll7/s41_8298263.mp4",
+   "duration": 22.76,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - reviewing documents"
+  },
+  {
+   "file": "library/broll7/s41_7732805.mp4",
+   "duration": 12.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - paper document, anonymous hand"
+  },
+  {
+   "file": "library/broll7/s41_8061370.mp4",
+   "duration": 8.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - paper document, anonymous hands"
+  }
+ ],
+ "s43": [
+  {
+   "file": "library/broll7/s43_9902315.mp4",
+   "duration": 25.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - sneaker close-up, verify no logo"
+  },
+  {
+   "file": "library/broll7/s43_8458662.mp4",
+   "duration": 24.64,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous man visible"
+  },
+  {
+   "file": "library/broll7/s43_36331848.mp4",
+   "duration": 12.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s43_10159563.mp4",
+   "duration": 11.63,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - man seated in empty white room"
+  },
+  {
+   "file": "library/broll7/s43_2845962.mp4",
+   "duration": 10.92,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s45": [
+  {
+   "file": "library/broll7/s45_18069804.mp4",
+   "duration": 18.09,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s45_36418628.mp4",
+   "duration": 16.12,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hand only"
+  },
+  {
+   "file": "library/broll7/s45_18069093.mp4",
+   "duration": 15.02,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s45_19419586.mp4",
+   "duration": 10.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s47": [
+  {
+   "file": "library/broll7/s47_9305964.mp4",
+   "duration": 29.38,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s47_6538593.mp4",
+   "duration": 27.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - partial face"
+  },
+  {
+   "file": "library/broll7/s47_6671508.mp4",
+   "duration": 16.38,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s47_6278837.mp4",
+   "duration": 14.1,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands only"
+  },
+  {
+   "file": "library/broll7/s47_6787192.mp4",
+   "duration": 9.43,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands only"
+  }
+ ],
+ "s50": [
+  {
+   "file": "library/broll7/s50_6577022.mp4",
+   "duration": 37.67,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s50_36282125.mp4",
+   "duration": 28.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s50_5663406.mp4",
+   "duration": 20.23,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s50_4386106.mp4",
+   "duration": 10.08,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s50_4407597.mp4",
+   "duration": 7.51,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s51": [
+  {
+   "file": "library/broll7/s51_16125447.mp4",
+   "duration": 29.05,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous man visible"
+  },
+  {
+   "file": "library/broll7/s51_4367514.mp4",
+   "duration": 16.45,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous people visible"
+  },
+  {
+   "file": "library/broll7/s51_5319998.mp4",
+   "duration": 8.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s51_4859453.mp4",
+   "duration": 7.92,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - shoe close-up, verify no brand"
+  }
+ ],
+ "s52": [
+  {
+   "file": "library/broll7/s52_29320113.mp4",
+   "duration": 42.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s52_31130606.mp4",
+   "duration": 19.81,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - possible brand markings unclear"
+  },
+  {
+   "file": "library/broll7/s52_11743017.mp4",
+   "duration": 18.24,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s53": [
+  {
+   "file": "library/broll7/s53_19295766.mp4",
+   "duration": 18.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - legs/feet only"
+  },
+  {
+   "file": "library/broll7/s53_14254688.mp4",
+   "duration": 13.5,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous man visible"
+  },
+  {
+   "file": "library/broll7/s53_5837661.mp4",
+   "duration": 6.72,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - back to camera"
+  },
+  {
+   "file": "library/broll7/s53_35585627.mp4",
+   "duration": 6.27,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s54": [
+  {
+   "file": "library/broll7/s54_3196425.mp4",
+   "duration": 19.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - woman from behind"
+  },
+  {
+   "file": "library/broll7/s54_8197045.mp4",
+   "duration": 14.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hand only"
+  },
+  {
+   "file": "library/broll7/s54_8197037.mp4",
+   "duration": 11.4,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - staged scene, faces visible"
+  },
+  {
+   "file": "library/broll7/s54_8197216.mp4",
+   "duration": 10.92,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - staged scene, faces visible"
+  },
+  {
+   "file": "library/broll7/s54_8197218.mp4",
+   "duration": 6.68,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hand only"
+  }
+ ],
+ "s55": [
+  {
+   "file": "library/broll7/s55_9777598.mp4",
+   "duration": 16.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands only"
+  },
+  {
+   "file": "library/broll7/s55_27410197.mp4",
+   "duration": 13.13,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands only"
+  },
+  {
+   "file": "library/broll7/s55_34741560.mp4",
+   "duration": 5.78,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - shipping label text on box"
+  },
+  {
+   "file": "library/broll7/s55_34741554.mp4",
+   "duration": 5.08,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s56": [
+  {
+   "file": "library/broll7/s56_29564687.mp4",
+   "duration": 22.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s56_31751363.mp4",
+   "duration": 13.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s56_5846379.mp4",
+   "duration": 13.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - silhouettes in background"
+  },
+  {
+   "file": "library/broll7/s56_31751361.mp4",
+   "duration": 10.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s56_14132388.mp4",
+   "duration": 8.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s57": [
+  {
+   "file": "library/broll7/s57_7681174.mp4",
+   "duration": 20.88,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous woman visible"
+  },
+  {
+   "file": "library/broll7/s57_7311990.mp4",
+   "duration": 14.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - anonymous woman visible"
+  },
+  {
+   "file": "library/broll7/s57_4168977.mp4",
+   "duration": 10.36,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s57_7661525.mp4",
+   "duration": 9.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s58": [
+  {
+   "file": "library/broll7/s58_8322336.mp4",
+   "duration": 23.4,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands holding gear mechanism"
+  },
+  {
+   "file": "library/broll7/s58_9244504.mp4",
+   "duration": 16.08,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands holding interlocking gear part"
+  },
+  {
+   "file": "library/broll7/s58_9431249.mp4",
+   "duration": 16.08,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands only"
+  },
+  {
+   "file": "library/broll7/s58_8322056.mp4",
+   "duration": 15.8,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - brass clockwork gears meshing"
+  },
+  {
+   "file": "library/broll7/s58_10536861.mp4",
+   "duration": 12.68,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s58_35069286.mp4",
+   "duration": 11.28,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - gear teeth macro"
+  }
+ ],
+ "s5": [
+  {
+   "file": "library/broll7/s5_14369143.mp4",
+   "duration": 41.26,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - empty baseball diamond"
+  },
+  {
+   "file": "library/broll7/s5_36964830.mp4",
+   "duration": 15.43,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s5_14369146.mp4",
+   "duration": 14.46,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s5_17515082.mp4",
+   "duration": 12.14,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  },
+  {
+   "file": "library/broll7/s5_16186338.mp4",
+   "duration": 5.05,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s61": [
+  {
+   "file": "library/broll7/s61_27980888.mp4",
+   "duration": 10.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - abstract digital grid/wave"
+  },
+  {
+   "file": "library/broll7/s61_34576865.mp4",
+   "duration": 10.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - abstract particle grid"
+  },
+  {
+   "file": "library/broll7/s61_34799911.mp4",
+   "duration": 5.51,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - circuit board grid pattern"
+  }
+ ],
+ "s63": [
+  {
+   "file": "library/broll7/s63_4203183.mp4",
+   "duration": 31.3,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - close-up shoes indoors, no legible logo"
+  },
+  {
+   "file": "library/broll7/s63_8519888.mp4",
+   "duration": 24.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - gloved hands lacing sneaker"
+  },
+  {
+   "file": "library/broll7/s63_6667264.mp4",
+   "duration": 11.93,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - front door entryway, boots"
+  },
+  {
+   "file": "library/broll7/s63_8059611.mp4",
+   "duration": 10.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - adult lacing sneakers"
+  },
+  {
+   "file": "library/broll7/s63_4010080.mp4",
+   "duration": 7.34,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - shoe near doorway"
+  }
+ ],
+ "s64": [
+  {
+   "file": "library/broll7/s64_10387906.mp4",
+   "duration": 25.52,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - empty dark bedroom"
+  }
+ ],
+ "s65": [
+  {
+   "file": "library/broll7/s65_8321082.mp4",
+   "duration": 39.91,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - beam in darkness"
+  },
+  {
+   "file": "library/broll7/s65_28957437.mp4",
+   "duration": 38.2,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - fog light beams"
+  },
+  {
+   "file": "library/broll7/s65_8515272.mp4",
+   "duration": 24.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - crossed beams in dark space"
+  },
+  {
+   "file": "library/broll7/s65_29471049.mp4",
+   "duration": 20.02,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - starburst beams in darkness"
+  }
+ ],
+ "s66": [
+  {
+   "file": "library/broll7/s66_4707599.mp4",
+   "duration": 32.47,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - overgrown abandoned field with path"
+  },
+  {
+   "file": "library/broll7/s66_4707581.mp4",
+   "duration": 24.34,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - derelict building in overgrown field"
+  }
+ ],
+ "s69": [
+  {
+   "file": "library/broll7/s69_6865219.mp4",
+   "duration": 24.2,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - pouring pills from bottle"
+  },
+  {
+   "file": "library/broll7/s69_6865226.mp4",
+   "duration": 13.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - hands with bottle and glass"
+  },
+  {
+   "file": "library/broll7/s69_6865223.mp4",
+   "duration": 12.84,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - glass and pill bottles close-up"
+  },
+  {
+   "file": "library/broll7/s69_4492588.mp4",
+   "duration": 10.97,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - pill bottle and pills with hand"
+  },
+  {
+   "file": "library/broll7/s69_6865216.mp4",
+   "duration": 5.44,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - pill bottle near glass"
+  }
+ ],
+ "s6.5": [
+  {
+   "file": "library/broll7/s6_5_37165615.mp4",
+   "duration": 19.39,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - good dusk match"
+  },
+  {
+   "file": "library/broll7/s6_5_35557009.mp4",
+   "duration": 9.0,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - good dusk match"
+  }
+ ],
+ "s70": [
+  {
+   "file": "library/broll7/s70_17089635.mp4",
+   "duration": 30.36,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - whitewater over rocks"
+  },
+  {
+   "file": "library/broll7/s70_1332902.mp4",
+   "duration": 21.99,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - stream bed to flowing water"
+  },
+  {
+   "file": "library/broll7/s70_18448945.mp4",
+   "duration": 20.48,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - desaturated water over rocks"
+  },
+  {
+   "file": "library/broll7/s70_5151380.mp4",
+   "duration": 15.27,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - rocky stream bed"
+  },
+  {
+   "file": "library/broll7/s70_5161856.mp4",
+   "duration": 14.19,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - water flowing over stones"
+  }
+ ],
+ "s72": [
+  {
+   "file": "library/broll7/s72_30493711.mp4",
+   "duration": 25.15,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - single flame in darkness"
+  },
+  {
+   "file": "library/broll7/s72_4761733.mp4",
+   "duration": 13.58,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - single light against dark structure"
+  },
+  {
+   "file": "library/broll7/s72_36244096.mp4",
+   "duration": 9.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - single floodlight in dark mist"
+  }
+ ],
+ "s9": [
+  {
+   "file": "library/broll7/s9_2249402.mp4",
+   "duration": 19.39,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - floodlit stadium"
+  },
+  {
+   "file": "library/broll7/s9_37150836.mp4",
+   "duration": 18.5,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - crowd and roof structure"
+  },
+  {
+   "file": "library/broll7/s9_8938619.mp4",
+   "duration": 13.6,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - empty pitch, no people"
+  },
+  {
+   "file": "library/broll7/s9_2657261.mp4",
+   "duration": 12.78,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - aerial stadium"
+  },
+  {
+   "file": "library/broll7/s9_16186240.mp4",
+   "duration": 10.22,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - screened: no logo, no text, subject matches"
+  }
+ ],
+ "s-1": [
+  {
+   "file": "library/broll7/sm1_1535482.mp4",
+   "duration": 20.61,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - studio light glowing in dark"
+  },
+  {
+   "file": "library/broll7/sm1_853724.mp4",
+   "duration": 19.64,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - bulb in dark space"
+  },
+  {
+   "file": "library/broll7/sm1_853772.mp4",
+   "duration": 13.36,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - filament bulb in dark"
+  },
+  {
+   "file": "library/broll7/sm1_7593543.mp4",
+   "duration": 7.45,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - two Edison bulbs glowing"
+  },
+  {
+   "file": "library/broll7/sm1_9945033.mp4",
+   "duration": 7.25,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - light beam streak in dark"
+  }
+ ],
+ "s3": [
+  {
+   "file": "library/broll7/s3_5182640.mp4",
+   "duration": 8.96,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - helmet, bat, balls and mitt against a fence"
+  },
+  {
+   "file": "library/broll7/s3_4889152.mp4",
+   "duration": 6.04,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - baseball cap and gloves resting on a bench"
+  }
+ ],
+ "s4": [
+  {
+   "file": "library/broll7/s4_8533916.mp4",
+   "duration": 13.32,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - curved lane lines, no people"
+  },
+  {
+   "file": "library/broll7/s4_8457042.mp4",
+   "duration": 12.16,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - clean red lane lines, no people"
+  },
+  {
+   "file": "library/broll7/s4_8533460.mp4",
+   "duration": 7.4,
+   "class": "OBJECT",
+   "crop": null,
+   "note": "broll7 eyes-on pass - plain lane markings, no people"
+  }
+ ]
+}

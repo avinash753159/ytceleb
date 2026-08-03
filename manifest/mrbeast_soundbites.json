@@ -1,0 +1,615 @@
+[
+  {
+    "id": "doaceo_weight_collapse",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 825.0,
+    "t1": 841.0,
+    "duration": 16.0,
+    "chapter": "origin",
+    "topic_tags": [
+      "baseball",
+      "crohns",
+      "weight-loss",
+      "youtube"
+    ],
+    "text": "When I turned 15, I got Crohn's and I went from like 190 pounds down to 139. I lost all muscle I had, and so I was like, all right, I'm not playing baseball in college anymore. So then I was like, it's just all in on YouTube.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_symptoms",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 918.0,
+    "t1": 936.92,
+    "duration": 18.92,
+    "chapter": "illness",
+    "topic_tags": [
+      "crohns",
+      "symptoms",
+      "digestion"
+    ],
+    "text": "When I was 15, I just started going to the bathroom eight, nine, ten times a day, not digesting any food because my GI tract is literally just attacking itself. Your immune system in your gut thinks your gut is a foreign invader, and so it just starts attacking itself.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_pain",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 936.92,
+    "t1": 947.86,
+    "duration": 10.94,
+    "chapter": "illness",
+    "topic_tags": [
+      "crohns",
+      "pain",
+      "inflammation"
+    ],
+    "text": "If you're using the bathroom ten times a day, not digesting food, that's why you drop weight rapidly, and it hurts like crazy because it gets very inflamed and it feels like someone's stabbing you in the gut with a knife constantly.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_fifty_pounds",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 947.86,
+    "t1": 952.7,
+    "duration": 4.84,
+    "chapter": "illness",
+    "topic_tags": [
+      "crohns",
+      "weight-loss"
+    ],
+    "text": "So I lost 50 pounds, which is crazy because I was already relatively lanky.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_treatment_burden",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 969.02,
+    "t1": 981.36,
+    "duration": 12.34,
+    "chapter": "limit",
+    "topic_tags": [
+      "crohns",
+      "treatment",
+      "immune-system"
+    ],
+    "text": "To have my GI tract stop attacking itself, we basically have to shut down my immune system. So I have a really weak immune system. I just get sick all the time.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "jre_decade_of_obsession",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 174.0,
+    "t1": 181.1,
+    "duration": 7.1,
+    "chapter": "machine",
+    "topic_tags": [
+      "youtube",
+      "obsession",
+      "origin"
+    ],
+    "text": "I was as awkward as they came—no money, no nothing—and I just basically obsessed over YouTube every day for a decade.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "jre_hyper_obsession",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 485.0,
+    "t1": 493.42,
+    "duration": 8.42,
+    "chapter": "machine",
+    "topic_tags": [
+      "obsession",
+      "problem-solving"
+    ],
+    "text": "I have hyper-obsession, and I love this. You give it enough time, anyone can solve it.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "jre_social_cost",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 538.6,
+    "t1": 559.72,
+    "duration": 21.12,
+    "chapter": "machine",
+    "topic_tags": [
+      "obsession",
+      "isolation",
+      "cost"
+    ],
+    "text": "I didn't talk to anyone. I hardly had any friends because I was so obsessed with YouTube. Back then, no one cared. I thought I didn't even know how to speak. I couldn't hold a conversation because people would tell me, all you talk about is YouTube.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "jre_baseball_to_crohns",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5198.0,
+    "t1": 5207.6,
+    "duration": 9.6,
+    "chapter": "origin",
+    "topic_tags": [
+      "baseball",
+      "crohns",
+      "weight-loss"
+    ],
+    "text": "I played baseball nonstop, and then when I got Crohn's I lost like 50 pounds.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "jre_crohns_explanation",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5320.32,
+    "t1": 5336.4,
+    "duration": 16.08,
+    "chapter": "illness",
+    "topic_tags": [
+      "crohns",
+      "inflammation",
+      "digestion"
+    ],
+    "text": "It's something about my intestines where the immune system attacks the lining. My intestines are super inflamed, and so if it's not in remission I basically just can't digest food.",
+    "status": "transcript_and_frames_verified",
+    "note": "Use only as a first-person description. Follow with NIDDK context; do not present it as a clinical definition."
+  },
+  {
+    "id": "doaceo_extreme_ambition",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 1304.04,
+    "t1": 1315.0,
+    "duration": 10.96,
+    "chapter": "machine",
+    "topic_tags": [
+      "ambition",
+      "time",
+      "control"
+    ],
+    "text": "Does physics allow it? Then yes, it's possible. It's just: do we want to put the time in? I feel like people overcomplicate a lot of things.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_best_at_everything",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 4642.6,
+    "t1": 4656.52,
+    "duration": 13.92,
+    "chapter": "machine",
+    "topic_tags": [
+      "standards",
+      "obsession",
+      "control"
+    ],
+    "text": "I used to think it was just content, but I realize it's just everything I do. I just want to be the best at it.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_younger_self",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 5698.54,
+    "t1": 5717.64,
+    "duration": 19.1,
+    "chapter": "resolution",
+    "topic_tags": [
+      "reflection",
+      "identity",
+      "cost"
+    ],
+    "text": "I wouldn't say anything if you gave me a microphone to talk to him, because I'd be worried that it would change the outcome of how I became. Even though earlier I probably sounded a little depressed, because this is hard, I am happy with the position I am in.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "doaceo_workout_collapsed",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 2721.87,
+    "t1": 2724.8,
+    "duration": 2.93,
+    "chapter": "resolution",
+    "topic_tags": [
+      "workout",
+      "travel",
+      "workload",
+      "reversal"
+    ],
+    "text": "Months, it's just, it's really killing me, to be honest.",
+    "status": "transcript_and_frames_verified",
+    "verification_note": "Jimmy close-up verified in the DOACEO reversal contact sheet; use as a first-person update, not a general claim."
+  },
+  {
+    "id": "doaceo_something_had_to_give",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 2776.0,
+    "t1": 2791.2,
+    "duration": 15.2,
+    "chapter": "resolution",
+    "topic_tags": [
+      "beast-games",
+      "workload",
+      "reprioritization",
+      "reversal"
+    ],
+    "text": "Beast Games is such a monster of a project, and I have to maintain the same YouTube upload schedule, and then I do a lot on Feastables now and then I have a couple other businesses. So I just honestly, something had to give, and sadly it was working out.",
+    "status": "transcript_and_frames_verified",
+    "verification_note": "Jimmy close-up verified in the DOACEO reversal contact sheet; profanity after this window is intentionally excluded."
+  },
+  {
+    "id": "doaceo_sleep_first",
+    "source_id": "FjrJ2DJN_pA",
+    "speaker": "subject",
+    "t0": 2792.72,
+    "t1": 2807.7,
+    "duration": 14.98,
+    "chapter": "resolution",
+    "topic_tags": [
+      "sleep",
+      "fatigue",
+      "workout",
+      "recovery"
+    ],
+    "text": "It only needs to be 45 minutes, 5 days a week. It doesn't need to be hard, but the bigger problem is I'm just not sleeping like I used to. When I hit it hard in the gym and then I don't get enough sleep, that causes pretty extreme fatigue the next day. So it's like, I got to fix sleep first.",
+    "status": "transcript_and_frames_verified",
+    "verification_note": "Jimmy close-up verified in the DOACEO reversal contact sheet; retain as his personal account, not medical advice."
+  },
+  {
+    "id": "colin_three_things",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 708.92,
+    "t1": 721.0,
+    "duration": 12.08,
+    "chapter": "contract",
+    "topic_tags": [
+      "focus",
+      "workout",
+      "routine"
+    ],
+    "text": "Right now it's really three things that my entire world revolves around: I work out every day, I work on main-channel videos, and I work on Feastables. I wake up, I do that, and when I'm done I go to bed.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "colin_day_310_contract",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 731.96,
+    "t1": 754.6,
+    "duration": 22.64,
+    "chapter": "contract",
+    "topic_tags": [
+      "310-days",
+      "contract",
+      "accountability",
+      "tattoo"
+    ],
+    "text": "Today was day 310. Me and Eric signed a contract: we'd work out every day, and if we didn't we'd get a tattoo of each other. You're okay to have a day off if it's an actual part of your program, so occasionally we have rest days. For the most part, we've worked out every single day and held each other accountable.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "colin_why_he_started",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 755.96,
+    "t1": 774.6,
+    "duration": 18.64,
+    "chapter": "contract",
+    "topic_tags": [
+      "self-care",
+      "decision",
+      "accountability"
+    ],
+    "text": "I was so laser-focused on the channel, and I just realized one day: I have not been working out or taking care of myself. Then I called Eric and I was like, this is a problem. Let's do this.",
+    "status": "transcript_and_frames_verified",
+    "picture_note": "The source cuts from the hosts to Jimmy inside this audio window. Use Jimmy's angle or fitness B-roll for the final picture so no delivered cut crosses the source edit."
+  },
+  {
+    "id": "colin_fat_loss_phase",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 779.08,
+    "t1": 786.44,
+    "duration": 7.36,
+    "chapter": "protocol",
+    "topic_tags": [
+      "fat-loss",
+      "muscle",
+      "transformation"
+    ],
+    "text": "Up to this point, I've just been losing fat. It's a lot harder to put on muscle when you're losing fat.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "colin_three_month_habit",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 794.2,
+    "t1": 807.48,
+    "duration": 13.28,
+    "chapter": "protocol",
+    "topic_tags": [
+      "consistency",
+      "habit",
+      "training"
+    ],
+    "text": "All you have to do, really, is work out for like three months really consistently, and then it'll just become part of your lifestyle. A year ago I couldn't fathom how I was ever going to do this religiously. But now it's truly a habit.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "colin_daily_protocol",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 812.92,
+    "t1": 827.48,
+    "duration": 14.56,
+    "chapter": "protocol",
+    "topic_tags": [
+      "ninety-minutes",
+      "food",
+      "steps",
+      "time-cost"
+    ],
+    "text": "In the short term, I'd probably upload more and get more done if I didn't work out. It's like an hour and a half every day, and then the food, and I do 15,000 steps a day. All that is very time-consuming.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "colin_two_hour_cost",
+    "source_id": "9IQ_ldV9z_A",
+    "speaker": "subject",
+    "t0": 832.12,
+    "t1": 846.44,
+    "duration": 14.32,
+    "chapter": "limit",
+    "topic_tags": [
+      "stress",
+      "phone-calls",
+      "steps",
+      "time-cost"
+    ],
+    "text": "I think I feel more stressed. I just have less time to work on the main channel. The steps I take phone calls while I do it, but at least two hours of my day that previously used to go to the main channel doesn't.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_contract_premise",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "support",
+    "t0": 0.0,
+    "t1": 5.95,
+    "duration": 5.95,
+    "chapter": "contract",
+    "topic_tags": [
+      "600-days",
+      "contract",
+      "bodybuilding",
+      "witness"
+    ],
+    "text": "I signed a legally binding contract with MrBeast that says that we both have to work out every single day for 600 days.",
+    "status": "transcript_and_frames_verified",
+    "edit_note": "Tail removed at 5.95s: the bodybuilding-competition clause is a separate idea, never paid off, and turns a health story into a contest."
+  },
+  {
+    "id": "airrack_tattoo_stakes",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "support",
+    "t0": 13.44,
+    "t1": 19.48,
+    "duration": 6.04,
+    "chapter": "contract",
+    "topic_tags": [
+      "contract",
+      "tattoo",
+      "stakes",
+      "witness"
+    ],
+    "text": "That contract says that if I miss a single day of working out, I have to get MrBeast's name tattooed on my forehead.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_jimmy_harder_than_expected",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "subject",
+    "t0": 489.48,
+    "t1": 504.16,
+    "duration": 14.68,
+    "chapter": "limit",
+    "topic_tags": [
+      "difficulty",
+      "time-cost",
+      "expectations"
+    ],
+    "text": "Way harder—infinitely harder. I thought I'd just work out for like an hour and it'd be relatively easy, but it's very time-consuming because we're trying to get what normal people would get, gains-wise, in like two years in one.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_jimmy_41_percent",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "support",
+    "t0": 510.24,
+    "t1": 520.4,
+    "duration": 10.16,
+    "chapter": "protocol",
+    "topic_tags": [
+      "body-fat",
+      "starting-point",
+      "contract"
+    ],
+    "text": "I don't think anyone thinks I'm going to win. I started off at 41% body fat. It's if you miss a day of working out—which I think he has, but I'm not going to press him.",
+    "status": "rejected_for_jimmy_claim",
+    "note": "Frame verification shows Eric/Airrack speaking, not Jimmy. This is Airrack's starting figure and must never be attributed to Jimmy."
+  },
+  {
+    "id": "airrack_602_day_recap",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "support",
+    "t0": 1048.46,
+    "t1": 1055.74,
+    "duration": 7.28,
+    "chapter": "resolution",
+    "topic_tags": [
+      "602-days",
+      "reflection",
+      "cost"
+    ],
+    "text": "Six hundred and two days working out every single day. When I started, I was fat. This has been a wild journey.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_jimmy_both_grinded_youtube",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "subject",
+    "t0": 1069.1,
+    "t1": 1079.26,
+    "duration": 10.16,
+    "chapter": "resolution",
+    "topic_tags": [
+      "youtube",
+      "fitness",
+      "expectations",
+      "identity"
+    ],
+    "text": "Basically both of us did nothing but grind YouTube. Whenever we started together, we thought, oh, we'll both just work out really hard and then we'll just go.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_jimmy_progress_reality",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "subject",
+    "t0": 1082.02,
+    "t1": 1098.98,
+    "duration": 16.96,
+    "chapter": "limit",
+    "topic_tags": [
+      "progress",
+      "expectations",
+      "humility"
+    ],
+    "text": "A hundred percent. I tell Alex all the time, I can't believe how little progress I've made in the amount of time. When we started, we both thought if we just went to the gym and worked out really hard, we would end up in the same spot. We were so stupid.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_jimmy_changed_life",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "subject",
+    "t0": 1102.86,
+    "t1": 1111.06,
+    "duration": 8.2,
+    "chapter": "resolution",
+    "topic_tags": [
+      "transformation",
+      "gratitude",
+      "payoff"
+    ],
+    "text": "You look like a different human being. I do think that we both have severely changed our life for the better, and I'm very grateful for us doing this challenge.",
+    "status": "transcript_and_frames_verified"
+  },
+  {
+    "id": "airrack_jimmy_continue",
+    "source_id": "7r3ORKgNUjw",
+    "speaker": "subject",
+    "t0": 1115.85,
+    "t1": 1118.15,
+    "duration": 2.3,
+    "chapter": "resolution",
+    "topic_tags": [
+      "habit",
+      "future",
+      "health"
+    ],
+    "text": "Oh, of course. I mean, mostly because I just don't want to die.",
+    "status": "transcript_and_frames_verified",
+    "edit_note": "Head moved past the host's question so the cut opens on Jimmy."
+  },
+  {
+    "id": "jre_least_energetic",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5265.4,
+    "t1": 5267.5,
+    "chapter": "illness",
+    "topic_tags": [
+      "crohns",
+      "energy",
+      "contradiction"
+    ],
+    "text": "I'm probably one of the least energetic people you'll ever meet.",
+    "status": "transcript_verified_frame_check_pending",
+    "verification_note": "Rogan #1788. The central contradiction of the film in his own words.",
+    "duration": 2.1
+  },
+  {
+    "id": "jre_triggers",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5308.8,
+    "t1": 5313.9,
+    "chapter": "protocol",
+    "topic_tags": [
+      "diet",
+      "triggers",
+      "crohns"
+    ],
+    "text": "Corn. Anything spicy. Anything like overly, overly processed.",
+    "status": "transcript_verified_frame_check_pending",
+    "verification_note": "His actual named trigger foods. Window starts after the profanity at 5307.",
+    "duration": 5.1
+  },
+  {
+    "id": "jre_flare_dead",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5353.9,
+    "t1": 5359.6,
+    "chapter": "illness",
+    "topic_tags": [
+      "crohns",
+      "flare",
+      "despair"
+    ],
+    "text": "Sometimes I'll flare up and then I'm just like, I'm dead. I just lay in bed all day, and I can't really do anything.",
+    "status": "transcript_verified_frame_check_pending",
+    "verification_note": "The emotional floor of the story - what the disease actually costs him, unglamorised.",
+    "duration": 5.7
+  },
+  {
+    "id": "jre_remicade",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5363.35,
+    "t1": 5369.2,
+    "chapter": "limit",
+    "topic_tags": [
+      "treatment",
+      "remicade",
+      "immune"
+    ],
+    "text": "I'm on what's called Remicade, and so every eight weeks they just do an IV with a huge bag, which essentially suppresses my immune system.",
+    "status": "transcript_verified_frame_check_pending",
+    "verification_note": "Names the actual treatment and its interval. Present as his account, not medical advice.",
+    "duration": 5.85
+  },
+  {
+    "id": "jre_its_just_life",
+    "source_id": "cLRLEnPaJLM",
+    "speaker": "subject",
+    "t0": 5416.15,
+    "t1": 5419.95,
+    "chapter": "resolution",
+    "topic_tags": [
+      "acceptance",
+      "crohns",
+      "resolution"
+    ],
+    "text": "Honestly, I haven't really thought about it. It's just one of those things - I'm so used to it. It's just life.",
+    "status": "transcript_verified_frame_check_pending",
+    "verification_note": "Quiet acceptance. Ends before the host re-enters at 5420.00.",
+    "duration": 3.8
+  }
+]

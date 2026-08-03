@@ -1,795 +1,794 @@
 {
- "duration": 536.16,
  "beats": [
   {
    "beat_id": "b_000",
    "text": "In December 2019, a fitness magazine ran a rumor about a 26 -year -old actor almost nobody had heard of.",
    "start": 0.0,
-   "end": 7.4667,
+   "end": 7.4333,
    "word_start": 0,
    "word_end": 19
   },
   {
    "beat_id": "b_001",
    "text": "The headline said Warner Bros. was eyeing him to replace Henry Cavill as Superman.",
-   "start": 7.4667,
-   "end": 12.5334,
+   "start": 7.4333,
+   "end": 12.2,
    "word_start": 20,
    "word_end": 33
   },
   {
    "beat_id": "b_002",
    "text": "Four months later, that same actor told an interviewer exactly what he thought of the role \u2014 Superman is underappreciated",
-   "start": 12.5334,
-   "end": 18.6334,
+   "start": 12.2,
+   "end": 18.8333,
    "word_start": 34,
    "word_end": 53
   },
   {
    "beat_id": "b_003",
    "text": "and oversimplified. And when the interviewer said he could picture him in the cape, he joked, Great to know.",
-   "start": 18.6334,
-   "end": 25.7001,
+   "start": 18.8333,
+   "end": 25.3333,
    "word_start": 54,
    "word_end": 72
   },
   {
    "beat_id": "b_004",
    "text": "I'll take that in writing. Maybe we can start a petition.",
-   "start": 25.7001,
-   "end": 30.0668,
+   "start": 25.3333,
+   "end": 28.9666,
    "word_start": 73,
    "word_end": 83
   },
   {
    "beat_id": "b_005",
    "text": "Three years later, the phone rang. And the man on the other end said, Hey David, it's James Gunn.",
-   "start": 30.0668,
-   "end": 37.4668,
+   "start": 28.9666,
+   "end": 35.1666,
    "word_start": 84,
    "word_end": 102
   },
   {
    "beat_id": "b_006",
    "text": "This is how David Cornswet turned a 195 -pound frame into Superman,",
-   "start": 37.4668,
-   "end": 42.0001,
+   "start": 35.1666,
+   "end": 40.4333,
    "word_start": 103,
    "word_end": 114
   },
   {
    "beat_id": "b_007",
    "text": "40 pounds in a matter of months, documented by the people who trained him, fed him,",
-   "start": 42.0001,
-   "end": 46.3668,
+   "start": 40.4333,
+   "end": 45.9333,
    "word_start": 115,
    "word_end": 130
   },
   {
    "beat_id": "b_008",
    "text": "and measured him for a suit he'd outgrow before it was finished.",
-   "start": 46.3668,
-   "end": 50.3335,
+   "start": 45.9333,
+   "end": 50.1666,
    "word_start": 131,
    "word_end": 142
   },
   {
    "beat_id": "b_009",
    "text": "Start in Philadelphia, 1993 A high school drama kid at a Quaker school,",
-   "start": 50.3335,
-   "end": 56.0668,
+   "start": 50.1666,
+   "end": 54.6666,
    "word_start": 143,
    "word_end": 155
   },
   {
    "beat_id": "b_010",
    "text": "with a teacher who refused to let him coast. He remembered it years later, quote,",
-   "start": 56.0668,
-   "end": 61.1668,
+   "start": 54.6666,
+   "end": 60.1999,
    "word_start": 156,
    "word_end": 170
   },
   {
    "beat_id": "b_011",
    "text": "Don't let that be an excuse not to push yourself and not to work harder than everybody else.",
-   "start": 61.1668,
-   "end": 66.3001,
+   "start": 60.1999,
+   "end": 65.7332,
    "word_start": 171,
    "word_end": 188
   },
   {
    "beat_id": "b_012",
    "text": "That teacher was the last person he personally told he'd be Superman.",
-   "start": 66.3001,
-   "end": 70.5334,
+   "start": 65.7332,
+   "end": 68.7999,
    "word_start": 189,
    "word_end": 200
   },
   {
    "beat_id": "b_013",
    "text": "From there, Juilliard, class of 2016, and its famously brutal movement classes,",
-   "start": 70.5334,
-   "end": 76.2001,
+   "start": 68.7999,
+   "end": 75.6332,
    "word_start": 201,
    "word_end": 212
   },
   {
    "beat_id": "b_014",
    "text": "training he says was, quote, super high intensity almost to the point of being impossible.",
-   "start": 76.2001,
-   "end": 81.9668,
+   "start": 75.6332,
+   "end": 80.4665,
    "word_start": 213,
    "word_end": 227
   },
   {
    "beat_id": "b_015",
    "text": "Remember that, because it comes back when they hang him from wires.",
-   "start": 81.9668,
-   "end": 86.4335,
+   "start": 80.4665,
+   "end": 83.9998,
    "word_start": 228,
    "word_end": 239
   },
   {
    "beat_id": "b_016",
    "text": "The problem was the frame. 6 '4\", and by his own account, about 195 pounds.",
-   "start": 86.4335,
-   "end": 93.7002,
+   "start": 83.9998,
+   "end": 90.7665,
    "word_start": 240,
    "word_end": 254
   },
   {
    "beat_id": "b_017",
    "text": "In his words, which is not very much for somebody who's 6 '4\".",
-   "start": 93.7002,
-   "end": 98.1335,
+   "start": 90.7665,
+   "end": 95.4665,
    "word_start": 255,
    "word_end": 267
   },
   {
    "beat_id": "b_018",
    "text": "Netflix says the politician made him a face in 2019.",
-   "start": 98.1335,
-   "end": 102.4668,
+   "start": 95.4665,
+   "end": 99.3332,
    "word_start": 268,
    "word_end": 277
   },
   {
    "beat_id": "b_019",
    "text": "The Superman rumor followed within months. He'd already called the part his pie in the sky ambition.",
-   "start": 102.4668,
-   "end": 109.6001,
+   "start": 99.3332,
+   "end": 105.8665,
    "word_start": 278,
    "word_end": 294
   },
   {
    "beat_id": "b_020",
    "text": "June 2023 Warner Brothers calls him in for a final screen test,",
-   "start": 109.6001,
-   "end": 114.3668,
+   "start": 105.8665,
+   "end": 109.5332,
    "word_start": 295,
    "word_end": 306
   },
   {
    "beat_id": "b_021",
    "text": "three Clark Kent's, three Lois Lane's, suit up on day two.",
-   "start": 114.3668,
-   "end": 118.9668,
+   "start": 109.5332,
+   "end": 115.6999,
    "word_start": 307,
    "word_end": 317
   },
   {
    "beat_id": "b_022",
    "text": "Two days after he found out about the test, his wife Julia told him she was pregnant.",
-   "start": 118.9668,
-   "end": 124.4335,
+   "start": 115.6999,
+   "end": 120.2332,
    "word_start": 318,
    "word_end": 334
   },
   {
    "beat_id": "b_023",
    "text": "Two enormous secrets, and he could tell no one about either.",
-   "start": 124.4335,
-   "end": 128.2668,
+   "start": 120.2332,
+   "end": 123.8665,
    "word_start": 335,
    "word_end": 345
   },
   {
    "beat_id": "b_024",
    "text": "He said, quote, we had these two quite huge secrets that we just had between the two of us.",
-   "start": 128.2668,
-   "end": 134.3335,
+   "start": 123.8665,
+   "end": 129.8332,
    "word_start": 346,
    "word_end": 364
   },
   {
    "beat_id": "b_025",
    "text": "And that was intense. Then, while he was home on a break from filming Twisters,",
-   "start": 134.3335,
-   "end": 139.6335,
+   "start": 129.8332,
+   "end": 135.0665,
    "word_start": 365,
    "word_end": 379
   },
   {
    "beat_id": "b_026",
    "text": "an unknown number, hey David, it's James Gunn. His answer, can you prove that?",
-   "start": 139.6335,
-   "end": 146.0668,
+   "start": 135.0665,
+   "end": 141.6998,
    "word_start": 380,
    "word_end": 393
   },
   {
    "beat_id": "b_027",
    "text": "The offer came with a brief. Quote, you're in good shape, but I want you to get a trainer.",
-   "start": 146.0668,
-   "end": 152.6001,
+   "start": 141.6998,
+   "end": 147.0331,
    "word_start": 394,
    "word_end": 412
   },
   {
    "beat_id": "b_028",
    "text": "I want you to work on your shoulders and your vulnerability.",
-   "start": 152.6001,
-   "end": 156.1668,
+   "start": 147.0331,
+   "end": 150.2331,
    "word_start": 413,
    "word_end": 423
   },
   {
    "beat_id": "b_029",
    "text": "And one more detail that matters for everything that follows, the costume department built his suit from the screen test measurements.",
-   "start": 156.1668,
-   "end": 162.9668,
+   "start": 150.2331,
+   "end": 158.4331,
    "word_start": 424,
    "word_end": 444
   },
   {
    "beat_id": "b_030",
    "text": "Six foot four. 195 pounds.",
-   "start": 162.9668,
-   "end": 167.9335,
+   "start": 158.4331,
+   "end": 161.0331,
    "word_start": 445,
    "word_end": 449
   },
   {
    "beat_id": "b_031",
    "text": "Gunn hand -picked the trainer, Paolo Machete, the Hollywood coach whose work on the suicide squad Gunn had loved.",
-   "start": 167.9335,
-   "end": 174.7002,
+   "start": 161.0331,
+   "end": 169.7331,
    "word_start": 450,
    "word_end": 468
   },
   {
    "beat_id": "b_032",
    "text": "The program started in July 2023, and none of it was exotic.",
-   "start": 174.7002,
-   "end": 179.8335,
+   "start": 169.7331,
+   "end": 174.3331,
    "word_start": 469,
    "word_end": 480
   },
   {
    "beat_id": "b_033",
    "text": "Push, pull, legs. Five to six days a week.",
-   "start": 179.8335,
-   "end": 184.8668,
+   "start": 174.3331,
+   "end": 177.9664,
    "word_start": 481,
    "word_end": 489
   },
   {
    "beat_id": "b_034",
    "text": "Presses, pull -ups, pull -downs, rows, in Machete's words,",
-   "start": 184.8668,
-   "end": 189.1335,
+   "start": 177.9664,
+   "end": 182.5997,
    "word_start": 490,
    "word_end": 498
   },
   {
    "beat_id": "b_035",
    "text": "all the big ones, with progressive overload as the entire religion, track the reps, track the weight, advance every week.",
-   "start": 189.1335,
-   "end": 197.1335,
+   "start": 182.5997,
+   "end": 191.7997,
    "word_start": 499,
    "word_end": 518
   },
   {
    "beat_id": "b_036",
    "text": "Most sets in the six to 12 range, isolation work pushed to 15 or 20 to finish the muscle off.",
-   "start": 197.1335,
-   "end": 203.7668,
+   "start": 191.7997,
+   "end": 198.4664,
    "word_start": 519,
    "word_end": 538
   },
   {
    "beat_id": "b_037",
    "text": "The published push day looks like this. Inclined dumbbell press.",
-   "start": 203.7668,
-   "end": 208.3001,
+   "start": 198.4664,
+   "end": 202.6331,
    "word_start": 539,
    "word_end": 548
   },
   {
    "beat_id": "b_038",
    "text": "Bench press superset with cable flies. Seated shoulder press superset with lateral raises.",
-   "start": 208.3001,
-   "end": 215.1334,
+   "start": 202.6331,
+   "end": 209.2331,
    "word_start": 549,
    "word_end": 561
   },
   {
    "beat_id": "b_039",
    "text": "Triceps extension superset with curls. For sets of 10, last set to failure.",
-   "start": 215.1334,
-   "end": 221.5001,
+   "start": 209.2331,
+   "end": 215.7664,
    "word_start": 562,
    "word_end": 574
   },
   {
    "beat_id": "b_040",
    "text": "On top of it, a lot of core work, because this body had a job, harness stunts.",
-   "start": 221.5001,
-   "end": 227.3001,
+   "start": 215.7664,
+   "end": 221.8664,
    "word_start": 575,
    "word_end": 591
   },
   {
    "beat_id": "b_041",
    "text": "He credits those impossible Juilliard movement classes for surviving the wires, strung up,",
-   "start": 227.3001,
-   "end": 232.3668,
+   "start": 221.8664,
+   "end": 227.3331,
    "word_start": 592,
    "word_end": 604
   },
   {
    "beat_id": "b_042",
    "text": "in his words, by my underpants, holding every limb in one steady, exact position.",
-   "start": 232.3668,
-   "end": 238.1668,
+   "start": 227.3331,
+   "end": 233.8331,
    "word_start": 605,
    "word_end": 618
   },
   {
    "beat_id": "b_043",
    "text": "His one weakness, per his trainer, walking lunges. He's great at squats.",
-   "start": 238.1668,
-   "end": 244.1335,
+   "start": 233.8331,
+   "end": 239.7664,
    "word_start": 619,
    "word_end": 630
   },
   {
    "beat_id": "b_044",
    "text": "He just hates lunges. He did them anyway, with jazz in his headphones.",
-   "start": 244.1335,
-   "end": 249.8668,
+   "start": 239.7664,
+   "end": 244.0997,
    "word_start": 631,
    "word_end": 643
   },
   {
    "beat_id": "b_045",
    "text": "And his own description of the work is the best training quote of the year.",
-   "start": 249.8668,
-   "end": 254.2001,
+   "start": 244.0997,
+   "end": 248.7664,
    "word_start": 644,
    "word_end": 658
   },
   {
    "beat_id": "b_046",
    "text": "Quote, there is a certain loneliness that comes at the gym.",
-   "start": 254.2001,
-   "end": 257.7668,
+   "start": 248.7664,
+   "end": 252.9664,
    "word_start": 659,
    "word_end": 669
   },
   {
    "beat_id": "b_047",
    "text": "In the moment when you're going for that ninth rep, or you've put a little extra weight on the bar, nobody's going to do it for you.",
-   "start": 257.7668,
-   "end": 264.3001,
+   "start": 252.9664,
+   "end": 260.5997,
    "word_start": 670,
    "word_end": 696
   },
   {
    "beat_id": "b_048",
    "text": "It's just you, alone in your mind, seeing if you can go a little bit further than you thought you could.",
-   "start": 264.3001,
-   "end": 270.1668,
+   "start": 260.5997,
+   "end": 266.6664,
    "word_start": 697,
    "word_end": 717
   },
   {
    "beat_id": "b_049",
    "text": "The. Eating was the harder job.",
-   "start": 270.1668,
-   "end": 273.5001,
+   "start": 266.6664,
+   "end": 269.0331,
    "word_start": 718,
    "word_end": 723
   },
   {
    "beat_id": "b_050",
    "text": "Corn sweat's own number, I was aiming for about 4 ,500 calories a day.",
-   "start": 273.5001,
-   "end": 279.0334,
+   "start": 269.0331,
+   "end": 273.6331,
    "word_start": 724,
    "word_end": 737
   },
   {
    "beat_id": "b_051",
    "text": "His trainer has put the peak even higher, around 6 ,000, by Mashity's telling,",
-   "start": 279.0334,
-   "end": 283.9667,
+   "start": 273.6331,
+   "end": 279.9664,
    "word_start": 738,
    "word_end": 751
   },
   {
    "beat_id": "b_052",
    "text": "before cutting to roughly 3 ,500 as cameras approached, to trade a little mass for definition.",
-   "start": 283.9667,
-   "end": 289.6667,
+   "start": 279.9664,
+   "end": 286.4664,
    "word_start": 752,
    "word_end": 767
   },
   {
    "beat_id": "b_053",
    "text": "The structure underneath was strict, 50 % carbs, 30 protein, 20 fat.",
-   "start": 289.6667,
-   "end": 295.9,
+   "start": 286.4664,
+   "end": 293.2997,
    "word_start": 768,
    "word_end": 779
   },
   {
    "beat_id": "b_054",
    "text": "Around seven meals and snacks a day.",
-   "start": 295.9,
-   "end": 298.6,
+   "start": 293.2997,
+   "end": 295.7997,
    "word_start": 780,
    "word_end": 786
   },
   {
    "beat_id": "b_055",
    "text": "Breakfast alone, six egg whites plus two whole eggs, up to two cups of oatmeal,",
-   "start": 298.6,
-   "end": 304.0333,
+   "start": 295.7997,
+   "end": 301.8997,
    "word_start": 787,
    "word_end": 801
   },
   {
    "beat_id": "b_056",
    "text": "berries, Greek yogurt with almonds, and a protein shake.",
-   "start": 304.0333,
-   "end": 308.2333,
+   "start": 301.8997,
+   "end": 306.233,
    "word_start": 802,
    "word_end": 810
   },
   {
    "beat_id": "b_057",
    "text": "Then rice, beef, chicken, fish and vegetables on repeat, with the carbs stacked before training.",
-   "start": 308.2333,
-   "end": 314.8333,
+   "start": 306.233,
+   "end": 312.6663,
    "word_start": 811,
    "word_end": 825
   },
   {
    "beat_id": "b_058",
    "text": "Mostly whole, unprocessed food, the quality of the calories mattered as much as the count.",
-   "start": 314.8333,
-   "end": 320.6333,
+   "start": 312.6663,
+   "end": 318.833,
    "word_start": 826,
    "word_end": 840
   },
   {
    "beat_id": "b_059",
    "text": "And one documented vice. His trainer's words, he loves cereal.",
-   "start": 320.6333,
-   "end": 326.2333,
+   "start": 318.833,
+   "end": 323.9663,
    "word_start": 841,
    "word_end": 850
   },
   {
    "beat_id": "b_060",
    "text": "That's his kryptonite. He'd be on a check -in call, eating cereal, asking, what's wrong with cereal?",
-   "start": 326.2333,
-   "end": 333.4,
+   "start": 323.9663,
+   "end": 331.7663,
    "word_start": 851,
    "word_end": 867
   },
   {
    "beat_id": "b_061",
    "text": "The third pillar was non -negotiable. Sleep.",
-   "start": 333.4,
-   "end": 337.6667,
+   "start": 331.7663,
+   "end": 335.333,
    "word_start": 868,
    "word_end": 874
   },
   {
    "beat_id": "b_062",
    "text": "Mashity again, everything is part of the puzzle. You take one of the things out, and it's not going to happen.",
-   "start": 337.6667,
-   "end": 344.3667,
+   "start": 335.333,
+   "end": 342.633,
    "word_start": 875,
    "word_end": 895
   },
   {
    "beat_id": "b_063",
    "text": "Here's the part no other superhero transformation has.",
-   "start": 344.3667,
-   "end": 348.2,
+   "start": 342.633,
+   "end": 346.7663,
    "word_start": 896,
    "word_end": 903
   },
   {
    "beat_id": "b_064",
    "text": "While David was gaining his 40 pounds, his wife was pregnant with their first child, and gained about 40 pounds in the same months.",
-   "start": 348.2,
-   "end": 355.6667,
+   "start": 346.7663,
+   "end": 355.1663,
    "word_start": 904,
    "word_end": 927
   },
   {
    "beat_id": "b_065",
    "text": "His words, she gained about 40 pounds while she was pregnant, and in the same period I gained about 40 pounds for Superman.",
-   "start": 355.6667,
-   "end": 363.4334,
+   "start": 355.1663,
+   "end": 362.633,
    "word_start": 928,
    "word_end": 950
   },
   {
    "beat_id": "b_066",
    "text": "I started snoring, and had to use her pregnancy pillow.",
-   "start": 363.4334,
-   "end": 367.4667,
+   "start": 362.633,
+   "end": 366.033,
    "word_start": 951,
    "word_end": 960
   },
   {
    "beat_id": "b_067",
    "text": "And the proof of the transformation wasn't a gym selfie. It was a tape measure.",
-   "start": 367.4667,
-   "end": 372.9667,
+   "start": 366.033,
+   "end": 370.9663,
    "word_start": 961,
    "word_end": 975
   },
   {
    "beat_id": "b_068",
    "text": "Four to five months after the screen test, he walked into his first costume fitting,",
-   "start": 372.9667,
-   "end": 377.5334,
+   "start": 370.9663,
+   "end": 375.3996,
    "word_start": 976,
    "word_end": 990
   },
   {
    "beat_id": "b_069",
    "text": "into a suit built for a 195 -pound man, at 240 pounds.",
-   "start": 377.5334,
-   "end": 382.5667,
+   "start": 375.3996,
+   "end": 381.9663,
    "word_start": 991,
    "word_end": 1002
   },
   {
    "beat_id": "b_070",
    "text": "His words, that first fitting was a bit of a squeeze.",
-   "start": 382.5667,
-   "end": 386.9667,
+   "start": 381.9663,
+   "end": 386.133,
    "word_start": 1003,
    "word_end": 1013
   },
   {
    "beat_id": "b_071",
    "text": "Filming began in early 2024. Training dropped to three or four sessions a week,",
-   "start": 386.9667,
-   "end": 392.5334,
+   "start": 386.133,
+   "end": 391.3663,
    "word_start": 1014,
    "word_end": 1027
   },
   {
    "beat_id": "b_072",
    "text": "still two hours at a time, half of them coached over FaceTime between setups.",
-   "start": 392.5334,
-   "end": 397.7667,
+   "start": 391.3663,
+   "end": 396.833,
    "word_start": 1028,
    "word_end": 1041
   },
   {
    "beat_id": "b_073",
    "text": "The stunts were real enough to leave marks, the huge flying leap you've seen in the trailer is also the take",
-   "start": 397.7667,
-   "end": 402.9,
+   "start": 396.833,
+   "end": 403.533,
    "word_start": 1042,
    "word_end": 1062
   },
   {
    "beat_id": "b_074",
    "text": "that ended with a very personal bruise, a story he told on a lie detector, because, in his words, I couldn't lie about that.",
-   "start": 402.9,
-   "end": 410.2667,
+   "start": 403.533,
+   "end": 411.933,
    "word_start": 1063,
    "word_end": 1086
   },
   {
    "beat_id": "b_075",
    "text": "It's on film. On July 11, 2025,",
-   "start": 410.2667,
-   "end": 414.8,
+   "start": 411.933,
+   "end": 415.9997,
    "word_start": 1087,
    "word_end": 1093
   },
   {
    "beat_id": "b_076",
    "text": "Superman opened to roughly $220 million worldwide.",
-   "start": 414.8,
-   "end": 419.3333,
+   "start": 415.9997,
+   "end": 420.3664,
    "word_start": 1094,
    "word_end": 1100
   },
   {
    "beat_id": "b_077",
    "text": "The 2019 rumor had become a fact. The 2020 petition joke had become a prophecy.",
-   "start": 419.3333,
-   "end": 426.1333,
+   "start": 420.3664,
+   "end": 426.4997,
    "word_start": 1101,
    "word_end": 1115
   },
   {
    "beat_id": "b_078",
    "text": "And the physique that carried it was never meant to be a bodybuilder's.",
-   "start": 426.1333,
-   "end": 430.0333,
+   "start": 426.4997,
+   "end": 430.733,
    "word_start": 1116,
    "word_end": 1128
   },
   {
    "beat_id": "b_079",
    "text": "The design brief, per his trainer, he needed to look more like a farm boy than a complete bodybuilder.",
-   "start": 430.0333,
-   "end": 436.3666,
+   "start": 430.733,
+   "end": 436.8663,
    "word_start": 1129,
    "word_end": 1147
   },
   {
    "beat_id": "b_080",
    "text": "The sequel, Man of Tomorrow, was announced within two months of the opening.",
-   "start": 436.3666,
-   "end": 441.1333,
+   "start": 436.8663,
+   "end": 441.133,
    "word_start": 1148,
    "word_end": 1160
   },
   {
    "beat_id": "b_081",
    "text": "Cameras rolled again in April 2026, in Georgia, for a July 2027 release.",
-   "start": 441.1333,
-   "end": 447.7666,
+   "start": 441.133,
+   "end": 448.133,
    "word_start": 1161,
    "word_end": 1173
   },
   {
    "beat_id": "b_082",
    "text": "Which means somewhere right now, the lonely math is running again, the plates,",
-   "start": 447.7666,
-   "end": 452.3333,
+   "start": 448.133,
+   "end": 452.933,
    "word_start": 1174,
    "word_end": 1186
   },
   {
    "beat_id": "b_083",
    "text": "the meals, the sleep, the ninth rep nobody can do for you.",
-   "start": 452.3333,
-   "end": 456.4666,
+   "start": 452.933,
+   "end": 456.1997,
    "word_start": 1187,
    "word_end": 1198
   },
   {
    "beat_id": "b_084",
    "text": "You don't need a Warner Brothers contract. You need the rules his team actually used.",
-   "start": 456.4666,
-   "end": 462.6666,
+   "start": 456.1997,
+   "end": 461.933,
    "word_start": 1199,
    "word_end": 1213
   },
   {
    "beat_id": "b_085",
    "text": "Rule 1, train for the roll, not the mirror. Define the brief first, his with shoulders, and vulnerability.",
-   "start": 462.6666,
-   "end": 470.2666,
+   "start": 461.933,
+   "end": 469.333,
    "word_start": 1214,
    "word_end": 1231
   },
   {
    "beat_id": "b_086",
    "text": "Rule 2, push, pull, legs, forever.",
-   "start": 470.2666,
-   "end": 474.6666,
+   "start": 469.333,
+   "end": 473.1997,
    "word_start": 1232,
    "word_end": 1237
   },
   {
    "beat_id": "b_087",
    "text": "Big compound lifts, 6 to 12 reps, and progressive overload you actually write down.",
-   "start": 474.6666,
-   "end": 480.6999,
+   "start": 473.1997,
+   "end": 479.7664,
    "word_start": 1238,
    "word_end": 1251
   },
   {
    "beat_id": "b_088",
    "text": "Rule 3, master the lift, not the show.",
-   "start": 480.6999,
-   "end": 484.1666,
+   "start": 479.7664,
+   "end": 482.9664,
    "word_start": 1252,
    "word_end": 1259
   },
   {
    "beat_id": "b_089",
    "text": "His trainer's doctrine, full range of motion, own the negative, add weight or reps every week.",
-   "start": 484.1666,
-   "end": 490.4333,
+   "start": 482.9664,
+   "end": 489.1331,
    "word_start": 1260,
    "word_end": 1275
   },
   {
    "beat_id": "b_090",
    "text": "Rule 4, eat like it's your job. Real food, protein at every meal,",
-   "start": 490.4333,
-   "end": 495.5333,
+   "start": 489.1331,
+   "end": 494.5664,
    "word_start": 1276,
    "word_end": 1288
   },
   {
    "beat_id": "b_091",
    "text": "carbs before training, and enough total calories that the scale has no choice.",
-   "start": 495.5333,
-   "end": 500.3333,
+   "start": 494.5664,
+   "end": 500.1664,
    "word_start": 1289,
    "word_end": 1301
   },
   {
    "beat_id": "b_092",
    "text": "Rule 5, sleep is the third pillar, take one piece out and the puzzle doesn't work.",
-   "start": 500.3333,
-   "end": 506.3666,
+   "start": 500.1664,
+   "end": 505.8331,
    "word_start": 1302,
    "word_end": 1317
   },
   {
    "beat_id": "b_093",
    "text": "And Rule 6, keep your kryptonite. His was cereal.",
-   "start": 506.3666,
-   "end": 511.2333,
+   "start": 505.8331,
+   "end": 510.1998,
    "word_start": 1318,
    "word_end": 1326
   },
   {
    "beat_id": "b_094",
    "text": "He kept it, and it kept him sane. Honest question, drop it in the comments,",
-   "start": 511.2333,
-   "end": 516.4666,
+   "start": 510.1998,
+   "end": 516.2998,
    "word_start": 1327,
    "word_end": 1341
   },
   {
    "beat_id": "b_095",
    "text": "could you even finish his breakfast, 6 egg whites, 2 whole eggs, 2 cups of oats,",
-   "start": 516.4666,
-   "end": 521.7666,
+   "start": 516.2998,
+   "end": 522.3998,
    "word_start": 1342,
    "word_end": 1357
   },
   {
    "beat_id": "b_096",
    "text": "yogurt, berries, and a shake, or would meal 2 of 7 finish you first?",
-   "start": 521.7666,
-   "end": 527.0333,
+   "start": 522.3998,
+   "end": 528.0331,
    "word_start": 1358,
    "word_end": 1371
   },
   {
    "beat_id": "b_097",
    "text": "If this breakdown earned it, subscribe. The training file on the next legend is already open.",
-   "start": 527.0333,
-   "end": 534.0666,
+   "start": 528.0331,
+   "end": 535.2331,
    "word_start": 1372,
    "word_end": 1387
   },
   {
    "beat_id": "b_098",
    "text": "Up, up, and away.",
-   "start": 534.0666,
-   "end": 536.1666,
+   "start": 535.2331,
+   "end": 536.8998,
    "word_start": 1388,
    "word_end": 1391
   }

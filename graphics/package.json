@@ -9,6 +9,13 @@
   },
   "dependencies": {
     "@remotion/cli": "4.0.290",
+    "@remotion/lottie": "^4.0.290",
+    "@remotion/media-utils": "^4.0.290",
+    "@remotion/motion-blur": "^4.0.290",
+    "@remotion/noise": "^4.0.290",
+    "@remotion/paths": "^4.0.290",
+    "@remotion/shapes": "^4.0.290",
+    "@remotion/transitions": "^4.0.290",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remotion": "4.0.290"

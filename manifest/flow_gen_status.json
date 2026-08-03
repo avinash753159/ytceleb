@@ -1,0 +1,121 @@
+{
+ "s_lead": {
+  "state": "done",
+  "path": "library\\veo\\s_lead.mp4",
+  "cost": 0.2
+ },
+ "s000a": {
+  "state": "done",
+  "path": "library\\veo\\s000a.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s047a": {
+  "state": "done",
+  "path": "library\\veo\\s047a.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s000b": {
+  "state": "done",
+  "path": "library\\veo\\s000b.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s002a": {
+  "state": "done",
+  "path": "library\\veo\\s002a.mp4",
+  "cost": 0.2
+ },
+ "s002b": {
+  "state": "done",
+  "path": "library\\veo\\s002b.mp4",
+  "cost": 0.2
+ },
+ "s003a": {
+  "state": "done",
+  "path": "library\\veo\\s003a.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s003b": {
+  "state": "done",
+  "path": "library\\veo\\s003b.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s004a": {
+  "state": "done",
+  "path": "library\\veo\\s004a.mp4",
+  "cost": 0.2
+ },
+ "s005a": {
+  "state": "done",
+  "path": "library\\veo\\s005a.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s005b": {
+  "state": "done",
+  "path": "library\\veo\\s005b.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s_break": {
+  "state": "done",
+  "path": "library\\veo\\s_break.mp4",
+  "cost": 0.2
+ },
+ "s007a": {
+  "state": "done",
+  "path": "library\\veo\\s007a.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s014c": {
+  "state": "done",
+  "path": "library\\veo\\s014c.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s015a": {
+  "state": "done",
+  "path": "library\\veo\\s015a.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s015b": {
+  "state": "done",
+  "path": "library\\veo\\s015b.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s015c": {
+  "state": "done",
+  "path": "library\\veo\\s015c.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s016b": {
+  "state": "done",
+  "path": "library\\veo\\s016b.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s016c": {
+  "state": "done",
+  "path": "library\\veo\\s016c.mp4",
+  "cost": 0.30000000000000004
+ },
+ "s017b": {
+  "state": "failed",
+  "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
+  "charged": 0.0,
+  "submissions": 0
+ },
+ "s018a": {
+  "state": "failed",
+  "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
+  "charged": 0.0,
+  "submissions": 0
+ },
+ "s019a": {
+  "state": "failed",
+  "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
+  "charged": 0.0,
+  "submissions": 0
+ },
+ "s021a": {
+  "state": "failed",
+  "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
+  "charged": 0.0,
+  "submissions": 0
+ }
+}

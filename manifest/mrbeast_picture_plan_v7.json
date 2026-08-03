@@ -1,0 +1,512 @@
+[
+  {
+    "name": "ba_open",
+    "dur": 14,
+    "kind": "pair"
+  },
+  {
+    "name": "rogan_energy_0",
+    "dur": 5.0,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_energy_1",
+    "dur": 5.0,
+    "kind": "footage"
+  },
+  {
+    "name": "teen_1",
+    "dur": 10.0,
+    "kind": "footage"
+  },
+  {
+    "name": "present_hold_0",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "present_hold_1",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "teen_2_0",
+    "dur": 8.0,
+    "kind": "footage"
+  },
+  {
+    "name": "teen_2_1",
+    "dur": 8.0,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_baseball_0",
+    "dur": 5.333,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_baseball_1",
+    "dur": 5.333,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_baseball_2",
+    "dur": 5.333,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_collapse_0",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_collapse_1",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_collapse_2",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "card_weight",
+    "dur": 14,
+    "kind": "still"
+  },
+  {
+    "name": "doaceo_symptoms_0",
+    "dur": 5.333,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_symptoms_1",
+    "dur": 5.333,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_symptoms_2",
+    "dur": 5.333,
+    "kind": "footage"
+  },
+  {
+    "name": "ibd_real",
+    "dur": 16,
+    "kind": "still"
+  },
+  {
+    "name": "real_tissue",
+    "dur": 20,
+    "kind": "still"
+  },
+  {
+    "name": "mechanism",
+    "dur": 20,
+    "kind": "still"
+  },
+  {
+    "name": "clinical_strip",
+    "dur": 16,
+    "kind": "strip"
+  },
+  {
+    "name": "rogan_dead_0",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_dead_1",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_dead_2",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_remicade_0",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_remicade_1",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_remicade_2",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "card_infusion_0",
+    "dur": 6.333,
+    "kind": "titled"
+  },
+  {
+    "name": "card_infusion_1",
+    "dur": 6.333,
+    "kind": "titled"
+  },
+  {
+    "name": "card_infusion_2",
+    "dur": 6.333,
+    "kind": "titled"
+  },
+  {
+    "name": "the_post",
+    "dur": 21,
+    "kind": "still"
+  },
+  {
+    "name": "rogan_obsession_0",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_obsession_1",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_obsession_2",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "card_machine_0",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "card_machine_1",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "card_machine_2",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "teen_3",
+    "dur": 12.0,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_1_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_1_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_1_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_1_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_a_0",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_a_1",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_a_2",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "card_310",
+    "dur": 22,
+    "kind": "still"
+  },
+  {
+    "name": "gym_b_0",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_b_1",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_b_2",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_2_0",
+    "dur": 7.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_2_1",
+    "dur": 7.5,
+    "kind": "footage"
+  },
+  {
+    "name": "walk_steps_0",
+    "dur": 5.75,
+    "kind": "footage"
+  },
+  {
+    "name": "walk_steps_1",
+    "dur": 5.75,
+    "kind": "footage"
+  },
+  {
+    "name": "walk_steps_2",
+    "dur": 5.75,
+    "kind": "footage"
+  },
+  {
+    "name": "walk_steps_3",
+    "dur": 5.75,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_c_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_c_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_c_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_c_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_3_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_3_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_3_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "colin_3_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "card_record",
+    "dur": 22,
+    "kind": "still"
+  },
+  {
+    "name": "gym_d_0",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_d_1",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_d_2",
+    "dur": 6.0,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_limit_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_limit_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_limit_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_limit_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_treatment_0",
+    "dur": 7.0,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_treatment_1",
+    "dur": 7.0,
+    "kind": "footage"
+  },
+  {
+    "name": "tired_0",
+    "dur": 8.0,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_e_0",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_e_1",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_e_2",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_e_3",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_give_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_give_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_give_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_give_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_sleep_0",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_sleep_1",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_sleep_2",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "doaceo_sleep_3",
+    "dur": 5.25,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_f_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_f_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_f_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "gym_f_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "ba_payoff",
+    "dur": 26,
+    "kind": "pair"
+  },
+  {
+    "name": "rogan_life_0",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_life_1",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "rogan_life_2",
+    "dur": 6.667,
+    "kind": "footage"
+  },
+  {
+    "name": "present_end_0",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "present_end_1",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "present_end_2",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "present_end_3",
+    "dur": 5.5,
+    "kind": "footage"
+  },
+  {
+    "name": "card_end_0",
+    "dur": 6.0,
+    "kind": "titled"
+  },
+  {
+    "name": "card_end_1",
+    "dur": 6.0,
+    "kind": "titled"
+  },
+  {
+    "name": "card_end_2",
+    "dur": 6.0,
+    "kind": "titled"
+  }
+]
