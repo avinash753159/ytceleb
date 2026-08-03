@@ -195,6 +195,59 @@ misses it, which is how a "no profanity found" answer was wrong.
 - Writing to a locked output path silently produces a corrupt file
   (`moov atom not found`). Write to a fresh filename.
 
+## YouTube copyright — hard limits on real footage
+
+Generated material carries no claim risk. Real interview and archive footage
+does, and the owner set these limits:
+
+1. **No clip longer than 10 seconds.**
+2. **Never repeat a clip.** Already enforced by the no-reuse registry.
+3. **One clip per source video.** Not one per scene — **one per source.** If a
+   90-minute podcast yields a perfect moment, take that moment and nothing
+   else from that video.
+
+Rule 3 is the expensive one and it invalidates the previous film's structure:
+*The Disease That Built MrBeast* draws **8 bites from a single Rogan episode**
+and 6 more from one Airrack video. Under this rule that film would need 14
+different sources.
+
+Plan for it at the EDL stage, not at the picture stage: the script must be
+built so each quoted moment comes from a different appearance. Widen the
+source pool during research rather than mining one long interview, and where
+only one source exists for a claim, use it once and carry the rest of the
+point in narration over generated picture.
+
+## Branding — the largest quality gap
+
+Read `docs/BRAND.md` before building any graphic. It is measured off
+`library/brand/channel_banner.png`, the only authoritative statement of the
+identity.
+
+The failure to avoid, in the owner's words: *"it's very easy to tell that it
+was generated with AI — the fonts, animations, layouts and overall design look
+like the default style Claude uses for almost every project."*
+
+Two specifics that recur:
+
+- **The channel red is `#C00000`, not `#E3120B`.** The brighter, more orange
+  value is wrong and appears throughout the existing code.
+- **The ground is `#F0F0F0` paper, not black.** The films have been built in a
+  dark anamorphic world that contradicts the channel's own banner.
+
+Identity is cumulative. It will not be fixed by restyling one video; every
+film has to use the same faces, the same red, the same devices.
+
+## Revisions — keep the unit of change small
+
+A fix in Premiere is quick because you change one clip. An AI workflow only
+matches that if the pipeline is granular, and this one is: every shot renders
+to its own piece, cached on a **content fingerprint**, so changing one prompt
+re-renders exactly one shot and nothing else. A re-roll costs $0.04 and the
+assembler stitches around it.
+
+Protect that property. It breaks the moment anything caches on position, or a
+single render covers several beats.
+
 ## Red flags — stop
 
 - Hunting for more footage because the pool is thin → generate it
