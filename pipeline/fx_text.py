@@ -116,7 +116,8 @@ def _fit_font(text: str, target_w: int, max_size: int = 900) -> ImageFont.FreeTy
 
 def text_matte(clip: Path, dest: Path, lines: list[str], frames: int, *,
                fill: float = 0.88, drift: float = 0.02,
-               bloom: float = 0.55) -> Path:
+               bloom: float = 0.55, min_luma: float = 72.0,
+               edge: int = 2, edge_strength: float = 0.5) -> Path:
     """Footage plays THROUGH the letters; everything outside is near-black.
 
     The type is a mask, not an overlay.
@@ -166,12 +167,37 @@ def text_matte(clip: Path, dest: Path, lines: list[str], frames: int, *,
             a = np.asarray(m, dtype=np.float32) / 255.0
             rgb = np.asarray(base, dtype=np.float32)
 
+            # The matte reads only if the footage inside the glyphs is
+            # brighter than the ground. Over a dark clip the letters go
+            # black-on-black and the title disappears - measured on a night
+            # aerial where mean luminance inside the type was under 40.
+            inside = a > 0.5
+            if inside.any():
+                lum = float((rgb.mean(axis=2)[inside]).mean())
+                if lum < min_luma:
+                    # Lift toward the target rather than clipping to it, so
+                    # the footage keeps its shape instead of blowing out.
+                    rgb = np.clip(rgb * (min_luma / max(lum, 1.0)) ** 0.8,
+                                  0, 255)
+
             out = rgb * a[..., None]
+
+            if edge > 0:
+                # Warm-white rim, per the brand guideline: only for
+                # separation, never as decoration.
+                ring = np.asarray(
+                    m.filter(ImageFilter.MaxFilter(edge * 2 + 1)),
+                    np.float32) / 255.0 - a
+                ring = np.clip(ring, 0.0, 1.0)[..., None]
+                out = out * (1 - ring) + np.array(
+                    [244, 242, 239], np.float32) * ring * edge_strength
+
             if bloom > 0:
                 glow = Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
                 glow = glow.filter(ImageFilter.GaussianBlur(28))
                 out = np.clip(out + np.asarray(glow, np.float32) * bloom, 0, 255)
-            Image.fromarray(out.astype(np.uint8)).save(fdir / f"f{i:05d}.png")
+            Image.fromarray(np.clip(out, 0, 255).astype(np.uint8)).save(
+                fdir / f"f{i:05d}.png")
 
         return _encode(fdir, dest, frames)
     finally:

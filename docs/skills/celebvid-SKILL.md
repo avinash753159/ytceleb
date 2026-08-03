@@ -227,12 +227,22 @@ The failure to avoid, in the owner's words: *"it's very easy to tell that it
 was generated with AI — the fonts, animations, layouts and overall design look
 like the default style Claude uses for almost every project."*
 
-Two specifics that recur:
+The system, in short — full detail in `docs/BRAND.md`:
 
-- **The channel red is `#C00000`, not `#E3120B`.** The brighter, more orange
-  value is wrong and appears throughout the existing code.
-- **The ground is `#F0F0F0` paper, not black.** The films have been built in a
-  dark anamorphic world that contradicts the channel's own banner.
+- **Celebrity Red `#B22B1A`.** `#E3120B` is wrong and appears throughout the
+  existing code. So is any per-celebrity accent colour.
+- **70% black/white/photography, 20% neutral, 10% red.** Red is the signature,
+  not the ground.
+- **Four type roles, three families, all installed and OFL:** Anton (hero
+  condensed), Archivo Black (names, logo), Archivo Regular/Medium (information),
+  Allura (a one- or two-word script accent). **Never more than two families in
+  one frame.**
+- **Chapters are fixed:** THE ROLE, THE WORKOUT, THE DIET, THE RESULTS.
+- **The red circle behind cut-out subjects is permanent brand**, not decoration.
+
+Check contrast wherever type meets image. A matte over dark footage goes
+black-on-black; separate with the thin warm-white edge the guidelines allow,
+never with a glow or a second colour.
 
 Identity is cumulative. It will not be fixed by restyling one video; every
 film has to use the same faces, the same red, the same devices.
