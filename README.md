@@ -7,6 +7,17 @@ channel: narration → auto-sourced B-roll → content-matched edit → rendered
 Fork of the original documentary builder, upgraded to be **portable,
 non-interactive, and self-classifying**.
 
+## Final assembly prompt (current workflow, 2026-11-21)
+
+**[`FINAL_ASSEMBLY_PROMPT.md`](FINAL_ASSEMBLY_PROMPT.md)** is the prompt to paste into Claude Code for the final cut.
+
+1. Build the first cut (editor-kit `SKILL.md` + this repo).
+2. Upload it to YouTube as **unlisted**; in Studio > Copyright, trim out every claimed segment.
+3. Download the edited version and run the prompt on it. It bridges every removed segment so the story still flows.
+
+It also carries the verified tool list (stars checked 2026-11-21), the pronunciation check, the 15-25 min length gate, the full QC gate, and delivery rules.
+**Owner override:** this prompt's music bed replaces the "NO MUSIC BED" Standing Ruling in `SKILL.md`.
+
 ## What's new in this fork
 
 | Upgrade | Detail |
