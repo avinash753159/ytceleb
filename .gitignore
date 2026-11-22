@@ -32,3 +32,6 @@ pexels_videos/
 vision_frames*/
 vision_sheets*/
 elevenlabs_key.txt
+# growth tracking data (weekly history is the proof of improvement)
+!growth/*.csv
+!growth/history/*.csv
