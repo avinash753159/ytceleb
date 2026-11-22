@@ -42,7 +42,7 @@ search, ad revenue goes up, and the numbers prove it gets better every week.
 - **Star power wins.** A-list action and superhero leads and athletes at peak hype. Niche, B-list, "vs", listicle and clickbait titles got under 1,000 views in 2026.
 - **Name the role:** titles naming the movie role get about 6x the views/day of titles that don't.
 - **Winning title formula:** `Train Like <Role>: <Star>'s <Specific Plan>`, star name in the first 40 characters, 55-70 characters, no ALL CAPS, no "| Celeb Workout" suffix.
-- **Length:** in our own data, 8-10 min videos have the best median views. Current house standard is 15-25 min (owner decision 2026-11-21). Test both and let `weekly_tracker.py` decide.
+- **Length: 15-25 min is the house standard (owner decision 2026-11-21, final).** Our older data shows 8-10 min videos had the best median views; that was a different, thinner format. The tracker reports views and watch hours by length so the result stays visible.
 - **Shorts:** none since July 2022. The closest competitor's Shorts use story hooks ("X is getting in trouble for being fat...") and get a 40k median; ours were generic "#short" clips.
 - **Tags** are the same 13 generic tags on every video, and 90 videos carry a competitor's "men's health" tag. Tags count for little; the title and the first lines of the description do the work.
 
@@ -76,7 +76,7 @@ Thumbnails: 3 variants per film into YouTube **Test & Compare**. One variable pe
 
 | # | Check | Pass |
 |---|---|---|
-| 1 | Length | 15:00-25:00 (or the length being tested that week) |
+| 1 | Length | 15:00-25:00 |
 | 2 | Hook (LLM judge on first 60s of script + frames) | score >= 8/10: a surprising true claim in the first 10s, a promise, an open loop |
 | 3 | Fact sourcing | 100% of claims map to SOURCES.md |
 | 4 | Bites | every bite ends on a full sentence; >= 200ms pre-roll and >= 500ms tail (`EDITING_CRAFT.md` section 7) |
