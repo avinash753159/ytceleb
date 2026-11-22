@@ -113,3 +113,7 @@ Thumbnails: 3 variants per film into YouTube **Test & Compare**. One variable pe
 4. Open the retention graph of each new film, find the 3 steepest drops, write what was on screen in `growth/LESSONS.md`.
 5. Feed `LESSONS.md` and the winning tags into next week's briefs and the script prompt.
 6. Commit `growth/` to both repos. The history folder is the proof of improvement.
+
+## Step 9b: Thumbnail (right after upload)
+Run `growth/thumbnail/thumbnail.py auto` (see growth/thumbnail/README.md). Real celebrity frame + text, never AI imagery.
+The old thumbnail is backed up first; `rollback` restores it. Eyeball the result before leaving it live.

@@ -35,3 +35,10 @@ elevenlabs_key.txt
 # growth tracking data (weekly history is the proof of improvement)
 !growth/*.csv
 !growth/history/*.csv
+
+# thumbnail tool
+!growth/thumbnail/
+!growth/thumbnail/*.py
+!growth/thumbnail/*.md
+growth/thumbnail/out/
+growth/thumbnail/backups/
