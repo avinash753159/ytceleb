@@ -1,5 +1,7 @@
 # CELEBVID CHARTER — full operating guide
 
+> **Superseded for new films (2026-11-21):** follow `playbook/README.md`, `FINAL_ASSEMBLY_PROMPT.md`, and `.claude/skills/celebvid/SKILL.md` in the celebworkout-editor-kit repo. This charter documents the older automated pipeline.
+
 Detailed instructions for producing a **Celeb Workout** "Train Like ___"
 documentary end-to-end. The `/celebvid` skill and the short `/goal` both
 point here. Repo lives at `C:\Users\avina\ytceleb` (GitHub:

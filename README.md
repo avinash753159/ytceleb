@@ -15,8 +15,11 @@ non-interactive, and self-classifying**.
 2. Upload it to YouTube as **unlisted**; in Studio > Copyright, trim out every claimed segment.
 3. Download the edited version and run the prompt on it. It bridges every removed segment so the story still flows.
 
-It also carries the verified tool list (stars checked 2026-11-21), the pronunciation check, the 15-25 min length gate, the full QC gate, and delivery rules.
-**Owner override:** this prompt's music bed replaces the "NO MUSIC BED" Standing Ruling in `SKILL.md`.
+It also carries the verified tool list (stars checked 2026-11-21), the pronunciation check, the 15-25 min length gate, cut/music/transition rules, Shorts, SEO packaging, the full QC gate, and delivery rules.
+**Owner override:** the music bed replaces the old "NO MUSIC BED" ruling (now updated in `SKILL.md` too).
+
+**Playbook (identical in both repos):** [`playbook/README.md`](playbook/README.md) has the weekly flow (3 films + Shorts), the SEO title/description template, pre- and post-publish evals, and the learning loop. [`playbook/EDITING_CRAFT.md`](playbook/EDITING_CRAFT.md) covers cuts that breathe, music matched to the words, transitions and graphics. [`playbook/TOOLS.md`](playbook/TOOLS.md) says what each tool is good for and when to use it. [`growth/`](growth/) holds the weekly tracker and the history that shows whether we are improving.
+
 
 ## What's new in this fork
 
