@@ -18,7 +18,9 @@ How it works
 - Text: from the video title. "Train Like X: ..." -> TRAIN LIKE / X. Otherwise STAR / WORKOUT & DIET.
 - Look: copies the channel's best performers (Bucky Barnes / Lamine Yamal / Hemsworth thumbnails): real photo scene
   with warm backlight, star big on the right, huge white WORKOUT & DIET PLAN or TRAIN LIKE, red name box, and a real
-  meal + water / BLACK WATER bottle (props/ were cut from our own thumbnails; the combo varies per video).
+  meal + water / BLACK WATER bottle (props/ were cut from our own thumbnails).
+  Every video looks different: star left or right, warm/green/teal/red grade, headline (WORKOUT & DIET PLAN, TRAIN LIKE,
+  GET BODY LIKE, INSANE TRAINING PLAN, + EAT LIKE THIS / DIET INCLUDED), red arrow or circled meal, meal + bottle combo.
 - Safety: before every upload the CURRENT thumbnail is downloaded to backups/<ID>/<timestamp>.jpg and logged in
   backups/log.jsonl. rollback re-uploads the newest backup. Nothing is ever deleted.
 - Quota: thumbnails.set = 50 units. Shorts are skipped (the Shorts feed ignores custom thumbnails).
@@ -153,6 +155,124 @@ def build(src, title, props=True, key=None):
 
 
 
+# ---------- variety (v5): layout mirror, colour grade, headline, arrow / circled meal ----------
+import math, zlib
+RED, YEL, WHITE = (206, 17, 26), (255, 214, 0), (255, 255, 255)
+GRADES = {  # multiplier, add, glow colour
+    "warm":  ((1.12, 0.98, 0.80), (14, 8, 0), (255, 150, 60)),
+    "green": ((0.80, 1.10, 0.90), (0, 14, 6), (120, 255, 150)),
+    "teal":  ((0.75, 1.05, 1.15), (0, 18, 26), (60, 220, 255)),
+    "red":   ((1.25, 0.75, 0.75), (30, 0, 0), (255, 60, 60)),
+}
+
+def headline(title, variant, star_or_role):
+    t = re.sub(r"\s*\((V\d+[^)]*)\)", "", title)
+    big, name = texts(t)
+    if name is None: return big, None, None
+    is_role = big == ["TRAIN LIKE"]
+    opts = {0: (big, name, None),
+            1: (["GET BODY", "LIKE"], name, None),
+            2: (big, name, "EAT LIKE THIS"),
+            3: (["INSANE", "TRAINING PLAN"], name, None),
+            4: (big, name, "DIET INCLUDED")}
+    return opts[variant]
+
+def arrow(d, p0, p1, color=RED, width=22):
+    # curved arrow p0 -> p1 with white outline
+    (x0, y0), (x1, y1) = p0, p1
+    cx, cy = (x0 + x1) / 2 - (y1 - y0) * 0.35, (y0 + y1) / 2 + (x1 - x0) * 0.35 * (1 if x1 > x0 else -1)
+    pts = [((1 - t) ** 2 * x0 + 2 * (1 - t) * t * cx + t * t * x1, (1 - t) ** 2 * y0 + 2 * (1 - t) * t * cy + t * t * y1) for t in np.linspace(0, 0.86, 40)]
+    ang = math.atan2(y1 - pts[-1][1], x1 - pts[-1][0]); L = 62
+    head = [(x1, y1), (x1 - L * math.cos(ang - 0.55), y1 - L * math.sin(ang - 0.55)), (x1 - L * math.cos(ang + 0.55), y1 - L * math.sin(ang + 0.55))]
+    for col, w in ((WHITE, width + 12), (color, width)):
+        d.line(pts, fill=col, width=w, joint="curve")
+        hh = head if col == color else [(x + (x - x1) * 0.0, y) for x, y in head]
+        d.polygon(hh, fill=col, outline=WHITE if col == color else None)
+        if col == WHITE: d.polygon(head, fill=WHITE); d.line(head + [head[0]], fill=WHITE, width=12)
+
+def build5(src, title, vid):
+    h = zlib.crc32(vid.encode())
+    mirror = (h >> 1) % 3 == 0
+    grade = list(GRADES)[(h >> 3) % 4]
+    hv = (h >> 5) % 5
+    use_arrow = (h >> 8) % 2 == 0
+    circle = not use_arrow and (h >> 9) % 2 == 0
+    mul, add, gl = GRADES[grade]
+    im = ImageOps.fit(Image.open(src).convert("RGB"), (W, H), Image.LANCZOS)
+    p, touch = cut(im)
+    if p is None: return None
+    if mirror:
+        p = ImageOps.mirror(p); touch = {"l": touch["r"], "r": touch["l"], "t": touch["t"], "b": touch["b"]}
+    bg = im.filter(ImageFilter.GaussianBlur(30))
+    a = np.asarray(ImageEnhance.Color(bg).enhance(0.55), "float32") * 0.55 * np.array(mul) + np.array(add)
+    xx = np.linspace(0, 1, W)[None, :, None]
+    side = np.clip((xx - 0.18) / 0.55, 0, 1) if not mirror else np.clip((0.82 - xx) / 0.55, 0, 1)
+    a *= 0.30 + 0.70 * side
+    img = Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA")
+    sc = min(H * 1.08 / p.height, 760 / p.width, 3.0)
+    p = p.resize((int(p.width * sc), int(p.height * sc)), Image.LANCZOS)
+    al = p.split()[-1]
+    rgb = ImageEnhance.Sharpness(ImageEnhance.Color(ImageEnhance.Contrast(p.convert("RGB")).enhance(1.15)).enhance(1.12)).enhance(1.5)
+    p = rgb.convert("RGBA"); p.putalpha(al)
+    if not mirror:
+        x = W - p.width if touch["r"] else max(W - p.width + 60, 520)
+    else:
+        x = 0 if touch["l"] else min(-60, W - 520 - p.width)
+        x = max(x, -p.width // 3)
+    edge = "l" if not mirror else "r"
+    if touch[edge]:
+        g = Image.new("L", p.size, 255); gd = ImageDraw.Draw(g)
+        for i in range(90):
+            xx_ = i if edge == "l" else p.width - 1 - i
+            gd.line([(xx_, 0), (xx_, p.height)], fill=int(255 * i / 90))
+        al = ImageChops.multiply(al, g); p.putalpha(al)
+    y = 0 if (touch["t"] and p.height < H) else H - p.height
+    A = Image.new("L", (W, H)); A.paste(al, (x, y))
+    glow = Image.new("RGBA", (W, H), gl + (255,)); glow.putalpha(A.filter(ImageFilter.MaxFilter(31)).filter(ImageFilter.GaussianBlur(45)).point(lambda v: int(v * .75)))
+    img = Image.alpha_composite(img, glow)
+    rim = Image.new("RGBA", (W, H), (255, 235, 200, 255)); rim.putalpha(ImageChops.subtract(A.filter(ImageFilter.MaxFilter(5)), A).filter(ImageFilter.GaussianBlur(3)).point(lambda v: int(v * .8)))
+    img.alpha_composite(p, (x, y)); img = Image.alpha_composite(img, rim)
+    # meal
+    pr = prop_for(vid); pw = 500; pr = pr.resize((pw, int(pr.height * pw / pr.width)), Image.LANCZOS)
+    if not mirror: px = max(300, min(x - 170, W - pw - 40))
+    else: px = min(W - pw - 300, x + p.width - 330); px = max(px, 420)
+    py = H - pr.height
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sa = Image.new("L", (W, H)); sa.paste(pr.split()[-1], (px - 10, py - 6))
+    sh.putalpha(sa.filter(ImageFilter.GaussianBlur(14)).point(lambda v: int(v * .6))); img = Image.alpha_composite(img, sh)
+    img.alpha_composite(pr, (px, py))
+    _, _, _k = headline(title, hv, None)
+    if _k: use_arrow, circle = False, True
+    d = ImageDraw.Draw(img)
+    if circle:
+        cx, cy = px + pw * 0.42, py + pr.height * 0.55; r = pw * 0.48
+        for col, w in ((WHITE, 16), (YEL, 10)): d.ellipse((cx - r, cy - r * 0.62, cx + r, cy + r * 0.62), outline=col, width=w)
+    # text block
+    big, name, kicker = headline(title, hv, None)
+    tx = 44 if not mirror else W - 44 - 600
+    maxw = 600
+    f = min((fit(d, s, maxw, 200) for s in big), key=lambda f: f.size)
+    yy = 30
+    for s in big:
+        wtxt = d.textlength(s, font=f); xx0 = tx if not mirror else W - 44 - wtxt
+        d.text((xx0 + 5, yy + 7), s, font=f, fill=(0, 0, 0, 170)); d.text((xx0, yy), s, font=f, fill=WHITE)
+        yy += int(f.size * 1.0)
+    if name:
+        fn = fit(d, name, maxw - 44, 96); tb = d.textbbox((0, 0), name, font=fn); bw = tb[2] + 44
+        bx = tx if not mirror else W - 44 - bw
+        yy += 16; box = (bx, yy, bx + bw, yy + tb[3] + 30)
+        d.rectangle((box[0] + 6, box[1] + 8, box[2] + 6, box[3] + 8), fill=(0, 0, 0, 150)); d.rectangle(box, fill=RED)
+        d.text((bx + 22, yy + 11), name, font=fn, fill=WHITE); yy = box[3]
+    if kicker:
+        fk = ImageFont.truetype(IMPACT, 76); kw = d.textlength(kicker, font=fk)
+        kx = tx if not mirror else W - 44 - kw
+        d.text((kx, yy + 18), kicker, font=fk, fill=YEL, stroke_width=5, stroke_fill=(0, 0, 0)); yy += 100
+    if use_arrow:
+        start = (tx + 180 if not mirror else W - 44 - 200, yy + 40)
+        end = (px + 60 if not mirror else px + pw - 80, py + 40)
+        if abs(end[1] - start[1]) > 60: arrow(d, start, end)
+    return img.convert("RGB")
+
+
 # ---------- picture: real frame or real photo ----------
 def best_frame(video_path, samples=80):
     """Pick the real frame with the biggest, sharpest frontal face."""
@@ -183,7 +303,7 @@ def best_frame(video_path, samples=80):
 
 def build_from(pic, title, key):
     tmp = os.path.join(OUT, "_src.jpg"); pic.convert("RGB").save(tmp, quality=95)
-    return build(tmp, title, key=key)
+    return build5(tmp, title, key)
 
 
 # ---------- YouTube ----------
