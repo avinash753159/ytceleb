@@ -42,3 +42,5 @@ elevenlabs_key.txt
 !growth/thumbnail/*.md
 growth/thumbnail/out/
 growth/thumbnail/backups/
+!growth/thumbnail/props/
+!growth/thumbnail/props/*.png

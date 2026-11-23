@@ -16,7 +16,9 @@ How it works
   The person is cut out (rembg u2net_human_seg) and placed right; nothing is generated or altered beyond cutout,
   contrast and sharpening.
 - Text: from the video title. "Train Like X: ..." -> TRAIN LIKE / X. Otherwise STAR / WORKOUT & DIET.
-- Look: dark background with red brand light and streaks, white Impact line + yellow-on-red tag, "CELEB WORKOUT" corner.
+- Look: copies the channel's best performers (Bucky Barnes / Lamine Yamal / Hemsworth thumbnails): real photo scene
+  with warm backlight, star big on the right, huge white WORKOUT & DIET PLAN or TRAIN LIKE, red name box, and a real
+  meal + water / BLACK WATER bottle (props/ were cut from our own thumbnails; the combo varies per video).
 - Safety: before every upload the CURRENT thumbnail is downloaded to backups/<ID>/<timestamp>.jpg and logged in
   backups/log.jsonl. rollback re-uploads the newest backup. Nothing is ever deleted.
 - Quota: thumbnails.set = 50 units. Shorts are skipped (the Shorts feed ignores custom thumbnails).
@@ -38,30 +40,117 @@ FONT_SMALL = next((p for p in [r"C:\Windows\Fonts\arialbd.ttf", "/usr/share/font
 _SESSION = None
 
 
-# ---------- text ----------
-def text_lines(title):
-    t = re.sub(r"\s*\((V\d+[^)]*)\)", "", title).replace("#shorts", "").strip()
-    m = re.match(r"Train Like (.+?):", t)
-    if m:
-        return "TRAIN LIKE", m.group(1).upper()
+# ---------- look: the channel's own best style (Bucky Barnes / Lamine / Hemsworth thumbnails) ----------
+from scipy import ndimage
+from rembg import remove, new_session
+from PIL import ImageChops
+IMPACT = FONT_BIG
+RED = (206, 17, 26)
+PD = os.path.join(HERE, "props")
+def _l(n): return Image.open(os.path.join(PD, n + ".png")).convert("RGBA")
+def compose(food, bottle):
+    f, b = _l(food), _l(bottle)
+    bh = int(f.height * 1.05); b = b.resize((int(b.width * bh / b.height), bh), Image.LANCZOS)
+    c = Image.new("RGBA", (f.width + int(b.width * 0.6), max(f.height, bh)), (0, 0, 0, 0))
+    c.alpha_composite(f, (0, c.height - f.height)); c.alpha_composite(b, (c.width - b.width, c.height - bh))
+    return c
+COMBOS = [lambda: _l("set_bucky"), lambda: _l("set_hems"), lambda: _l("set_cap"), lambda: _l("set_bale"),
+          lambda: compose("food_cruise", "bottle_black"), lambda: compose("food_tyson", "bottle_clear"),
+          lambda: compose("food_kim", "bottle_black"), lambda: compose("food_brad", "bottle_clear"),
+          lambda: compose("food_deadpool", "bottle_black"), lambda: compose("food_cruise", "bottle_clear"),
+          lambda: compose("food_tyson", "bottle_black"), lambda: compose("food_brad", "bottle_black")]
+def prop_for(key):
+    import zlib
+    return COMBOS[zlib.crc32(key.encode()) % len(COMBOS)]()
+S = None
+
+def texts(title):
+    t = re.sub(r"\s*\((V\d+[^)]*)\)", "", title).strip()
+    mt = re.match(r"Train Like (.+?):", t)
+    if mt: return ["TRAIN LIKE"], mt.group(1).upper()
+    vs = re.match(r"((?:(?!Workout|Diet|Training).)+?) (vs|&) ((?:(?!Workout|Diet|Training).)+?)(:| Workout| Diet)", t)
+    if vs: return ["WORKOUT", "& DIET PLAN"], f"{vs.group(1)} {vs.group(2).upper()} {vs.group(3)}".upper()
     star = re.split(r"\s+(Workout|Training|Diet)\b|:|'s ", t)[0].strip()
-    if len(star) > 22 or star == t:
-        return None, t.split(":")[0].upper()[:28]
-    return star.upper(), "WORKOUT & DIET"
+    if star == t or len(star) > 26: return [t.split(":")[0].upper()], None
+    return ["WORKOUT", "& DIET PLAN"], star.upper()
 
+def cut(im):
+    global S
+    S = S or new_session("u2net_human_seg")
+    c = remove(im, session=S); al = np.array(c.split()[-1])
+    lab, n = ndimage.label(al > 60)
+    if n == 0: return None, None
+    sizes = ndimage.sum(al > 60, lab, range(1, n + 1)); k = int(np.argmax(sizes)) + 1
+    if sizes[k - 1] < W * H * 0.03: return None, None
+    al[lab != k] = 0
+    bb = Image.fromarray(al).point(lambda v: 255 if v > 60 else 0).getbbox()
+    touch = {"l": bb[0] <= 4, "r": bb[2] >= W - 4, "t": bb[1] <= 4, "b": bb[3] >= H - 4}
+    c.putalpha(Image.fromarray(al).filter(ImageFilter.GaussianBlur(0.8)))
+    return c.crop(bb), touch
 
-def _font(path, size):
-    return ImageFont.truetype(path, size) if path else ImageFont.load_default()
-
-
-def _fit(draw, txt, max_w, start, min_size=40):
+def fit(d, txt, maxw, start, lo=34):
     s = start
-    while s > min_size:
-        f = _font(FONT_BIG, s)
-        if draw.textlength(txt, font=f) <= max_w:
-            return f
-        s -= 4
-    return _font(FONT_BIG, min_size)
+    while s > lo:
+        f = ImageFont.truetype(IMPACT, s)
+        if d.textlength(txt, font=f) <= maxw: return f
+        s -= 3
+    return ImageFont.truetype(IMPACT, lo)
+
+def build(src, title, props=True, key=None):
+    im = ImageOps.fit(Image.open(src).convert("RGB"), (W, H), Image.LANCZOS)
+    p, touch = cut(im)
+    if p is None: return None
+    # scene: same real photo, soft focus, warm gym grade, dark on the text side
+    bg = im.filter(ImageFilter.GaussianBlur(30))
+    a = np.asarray(ImageEnhance.Color(bg).enhance(0.55), "float32") * 0.55
+    a = a * np.array([1.12, 0.98, 0.80]) + np.array([14, 8, 0])
+    xx = np.linspace(0, 1, W)[None, :, None]
+    a *= 0.30 + 0.70 * np.clip((xx - 0.18) / 0.55, 0, 1)
+    img = Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA")
+    # star: big, right, punchy
+    sc = min(H * 1.08 / p.height, 760 / p.width, 3.0)
+    p = p.resize((int(p.width * sc), int(p.height * sc)), Image.LANCZOS)
+    al = p.split()[-1]
+    rgb = ImageEnhance.Sharpness(ImageEnhance.Color(ImageEnhance.Contrast(p.convert("RGB")).enhance(1.15)).enhance(1.12)).enhance(1.5)
+    p = rgb.convert("RGBA"); p.putalpha(al)
+    x = W - p.width + (60 if not touch["r"] else 0); x = max(x, 520)
+    if touch["r"]: x = W - p.width
+    y = H - p.height + (0 if touch["b"] or p.height >= H else 0)
+    if touch["l"]:  # arm/body cut at the photo edge: fade it out instead of showing a hard cut
+        g = Image.new("L", p.size, 255); gd = ImageDraw.Draw(g)
+        for i in range(90): gd.line([(i, 0), (i, p.height)], fill=int(255 * i / 90))
+        al = ImageChops.multiply(al, g); p.putalpha(al)
+    if touch["t"] and p.height < H:
+        y = 0
+    A = Image.new("L", (W, H)); A.paste(al, (x, y))
+    glow = Image.new("RGBA", (W, H), (255, 150, 60, 255))
+    glow.putalpha(A.filter(ImageFilter.MaxFilter(31)).filter(ImageFilter.GaussianBlur(45)).point(lambda v: int(v * 0.75)))
+    img = Image.alpha_composite(img, glow)
+    rim = Image.new("RGBA", (W, H), (255, 225, 180, 255))
+    rim.putalpha(ImageChops.subtract(A.filter(ImageFilter.MaxFilter(5)), A).filter(ImageFilter.GaussianBlur(3)).point(lambda v: int(v * 0.8)))
+    img.alpha_composite(p, (x, y)); img = Image.alpha_composite(img, rim)
+    # plate + BLACK WATER, bottom, overlapping the star's lower edge
+    if props:
+        pr = prop_for(key or title); s2 = 540 / pr.width; pr = pr.resize((540, int(pr.height * s2)), Image.LANCZOS)
+        px = max(300, min(x - 190, W - pr.width - 40)); py = H - pr.height
+        sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sa = Image.new("L", (W, H)); sa.paste(pr.split()[-1], (px - 10, py - 6))
+        sh.putalpha(sa.filter(ImageFilter.GaussianBlur(14)).point(lambda v: int(v * .6))); img = Image.alpha_composite(img, sh)
+        img.alpha_composite(pr, (px, py))
+    # text, Bucky layout
+    big, name = texts(title)
+    d = ImageDraw.Draw(img); maxw = 600
+    f = min((fit(d, s, maxw, 200) for s in big), key=lambda f: f.size)
+    yy = 30
+    for s in big:
+        d.text((44 + 5, yy + 7), s, font=f, fill=(0, 0, 0, 170)); d.text((44, yy), s, font=f, fill=(255, 255, 255))
+        yy += int(f.size * 1.0)
+    if name:
+        fn = fit(d, name, maxw - 44, 96); tb = d.textbbox((0, 0), name, font=fn)
+        yy += 16; box = (40, yy, 40 + tb[2] + 44, yy + tb[3] + 30)
+        d.rectangle((box[0] + 6, box[1] + 8, box[2] + 6, box[3] + 8), fill=(0, 0, 0, 150))
+        d.rectangle(box, fill=RED); d.text((62, yy + 11), name, font=fn, fill=(255, 255, 255))
+    return img.convert("RGB")
+
 
 
 # ---------- picture: real frame or real photo ----------
@@ -92,72 +181,9 @@ def best_frame(video_path, samples=80):
     return Image.fromarray(best[:, :, ::-1])
 
 
-def _subject(im):
-    global _SESSION
-    from rembg import new_session, remove
-    from scipy import ndimage
-    _SESSION = _SESSION or new_session("u2net_human_seg")
-    cut = remove(im, session=_SESSION)
-    al = np.array(cut.split()[-1])
-    lab, n = ndimage.label(al > 60)
-    if n == 0:
-        return None
-    sizes = ndimage.sum(al > 60, lab, range(1, n + 1))
-    mask = np.isin(lab, np.where(sizes >= sizes.max() * 0.25)[0] + 1)
-    if mask.sum() < W * H * 0.03:
-        return None
-    al[~mask] = 0
-    cut.putalpha(Image.fromarray(al))
-    return cut.crop(Image.fromarray(al).point(lambda v: 255 if v > 60 else 0).getbbox())
-
-
-def _background():
-    yy, xx = np.mgrid[0:H, 0:W].astype("float32")
-    base = np.zeros((H, W, 3), "float32") + np.array([10, 10, 16], "float32")
-    d1 = np.exp(-(((xx - W * .78) / (W * .32)) ** 2 + ((yy - H * .55) / (H * .6)) ** 2))
-    d2 = np.exp(-(((xx - W * .1) / (W * .35)) ** 2 + ((yy - H * .1) / (H * .5)) ** 2))
-    base += d1[..., None] * np.array(ACCENT, "float32") * .55 + d2[..., None] * np.array([40, 60, 110], "float32") * .5
-    img = Image.fromarray(np.clip(base + np.random.default_rng(1).normal(0, 4, (H, W, 1)), 0, 255).astype("uint8"))
-    d = ImageDraw.Draw(img, "RGBA")
-    for k in range(7):
-        x0 = 520 + k * 110
-        d.polygon([(x0, 0), (x0 + 38, 0), (x0 - 260, H), (x0 - 298, H)], fill=ACCENT + (22,))
-    return img
-
-
-def build(picture, l1, l2):
-    im = ImageOps.fit(picture.convert("RGB"), (W, H), Image.LANCZOS)
-    canvas = _background().convert("RGBA")
-    subj = _subject(im)
-    if subj is None:
-        raise SystemExit("Could not cut out a person from this picture; pass a clearer real --photo.")
-    sc = min(H * 1.02 / subj.height, 660 / subj.width, 2.4)
-    subj = subj.resize((int(subj.width * sc), int(subj.height * sc)), Image.LANCZOS)
-    subj = ImageEnhance.Color(ImageEnhance.Sharpness(ImageEnhance.Contrast(subj).enhance(1.12)).enhance(1.5)).enhance(1.12)
-    x = W - subj.width - max(0, (660 - subj.width) // 2) - 20; y = H - subj.height
-    ga = Image.new("L", (W, H)); ga.paste(subj.split()[-1], (x, y))
-    rim = Image.new("RGBA", (W, H), (255, 255, 255, 255))
-    rim.putalpha(ga.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(14)).point(lambda v: int(v * .52)))
-    glow = Image.new("RGBA", (W, H), ACCENT + (255,))
-    glow.putalpha(ga.filter(ImageFilter.MaxFilter(21)).filter(ImageFilter.GaussianBlur(40)).point(lambda v: int(v * .8)))
-    canvas = Image.alpha_composite(Image.alpha_composite(canvas, rim), glow)
-    canvas.alpha_composite(subj, (x, y))
-    d = ImageDraw.Draw(canvas)
-    f1 = _fit(d, l1, 600, 150) if l1 else None
-    f2 = _fit(d, l2, 556, 120)
-    h1 = d.textbbox((0, 0), l1, font=f1)[3] + 24 if l1 else 0
-    tb = d.textbbox((0, 0), l2, font=f2); h2 = tb[3] + 34
-    ty = (H - (h1 + h2)) // 2 - 20
-    if l1:
-        d.text((52, ty + 7), l1, font=f1, fill=(0, 0, 0, 210))
-        d.text((46, ty), l1, font=f1, fill=(255, 255, 255), stroke_width=6, stroke_fill=(0, 0, 0))
-        ty += h1
-    box = (40, ty, 40 + tb[2] + 44, ty + h2)
-    d.rounded_rectangle(tuple(v + 9 for v in box), 14, fill=(0, 0, 0, 180))
-    d.rounded_rectangle(box, 14, fill=ACCENT, outline=(255, 255, 255), width=4)
-    d.text((62, ty + 8), l2, font=f2, fill=(255, 235, 59), stroke_width=5, stroke_fill=(0, 0, 0))
-    d.text((46, H - 62), "CELEB WORKOUT", font=_font(FONT_SMALL, 28), fill=(255, 255, 255, 220), stroke_width=2, stroke_fill=(0, 0, 0))
-    return canvas.convert("RGB")
+def build_from(pic, title, key):
+    tmp = os.path.join(OUT, "_src.jpg"); pic.convert("RGB").save(tmp, quality=95)
+    return build(tmp, title, key=key)
 
 
 # ---------- YouTube ----------
@@ -227,7 +253,9 @@ def main():
         if title.endswith("#shorts"):
             print("Short: skipped (Shorts feed ignores custom thumbnails)."); return
         pic = Image.open(a.photo) if a.photo else best_frame(a.video)
-        build(pic, *text_lines(title)).save(out, quality=90)
+        img = build_from(pic, title, a.video_id)
+        if img is None: raise SystemExit('No clear person in this picture; pass --photo with a real photo of the celebrity.')
+        img.save(out, quality=92)
         print("built", out)
 
     if a.cmd in ("upload", "auto"):
