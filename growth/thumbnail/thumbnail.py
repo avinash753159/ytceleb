@@ -315,7 +315,30 @@ def scene(src, prefer_right=True):
     vig = 1 - 0.45 * np.clip(((xx - W * .6) / (W * .75)) ** 2 + ((yy - H * .45) / (H * .8)) ** 2, 0, 1)
     bottom = 1 - 0.55 * np.clip((yy - H * 0.55) / (H * 0.45), 0, 1) * np.clip((W * 0.75 - xx) / (W * 0.75), 0, 1)
     a *= (vig * bottom)[..., None]
-    return Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA"), p
+    base = Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA")
+    return add_glow(base, im), p
+
+
+def add_glow(base, im):
+    """Warm glow behind the star (owner 2026-11-23): halo + light burst behind the head, star re-pasted sharp on top."""
+    from rembg import remove, new_session
+    global _GLOW_S
+    try: _GLOW_S
+    except NameError: _GLOW_S = new_session("u2net_human_seg")
+    mask = remove(im, session=_GLOW_S, only_mask=True).convert("L").point(lambda v: 255 if v > 90 else 0)
+    if mask.getbbox() is None: return base
+    bx = mask.getbbox(); fx = (bx[0] + bx[2]) / 2; fy = bx[1] + (bx[3] - bx[1]) * 0.18
+    yy, xx = np.mgrid[0:H, 0:W].astype("float32")
+    burst = np.exp(-(((xx - fx) / 330) ** 2 + ((yy - fy) / 300) ** 2))
+    bl = Image.new("RGBA", (W, H), (255, 165, 70, 255)); bl.putalpha(Image.fromarray((burst * 170).astype("uint8")))
+    halo = Image.new("RGBA", (W, H), (255, 140, 40, 255))
+    halo.putalpha(mask.filter(ImageFilter.MaxFilter(31)).filter(ImageFilter.GaussianBlur(45)).point(lambda v: min(255, int(v * 0.95))))
+    rim = Image.new("RGBA", (W, H), (255, 225, 170, 255))
+    rim.putalpha(mask.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(10)).point(lambda v: int(v * 0.75)))
+    out = Image.alpha_composite(Image.alpha_composite(Image.alpha_composite(base, bl), halo), rim)
+    star = base.copy(); star.putalpha(mask.filter(ImageFilter.GaussianBlur(1)))
+    out.alpha_composite(star)
+    return out
 
 def style_train(src, title, vid):
     """TRAIN LIKE with a real meal too (owner: every thumbnail shows food)."""
@@ -408,8 +431,14 @@ def best_frame(video_path, samples=80):
 
 
 def build_from(pic, title, key):
+    """The exact builder QA'd on 171 live thumbnails (make_v7): real star cut out sharp, softened real background,
+    warm glow behind the star, TRAIN LIKE / EAT LIKE + red name tag, a real meal + complete bottle, face never cut off."""
+    import zlib, make_v7
     tmp = os.path.join(OUT, "_src.jpg"); pic.convert("RGB").save(tmp, quality=95)
-    return build(tmp, title, key)
+    combo = make_v7.COMBOS[zlib.crc32(key.encode()) % len(make_v7.COMBOS)]
+    word = "EAT LIKE" if zlib.crc32(key.encode()) % 2 else "TRAIN LIKE"
+    img, meta = make_v7.build(tmp, title, combo, word)
+    return img
 
 
 
