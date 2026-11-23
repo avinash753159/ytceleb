@@ -44,3 +44,4 @@ growth/thumbnail/out/
 growth/thumbnail/backups/
 !growth/thumbnail/props/
 !growth/thumbnail/props/*.png
+!growth/thumbnail/prop_eval.py

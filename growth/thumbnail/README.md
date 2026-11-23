@@ -29,6 +29,10 @@ A shirtless or training shot beats an interview shot every time; pass --photo wh
 Then LOOK at it before it goes live: right person? no stray old text? no floating arm or extra small figures?
 If anything is off, use a different real photo (--photo / --before --after). `--force` exists but should not be used.
 
+## Prop evals (run when adding a meal/bottle to props/)
+`python growth/thumbnail/prop_eval.py growth/thumbnail/props` fails any cutout with a straight cut on its left, right or top
+(a sliced bottle or plate). Props must also be solid (no faded ghost areas). Bottle labels are never mirrored.
+
 ## Safety
 - Before uploading, the current thumbnail is saved to `growth/thumbnail/backups/<ID>/` (never deleted).
 - Undo one: `python growth/thumbnail/thumbnail.py rollback --video-id <ID> --token ...`
