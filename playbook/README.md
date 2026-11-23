@@ -115,5 +115,6 @@ Thumbnails: 3 variants per film into YouTube **Test & Compare**. One variable pe
 6. Commit `growth/` to both repos. The history folder is the proof of improvement.
 
 ## Step 9b: Thumbnail (right after upload)
-Run `growth/thumbnail/thumbnail.py auto` (see growth/thumbnail/README.md). Real celebrity frame + text, never AI imagery.
+Run `growth/thumbnail/thumbnail.py auto` (see growth/thumbnail/README.md). Real celebrity photos + text, never AI imagery.
+During research, save two REAL photos of the star (before and after the transformation): the before/after thumbnail is the strongest format. Otherwise pass a shirtless/training shot with --photo.
 The old thumbnail is backed up first; `rollback` restores it. Eyeball the result before leaving it live.

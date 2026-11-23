@@ -273,6 +273,115 @@ def build5(src, title, vid):
     return img.convert("RGB")
 
 
+# ---------- v6: what 10M-view celebrity fitness thumbnails do (Men's Health Train Like / Eat Like, before/after) ----------
+RED, WHITE = (214, 20, 28), (255, 255, 255)
+
+def name_of(title):
+    big, name = texts(title)
+    return name, big == ["TRAIN LIKE"]
+
+def italic_text(img, xy, txt, size, fill=WHITE, shadow=True, maxw=None):
+    f = ImageFont.truetype(IMPACT, size)
+    d0 = ImageDraw.Draw(img)
+    if maxw:
+        while d0.textlength(txt, font=f) > maxw and size > 40:
+            size -= 4; f = ImageFont.truetype(IMPACT, size)
+    tw = int(d0.textlength(txt, font=f)) + 80; th = int(size * 1.35)
+    layer = Image.new("RGBA", (tw, th), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
+    d.text((20, 0), txt, font=f, fill=fill + (255,))
+    sh = 0.18
+    layer = layer.transform((tw + int(th * sh), th), Image.AFFINE, (1, sh, -th * sh, 0, 1, 0), Image.BICUBIC)
+    if shadow:
+        s = layer.split()[-1].filter(ImageFilter.GaussianBlur(10))
+        blk = Image.new("RGBA", layer.size, (0, 0, 0, 255)); blk.putalpha(s.point(lambda v: int(v * .85)))
+        img.alpha_composite(blk, (xy[0] + 6, xy[1] + 8))
+    img.alpha_composite(layer, xy)
+    return size, layer.size
+
+def tag(img, xy, txt, size=44):
+    d = ImageDraw.Draw(img); f = ImageFont.truetype(IMPACT, size)
+    tb = d.textbbox((0, 0), txt, font=f); box = (xy[0], xy[1], xy[0] + tb[2] + 34, xy[1] + tb[3] + 18)
+    d.rectangle(box, fill=RED); d.text((xy[0] + 17, xy[1] + 6), txt, font=f, fill=WHITE)
+    return box
+
+def scene(src, prefer_right=True):
+    """Full-bleed real photo, framed so the person sits right of centre, graded punchy."""
+    im = Image.open(src).convert("RGB")
+    im = ImageOps.fit(im, (W, H), Image.LANCZOS, centering=(0.5, 0.3))
+    p, touch = cut(im)
+    im = ImageEnhance.Contrast(im).enhance(1.12); im = ImageEnhance.Color(im).enhance(1.15); im = ImageEnhance.Sharpness(im).enhance(1.3)
+    a = np.asarray(im, "float32")
+    yy, xx = np.mgrid[0:H, 0:W].astype("float32")
+    vig = 1 - 0.45 * np.clip(((xx - W * .6) / (W * .75)) ** 2 + ((yy - H * .45) / (H * .8)) ** 2, 0, 1)
+    bottom = 1 - 0.55 * np.clip((yy - H * 0.55) / (H * 0.45), 0, 1) * np.clip((W * 0.75 - xx) / (W * 0.75), 0, 1)
+    a *= (vig * bottom)[..., None]
+    return Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA"), p
+
+def style_train(src, title, vid):
+    img, _ = scene(src)
+    name, _ = name_of(title)
+    s, (lw, lh) = italic_text(img, (10, H - 250), "TRAIN LIKE", 190, maxw=W - 120)
+    if name: tag(img, (40, H - 250 - 62), name)
+    return img
+
+def style_eat(src, title, vid):
+    img, _ = scene(src)
+    name, _ = name_of(title)
+    pr = prop_for(vid + "eat"); pw = 640
+    pr = pr.resize((pw, int(pr.height * pw / pr.width)), Image.LANCZOS)
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sa = Image.new("L", (W, H)); sa.paste(pr.split()[-1], (-10, H - pr.height + 4))
+    sh.putalpha(sa.filter(ImageFilter.GaussianBlur(16)).point(lambda v: int(v * .7))); img = Image.alpha_composite(img, sh)
+    img.alpha_composite(pr, (-30, H - pr.height + 10))
+    s, (lw, lh) = italic_text(img, (10, 10), "EAT LIKE", 200, maxw=640)
+    if name: tag(img, (44, 10 + lh - 20), name)
+    return img
+
+STYLES = [style_train, style_eat]
+
+def build(src, title, vid, style=None):
+    fn = STYLES[zlib.crc32(vid.encode()) % len(STYLES)] if style is None else style
+    return fn(src, title, vid).convert("RGB")
+
+def face_crop(src, w, h):
+    """Crop a real photo to w x h centred on the largest face (falls back to upper-centre)."""
+    import cv2
+    im = Image.open(src).convert("RGB")
+    sc = max(w / im.width, h / im.height) * 1.25
+    im = im.resize((int(im.width * sc), int(im.height * sc)), Image.LANCZOS)
+    g = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2GRAY)
+    faces = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml").detectMultiScale(g, 1.15, 6, minSize=(60, 60))
+    if len(faces):
+        x, y, fw, fh = max(faces, key=lambda f: f[2] * f[3]); cx, cy = x + fw / 2, y + fh / 2
+    else:
+        cx, cy = im.width / 2, im.height * 0.35
+    left = int(min(max(cx - w / 2, 0), im.width - w)); top = int(min(max(cy - h * 0.3, 0), im.height - h))
+    return im.crop((left, top, left + w, top + h))
+
+def style_split(before, after, title, vid):
+    """Real BEFORE | AFTER photos, diagonal white split, white arrow, name tag, TRAIN LIKE."""
+    half = W // 2 + 60
+    b = face_crop(before, half, H); a = face_crop(after, half, H)
+    b = ImageEnhance.Color(b).enhance(0.75); b = ImageEnhance.Brightness(b).enhance(0.92)
+    a = ImageEnhance.Contrast(a).enhance(1.15); a = ImageEnhance.Color(a).enhance(1.2); a = ImageEnhance.Sharpness(a).enhance(1.3)
+    img = Image.new("RGBA", (W, H)); img.paste(b, (0, 0))
+    mask = Image.new("L", (W, H), 0); ImageDraw.Draw(mask).polygon([(W // 2 + 40, 0), (W, 0), (W, H), (W // 2 - 40, H)], fill=255)
+    full_a = Image.new("RGB", (W, H)); full_a.paste(a, (W - half, 0))
+    img.paste(full_a, (0, 0), mask)
+    d = ImageDraw.Draw(img)
+    d.line([(W // 2 + 40, 0), (W // 2 - 40, H)], fill=WHITE, width=14)
+    cx, cy = W // 2, H // 2
+    d.polygon([(cx - 42, cy - 70), (cx + 58, cy), (cx - 42, cy + 70)], fill=WHITE, outline=(0, 0, 0))
+    d.polygon([(cx - 30, cy - 48), (cx + 38, cy), (cx - 30, cy + 48)], fill=RED)
+    yy, xx = np.mgrid[0:H, 0:W].astype("float32")
+    shade = Image.fromarray((255 * (1 - 0.6 * np.clip((yy - H * .6) / (H * .4), 0, 1))).astype("uint8"))
+    img = Image.composite(img, Image.new("RGBA", (W, H), (0, 0, 0, 255)), shade)
+    name, _ = name_of(title)
+    italic_text(img, (10, H - 220), "TRAIN LIKE", 170, maxw=W - 120)
+    if name: tag(img, (40, H - 220 - 60), name)
+    for txt, x in (("BEFORE", 30), ("AFTER", W - 190)):
+        tag(img, (x, 24), txt, 40)
+    return img.convert("RGB")
+
 # ---------- picture: real frame or real photo ----------
 def best_frame(video_path, samples=80):
     """Pick the real frame with the biggest, sharpest frontal face."""
@@ -303,7 +412,7 @@ def best_frame(video_path, samples=80):
 
 def build_from(pic, title, key):
     tmp = os.path.join(OUT, "_src.jpg"); pic.convert("RGB").save(tmp, quality=95)
-    return build5(tmp, title, key)
+    return build(tmp, title, key)
 
 
 # ---------- YouTube ----------
@@ -355,6 +464,7 @@ def main():
     ap.add_argument("cmd", choices=["make", "upload", "auto", "rollback"])
     ap.add_argument("--video-id"); ap.add_argument("--title"); ap.add_argument("--video"); ap.add_argument("--photo")
     ap.add_argument("--token"); ap.add_argument("--all", action="store_true")
+    ap.add_argument("--before", help="REAL photo of the star before the transformation"); ap.add_argument("--after", help="REAL photo after")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
     out = os.path.join(OUT, f"{a.video_id}.jpg") if a.video_id else None
@@ -372,11 +482,14 @@ def main():
             title = yt.videos().list(part="snippet", id=a.video_id).execute()["items"][0]["snippet"]["title"]
         if title.endswith("#shorts"):
             print("Short: skipped (Shorts feed ignores custom thumbnails)."); return
-        pic = Image.open(a.photo) if a.photo else best_frame(a.video)
-        img = build_from(pic, title, a.video_id)
-        if img is None: raise SystemExit('No clear person in this picture; pass --photo with a real photo of the celebrity.')
-        img.save(out, quality=92)
-        print("built", out)
+        if a.before and a.after:
+            style_split(a.before, a.after, title, a.video_id).save(out, quality=92); print('built (before/after)', out)
+        else:
+          pic = Image.open(a.photo) if a.photo else best_frame(a.video)
+          img = build_from(pic, title, a.video_id)
+          if img is None: raise SystemExit('No clear person in this picture; pass --photo with a real photo of the celebrity.')
+          img.save(out, quality=92)
+          print("built", out)
 
     if a.cmd in ("upload", "auto"):
         backup_current(yt, a.video_id)
