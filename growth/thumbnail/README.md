@@ -21,6 +21,14 @@ Alternates per video between:
 - EAT LIKE: full-frame real photo, big real meal + water / BLACK WATER bottle in front (props/), EAT LIKE + red name tag.
 A shirtless or training shot beats an interview shot every time; pass --photo when you have one.
 
+## Evals (run automatically; upload is blocked if any fail)
+- 1280x720, under 2 MB
+- a REAL name in the red tag (not "CELEB", "MALE CELEBRITY", "A MARVEL HERO")
+- a face is detected, fully inside the frame (not cut off at the top) and big enough
+- every thumbnail shows a real meal + water / BLACK WATER bottle (labels never mirrored)
+Then LOOK at it before it goes live: right person? no stray old text? no floating arm or extra small figures?
+If anything is off, use a different real photo (--photo / --before --after). `--force` exists but should not be used.
+
 ## Safety
 - Before uploading, the current thumbnail is saved to `growth/thumbnail/backups/<ID>/` (never deleted).
 - Undo one: `python growth/thumbnail/thumbnail.py rollback --video-id <ID> --token ...`

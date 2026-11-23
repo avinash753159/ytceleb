@@ -318,13 +318,10 @@ def scene(src, prefer_right=True):
     return Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA"), p
 
 def style_train(src, title, vid):
-    img, _ = scene(src)
-    name, _ = name_of(title)
-    s, (lw, lh) = italic_text(img, (10, H - 250), "TRAIN LIKE", 190, maxw=W - 120)
-    if name: tag(img, (40, H - 250 - 62), name)
-    return img
+    """TRAIN LIKE with a real meal too (owner: every thumbnail shows food)."""
+    return style_eat(src, title, vid + "t", word="TRAIN LIKE")
 
-def style_eat(src, title, vid):
+def style_eat(src, title, vid, word="EAT LIKE"):
     img, _ = scene(src)
     name, _ = name_of(title)
     pr = prop_for(vid + "eat"); pw = 640
@@ -332,7 +329,7 @@ def style_eat(src, title, vid):
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sa = Image.new("L", (W, H)); sa.paste(pr.split()[-1], (-10, H - pr.height + 4))
     sh.putalpha(sa.filter(ImageFilter.GaussianBlur(16)).point(lambda v: int(v * .7))); img = Image.alpha_composite(img, sh)
     img.alpha_composite(pr, (-30, H - pr.height + 10))
-    s, (lw, lh) = italic_text(img, (10, 10), "EAT LIKE", 200, maxw=640)
+    s, (lw, lh) = italic_text(img, (10, 10), word, 200, maxw=640)
     if name: tag(img, (44, 10 + lh - 20), name)
     return img
 
@@ -415,6 +412,29 @@ def build_from(pic, title, key):
     return build(tmp, title, key)
 
 
+
+
+# ---------- evals: every thumbnail must pass before upload ----------
+GENERIC_NAMES = {"CELEB", "CELEBRITY", "MALE CELEBRITY", "FEMALE CELEBRITY", "A MARVEL HERO"}
+
+def evaluate_thumb(path, title):
+    """Automated checks (all must pass). A person must still eyeball the image for wrong person / stray text."""
+    import cv2
+    im = Image.open(path).convert("RGB"); W_, H_ = im.size
+    g = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2GRAY)
+    fc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml").detectMultiScale(g, 1.1, 5, minSize=(40, 40))
+    fb = max(fc, key=lambda b: b[2] * b[3]) if len(fc) else None
+    name = name_of(title)[0] if "name_of" in globals() else None
+    checks = {
+        "size_1280x720": (W_, H_) == (1280, 720),
+        "under_2MB": os.path.getsize(path) < 2_000_000,
+        "real_name_present": bool(name) and name.strip() not in GENERIC_NAMES,
+        "face_detected": fb is not None,
+        "face_fully_in_frame": fb is not None and fb[1] >= 15 and fb[1] + fb[3] <= H_ and fb[0] + fb[2] <= W_,
+        "face_big_enough": fb is not None and fb[3] >= H_ * 0.12,
+    }
+    return all(checks.values()), checks
+
 # ---------- YouTube ----------
 def api(token):
     from google.auth.transport.requests import Request
@@ -464,6 +484,7 @@ def main():
     ap.add_argument("cmd", choices=["make", "upload", "auto", "rollback"])
     ap.add_argument("--video-id"); ap.add_argument("--title"); ap.add_argument("--video"); ap.add_argument("--photo")
     ap.add_argument("--token"); ap.add_argument("--all", action="store_true")
+    ap.add_argument("--force", action="store_true", help="upload even if evals fail (not recommended)")
     ap.add_argument("--before", help="REAL photo of the star before the transformation"); ap.add_argument("--after", help="REAL photo after")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
@@ -490,6 +511,13 @@ def main():
           if img is None: raise SystemExit('No clear person in this picture; pass --photo with a real photo of the celebrity.')
           img.save(out, quality=92)
           print("built", out)
+
+    if a.cmd in ("make", "auto"):
+        ok, checks = evaluate_thumb(out, title if a.cmd != "upload" else "")
+        print("EVALS:", "PASS" if ok else "FAIL", {k: v for k, v in checks.items()})
+        if not ok and not a.force:
+            raise SystemExit("Evals failed: fix the photo (use --photo/--before/--after) and rerun. Nothing uploaded.")
+        print("Now LOOK at", out, ": right person? no stray old text? face not cut? meal visible?")
 
     if a.cmd in ("upload", "auto"):
         backup_current(yt, a.video_id)
